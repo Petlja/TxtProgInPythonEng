@@ -1,0 +1,985 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Check out and decide &#8212; Textual Programming in Python</title>
+    <link rel="stylesheet" href="_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/activecode.css" />
+    <link rel="stylesheet" type="text/css" href="_static/codemirror.css" />
+    <link rel="stylesheet" type="text/css" href="_static/clickable.css" />
+    <link rel="stylesheet" type="text/css" href="_static/pytutor.css" />
+    <link rel="stylesheet" type="text/css" href="_static/modal-basic.css" />
+    <link rel="stylesheet" type="text/css" href="_static/datafile.css" />
+    <link rel="stylesheet" type="text/css" href="_static/dragndrop.css" />
+    <link rel="stylesheet" type="text/css" href="_static/fitb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/matrixeq.css" />
+    <link rel="stylesheet" type="text/css" href="_static/parsons.css" />
+    <link rel="stylesheet" type="text/css" href="_static/lib/prettify.css" />
+    <link rel="stylesheet" type="text/css" href="_static/poll.css" />
+    <link rel="stylesheet" type="text/css" href="_static/showEval.css" />
+    <link rel="stylesheet" type="text/css" href="_static/tabbedstuff.css" />
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="_static/video.css" />
+    <link rel="stylesheet" type="text/css" href="_static/karel.css" />
+    <link rel="stylesheet" type="text/css" href="_static/notes.css" />
+    <link rel="stylesheet" href="_static/user-highlights.css" type="text/css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-4.0.0-dist/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/flatly.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/petlja.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/runestonebase.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/language_data.js"></script>
+    <script type="text/javascript" src="_static/jquery.highlight.js"></script>
+    <script type="text/javascript" src="_static/bookfuncs.js"></script>
+    <script type="text/javascript" src="_static/codemirror.js"></script>
+    <script type="text/javascript" src="_static/xml.js"></script>
+    <script type="text/javascript" src="_static/css.js"></script>
+    <script type="text/javascript" src="_static/python.js"></script>
+    <script type="text/javascript" src="_static/htmlmixed.js"></script>
+    <script type="text/javascript" src="_static/javascript.js"></script>
+    <script type="text/javascript" src="_static/jquery_i18n/CLDRPluralRuleParser.js"></script>
+    <script type="text/javascript" src="_static/jquery_i18n/jquery.i18n.js"></script>
+    <script type="text/javascript" src="_static/jquery_i18n/jquery.i18n.messagestore.js"></script>
+    <script type="text/javascript" src="_static/jquery_i18n/jquery.i18n.fallbacks.js"></script>
+    <script type="text/javascript" src="_static/jquery_i18n/jquery.i18n.language.js"></script>
+    <script type="text/javascript" src="_static/jquery_i18n/jquery.i18n.parser.js"></script>
+    <script type="text/javascript" src="_static/jquery_i18n/jquery.i18n.emitter.js"></script>
+    <script type="text/javascript" src="_static/jquery_i18n/jquery.i18n.emitter.bidi.js"></script>
+    <script type="text/javascript" src="_static/activecode-i18n.en.js"></script>
+    <script type="text/javascript" src="_static/skulpt.min.js"></script>
+    <script type="text/javascript" src="_static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="_static/activecode.js"></script>
+    <script type="text/javascript" src="_static/clike.js"></script>
+    <script type="text/javascript" src="_static/timed_activecode.js"></script>
+    <script type="text/javascript" src="_static/animationbase.js"></script>
+    <script type="text/javascript" src="_static/mchoice.js"></script>
+    <script type="text/javascript" src="_static/timedmc.js"></script>
+    <script type="text/javascript" src="_static/timed.js"></script>
+    <script type="text/javascript" src="_static/mchoice-i18n.en.js"></script>
+    <script type="text/javascript" src="_static/clickable.js"></script>
+    <script type="text/javascript" src="_static/timedclickable.js"></script>
+    <script type="text/javascript" src="_static/d3.v2.min.js"></script>
+    <script type="text/javascript" src="_static/jquery.ba-bbq.min.js"></script>
+    <script type="text/javascript" src="_static/jquery.jsPlumb-1.3.10-all-min.js"></script>
+    <script type="text/javascript" src="_static/pytutor.js"></script>
+    <script type="text/javascript" src="_static/codelens.js"></script>
+    <script type="text/javascript" src="_static/datafile.js"></script>
+    <script type="text/javascript" src="_static/dragndrop.js"></script>
+    <script type="text/javascript" src="_static/timeddnd.js"></script>
+    <script type="text/javascript" src="_static/dragndrop-i18n.en.js"></script>
+    <script type="text/javascript" src="_static/fitb.js"></script>
+    <script type="text/javascript" src="_static/timedfitb.js"></script>
+    <script type="text/javascript" src="_static/fitb-i18n.en.js"></script>
+    <script type="text/javascript" src="_static/matrixeq.js"></script>
+    <script type="text/javascript" src="_static/lib/prettify.js"></script>
+    <script type="text/javascript" src="_static/lib/hammer.min.js"></script>
+    <script type="text/javascript" src="_static/parsons.js"></script>
+    <script type="text/javascript" src="_static/timedparsons.js"></script>
+    <script type="text/javascript" src="_static/poll.js"></script>
+    <script type="text/javascript" src="_static/reveal.js"></script>
+    <script type="text/javascript" src="_static/shortanswer.js"></script>
+    <script type="text/javascript" src="_static/timed_shortanswer.js"></script>
+    <script type="text/javascript" src="_static/showEval.js"></script>
+    <script type="text/javascript" src="_static/tabbedstuff.js"></script>
+    <script type="text/javascript" src="_static/runestonevideo.js"></script>
+    <script type="text/javascript" src="_static/karelCorner.js"></script>
+    <script type="text/javascript" src="_static/karelRobot.js"></script>
+    <script type="text/javascript" src="_static/karelWorld.js"></script>
+    <script type="text/javascript" src="_static/karelRobotDrawer.js"></script>
+    <script type="text/javascript" src="_static/karelUI.js"></script>
+    <script type="text/javascript" src="_static/karel.js"></script>
+    <script type="text/javascript" src="_static/karel-i18n.en.js"></script>
+    <script type="text/javascript" src="_static/karel-i18n.en.js"></script>
+    <script type="text/javascript" src="_static/notes.js"></script>
+    <script type="text/javascript" src="_static/pygamelib-init.js"></script>
+    <script type="text/javascript" src="_static/blockly/blockly_compressed.js"></script>
+    <script type="text/javascript" src="_static/blockly/blocks_compressed.js"></script>
+    <script type="text/javascript" src="_static/blockly/python_compressed.js"></script>
+    <script type="text/javascript" src="_static/blockly/msg-sr.js"></script>
+    <script type="text/javascript" src="_static/blockpy/utilities.js"></script>
+    <script type="text/javascript" src="_static/blockpy/python_errors.js"></script>
+    <script type="text/javascript" src="_static/blockpy/ast_node_visitor.js"></script>
+    <script type="text/javascript" src="_static/blockpy/abstract_interpreter.js"></script>
+    <script type="text/javascript" src="_static/blockpy/pytifa.js"></script>
+    <script type="text/javascript" src="_static/blockpy/abstract_interpreter_definitions.js"></script>
+    <script type="text/javascript" src="_static/blockpy/python_to_blockly.js"></script>
+    <script type="text/javascript" src="_static/blockpy/imported.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/class.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/comment.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/comprehensions.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/dict.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/if.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/io.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/lists.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/sets.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/loops.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/parking.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/tuple.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/turtles.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/text.js"></script>
+    <script type="text/javascript" src="_static/blockpy-modal.js"></script>
+    <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="_static/jquery-ui-1.10.3.custom.min.js"></script>
+    <script type="text/javascript" src="_static/jquery-fix.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-4.0.0-dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-4.0.0-dist/js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-sphinx.js"></script>
+    <script type="text/javascript" src="_static/waypoints.min.js"></script>
+    <script type="text/javascript" src="_static/rangy-core.js"></script>
+    <script type="text/javascript" src="_static/rangy-textrange.js"></script>
+    <script type="text/javascript" src="_static/rangy-cssclassapplier.js"></script>
+    <script type="text/javascript" src="_static/user-highlights.js"></script>
+    <script type="text/javascript" src="_static/jquery.idle-timer.js"></script>
+    <script type="text/javascript" src="_static/processing-1.4.1.min.js"></script>
+    <script type="text/javascript" src="_static/jquery.hotkey.js"></script>
+    <script type="text/javascript" src="_static/jquery-migrate-1.2.1.min.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="if statement - practice" href="01_Karel_08_if_practice.html" />
+    <link rel="prev" title="Combining loops" href="01_Karel_06_nested_loops_mix.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+<link rel="shortcut icon" href="_static/favicon.ico" type="image/ico" />
+
+<script type="text/javascript">
+  eBookConfig = {};
+  eBookConfig.host = 'http://127.0.0.1:8000' ? 'http://127.0.0.1:8000' : 'http://127.0.0.1:8000';
+  eBookConfig.app = eBookConfig.host+'/runestone';
+  eBookConfig.ajaxURL = eBookConfig.app+'/ajax/';
+  eBookConfig.course = 'TxtProgInPython';
+  eBookConfig.logLevel = 0;
+  eBookConfig.loginRequired = false;
+  eBookConfig.build_info = "";
+  eBookConfig.isLoggedIn = false;
+  eBookConfig.useRunestoneServices = false;
+  eBookConfig.python3 = true;
+  eBookConfig.basecourse = 'TxtProgInPython';
+  eBookConfig.runestone_version = '3.1.1';
+  eBookConfig.imagesDir = '_images/';
+  if(typeof(Sk) != "undefined")
+      Sk.imgPath = eBookConfig.imagesDir;
+</script>
+
+<div id="fb-root"></div>
+
+
+
+  </head><body>
+
+
+<!-- Begin navbar -->
+
+<nav id="navbar" class="navbar navbar-default navbar-fixed-top" role="navigation">
+
+  <div class="container">
+
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+     <img src="_static/img/logo.png" style="width:80px; height: 80px;"> 
+    </div>
+
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" style="margin-top: 10px; margin-left: 25px;">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="./">Textual Programming in Python</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<div class="container col-md-12" id="continue-reading"></div>
+
+<div class="container col-md-8 col-md-offset-2" id="main-content">
+  
+  <div class="section" id="check-out-and-decide">
+<h1>Check out and decide<a class="headerlink" href="#check-out-and-decide" title="Permalink to this headline">¶</a></h1>
+<p>The <em>while</em> statement proved very useful, because by using it we were able to solve more diversified tasks. However, the following example shows that there are simple tasks that we can not solve with what we have learned so far.</p>
+<p>Let’s say that in some situation you need to move Karel only for one square if possible (if not possible, Karel should remain where he is).</p>
+<ul class="simple">
+<li><p>If we only write the <em>move()</em> command, we are risking an error message in case that Karel is in front of the wall.</p></li>
+<li><p>If we place the <em>move()</em> command below the <em>while front_is_clear():</em> statement, we risk Karel going further than we wanted.</p></li>
+<li><p>If we do not use the command <em>move()</em>, we risk not moving even if it is possible (and necessary).</p></li>
+</ul>
+<p>Obviously, we need a new statement, which will tell Karel “if you can go forward, move one place”.</p>
+<div class="section" id="if-statement">
+<h2><em>If</em> statement<a class="headerlink" href="#if-statement" title="Permalink to this headline">¶</a></h2>
+<p>The statement we need in the described case is the <code class="docutils literal notranslate"><span class="pre">if</span></code> statement, which also exists in almost all programming languages. In Python, it (in its simpler form) is written like this:</p>
+
+<div data-childcomponent="Karel_if__syntax" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=Karel_if__syntax data-lang="python" 
+      data-timelimit=25000  data-codelens="true"  
+    data-audio=''   
+             data-passivecode="true"  data-hidehistory=true
+       >
+if condition:
+    statement_1
+    ...
+    statement_k
+</textarea>
+</div>
+
+    <div class="course-box course-box-info">
+        <div class="course-content">
+            <p>
+<p>We see that writing the <code class="docutils literal notranslate"><span class="pre">if</span></code> statement is very similar to writing a <em>while</em> statement. Under the <code class="docutils literal notranslate"><span class="pre">if</span></code> statement we can also place one or more other statements, which constitute the <strong>body of the if statement</strong>. Same rules apply for writing a colon <code class="docutils literal notranslate"><span class="pre">:</span></code> after the condition and for indenting statements that are executed if the condition is met. The difference is that the statements in the body of an <em>if</em> statement will not be repeated - if the condition is fulfilled, they will only be done once.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">if</span></code> statement is sometimes called the <em>branching statement</em> because the program execution flow branches at this stement: the next statement to be executed depends on the answer to the question from the condition.</p>
+
+    </p></div></div>
+<p>In the above example, we should write:</p>
+
+<div data-childcomponent="Karel_if__example" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=Karel_if__example data-lang="python" 
+      data-timelimit=25000  data-codelens="true"  
+    data-audio=''   
+             data-passivecode="true"  data-hidehistory=true
+       >
+if front_is_clear():
+    move()
+</textarea>
+</div>
+<p>Let’s see some tasks in which (besides already known statements) the <code class="docutils literal notranslate"><span class="pre">if</span></code> statement is used.</p>
+<div class="section" id="take-one-ball-if-there-are-any">
+<h3>Take one ball, if there are any<a class="headerlink" href="#take-one-ball-if-there-are-any" title="Permalink to this headline">¶</a></h3>
+
+    <div class="course-box course-box-special">
+        <div class="course-content">
+            <h4 class="carbox-title">
+                <img class="corner-image float-right" src="_static/img/question-mark.png" />
+            </h4>
+            <p>
+<p>There is one square in front of Karel, with zero or more balls. Write a program that tells Karel to move onto that square, and then take exactly one ball if there is at least one ball in the field.</p>
+<p>Run the program several times to test it on different examples.</p>
+
+    </p></div></div>
+<p>In our case, the condition will be <code class="docutils literal notranslate"><span class="pre">is_ball_on_square()</span></code>, and the command that is conditionally executed is <code class="docutils literal notranslate"><span class="pre">pick_ball()</span></code>.</p>
+
+<div data-childcomponent="Karel_if__take_one_if_any" class="karel_section course-box course-box-problem">
+    <div class="course-content">
+        <p>
+
+    <div data-component="karel" id="Karel_if__take_one_if_any" class="karel_section">
+        <div class="karel_actions col-md-12 mb-2"><button class="btn btn-success run-button">Покрени програм</button>
+        <button class="btn btn-default reset-button">Врати на почетак</button>
+        <button class="btn btn-default blockly-button" style="display: inline-block;">Blockly</button></div>
+        <div style="overflow: hidden;" class="karel_actions col-md-12" >
+            <section class="col-md-12">
+                <article>
+                    <textarea class="codeArea" id="Karel_if__take_one_if_any" name="code" rows="10" style="width: 100%;height:300px"></textarea>
+                    <textarea class="configArea" style="display:none"><!--x {
+   setup:function() {
+       var world = new World(2, 1);
+       world.setRobotStartAvenue(1);
+       world.setRobotStartStreet(1);
+       world.setRobotStartDirection("E");
+       if (Math.random() > 0.5)
+          world.putBalls(2, 1, 1 + Math.floor(7 *  Math.random()));
+
+   var robot = new Robot();
+
+   var code = ["from karel import *",
+               "move()",
+               "if ...         # complete the statement",
+               "    pick_ball()",
+               ""];
+       return {robot:robot, world:world, code:code};
+   },
+
+   isSuccess: function(robot, world) {
+      return world.getBalls(1, 1) === 0 &&
+         (robot.getBalls() === 1 ||
+         (robot.getBalls() === 0 && world.getBalls(2, 1) === 0));
+   }
+} x--></textarea>
+                </article>
+            </section>
+            <section class="col-md-12">
+                <article>
+                    <canvas class="world" style="border-style: solid; border-width: 2px; border-color: inherit; background: white;" width="300" height="300">
+                        <p>Please try loading this page in HTML5 enabled web browsers. All the latest versions of famous browsers such as Internet explorer, Chrome, Firefox, Opera support HTML5.</p>
+                    </canvas>
+                </article>
+            </section>
+        </div>
+    </div>
+    <p class="karel_caption karel_caption_text"> (Karel_if__take_one_if_any)</p>
+</p></div></div>
+
+</div>
+<div class="section" id="go-to-the-end-of-path-and-pick-one-ball-where-possible">
+<h3>Go to the end of path and pick one ball where possible<a class="headerlink" href="#go-to-the-end-of-path-and-pick-one-ball-where-possible" title="Permalink to this headline">¶</a></h3>
+
+    <div class="course-box course-box-special">
+        <div class="course-content">
+            <h4 class="carbox-title">
+                <img class="corner-image float-right" src="_static/img/question-mark.png" />
+            </h4>
+            <p>
+<p>There is at least one square in front of Karel, and there can be any number of them. Each square has zero or more balls. Karel should pick up exactly one ball from each square on which there is a ball.</p>
+<p>Run the program several times to test it on different examples.</p>
+
+    </p></div></div>
+<p>Here it is necessary to use <em>while</em> statement for advancing forward, and in the body of the <em>while</em> loop, after every step forward, an <em>if</em> statement should be used to check whether Karel stands on a square with a ball on it or not.</p>
+
+<div data-childcomponent="Karel_if__many_squares_take_one_if_any" class="karel_section course-box course-box-problem">
+    <div class="course-content">
+        <p>
+
+    <div data-component="karel" id="Karel_if__many_squares_take_one_if_any" class="karel_section">
+        <div class="karel_actions col-md-12 mb-2"><button class="btn btn-success run-button">Покрени програм</button>
+        <button class="btn btn-default reset-button">Врати на почетак</button>
+        <button class="btn btn-default blockly-button" style="display: inline-block;">Blockly</button></div>
+        <div style="overflow: hidden;" class="karel_actions col-md-12" >
+            <section class="col-md-12">
+                <article>
+                    <textarea class="codeArea" id="Karel_if__many_squares_take_one_if_any" name="code" rows="10" style="width: 100%;height:300px"></textarea>
+                    <textarea class="configArea" style="display:none"><!--x {
+   setup:function() {
+      function random(n) {
+         return Math.floor(n * Math.random());
+      }
+
+      var N = 2 + random(8);
+      var world = new World(N, 1);
+      world.setRobotStartAvenue(1);
+      world.setRobotStartStreet(1);
+      world.setRobotStartDirection("E");
+       for (var k = 2; k &lt;= N; k++)
+          if (Math.random() > 0.5)
+             world.putBalls(k, 1, 2 + random(3)); // need initial world to replace '2'->'1'
+
+      var robot = new Robot();
+
+      var code = ["from karel import *",
+                  "while front_is_clear():",
+                  "    move()",
+                  "    if ... # add the condition",
+                  "       ... # add the conditional statement",
+                  ""];
+
+      return {robot:robot, world:world, code:code};
+   },
+
+   isSuccess: function(robot, world) {
+      var N = world.getAvenues();
+      var nonEmpty = 0;
+      for (var k = 1; k &lt;= N; k++)
+         if (world.getBalls(k, 1) > 0)
+            nonEmpty++;
+
+      return robot.getBalls() === nonEmpty;
+   }
+} x--></textarea>
+                </article>
+            </section>
+            <section class="col-md-12">
+                <article>
+                    <canvas class="world" style="border-style: solid; border-width: 2px; border-color: inherit; background: white;" width="300" height="300">
+                        <p>Please try loading this page in HTML5 enabled web browsers. All the latest versions of famous browsers such as Internet explorer, Chrome, Firefox, Opera support HTML5.</p>
+                    </canvas>
+                </article>
+            </section>
+        </div>
+    </div>
+    <p class="karel_caption karel_caption_text"> (Karel_if__many_squares_take_one_if_any)</p>
+</p></div></div>
+
+</div>
+</div>
+<div class="section" id="if-you-don-t-do-that-do-this-if-else">
+<h2>If you don’t do that, do this (if-else)<a class="headerlink" href="#if-you-don-t-do-that-do-this-if-else" title="Permalink to this headline">¶</a></h2>
+<p>In some tasks, one thing needs to be done if a certain condition is met, and some other thing if it is not met. In such case, we can use the extended form of an <em>if</em> statement, which looks like this:</p>
+
+<div data-childcomponent="Karel_if__else_syntax" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=Karel_if__else_syntax data-lang="python" 
+      data-timelimit=25000  data-codelens="true"  
+    data-audio=''   
+             data-passivecode="true"  data-hidehistory=true
+       >
+if condition:
+    statement_a1
+    ...
+    statement_ak
+else:
+    statement_b1
+    ...
+    statement_bm
+</textarea>
+</div>
+
+    <div class="course-box course-box-info">
+        <div class="course-content">
+            <p>
+<p>In the extended form of the <code class="docutils literal notranslate"><span class="pre">if</span></code> statement, the first part (up to the word <cite>else</cite>) has the same look and meaning as before. Below that part, the word <code class="docutils literal notranslate"><span class="pre">else</span></code> is written, equally indented as the word <cite>if`</cite>, followed by a colon <code class="docutils literal notranslate"><span class="pre">:</span></code>. In the following lines we write one or more other statements, which constitute the <strong>body of else branch</strong>. This second group of statements is indented one level deaper than the word <em>else</em> above, and is executed if the condition specified in the `` if`` statement is not met.</p>
+
+    </p></div></div>
+<div class="section" id="example-taking-and-dropping-balls">
+<h3>Example - taking and dropping balls<a class="headerlink" href="#example-taking-and-dropping-balls" title="Permalink to this headline">¶</a></h3>
+
+    <div class="course-box course-box-special">
+        <div class="course-content">
+            <h4 class="carbox-title">
+                <img class="corner-image float-right" src="_static/img/question-mark.png" />
+            </h4>
+            <p>
+<p>There are 3 squares in front of Karel, and on each of them there can be either one ball or no balls. Karel should take balls from the squares that have balls on them and place one ball on each square that was initially empty. Karel has enough balls with him at start.</p>
+
+    </p></div></div>
+<p>Using the new, expanded form of the <code class="docutils literal notranslate"><span class="pre">if</span></code> statement, we can tell Karel: “If there is a ball on the square, then take that ball, otherwise drop one ball”, so that the task can be easily solved:</p>
+
+<div data-childcomponent="Karel_if__take_else_put" class="karel_section course-box course-box-problem">
+    <div class="course-content">
+        <p>
+
+    <div data-component="karel" id="Karel_if__take_else_put" class="karel_section">
+        <div class="karel_actions col-md-12 mb-2"><button class="btn btn-success run-button">Покрени програм</button>
+        <button class="btn btn-default reset-button">Врати на почетак</button>
+        <button class="btn btn-default blockly-button" style="display: inline-block;">Blockly</button></div>
+        <div style="overflow: hidden;" class="karel_actions col-md-12" >
+            <section class="col-md-12">
+                <article>
+                    <textarea class="codeArea" id="Karel_if__take_else_put" name="code" rows="10" style="width: 100%;height:300px"></textarea>
+                    <textarea class="configArea" style="display:none"><!--x {
+  setup: function() {
+   var world = new World(4, 1);
+       world.setRobotStartAvenue(1);
+       world.setRobotStartStreet(1);
+       world.setRobotStartDirection("E");
+   world.balls = [];
+   for (var k = 2; k &lt;= world.getAvenues(); k++) {
+      var ball = Math.random() > 0.5;
+      world.balls.push(ball);
+      if (ball)
+              world.putBall(k, 1);
+       }
+       var robot = new Robot();
+   robot.setInfiniteBalls(true);
+   var code = ["from karel import *",
+    "for i in range(3):",
+    "    move()",
+    "    if is_ball_on_square():",
+    "        pick_ball()",
+    "    else:",
+    "        drop_ball()"
+   ]
+   return {world: world, robot: robot, code: code};
+  },
+
+  isSuccess: function(robot, world) {
+   for (var k = 2; k &lt;= world.getAvenues(); k++)
+          if (world.getBalls(k, 1) == world.balls[k-2])
+         return false;
+   return true;
+  }
+} x--></textarea>
+                </article>
+            </section>
+            <section class="col-md-12">
+                <article>
+                    <canvas class="world" style="border-style: solid; border-width: 2px; border-color: inherit; background: white;" width="300" height="300">
+                        <p>Please try loading this page in HTML5 enabled web browsers. All the latest versions of famous browsers such as Internet explorer, Chrome, Firefox, Opera support HTML5.</p>
+                    </canvas>
+                </article>
+            </section>
+        </div>
+    </div>
+    <p class="karel_caption karel_caption_text"> (Karel_if__take_else_put)</p>
+</p></div></div>
+
+</div>
+<div class="section" id="pick-up-the-balls-that-you-can-reach">
+<h3>Pick up the balls that you can reach<a class="headerlink" href="#pick-up-the-balls-that-you-can-reach" title="Permalink to this headline">¶</a></h3>
+
+    <div class="course-box course-box-special">
+        <div class="course-content">
+            <h4 class="carbox-title">
+                <img class="corner-image float-right" src="_static/img/question-mark.png" />
+            </h4>
+            <p>
+<p>A labyrinth consists of two rows. Karel is in the upper row, which is completely empty and passable. In the lower row there may be obstacles, or squares with one ball. Karel’s task is to pick up all the balls.</p>
+
+    </p></div></div>
+
+<div data-childcomponent="Karel_if__take_all_from_lower_row" class="karel_section course-box course-box-problem">
+    <div class="course-content">
+        <p>
+
+    <div data-component="karel" id="Karel_if__take_all_from_lower_row" class="karel_section">
+        <div class="karel_actions col-md-12 mb-2"><button class="btn btn-success run-button">Покрени програм</button>
+        <button class="btn btn-default reset-button">Врати на почетак</button>
+        <button class="btn btn-default blockly-button" style="display: inline-block;">Blockly</button></div>
+        <div style="overflow: hidden;" class="karel_actions col-md-12" >
+            <section class="col-md-12">
+                <article>
+                    <textarea class="codeArea" id="Karel_if__take_all_from_lower_row" name="code" rows="10" style="width: 100%;height:300px"></textarea>
+                    <textarea class="configArea" style="display:none"><!--x {
+  setup: function() {
+
+     function random(n) {
+         return Math.floor(n * Math.random());
+     }
+
+     var world = new World(4 + random(4), 2);
+     world.setRobotStartAvenue(1);
+     world.setRobotStartStreet(2);
+     world.setRobotStartDirection("E");
+
+     world.addEWWall(1, 1, 1);
+     var balls = 0;
+     var prevBall = false;
+     for (var i = 2; i &lt;= world.getAvenues(); i++) {
+         if (random(2) == 0 || (balls == 0 && i == world.getAvenues() - 1)) {
+             balls++;
+             if (!prevBall)
+                world.addNSWall(i-1, 1, 1);
+             world.putBall(i, 1);
+             prevBall = true;
+         } else {
+             if (prevBall)
+                world.addNSWall(i-1, 1, 1);
+             world.addEWWall(i, 1, 1);
+             prevBall = false;
+         }
+     }
+
+     var robot = new Robot();
+     var code = ["from karel import *",
+        "while front_is_clear():",
+        "    move() # next square in upper row",
+        "",
+        "    # check the lower row",
+        "    turn_right()           # southwards",
+        "    if front_is_clear():   # if there is a square in the lower row",
+        "        # tell Karel to go get the ball, ",
+        "        # to come back to the upper row and turn east",
+        "    # tell Karel, if he could not go to the lower row,",
+        "    # to turn back to east, to be able to continue properly",
+     ]
+     return {world: world, robot: robot, code: code};
+  },
+
+  isSuccess: function(robot, world) {
+       for (var i = 1; i &lt;= world.getAvenues(); i++)
+          for (var j = 1; j &lt;= world.getStreets(); j++)
+             if (world.getBalls(i, j) != 0)
+                return false;
+      return true;
+  }
+} x--></textarea>
+                </article>
+            </section>
+            <section class="col-md-12">
+                <article>
+                    <canvas class="world" style="border-style: solid; border-width: 2px; border-color: inherit; background: white;" width="300" height="300">
+                        <p>Please try loading this page in HTML5 enabled web browsers. All the latest versions of famous browsers such as Internet explorer, Chrome, Firefox, Opera support HTML5.</p>
+                    </canvas>
+                </article>
+            </section>
+        </div>
+    </div>
+    <p class="karel_caption karel_caption_text"> (Karel_if__take_all_from_lower_row)</p>
+</p></div></div>
+
+</div>
+</div>
+<div class="section" id="act-only-when-something-is-not-met">
+<h2>Act only when something is not met<a class="headerlink" href="#act-only-when-something-is-not-met" title="Permalink to this headline">¶</a></h2>
+<p>Let’s say that Karel needs to turn left if he <strong>can not</strong> go forward (if he can go forward, he should not do anything).</p>
+<p>According to the rules of writing an <em>if</em> statement, after the condition (in the body of the first branch) there must be at least one statement, and according to the logic of the task, we do not need any statements at that place. In such situations we can write:</p>
+
+<div data-childcomponent="Karel_if__else_only" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=Karel_if__else_only data-lang="python" 
+      data-timelimit=25000  data-codelens="true"  
+    data-audio=''   
+             data-passivecode="true"  data-hidehistory=true
+       >
+if front_is_clear():
+    pass
+else:
+    turn_left()
+</textarea>
+</div>
+<p>or</p>
+
+<div data-childcomponent="Karel_if__not" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=Karel_if__not data-lang="python" 
+      data-timelimit=25000  data-codelens="true"  
+    data-audio=''   
+             data-passivecode="true"  data-hidehistory=true
+       >
+if not front_is_clear():
+    turn_left()
+</textarea>
+</div>
+<p>In the first case, we use special <code class="docutils literal notranslate"><span class="pre">pass</span></code> statement that does nothing. By doing so, we both satisfy the syntax (writing rules), and we get a program that works the way we want.</p>
+<p>In the second case, by using the word <code class="docutils literal notranslate"><span class="pre">not</span></code>, we make the opposite condition, which means that the condition of the <em>if</em> statement is satisfied when Karel can not go forward. In this case, branches change roles, so the <em>else</em> branch becomes the one that is no longer needed.</p>
+<p>In the few upcoming tasks, there is something to be done only when the condition is not met.</p>
+<div class="section" id="turn-to-an-empty-field">
+<h3>Turn to an empty field<a class="headerlink" href="#turn-to-an-empty-field" title="Permalink to this headline">¶</a></h3>
+
+    <div class="course-box course-box-special">
+        <div class="course-content">
+            <h4 class="carbox-title">
+                <img class="corner-image float-right" src="_static/img/question-mark.png" />
+            </h4>
+            <p>
+<p>Initially, Karel can face either side, but he can start moving only in one direction. Karel needs to turn to the free square and make one step.</p>
+
+    </p></div></div>
+
+<div data-childcomponent="Karel_if__turn_to_free_square" class="karel_section course-box course-box-problem">
+    <div class="course-content">
+        <p>
+
+    <div data-component="karel" id="Karel_if__turn_to_free_square" class="karel_section">
+        <div class="karel_actions col-md-12 mb-2"><button class="btn btn-success run-button">Покрени програм</button>
+        <button class="btn btn-default reset-button">Врати на почетак</button>
+        <button class="btn btn-default blockly-button" style="display: inline-block;">Blockly</button></div>
+        <div style="overflow: hidden;" class="karel_actions col-md-12" >
+            <section class="col-md-12">
+                <article>
+                    <textarea class="codeArea" id="Karel_if__turn_to_free_square" name="code" rows="10" style="width: 100%;height:300px"></textarea>
+                    <textarea class="configArea" style="display:none"><!--x {
+   setup:function() {
+      function random(n) {
+         return Math.floor(n * Math.random());
+      }
+
+      var ww = [
+         [
+            '█████',
+            '█N.0█',
+            '█████'
+         ],
+         [
+            '█████',
+            '█S.0█',
+            '█████'
+         ],
+         [
+            '█████',
+            '█E.0█',
+            '█████'
+         ],
+         [
+            '█████',
+            '█W.0█',
+            '█████'
+         ],
+         [
+            '███',
+            '█0█',
+            '█.█',
+            '█E█',
+            '███'
+         ],
+         [
+            '███',
+            '█0█',
+            '█.█',
+            '█W█',
+            '███'
+         ],
+         [
+            '███',
+            '█0█',
+            '█.█',
+            '█S█',
+            '███'
+         ],
+         [
+            '███',
+            '█0█',
+            '█.█',
+            '█N█',
+            '███'
+         ],
+         [
+            '███████',
+            '█0.0.N█',
+            '███████'
+         ],
+         [
+            '███████',
+            '█0.0.S█',
+            '███████'
+         ],
+         [
+            '███████',
+            '█0.0.W█',
+            '███████'
+         ],
+         [
+            '███████',
+            '█0.0.E█',
+            '███████'
+         ],
+         [
+            '█████',
+            '█0█N█',
+            '█.█.█',
+            '█0.0█',
+            '█████'
+         ],
+         [
+            '█████',
+            '█0█S█',
+            '█.█.█',
+            '█0.0█',
+            '█████'
+         ],
+         [
+            '█████',
+            '█0█W█',
+            '█.█.█',
+            '█0.0█',
+            '█████'
+         ],
+         [
+            '█████',
+            '█0█E█',
+            '█.█.█',
+            '█0.0█',
+            '█████'
+         ]
+      ];
+      let choice = random(ww.length);
+      var w = ww[choice];
+      var ny = Math.floor(w.length / 2);
+      var nx = Math.floor(w[0].length / 2);
+      var world = new World(nx, ny);
+
+      for (let y = 1; y &lt;= ny; y++) {
+         let wy = 2*(ny-y) + 1;
+         for (let x = 1; x &lt;= nx; x++) {
+            let wx = 2*x - 1;
+            if (y &lt; ny && w[wy - 1].charAt(wx) == "█") world.addEWWall(x, y, 1);
+            if (x &lt; nx && w[wy].charAt(wx + 1) == "█") world.addNSWall(x, y, 1);
+            let c = w[wy].charAt(wx);
+            let pos = "SWEN".indexOf(c);
+            if (pos > -1) {
+               world.setRobotStartAvenue(x);
+               world.setRobotStartStreet(y);
+               world.setRobotStartDirection("SWEN".charAt(pos));
+            }
+            let d = w[wy].charCodeAt(wx);
+            if (d >= 48 && d &lt; 58) world.putBalls(x, y, d - 48);
+         }
+      }
+
+      var robot = new Robot();
+
+      var code = ["from karel import *",
+                  "# write the program",
+                  ""];
+
+      return {robot:robot, world:world, code:code};
+   },
+
+   isSuccess: function(robot, world) {
+      var X = world.getAvenues();
+      var Y = world.getStreets();
+      if (X == 2 && Y == 1) return robot.getAvenue() == 2 && robot.getStreet() == 1 && robot.getDirection() == "E";
+      if (X == 1 && Y == 2) return robot.getAvenue() == 1 && robot.getStreet() == 2 && robot.getDirection() == "N";
+      if (X == 3 && Y == 1) return robot.getAvenue() == 2 && robot.getStreet() == 1 && robot.getDirection() == "W";
+      if (X == 2 && Y == 2) return robot.getAvenue() == 2 && robot.getStreet() == 1 && robot.getDirection() == "S";
+      return false;
+   }
+} x--></textarea>
+                </article>
+            </section>
+            <section class="col-md-12">
+                <article>
+                    <canvas class="world" style="border-style: solid; border-width: 2px; border-color: inherit; background: white;" width="300" height="300">
+                        <p>Please try loading this page in HTML5 enabled web browsers. All the latest versions of famous browsers such as Internet explorer, Chrome, Firefox, Opera support HTML5.</p>
+                    </canvas>
+                </article>
+            </section>
+        </div>
+    </div>
+    <p class="karel_caption karel_caption_text"> (Karel_if__turn_to_free_square)</p>
+</p></div></div>
+
+
+    <div data-component="reveal" id="Karel_if__turn_to_free_square_reveal"   data-showtitle="Solution" data-hidetitle="Hide solution">
+    <p>We offer you two short solutions:</p>
+
+<div data-childcomponent="Karel_if__turn_to_free_square_solution1" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=Karel_if__turn_to_free_square_solution1 data-lang="python" 
+      data-timelimit=25000  data-codelens="true"  
+    data-audio=''   
+             data-passivecode="true"  data-hidehistory=true
+       >
+from karel import *
+while not front_is_clear():
+    turn_left()
+move()
+</textarea>
+</div>
+
+<div data-childcomponent="Karel_if__turn_to_free_square_solution2" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=Karel_if__turn_to_free_square_solution2 data-lang="python" 
+      data-timelimit=25000  data-codelens="true"  
+    data-audio=''   
+             data-passivecode="true"  data-hidehistory=true
+       >
+from karel import *
+for i in range(3):
+    if not front_is_clear():
+        turn_left()
+move()
+</textarea>
+</div>
+
+    </div>
+    </div>
+<div class="section" id="where-there-are-no-balls-add-them">
+<h3>Where there are no balls, add them<a class="headerlink" href="#where-there-are-no-balls-add-them" title="Permalink to this headline">¶</a></h3>
+
+    <div class="course-box course-box-special">
+        <div class="course-content">
+            <h4 class="carbox-title">
+                <img class="corner-image float-right" src="_static/img/question-mark.png" />
+            </h4>
+            <p>
+<p>There is an unknown number of squares in front of Karel, and, each of them can contain one ball or no balls. Karel has enough balls with him, and he needs to put one ball on an each emtpy sqare.</p>
+
+    </p></div></div>
+
+<div data-childcomponent="Karel_if__fill_the_empty_squares" class="karel_section course-box course-box-problem">
+    <div class="course-content">
+        <p>
+
+    <div data-component="karel" id="Karel_if__fill_the_empty_squares" class="karel_section">
+        <div class="karel_actions col-md-12 mb-2"><button class="btn btn-success run-button">Покрени програм</button>
+        <button class="btn btn-default reset-button">Врати на почетак</button>
+        <button class="btn btn-default blockly-button" style="display: inline-block;">Blockly</button></div>
+        <div style="overflow: hidden;" class="karel_actions col-md-12" >
+            <section class="col-md-12">
+                <article>
+                    <textarea class="codeArea" id="Karel_if__fill_the_empty_squares" name="code" rows="10" style="width: 100%;height:300px"></textarea>
+                    <textarea class="configArea" style="display:none"><!--x {
+    setup: function() {
+        function random(n) {
+            return Math.floor(n * Math.random());
+        }
+        var N = 2 + random(5);
+        var world = new World(N, 1);
+        world.setRobotStartAvenue(1);
+        world.setRobotStartStreet(1);
+        world.setRobotStartDirection("E");
+        world.balls = [];
+        world.putBall(1, 1);
+        for (var k = 2; k &lt;= world.getAvenues(); k++) {
+            var ball = Math.random() > 0.5;
+            world.balls.push(ball);
+            if (ball)
+                world.putBall(k, 1);
+        }
+        var robot = new Robot();
+        robot.setInfiniteBalls(true);
+        var code = ["from karel import *",
+                    "# write the program"
+                    ]
+        return {world: world, robot: robot, code: code};
+    },
+
+    isSuccess: function(robot, world) {
+        for (var k = 1; k &lt;= world.getAvenues(); k++)
+            if (world.getBalls(k, 1) != 1)
+                return false;
+        return true;
+    }
+} x--></textarea>
+                </article>
+            </section>
+            <section class="col-md-12">
+                <article>
+                    <canvas class="world" style="border-style: solid; border-width: 2px; border-color: inherit; background: white;" width="300" height="300">
+                        <p>Please try loading this page in HTML5 enabled web browsers. All the latest versions of famous browsers such as Internet explorer, Chrome, Firefox, Opera support HTML5.</p>
+                    </canvas>
+                </article>
+            </section>
+        </div>
+    </div>
+    <p class="karel_caption karel_caption_text"> (Karel_if__fill_the_empty_squares)</p>
+</p></div></div>
+
+</div>
+</div>
+</div>
+
+
+  
+      <div class="col-md-12">
+<ul class="pager">
+        <li id="relations-prev" title='Previous chapter - Combining loops' data-toggle="tooltip"><a href="01_Karel_06_nested_loops_mix.html">Previous chapter</a></li>
+    
+        <li id="relations-next" title='Next chapter - <em>if</em> statement - practice' data-toggle="tooltip"><a href="01_Karel_08_if_practice.html">Next chapter</a></li>
+</ul>
+
+<!-- <ul class="pager"> -->
+    <!-- -->
+        <!-- <li id="relations-prev" title='Претходно поглавље - Combining loops' data-toggle="tooltip"><a href="01_Karel_06_nested_loops_mix.html">Претходно поглавље</a></li> -->
+    <!--  -->
+    <!-- -->
+        <!-- <li id="relations-next" title='Следеће поглавље - <em>if</em> statement - practice' data-toggle="tooltip"><a href="01_Karel_08_if_practice.html">Следеће поглавље</a></li> -->
+    <!-- -->
+<!-- </ul> -->
+
+<script type="text/javascript">
+
+  $('#relations-prev').tooltip({'placement':'right', 'selector': '', 'delay': { show: 100, hide: 50}});
+  $('#relations-next').tooltip({'placement':'left', 'selector': '', 'delay': { show: 100, hide: 50}});
+
+</script>
+</div>
+  
+</div>
+<footer class="footer col-md-12">
+    <div class="container">
+        <div class="text-center">
+            <hr>
+            <p class="text-muted">
+                <span class="pull-left">&copy; 2019 Petlja (Created using  <a href="https://pypi.org/project/Sphinx/">Swinx</a>, <a href="http://runestoneinteractive.org/">RunestoneComponents</a> and <a href="https://github.com/Petlja/PetljaDoc">PetljaDoc</a>)</span>
+            </p>
+        </div>
+    </div>
+</footer>
+
+
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-32029811-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+
+
+  </body>
+</html>
