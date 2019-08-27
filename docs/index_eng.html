@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Foreword &#8212; Textual Programming in Python</title>
+    <link rel="stylesheet" href="_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/activecode.css" />
+    <link rel="stylesheet" type="text/css" href="_static/codemirror.css" />
+    <link rel="stylesheet" type="text/css" href="_static/clickable.css" />
+    <link rel="stylesheet" type="text/css" href="_static/pytutor.css" />
+    <link rel="stylesheet" type="text/css" href="_static/modal-basic.css" />
+    <link rel="stylesheet" type="text/css" href="_static/datafile.css" />
+    <link rel="stylesheet" type="text/css" href="_static/dragndrop.css" />
+    <link rel="stylesheet" type="text/css" href="_static/fitb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/matrixeq.css" />
+    <link rel="stylesheet" type="text/css" href="_static/parsons.css" />
+    <link rel="stylesheet" type="text/css" href="_static/lib/prettify.css" />
+    <link rel="stylesheet" type="text/css" href="_static/poll.css" />
+    <link rel="stylesheet" type="text/css" href="_static/showEval.css" />
+    <link rel="stylesheet" type="text/css" href="_static/tabbedstuff.css" />
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="_static/video.css" />
+    <link rel="stylesheet" type="text/css" href="_static/karel.css" />
+    <link rel="stylesheet" type="text/css" href="_static/notes.css" />
+    <link rel="stylesheet" href="_static/user-highlights.css" type="text/css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-4.0.0-dist/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/flatly.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/petlja.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/runestonebase.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/language_data.js"></script>
+    <script type="text/javascript" src="_static/jquery.highlight.js"></script>
+    <script type="text/javascript" src="_static/bookfuncs.js"></script>
+    <script type="text/javascript" src="_static/codemirror.js"></script>
+    <script type="text/javascript" src="_static/xml.js"></script>
+    <script type="text/javascript" src="_static/css.js"></script>
+    <script type="text/javascript" src="_static/python.js"></script>
+    <script type="text/javascript" src="_static/htmlmixed.js"></script>
+    <script type="text/javascript" src="_static/javascript.js"></script>
+    <script type="text/javascript" src="_static/jquery_i18n/CLDRPluralRuleParser.js"></script>
+    <script type="text/javascript" src="_static/jquery_i18n/jquery.i18n.js"></script>
+    <script type="text/javascript" src="_static/jquery_i18n/jquery.i18n.messagestore.js"></script>
+    <script type="text/javascript" src="_static/jquery_i18n/jquery.i18n.fallbacks.js"></script>
+    <script type="text/javascript" src="_static/jquery_i18n/jquery.i18n.language.js"></script>
+    <script type="text/javascript" src="_static/jquery_i18n/jquery.i18n.parser.js"></script>
+    <script type="text/javascript" src="_static/jquery_i18n/jquery.i18n.emitter.js"></script>
+    <script type="text/javascript" src="_static/jquery_i18n/jquery.i18n.emitter.bidi.js"></script>
+    <script type="text/javascript" src="_static/activecode-i18n.en.js"></script>
+    <script type="text/javascript" src="_static/skulpt.min.js"></script>
+    <script type="text/javascript" src="_static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="_static/activecode.js"></script>
+    <script type="text/javascript" src="_static/clike.js"></script>
+    <script type="text/javascript" src="_static/timed_activecode.js"></script>
+    <script type="text/javascript" src="_static/animationbase.js"></script>
+    <script type="text/javascript" src="_static/mchoice.js"></script>
+    <script type="text/javascript" src="_static/timedmc.js"></script>
+    <script type="text/javascript" src="_static/timed.js"></script>
+    <script type="text/javascript" src="_static/mchoice-i18n.en.js"></script>
+    <script type="text/javascript" src="_static/clickable.js"></script>
+    <script type="text/javascript" src="_static/timedclickable.js"></script>
+    <script type="text/javascript" src="_static/d3.v2.min.js"></script>
+    <script type="text/javascript" src="_static/jquery.ba-bbq.min.js"></script>
+    <script type="text/javascript" src="_static/jquery.jsPlumb-1.3.10-all-min.js"></script>
+    <script type="text/javascript" src="_static/pytutor.js"></script>
+    <script type="text/javascript" src="_static/codelens.js"></script>
+    <script type="text/javascript" src="_static/datafile.js"></script>
+    <script type="text/javascript" src="_static/dragndrop.js"></script>
+    <script type="text/javascript" src="_static/timeddnd.js"></script>
+    <script type="text/javascript" src="_static/dragndrop-i18n.en.js"></script>
+    <script type="text/javascript" src="_static/fitb.js"></script>
+    <script type="text/javascript" src="_static/timedfitb.js"></script>
+    <script type="text/javascript" src="_static/fitb-i18n.en.js"></script>
+    <script type="text/javascript" src="_static/matrixeq.js"></script>
+    <script type="text/javascript" src="_static/lib/prettify.js"></script>
+    <script type="text/javascript" src="_static/lib/hammer.min.js"></script>
+    <script type="text/javascript" src="_static/parsons.js"></script>
+    <script type="text/javascript" src="_static/timedparsons.js"></script>
+    <script type="text/javascript" src="_static/poll.js"></script>
+    <script type="text/javascript" src="_static/reveal.js"></script>
+    <script type="text/javascript" src="_static/shortanswer.js"></script>
+    <script type="text/javascript" src="_static/timed_shortanswer.js"></script>
+    <script type="text/javascript" src="_static/showEval.js"></script>
+    <script type="text/javascript" src="_static/tabbedstuff.js"></script>
+    <script type="text/javascript" src="_static/runestonevideo.js"></script>
+    <script type="text/javascript" src="_static/karelCorner.js"></script>
+    <script type="text/javascript" src="_static/karelRobot.js"></script>
+    <script type="text/javascript" src="_static/karelWorld.js"></script>
+    <script type="text/javascript" src="_static/karelRobotDrawer.js"></script>
+    <script type="text/javascript" src="_static/karelUI.js"></script>
+    <script type="text/javascript" src="_static/karel.js"></script>
+    <script type="text/javascript" src="_static/karel-i18n.en.js"></script>
+    <script type="text/javascript" src="_static/karel-i18n.en.js"></script>
+    <script type="text/javascript" src="_static/notes.js"></script>
+    <script type="text/javascript" src="_static/pygamelib-init.js"></script>
+    <script type="text/javascript" src="_static/blockly/blockly_compressed.js"></script>
+    <script type="text/javascript" src="_static/blockly/blocks_compressed.js"></script>
+    <script type="text/javascript" src="_static/blockly/python_compressed.js"></script>
+    <script type="text/javascript" src="_static/blockly/msg-sr.js"></script>
+    <script type="text/javascript" src="_static/blockpy/utilities.js"></script>
+    <script type="text/javascript" src="_static/blockpy/python_errors.js"></script>
+    <script type="text/javascript" src="_static/blockpy/ast_node_visitor.js"></script>
+    <script type="text/javascript" src="_static/blockpy/abstract_interpreter.js"></script>
+    <script type="text/javascript" src="_static/blockpy/pytifa.js"></script>
+    <script type="text/javascript" src="_static/blockpy/abstract_interpreter_definitions.js"></script>
+    <script type="text/javascript" src="_static/blockpy/python_to_blockly.js"></script>
+    <script type="text/javascript" src="_static/blockpy/imported.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/class.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/comment.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/comprehensions.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/dict.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/if.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/io.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/lists.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/sets.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/loops.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/parking.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/tuple.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/turtles.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/text.js"></script>
+    <script type="text/javascript" src="_static/blockpy-modal.js"></script>
+    <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="_static/jquery-ui-1.10.3.custom.min.js"></script>
+    <script type="text/javascript" src="_static/jquery-fix.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-4.0.0-dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-4.0.0-dist/js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-sphinx.js"></script>
+    <script type="text/javascript" src="_static/waypoints.min.js"></script>
+    <script type="text/javascript" src="_static/rangy-core.js"></script>
+    <script type="text/javascript" src="_static/rangy-textrange.js"></script>
+    <script type="text/javascript" src="_static/rangy-cssclassapplier.js"></script>
+    <script type="text/javascript" src="_static/user-highlights.js"></script>
+    <script type="text/javascript" src="_static/jquery.idle-timer.js"></script>
+    <script type="text/javascript" src="_static/processing-1.4.1.min.js"></script>
+    <script type="text/javascript" src="_static/jquery.hotkey.js"></script>
+    <script type="text/javascript" src="_static/jquery-migrate-1.2.1.min.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+<link rel="shortcut icon" href="_static/favicon.ico" type="image/ico" />
+
+<script type="text/javascript">
+  eBookConfig = {};
+  eBookConfig.host = 'http://127.0.0.1:8000' ? 'http://127.0.0.1:8000' : 'http://127.0.0.1:8000';
+  eBookConfig.app = eBookConfig.host+'/runestone';
+  eBookConfig.ajaxURL = eBookConfig.app+'/ajax/';
+  eBookConfig.course = 'TxtProgInPython';
+  eBookConfig.logLevel = 0;
+  eBookConfig.loginRequired = false;
+  eBookConfig.build_info = "";
+  eBookConfig.isLoggedIn = false;
+  eBookConfig.useRunestoneServices = false;
+  eBookConfig.python3 = true;
+  eBookConfig.basecourse = 'TxtProgInPython';
+  eBookConfig.runestone_version = '3.1.1';
+  eBookConfig.imagesDir = '_images/';
+  if(typeof(Sk) != "undefined")
+      Sk.imgPath = eBookConfig.imagesDir;
+</script>
+
+<div id="fb-root"></div>
+
+
+
+  </head><body>
+
+
+<!-- Begin navbar -->
+
+<nav id="navbar" class="navbar navbar-default navbar-fixed-top" role="navigation">
+
+  <div class="container">
+
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+     <img src="_static/img/logo.png" style="width:80px; height: 80px;"> 
+    </div>
+
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" style="margin-top: 10px; margin-left: 25px;">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="./">Textual Programming in Python</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<div class="container col-md-12" id="continue-reading"></div>
+
+<div class="container col-md-8 col-md-offset-2" id="main-content">
+  
+  <div class="section" id="foreword">
+<h1>Foreword<a class="headerlink" href="#foreword" title="Permalink to this headline">¶</a></h1>
+<p>The interest in programming is constantly increasing, and not without a good a reason. However, mastering this skill can sometimes be troublesome. Some things in programming are hard in their own right, but often the difficulty comes from the way programming is tought to beginners. The way of explaining key concepts, the order of presenting/learning, examples that are used, selected programming language, and so on, can all be the factors that inhibit or facilitate learning.</p>
+<p>We believe that we have eliminated most of the reasons which make learning programming more burdensome than it has to be:</p>
+<ul class="simple">
+<li><p>We tend to first show why the things we are presenting here are needed, and only then to explain them. We believe this has a beneficial effect on readers’ motivation to learn;</p></li>
+<li><p>Examples that we use most often have a storyline in order to inspire you to go through them; tedious mechanical exercises are avoided as much as possible;</p></li>
+<li><p>We explain only what is needed to solve an upcomming problem; we leave more difficult things for later;</p></li>
+<li><p>We do not deal with an overview of the language capabilities; reference manuals exist with this purpose;</p></li>
+<li><p>We use the increasingly popular programming language Python, which is currently considered the best choice for beginners and is very applicable in real life situations;</p></li>
+<li><p>No prior knowledge in the field of programming is assumed, and mathematical knowledge on the level of the first few grades of primary school will be sufficient;</p></li>
+</ul>
+<p>Regarding technical details:</p>
+<ul class="simple">
+<li><p>You can solve tasks in the browser and immediately get the answer whether your programs are working properly;</p></li>
+<li><p>With some tasks, a hint or a solution is given, which is not immediately visible. When you click on the “Hint” or the “Solution” button, a hint, possibly detailed instruction or, sometimes, a complete program that solves the task appears. When the compelete program is given, you can copy it to the area for your solution and try it out;</p></li>
+<li><p>In the initial tasks, you can see a block diagram for your program, similar to those in Scratch (<a class="reference external" href="https://scratch.mit.edu/">https://scratch.mit.edu/</a>), or at <a class="reference external" href="https://code.org/">https://code.org/</a>. You can even change the program using block-commands, and then go back to Python with those changes;</p></li>
+<li><p>In many tasks, you can test your solution on several pre-prepared tests to confirm that the result is not accidentally good in just one case, but that you actually did what was expected;</p></li>
+</ul>
+<p>In short, we did our best to enable you to enter the world of writing computer programs in a pleasant way and reach the level at which you can apply your knowledge in practice.</p>
+<p>Before we begin, you should pay attention to several facts about learning programming in general:</p>
+<ul class="simple">
+<li><p>Your solution can be quite ok even if it’s different from ours. There is almost always more than one correct way to solve a task.</p></li>
+<li><p>Programming is best learned through writing programs. Do not just read and solve tasks in your head, or even worse, look at the solutions and think if you would have solved these tasks the same way. Write the programs. Even if you are able to formulate the exact program in your head (although you might just think you are), your hands need to pass through the process of writing that program as well. Actually, doing something is always more than just knowing how to do it.</p></li>
+<li><p>No matter how hard we try, we can not show or tell you everything - be curious, try out different ideas and see how they work, play with it.</p></li>
+<li><p>If you have problems in solving some of the tasks, do not worry - it’s completely normal. Have patience and be careful. Try to understand the message about the problem. If necessary, reanalyze the examples and explanations that you have been reading up to then. In case you do peek into a solution, you can copy it or type it with or without understanding, but, to achieve progress in learning programming, it is important that you try to fully comprehend the solutions and ideas behind them.</p></li>
+</ul>
+<p>We wish you a fun and successful programming joruney!</p>
+</div>
+<div class="section" id="content">
+<h1>Content<a class="headerlink" href="#content" title="Permalink to this headline">¶</a></h1>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="01_Karel_eng_00_intro.html">Karel</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="01_Karel_eng_01_sequential.html">Managing Karel</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="01_Karel_eng_01_sequential.html#examples">Examples</a></li>
+<li class="toctree-l3"><a class="reference internal" href="01_Karel_eng_01_sequential.html#tasks-for-exercise">Tasks for exercise</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="01_Karel_eng_02_for.html">Shorten your programs</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="01_Karel_eng_02_for.html#for-statement"><em>For</em> statement</a></li>
+<li class="toctree-l3"><a class="reference internal" href="01_Karel_eng_02_for.html#tasks-for-exercise">Tasks for exercise</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="01_Karel_eng_03_nested_for.html">Even shorter programs</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="01_Karel_eng_03_nested_for.html#nested-for-loops">Nested <em>for</em> loops</a></li>
+<li class="toctree-l3"><a class="reference internal" href="01_Karel_eng_03_nested_for.html#tasks-for-exercise">Tasks for exercise</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="01_Karel_eng_04_for_practice.html"><em>For</em> statement - practicing</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="01_Karel_eng_04_for_practice.html#tasks-for-exercise">Tasks for exercise</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="01_Karel_eng_05_while.html">Solve multiple tasks at once</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="01_Karel_eng_05_while.html#questions-about-karel">Questions about Karel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="01_Karel_eng_05_while.html#as-long-as-needed-while-statement">As long as needed (<em>while</em> statement)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="01_Karel_eng_05_while.html#tasks-for-exercise">Tasks for exercise</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="01_Karel_eng_06_nested_loops_mix.html">Combining loops</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="01_Karel_eng_06_nested_loops_mix.html#various-double-and-multiple-loops-tasks">Various double and multiple loops - tasks</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="01_Karel_eng_07_if.html">Check out and decide</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="01_Karel_eng_07_if.html#if-statement"><em>If</em> statement</a></li>
+<li class="toctree-l3"><a class="reference internal" href="01_Karel_eng_07_if.html#if-you-don-t-do-that-do-this-if-else">If you don’t do that, do this (if-else)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="01_Karel_eng_07_if.html#act-only-when-something-is-not-met">Act only when something is not met</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="01_Karel_eng_08_if_practice.html"><em>if</em> statement - practice</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="01_Karel_eng_08_if_practice.html#tasks-for-exercise">Tasks for exercise</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="01_Karel_eng_09_functions.html">Create a batch of statements</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="01_Karel_eng_09_functions.html#how-to-write-functions">How to write functions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="01_Karel_eng_09_functions.html#exiting-the-function-or-loop-before-its-end">Exiting the function or loop before its end</a></li>
+<li class="toctree-l3"><a class="reference internal" href="01_Karel_eng_09_functions.html#tasks-for-exercise">Tasks for exercise</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="01_Karel_eng_10_functions_params.html">Additional instructions to a function</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="01_Karel_eng_10_functions_params.html#functions-with-parameters">Functions with parameters</a></li>
+<li class="toctree-l3"><a class="reference internal" href="01_Karel_eng_10_functions_params.html#tasks-for-exercise">Tasks for exercise</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="02_Console/02_Console_eng_00_Intro.html">Basics of programming in Python</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="02_Console/02_Console_eng_01_about_python.html">Introduction to Python</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="02_Console/02_Console_eng_01_about_python.html#python-interpreter">Python interpreter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="02_Console/02_Console_eng_01_about_python.html#interactive-work">Interactive work</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="02_Console/02_Console_eng_02_programs.html">Python programs</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="02_Console/02_Console_eng_02_programs.html#assigning-a-value-to-a-variable">Assigning a value to a variable</a></li>
+<li class="toctree-l3"><a class="reference internal" href="02_Console/02_Console_eng_02_programs.html#print-values-from-a-program">Print values from a program</a></li>
+<li class="toctree-l3"><a class="reference internal" href="02_Console/02_Console_eng_02_programs.html#starting-a-program">Starting a program</a></li>
+<li class="toctree-l3"><a class="reference internal" href="02_Console/02_Console_eng_02_programs.html#program-errors">Program errors</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="02_Console/02_Console_eng_03_text.html">Text values</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="02_Console/02_Console_eng_03_text.html#printing-text">Printing text</a></li>
+<li class="toctree-l3"><a class="reference internal" href="02_Console/02_Console_eng_03_text.html#more-about-printing-numbers">More about printing numbers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="02_Console/02_Console_eng_03_text.html#string-operations">String operations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="02_Console/02_Console_eng_03_text.html#questions-and-tasks">Questions and Tasks</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="02_Console/02_Console_eng_04_reading.html">Reading data</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="02_Console/02_Console_eng_04_reading.html#reading-text">Reading text</a></li>
+<li class="toctree-l3"><a class="reference internal" href="02_Console/02_Console_eng_04_reading.html#reading-numbers">Reading numbers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="02_Console/02_Console_eng_04_reading.html#about-conversions">About conversions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="02_Console/02_Console_eng_04_reading.html#questions">Questions</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="02_Console/02_Console_eng_05_simple_computing_practice.html">Programs with Computation - Exercise</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="02_Console/02_Console_eng_05_simple_computing_practice.html#tasks-without-loading-data">Tasks without loading data</a></li>
+<li class="toctree-l3"><a class="reference internal" href="02_Console/02_Console_eng_05_simple_computing_practice.html#tasks-with-loading-data">Tasks with loading data</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="02_Console/02_Console_eng_06_number_functions.html">Math functions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="02_Console/02_Console_eng_06_number_functions.html#functions-abs-min-and-max">Functions <em>abs()</em>, <em>min()</em> and <em>max()</em></a></li>
+<li class="toctree-l3"><a class="reference internal" href="02_Console/02_Console_eng_06_number_functions.html#functions-abs-min-and-max-questions">Functions <em>abs()</em>, <em>min()</em> and <em>max()</em> - questions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="02_Console/02_Console_eng_06_number_functions.html#value-rounding-functions">Value Rounding Functions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="02_Console/02_Console_eng_06_number_functions.html#value-rounding-functions-questions">Value Rounding Functions - Questions</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="02_Console/02_Console_eng_07_number_functions_practice.html">Math Functions - Exercise</a></li>
+<li class="toctree-l2"><a class="reference internal" href="02_Console/02_Console_eng_08_if.html">Branching statements</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="02_Console/02_Console_eng_08_if.html#if-statement">if statement</a></li>
+<li class="toctree-l3"><a class="reference internal" href="02_Console/02_Console_eng_08_if.html#logical-expressions">Logical expressions</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="02_Console/02_Console_eng_09_elif.html">Complex branching</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="02_Console/02_Console_eng_09_elif.html#successive-conditions">Successive conditions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="02_Console/02_Console_eng_09_elif.html#nested-branching">Nested branching</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="02_Console/02_Console_eng_10_scripting.html">Programs with known input data</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="02_Console/02_Console_eng_10_scripting.html#scripts">Scripts</a></li>
+<li class="toctree-l3"><a class="reference internal" href="02_Console/02_Console_eng_10_scripting.html#changing-data-by-input">Changing data by input</a></li>
+<li class="toctree-l3"><a class="reference internal" href="02_Console/02_Console_eng_10_scripting.html#data-variation">Data variation</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="02_Console/02_Console_eng_11_collections.html">Data collections</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="02_Console/02_Console_eng_11_collections.html#tuple-and-its-elements">Tuple and its elements</a></li>
+<li class="toctree-l3"><a class="reference internal" href="02_Console/02_Console_eng_11_collections.html#range">Range</a></li>
+<li class="toctree-l3"><a class="reference internal" href="02_Console/02_Console_eng_11_collections.html#string-as-a-collection">String as a collection</a></li>
+<li class="toctree-l3"><a class="reference internal" href="02_Console/02_Console_eng_11_collections.html#functions-of-collections">Functions of collections</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="02_Console/02_Console_eng_12_algo_count_accumulate.html">Counting and summing</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="02_Console/02_Console_eng_12_algo_count_accumulate.html#counting">Counting</a></li>
+<li class="toctree-l3"><a class="reference internal" href="02_Console/02_Console_eng_12_algo_count_accumulate.html#summing">Summing</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="02_Console/02_Console_eng_13_list.html">Lists</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="02_Console/02_Console_eng_13_list.html#lists-and-tuples">Lists and tuples</a></li>
+<li class="toctree-l3"><a class="reference internal" href="02_Console/02_Console_eng_13_list.html#building-a-list">Building a list</a></li>
+<li class="toctree-l3"><a class="reference internal" href="02_Console/02_Console_eng_13_list.html#loading-a-list">Loading a list</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="02_Console/02_Console_eng_14_computing_with_lists.html">Computing with lists</a></li>
+<li class="toctree-l2"><a class="reference internal" href="02_Console/02_Console_eng_15_defining_functions.html">Defining functions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="02_Console/02_Console_eng_15_defining_functions.html#writing-functions-that-return-value">Writing functions that return value</a></li>
+<li class="toctree-l3"><a class="reference internal" href="02_Console/02_Console_eng_15_defining_functions.html#functions-that-do-not-return-value">Functions that do not return value</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="02_Console/02_Console_eng_16_dict_set.html">Dictionaries and sets</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="03_PyGame/03_PyGame_eng_Index.html">Graphics Programming with Pygame</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="03_PyGame/03_PyGame_eng_01_Intro.html">The PyGame library</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="03_PyGame/03_PyGame_eng_01_Intro.html#about-the-pygame-library">About the PyGame library</a></li>
+<li class="toctree-l3"><a class="reference internal" href="03_PyGame/03_PyGame_eng_01_Intro.html#online-use">Online use</a></li>
+<li class="toctree-l3"><a class="reference internal" href="03_PyGame/03_PyGame_eng_01_Intro.html#installation">Installation</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="03_PyGame/03_PyGame_eng_02_Basics.html">Writing a PyGame program</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="03_PyGame/03_PyGame_eng_02_Basics.html#basic-structure-of-a-pygame-program">Basic structure of a PyGame program</a></li>
+<li class="toctree-l3"><a class="reference internal" href="03_PyGame/03_PyGame_eng_02_Basics.html#coordinate-system">Coordinate system</a></li>
+<li class="toctree-l3"><a class="reference internal" href="03_PyGame/03_PyGame_eng_02_Basics.html#specifying-colors">Specifying colors</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="03_PyGame/03_PyGame_eng_10_Drawing.html">Drawing</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="03_PyGame/03_PyGame_eng_11a_Drawing_CircleRectEllipse.html">Drawing rectangles, ellipses, and circles</a></li>
+<li class="toctree-l3"><a class="reference internal" href="03_PyGame/03_PyGame_eng_11b_Drawing_LinePolygon.html">Drawing straight lines and polygons</a></li>
+<li class="toctree-l3"><a class="reference internal" href="03_PyGame/03_PyGame_eng_12a_Drawing_Given_Examples.html">Drawing from reference</a></li>
+<li class="toctree-l3"><a class="reference internal" href="03_PyGame/03_PyGame_eng_12b_Drawing_Given_Examples_opt.html">Drawing from reference - additional examples</a></li>
+<li class="toctree-l3"><a class="reference internal" href="03_PyGame/03_PyGame_eng_14_Drawing_Movable.html">Moving the drawing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="03_PyGame/03_PyGame_eng_15_Drawing_Scalable_opt.html">Changing the drawing size</a></li>
+<li class="toctree-l3"><a class="reference internal" href="03_PyGame/03_PyGame_eng_16a_Drawing_Using_Loops1.html">Drawing with the help of loops</a></li>
+<li class="toctree-l3"><a class="reference internal" href="03_PyGame/03_PyGame_eng_16b_Drawing_Using_Loops2.html">Drawing polygons with loops</a></li>
+<li class="toctree-l3"><a class="reference internal" href="03_PyGame/03_PyGame_eng_16c_Drawing_Using_Loops_alternating.html">Making more complex drawings using loops</a></li>
+<li class="toctree-l3"><a class="reference internal" href="03_PyGame/03_PyGame_eng_17a_Drawing_Pictures1.html">Displaying ready-made images</a></li>
+<li class="toctree-l3"><a class="reference internal" href="03_PyGame/03_PyGame_eng_17b_Drawing_Pictures2_opt.html">Displaying ready-made images - tasks</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="03_PyGame/03_PyGame_eng_20_Animation.html">Animation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="03_PyGame/03_PyGame_eng_21_Animation_Basics.html">How to make an animation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="03_PyGame/03_PyGame_eng_22_Animation_Motion.html">Drawings movement</a></li>
+<li class="toctree-l3"><a class="reference internal" href="03_PyGame/03_PyGame_eng_23_Animation_Stages.html">Animation by stages</a></li>
+<li class="toctree-l3"><a class="reference internal" href="03_PyGame/03_PyGame_eng_24_Animation_Text.html">Drawing text</a></li>
+<li class="toctree-l3"><a class="reference internal" href="03_PyGame/03_PyGame_eng_25_Animation_Multiple.html">Moving multiple objects</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="03_PyGame/03_PyGame_eng_30_Interaction.html">Interaction</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="03_PyGame/03_PyGame_eng_31_Interaction_ReadMousePos.html">Reading mouse position</a></li>
+<li class="toctree-l3"><a class="reference internal" href="03_PyGame/03_PyGame_eng_32_Interaction_ReadMouseKey.html">Reading mouse buttons</a></li>
+<li class="toctree-l3"><a class="reference internal" href="03_PyGame/03_PyGame_eng_33_Interaction_ReadKeyboard.html">Reading keyboard</a></li>
+<li class="toctree-l3"><a class="reference internal" href="03_PyGame/03_PyGame_eng_34_Interaction_Events.html">Events</a></li>
+<li class="toctree-l3"><a class="reference internal" href="03_PyGame/03_PyGame_eng_35_Interaction_EventMouse.html">Mouse events</a></li>
+<li class="toctree-l3"><a class="reference internal" href="03_PyGame/03_PyGame_eng_36_Interaction_EventKeyboard.html">Keyboard events</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+
+
+  
+      <div class="col-md-12">
+<ul class="pager">
+</ul>
+
+<!-- <ul class="pager"> -->
+    <!-- -->
+    <!-- -->
+<!-- </ul> -->
+
+<script type="text/javascript">
+
+  $('#relations-prev').tooltip({'placement':'right', 'selector': '', 'delay': { show: 100, hide: 50}});
+  $('#relations-next').tooltip({'placement':'left', 'selector': '', 'delay': { show: 100, hide: 50}});
+
+</script>
+</div>
+  
+</div>
+<footer class="footer col-md-12">
+    <div class="container">
+        <div class="text-center">
+            <hr>
+            <p class="text-muted">
+                <span class="pull-left">&copy; 2019 Petlja (Created using  <a href="https://pypi.org/project/Sphinx/">Swinx</a>, <a href="http://runestoneinteractive.org/">RunestoneComponents</a> and <a href="https://github.com/Petlja/PetljaDoc">PetljaDoc</a>)</span>
+            </p>
+        </div>
+    </div>
+</footer>
+
+
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-32029811-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+
+
+  </body>
+</html>

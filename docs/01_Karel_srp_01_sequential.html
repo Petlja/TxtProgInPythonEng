@@ -1,0 +1,1069 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Управљање Карелом &#8212; Textual Programming in Python</title>
+    <link rel="stylesheet" href="_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/activecode.css" />
+    <link rel="stylesheet" type="text/css" href="_static/codemirror.css" />
+    <link rel="stylesheet" type="text/css" href="_static/clickable.css" />
+    <link rel="stylesheet" type="text/css" href="_static/pytutor.css" />
+    <link rel="stylesheet" type="text/css" href="_static/modal-basic.css" />
+    <link rel="stylesheet" type="text/css" href="_static/datafile.css" />
+    <link rel="stylesheet" type="text/css" href="_static/dragndrop.css" />
+    <link rel="stylesheet" type="text/css" href="_static/fitb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/matrixeq.css" />
+    <link rel="stylesheet" type="text/css" href="_static/parsons.css" />
+    <link rel="stylesheet" type="text/css" href="_static/lib/prettify.css" />
+    <link rel="stylesheet" type="text/css" href="_static/poll.css" />
+    <link rel="stylesheet" type="text/css" href="_static/showEval.css" />
+    <link rel="stylesheet" type="text/css" href="_static/tabbedstuff.css" />
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="_static/video.css" />
+    <link rel="stylesheet" type="text/css" href="_static/karel.css" />
+    <link rel="stylesheet" type="text/css" href="_static/notes.css" />
+    <link rel="stylesheet" href="_static/user-highlights.css" type="text/css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-4.0.0-dist/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/flatly.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/petlja.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/runestonebase.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/language_data.js"></script>
+    <script type="text/javascript" src="_static/jquery.highlight.js"></script>
+    <script type="text/javascript" src="_static/bookfuncs.js"></script>
+    <script type="text/javascript" src="_static/codemirror.js"></script>
+    <script type="text/javascript" src="_static/xml.js"></script>
+    <script type="text/javascript" src="_static/css.js"></script>
+    <script type="text/javascript" src="_static/python.js"></script>
+    <script type="text/javascript" src="_static/htmlmixed.js"></script>
+    <script type="text/javascript" src="_static/javascript.js"></script>
+    <script type="text/javascript" src="_static/jquery_i18n/CLDRPluralRuleParser.js"></script>
+    <script type="text/javascript" src="_static/jquery_i18n/jquery.i18n.js"></script>
+    <script type="text/javascript" src="_static/jquery_i18n/jquery.i18n.messagestore.js"></script>
+    <script type="text/javascript" src="_static/jquery_i18n/jquery.i18n.fallbacks.js"></script>
+    <script type="text/javascript" src="_static/jquery_i18n/jquery.i18n.language.js"></script>
+    <script type="text/javascript" src="_static/jquery_i18n/jquery.i18n.parser.js"></script>
+    <script type="text/javascript" src="_static/jquery_i18n/jquery.i18n.emitter.js"></script>
+    <script type="text/javascript" src="_static/jquery_i18n/jquery.i18n.emitter.bidi.js"></script>
+    <script type="text/javascript" src="_static/activecode-i18n.en.js"></script>
+    <script type="text/javascript" src="_static/skulpt.min.js"></script>
+    <script type="text/javascript" src="_static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="_static/activecode.js"></script>
+    <script type="text/javascript" src="_static/clike.js"></script>
+    <script type="text/javascript" src="_static/timed_activecode.js"></script>
+    <script type="text/javascript" src="_static/animationbase.js"></script>
+    <script type="text/javascript" src="_static/mchoice.js"></script>
+    <script type="text/javascript" src="_static/timedmc.js"></script>
+    <script type="text/javascript" src="_static/timed.js"></script>
+    <script type="text/javascript" src="_static/mchoice-i18n.en.js"></script>
+    <script type="text/javascript" src="_static/clickable.js"></script>
+    <script type="text/javascript" src="_static/timedclickable.js"></script>
+    <script type="text/javascript" src="_static/d3.v2.min.js"></script>
+    <script type="text/javascript" src="_static/jquery.ba-bbq.min.js"></script>
+    <script type="text/javascript" src="_static/jquery.jsPlumb-1.3.10-all-min.js"></script>
+    <script type="text/javascript" src="_static/pytutor.js"></script>
+    <script type="text/javascript" src="_static/codelens.js"></script>
+    <script type="text/javascript" src="_static/datafile.js"></script>
+    <script type="text/javascript" src="_static/dragndrop.js"></script>
+    <script type="text/javascript" src="_static/timeddnd.js"></script>
+    <script type="text/javascript" src="_static/dragndrop-i18n.en.js"></script>
+    <script type="text/javascript" src="_static/fitb.js"></script>
+    <script type="text/javascript" src="_static/timedfitb.js"></script>
+    <script type="text/javascript" src="_static/fitb-i18n.en.js"></script>
+    <script type="text/javascript" src="_static/matrixeq.js"></script>
+    <script type="text/javascript" src="_static/lib/prettify.js"></script>
+    <script type="text/javascript" src="_static/lib/hammer.min.js"></script>
+    <script type="text/javascript" src="_static/parsons.js"></script>
+    <script type="text/javascript" src="_static/timedparsons.js"></script>
+    <script type="text/javascript" src="_static/poll.js"></script>
+    <script type="text/javascript" src="_static/reveal.js"></script>
+    <script type="text/javascript" src="_static/shortanswer.js"></script>
+    <script type="text/javascript" src="_static/timed_shortanswer.js"></script>
+    <script type="text/javascript" src="_static/showEval.js"></script>
+    <script type="text/javascript" src="_static/tabbedstuff.js"></script>
+    <script type="text/javascript" src="_static/runestonevideo.js"></script>
+    <script type="text/javascript" src="_static/karelCorner.js"></script>
+    <script type="text/javascript" src="_static/karelRobot.js"></script>
+    <script type="text/javascript" src="_static/karelWorld.js"></script>
+    <script type="text/javascript" src="_static/karelRobotDrawer.js"></script>
+    <script type="text/javascript" src="_static/karelUI.js"></script>
+    <script type="text/javascript" src="_static/karel.js"></script>
+    <script type="text/javascript" src="_static/karel-i18n.en.js"></script>
+    <script type="text/javascript" src="_static/karel-i18n.en.js"></script>
+    <script type="text/javascript" src="_static/notes.js"></script>
+    <script type="text/javascript" src="_static/pygamelib-init.js"></script>
+    <script type="text/javascript" src="_static/blockly/blockly_compressed.js"></script>
+    <script type="text/javascript" src="_static/blockly/blocks_compressed.js"></script>
+    <script type="text/javascript" src="_static/blockly/python_compressed.js"></script>
+    <script type="text/javascript" src="_static/blockly/msg-sr.js"></script>
+    <script type="text/javascript" src="_static/blockpy/utilities.js"></script>
+    <script type="text/javascript" src="_static/blockpy/python_errors.js"></script>
+    <script type="text/javascript" src="_static/blockpy/ast_node_visitor.js"></script>
+    <script type="text/javascript" src="_static/blockpy/abstract_interpreter.js"></script>
+    <script type="text/javascript" src="_static/blockpy/pytifa.js"></script>
+    <script type="text/javascript" src="_static/blockpy/abstract_interpreter_definitions.js"></script>
+    <script type="text/javascript" src="_static/blockpy/python_to_blockly.js"></script>
+    <script type="text/javascript" src="_static/blockpy/imported.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/class.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/comment.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/comprehensions.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/dict.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/if.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/io.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/lists.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/sets.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/loops.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/parking.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/tuple.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/turtles.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/text.js"></script>
+    <script type="text/javascript" src="_static/blockpy-modal.js"></script>
+    <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="_static/jquery-ui-1.10.3.custom.min.js"></script>
+    <script type="text/javascript" src="_static/jquery-fix.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-4.0.0-dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-4.0.0-dist/js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-sphinx.js"></script>
+    <script type="text/javascript" src="_static/waypoints.min.js"></script>
+    <script type="text/javascript" src="_static/rangy-core.js"></script>
+    <script type="text/javascript" src="_static/rangy-textrange.js"></script>
+    <script type="text/javascript" src="_static/rangy-cssclassapplier.js"></script>
+    <script type="text/javascript" src="_static/user-highlights.js"></script>
+    <script type="text/javascript" src="_static/jquery.idle-timer.js"></script>
+    <script type="text/javascript" src="_static/processing-1.4.1.min.js"></script>
+    <script type="text/javascript" src="_static/jquery.hotkey.js"></script>
+    <script type="text/javascript" src="_static/jquery-migrate-1.2.1.min.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+<link rel="shortcut icon" href="_static/favicon.ico" type="image/ico" />
+
+<script type="text/javascript">
+  eBookConfig = {};
+  eBookConfig.host = 'http://127.0.0.1:8000' ? 'http://127.0.0.1:8000' : 'http://127.0.0.1:8000';
+  eBookConfig.app = eBookConfig.host+'/runestone';
+  eBookConfig.ajaxURL = eBookConfig.app+'/ajax/';
+  eBookConfig.course = 'TxtProgInPython';
+  eBookConfig.logLevel = 0;
+  eBookConfig.loginRequired = false;
+  eBookConfig.build_info = "";
+  eBookConfig.isLoggedIn = false;
+  eBookConfig.useRunestoneServices = false;
+  eBookConfig.python3 = true;
+  eBookConfig.basecourse = 'TxtProgInPython';
+  eBookConfig.runestone_version = '3.1.1';
+  eBookConfig.imagesDir = '_images/';
+  if(typeof(Sk) != "undefined")
+      Sk.imgPath = eBookConfig.imagesDir;
+</script>
+
+<div id="fb-root"></div>
+
+
+
+  </head><body>
+
+
+<!-- Begin navbar -->
+
+<nav id="navbar" class="navbar navbar-default navbar-fixed-top" role="navigation">
+
+  <div class="container">
+
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+     <img src="_static/img/logo.png" style="width:80px; height: 80px;"> 
+    </div>
+
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" style="margin-top: 10px; margin-left: 25px;">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="./">Textual Programming in Python</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<div class="container col-md-12" id="continue-reading"></div>
+
+<div class="container col-md-8 col-md-offset-2" id="main-content">
+  
+  <p>Одмакни</p>
+<hr class="docutils" />
+<div class="section" id="id1">
+<h1>Управљање Карелом<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
+<p>Да бисте видели како програмирање изгледа, упознаћемо вас са Карелом. Карел је анимирани робот, који се креће по табели налик лавиринту тако што прати наша упутства у облику програма. Кроз управљање Карелом усвојићемо логику која је веома битна за писање било каквих програма, а можемо се успут и забавити.</p>
+<p>За управљање Карелом можемо користити ове функције:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">napred()</span></code> - помери се једно поље напред,</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">levo()</span></code> - окрени се 90 степени налево (у смеру супротном казаљки на сату),</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">desno()</span></code> - окрени се 90 степени надесно (у смеру казаљке на сату),</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">uzmi()</span></code> - покупи лоптицу са поља на којем се налазиш,</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ostavi()</span></code> - спусти лоптицу на поље на којем се налазиш.</p></li>
+</ul>
+<p>Ових пет функција користимо као команде упућене Карелу. Карел разуме још пет нешто друкчијих функција, које ћемо видети ускоро. Поред ових команди упућених директно Карелу, можемо да користимо и све наредбе програмског језика Пајтон, који ћемо успут упознавати.</p>
+<p>Погледајмо кроз примере како горе наведене наредбе можемо да користимо да бисмо водили Карела кроз његов свет:</p>
+<div class="section" id="id2">
+<h2>Примери<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id3">
+<h3>Помери се једно поље напред и узми лоптицу<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
+
+    <div class="course-box course-box-special">
+        <div class="course-content">
+            <h4 class="carbox-title">
+                <img class="corner-image float-right" src="_static/img/question-mark.png" />
+            </h4>
+            <p>
+<p>Напишите програм на основу којега ће се Карел померити на поље (2, 1) и покупити лоптицу.</p>
+
+    </p></div></div>
+<p>Овај програм се састоји од само две наредбе. Прва каже Карелу да се помери једно поље напред, а друга да узме лоптицу.</p>
+
+<div data-childcomponent="Karel_intro_two_squares_one_ball" class="karel_section course-box course-box-problem">
+    <div class="course-content">
+        <p>
+
+    <div data-component="karel" id="Karel_intro_two_squares_one_ball" class="karel_section">
+        <div class="karel_actions col-md-12 mb-2"><button class="btn btn-success run-button">Покрени програм</button>
+        <button class="btn btn-default reset-button">Врати на почетак</button>
+        <button class="btn btn-default blockly-button" style="display: inline-block;">Blockly</button></div>
+        <div style="overflow: hidden;" class="karel_actions col-md-12" >
+            <section class="col-md-12">
+                <article>
+                    <textarea class="codeArea" id="Karel_intro_two_squares_one_ball" name="code" rows="10" style="width: 100%;height:300px"></textarea>
+                    <textarea class="configArea" style="display:none"><!--x {
+     setup:function() {
+         var world = new World(2, 1);
+         world.setRobotStartAvenue(1);
+         world.setRobotStartStreet(1);
+         world.setRobotStartDirection("E");
+         world.putBall(2, 1);
+
+     var robot = new Robot();
+
+     var code = ["from karel import *",
+                 "napred()",
+                 "uzmi()"];
+         return {robot:robot, world:world, code:code};
+     },
+
+     isSuccess: function(robot, world) {
+        return robot.getBalls() === 1;
+     },
+} x--></textarea>
+                </article>
+            </section>
+            <section class="col-md-12">
+                <article>
+                    <canvas class="world" style="border-style: solid; border-width: 2px; border-color: inherit; background: white;" width="300" height="300">
+                        <p>Please try loading this page in HTML5 enabled web browsers. All the latest versions of famous browsers such as Internet explorer, Chrome, Firefox, Opera support HTML5.</p>
+                    </canvas>
+                </article>
+            </section>
+        </div>
+    </div>
+    <p class="karel_caption karel_caption_text"> (Karel_intro_two_squares_one_ball)</p>
+</p></div></div>
+
+</div>
+<div class="section" id="karel">
+<h3><strong>Прикључивање библиотеке</strong> <em>karel</em><a class="headerlink" href="#karel" title="Permalink to this headline">¶</a></h3>
+
+    <div class="course-box course-box-info">
+        <div class="course-content">
+            <p>
+<p>Наредбе помоћу којих управљамо Карелом налазе се у библиотеци <em>karel</em>. Зато на почетку програма треба да кажемо рачунару (тачније програму који извршава наш програм) да прво прикључи дефиниције команди за управљање Карелом. То се постиже првом линијом програма: <code class="docutils literal notranslate"><span class="pre">from</span> <span class="pre">karel</span> <span class="pre">import</span> <span class="pre">*</span></code>. Сваки наш програм који се бави Карелом, треба да почне овако.</p>
+<p>Имајте на уму да библиотека <em>karel</em> за сада може да се користи само у овом окружењу. Остале програме које будете писали можете покретати и на друге начине, али на то ћемо вас подсетити када за то буде време.</p>
+
+    </p></div></div>
+<p>На једном пољу може бити и више лоптица, а наш задатак може бити да кажемо Карелу да их узме неколико или све.</p>
+</div>
+<div class="section" id="id4">
+<h3>Помери се једно поље напред и узми три лоптице<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h3>
+
+    <div class="course-box course-box-special">
+        <div class="course-content">
+            <h4 class="carbox-title">
+                <img class="corner-image float-right" src="_static/img/question-mark.png" />
+            </h4>
+            <p>
+<p>Напишите програм на основу којега ће се Карел померити на поље (2, 1) и покупити три од пет лоптица које се тамо налазе.</p>
+
+    </p></div></div>
+<p>У овом програму након наредбе <code class="docutils literal notranslate"><span class="pre">napred()</span></code>, наредбу <code class="docutils literal notranslate"><span class="pre">uzmi()</span></code> треба навести три пута, јер треба покупити три лоптице. Обратите пажњу на број који се појављује на лоптици. Он показује колико лоптица има на том пољу. Осим тога, број лево од Карелове главе (који сте можда приметили и у претходном примеру), говори колико лоптица Карел има код себе.</p>
+
+<div data-childcomponent="Karel_intro_two_squares_five_balls" class="karel_section course-box course-box-problem">
+    <div class="course-content">
+        <p>
+
+    <div data-component="karel" id="Karel_intro_two_squares_five_balls" class="karel_section">
+        <div class="karel_actions col-md-12 mb-2"><button class="btn btn-success run-button">Покрени програм</button>
+        <button class="btn btn-default reset-button">Врати на почетак</button>
+        <button class="btn btn-default blockly-button" style="display: inline-block;">Blockly</button></div>
+        <div style="overflow: hidden;" class="karel_actions col-md-12" >
+            <section class="col-md-12">
+                <article>
+                    <textarea class="codeArea" id="Karel_intro_two_squares_five_balls" name="code" rows="10" style="width: 100%;height:300px"></textarea>
+                    <textarea class="configArea" style="display:none"><!--x {
+     setup:function() {
+         var world = new World(2, 1);
+         world.setRobotStartAvenue(1);
+         world.setRobotStartStreet(1);
+         world.setRobotStartDirection("E");
+         world.putBalls(2, 1, 5);
+
+     var robot = new Robot();
+
+     var code = ["from karel import *",
+                 "napred()",
+                 "uzmi()",
+                 "uzmi()",
+                 "uzmi()"];
+         return {robot:robot, world:world, code:code};
+     },
+
+     isSuccess: function(robot, world) {
+        return robot.getBalls() === 3;
+     },
+} x--></textarea>
+                </article>
+            </section>
+            <section class="col-md-12">
+                <article>
+                    <canvas class="world" style="border-style: solid; border-width: 2px; border-color: inherit; background: white;" width="300" height="300">
+                        <p>Please try loading this page in HTML5 enabled web browsers. All the latest versions of famous browsers such as Internet explorer, Chrome, Firefox, Opera support HTML5.</p>
+                    </canvas>
+                </article>
+            </section>
+        </div>
+    </div>
+    <p class="karel_caption karel_caption_text"> (Karel_intro_two_squares_five_balls)</p>
+</p></div></div>
+
+<p>Следи сличан, али нешто тежи задатак.</p>
+</div>
+<div class="section" id="id5">
+<h3>Дођи до лоптице и узми је<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h3>
+
+    <div class="course-box course-box-special">
+        <div class="course-content">
+            <h4 class="carbox-title">
+                <img class="corner-image float-right" src="_static/img/question-mark.png" />
+            </h4>
+            <p>
+<p>Напишите програм на основу којега ће Карел доћи на поље (4, 1) и покупити лоптицу.</p>
+
+    </p></div></div>
+<p>Задатак се суштински не разликује од претходног. И сада је потребно навести Карела до циљног поља и рећи му да узме лоптицу. Разлика је у томе што је сада путања до циљног поља дужа, а тиме и наш програм:</p>
+
+<div data-childcomponent="Karel_intro_take_ball_on_square_4_1" class="karel_section course-box course-box-problem">
+    <div class="course-content">
+        <p>
+
+    <div data-component="karel" id="Karel_intro_take_ball_on_square_4_1" class="karel_section">
+        <div class="karel_actions col-md-12 mb-2"><button class="btn btn-success run-button">Покрени програм</button>
+        <button class="btn btn-default reset-button">Врати на почетак</button>
+        <button class="btn btn-default blockly-button" style="display: inline-block;">Blockly</button></div>
+        <div style="overflow: hidden;" class="karel_actions col-md-12" >
+            <section class="col-md-12">
+                <article>
+                    <textarea class="codeArea" id="Karel_intro_take_ball_on_square_4_1" name="code" rows="10" style="width: 100%;height:300px"></textarea>
+                    <textarea class="configArea" style="display:none"><!--x {
+     setup:function() {
+         var world = new World(5,5);
+         world.setRobotStartAvenue(1);
+         world.setRobotStartStreet(1);
+         world.setRobotStartDirection("E");
+         world.putBall(4, 1);
+         world.addEWWall(1, 1, 2);
+         world.addNSWall(2, 2, 2);
+         world.addEWWall(2, 3, 3);
+         world.addNSWall(3, 1, 2);
+         world.addNSWall(3, 4, 1);
+         world.addNSWall(1, 5, 1);
+         world.addEWWall(4, 1, 1);
+
+     var robot = new Robot();
+
+     var code = ["from karel import *",
+                 "napred()      # idi na (2, 1)",
+                 "napred()      # idi na (3, 1)",
+                 "levo()        # okreni se na sever (^)",
+                 "napred()      # idi na (3, 2)",
+                 "napred()      # idi na (3, 3)",
+                 "desno()       # okreni se na istok (>)",
+                 "napred()      # idi na (4, 3)",
+                 "napred()      # idi na (5, 3)",
+                 "desno()       # okreni se na jug   (v)",
+                 "napred()      # idi na (5, 2)",
+                 "napred()      # idi na (5, 1)",
+                 "desno()       # okreni se na zapad (&lt;)",
+                 "napred()      # idi na (4, 1)",
+                 "uzmi()        # uzmi lopticu na (4, 1)"];
+         return {robot:robot, world:world, code:code};
+     },
+
+     isSuccess: function(robot, world) {
+        return robot.getBalls() === 1;
+     },
+} x--></textarea>
+                </article>
+            </section>
+            <section class="col-md-12">
+                <article>
+                    <canvas class="world" style="border-style: solid; border-width: 2px; border-color: inherit; background: white;" width="300" height="300">
+                        <p>Please try loading this page in HTML5 enabled web browsers. All the latest versions of famous browsers such as Internet explorer, Chrome, Firefox, Opera support HTML5.</p>
+                    </canvas>
+                </article>
+            </section>
+        </div>
+    </div>
+    <p class="karel_caption karel_caption_text"> (Karel_intro_take_ball_on_square_4_1)</p>
+</p></div></div>
+
+<p>Читајући овај програм, постаје тешко да се прати која наредба докле доводи Карела. То није тако само са почетницима, то је стварно тешко, јер свака наредба napred() изгледа исто. Да бисмо помогли себи (и вама), иза сваке наредбе смо додали знак # и неки текст који нам помаже да пратимо “докле смо стигли”.</p>
+</div>
+<div class="section" id="id6">
+<h3><strong>Коментари</strong><a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h3>
+
+    <div class="course-box course-box-info">
+        <div class="course-content">
+            <p>
+<p>Део било ког Пајтон програма од знака <code class="docutils literal notranslate"><span class="pre">#</span></code> до краја реда се зове <code class="docutils literal notranslate"><span class="pre">коментар</span></code>. Коментари не утичу на извршавање програма, програм ради исто са или без њих. Коментари су намењени само људима који читају и пишу програме, да би боље разумели те програме и лакше се у њима сналазили.</p>
+<p>Када размишљамо о писању коментара у програму, треба да их пишемо и због себе и због других људи који ће читати наш програм. Исто тако, коментари које други људи напишу у својим програмима помоћи ће нама да разумемо њихове програме.</p>
+<p>За писање коментара не постоје прецизна правила. Пишите у коментаре оно што сматрате да би помогло разумевању вашег програма.</p>
+
+    </p></div></div>
+</div>
+<div class="section" id="id7">
+<h3>Покупи све лоптице<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h3>
+<p>У овом примеру, лоптице се налазе на разним пољима и потребно је да доведемо Карела до сваке од тих лоптица.</p>
+
+    <div class="course-box course-box-special">
+        <div class="course-content">
+            <h4 class="carbox-title">
+                <img class="corner-image float-right" src="_static/img/question-mark.png" />
+            </h4>
+            <p>
+<p>Напишите програм на основу којега ће Карел покупити све четири лоптице.</p>
+
+    </p></div></div>
+<p>Путању можемо бирати на више начина, али што краћу путању изаберемо, краћи ће бити и програм. Можемо на пример прво да узмемо лоптицу на пољу (5, 2), затим две лоптице на пољу (5, 5) и на крају лоптицу на пољу (4, 4).</p>
+
+<div data-childcomponent="Karel_intro_collect_three_balls" class="karel_section course-box course-box-problem">
+    <div class="course-content">
+        <p>
+
+    <div data-component="karel" id="Karel_intro_collect_three_balls" class="karel_section">
+        <div class="karel_actions col-md-12 mb-2"><button class="btn btn-success run-button">Покрени програм</button>
+        <button class="btn btn-default reset-button">Врати на почетак</button>
+        <button class="btn btn-default blockly-button" style="display: inline-block;">Blockly</button></div>
+        <div style="overflow: hidden;" class="karel_actions col-md-12" >
+            <section class="col-md-12">
+                <article>
+                    <textarea class="codeArea" id="Karel_intro_collect_three_balls" name="code" rows="10" style="width: 100%;height:300px"></textarea>
+                    <textarea class="configArea" style="display:none"><!--x {
+     setup:function() {
+         var world = new World(5,5);
+         world.setRobotStartAvenue(1);
+         world.setRobotStartStreet(1);
+         world.setRobotStartDirection("E");
+         world.putBall(5, 2);
+         world.putBalls(5, 5, 2);
+         world.putBall(4, 4);
+         world.addEWWall(1, 1, 2);
+         world.addNSWall(2, 2, 2);
+         world.addEWWall(2, 3, 3);
+         world.addNSWall(3, 1, 2);
+         world.addNSWall(3, 4, 1);
+         world.addNSWall(1, 5, 1);
+         world.addEWWall(4, 1, 1);
+
+     var robot = new Robot();
+
+     var code = ["from karel import *",
+                 "napred(); napred(); levo()         # idi do polja (3, 1) i okreni se na sever",
+                 "napred(); napred(); desno()        # idi do polja (3, 3) i okreni se na istok",
+                 "napred(); napred(); desno()        # idi do polja (5, 3) i okreni se na jug",
+                 "napred(); uzmi()                   # dodji na polje (5, 2) i uzmi lopticu",
+                 "levo(); levo()                     # okreni se na sever",
+                 "napred(); napred(); napred()       # dodji na polje (5, 5)",
+                 "uzmi(); uzmi()                     # uzmi dve loptice",
+                 "levo(); napred(); levo(); napred() # idi na polje (4, 4)",
+                 "uzmi()                             # uzmi poslednju lopticu na polju (4, 4)"];
+         return {robot:robot, world:world, code:code};
+     },
+
+     isSuccess: function(robot, world) {
+        return robot.getBalls() === 4;
+     },
+} x--></textarea>
+                </article>
+            </section>
+            <section class="col-md-12">
+                <article>
+                    <canvas class="world" style="border-style: solid; border-width: 2px; border-color: inherit; background: white;" width="300" height="300">
+                        <p>Please try loading this page in HTML5 enabled web browsers. All the latest versions of famous browsers such as Internet explorer, Chrome, Firefox, Opera support HTML5.</p>
+                    </canvas>
+                </article>
+            </section>
+        </div>
+    </div>
+    <p class="karel_caption karel_caption_text"> (Karel_intro_collect_three_balls)</p>
+</p></div></div>
+
+</div>
+<div class="section" id="id8">
+<h3><strong>Груписање наредби</strong><a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h3>
+<p>Пошто је овај програм још дужи од претходног, да бисмо се лакше оријентисали у програму и пратили докле смо довели Карела, груписали смо по неколико наредби које чине једну етапу путовања у један ред програма. На крају сваког реда је коментар који објашњава групу наредби у том реду.</p>
+<p>Приметите да је при оваквом писању програма потребно између наредби писати знак <code class="docutils literal notranslate"><span class="pre">;</span></code> (иза последње наредбе у реду, овај знак се не пише).</p>
+<p>Наредбе могу да се групишу и другачије, на пример тако што се група наредби (написаних једна испод друге) раздвоји празним редом од следеће групе. Овакав начин груписања је много чешће у употреби, јер наредбе обично нису тако тако кратке као ове за управљање Карелом. Ево како би то изгледало:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">karel</span> <span class="k">import</span> <span class="o">*</span>
+
+<span class="c1"># idi do polja (3, 1) i okreni se na sever&quot;</span>
+<span class="n">napred</span><span class="p">()</span>
+<span class="n">napred</span><span class="p">()</span>
+<span class="n">levo</span><span class="p">()</span>
+
+<span class="c1"># idi do polja (3, 3) i okreni se na istok</span>
+<span class="n">napred</span><span class="p">()</span>
+<span class="n">napred</span><span class="p">()</span>
+<span class="n">desno</span><span class="p">()</span>
+
+<span class="c1"># idi do polja (5, 3) i okreni se na jug</span>
+<span class="n">napred</span><span class="p">()</span>
+<span class="n">napred</span><span class="p">()</span>
+<span class="n">desno</span><span class="p">()</span>
+
+<span class="c1"># dodji na polje (5, 2) i uzmi lopticu</span>
+<span class="n">napred</span><span class="p">()</span>
+<span class="n">uzmi</span><span class="p">()</span>
+
+<span class="c1"># okreni se na sever</span>
+<span class="n">levo</span><span class="p">()</span>
+<span class="n">levo</span><span class="p">()</span>
+
+<span class="c1"># dodji na polje (5, 5)</span>
+<span class="n">napred</span><span class="p">()</span>
+<span class="n">napred</span><span class="p">()</span>
+<span class="n">napred</span><span class="p">()</span>
+
+<span class="c1"># uzmi dve loptice</span>
+<span class="n">uzmi</span><span class="p">()</span>
+<span class="n">uzmi</span><span class="p">()</span>
+
+<span class="c1"># idi na polje (4, 4)</span>
+<span class="n">levo</span><span class="p">()</span>
+<span class="n">napred</span><span class="p">()</span>
+<span class="n">levo</span><span class="p">()</span>
+<span class="n">napred</span><span class="p">()</span>
+
+<span class="c1"># uzmi poslednju lopticu na polju (4, 4)</span>
+<span class="n">uzmi</span><span class="p">()</span>
+</pre></div>
+</div>
+<hr class="docutils" />
+<p>Карел може и да оставља лоптице на поједина поља. Ево како он то може да уради.</p>
+</div>
+<div class="section" id="id9">
+<h3>Премести лоптицу<a class="headerlink" href="#id9" title="Permalink to this headline">¶</a></h3>
+
+    <div class="course-box course-box-special">
+        <div class="course-content">
+            <h4 class="carbox-title">
+                <img class="corner-image float-right" src="_static/img/question-mark.png" />
+            </h4>
+            <p>
+<p>Напишите програм на основу којега ће се Карел преместити лоптицу на поље (2, 2) (приметите да Карел на почетку <strong>није</strong> окренут како треба).</p>
+
+    </p></div></div>
+
+<div data-childcomponent="Karel_intro_move_ball_in_2x2" class="karel_section course-box course-box-problem">
+    <div class="course-content">
+        <p>
+
+    <div data-component="karel" id="Karel_intro_move_ball_in_2x2" class="karel_section">
+        <div class="karel_actions col-md-12 mb-2"><button class="btn btn-success run-button">Покрени програм</button>
+        <button class="btn btn-default reset-button">Врати на почетак</button>
+        <button class="btn btn-default blockly-button" style="display: inline-block;">Blockly</button></div>
+        <div style="overflow: hidden;" class="karel_actions col-md-12" >
+            <section class="col-md-12">
+                <article>
+                    <textarea class="codeArea" id="Karel_intro_move_ball_in_2x2" name="code" rows="10" style="width: 100%;height:300px"></textarea>
+                    <textarea class="configArea" style="display:none"><!--x {
+     setup:function() {
+         var world = new World(2, 2);
+         world.setRobotStartAvenue(1);
+         world.setRobotStartStreet(1);
+         world.setRobotStartDirection("S");
+         world.putBall(2, 1);
+         world.addEWWall(2, 1, 1);
+
+     var robot = new Robot();
+
+     var code = ["from karel import *",
+                 "levo(); napred(); uzmi();  # uzmi lopticu na (2, 1)",
+                 "desno(); desno(); napred() # vrati se na (1, 1)",
+                 "desno(); napred()          # idi na (1, 2)",
+                 "desno(); napred()          # idi na (2, 2)",
+                 "ostavi()                   # ostavi lopticu na (2, 2)"];
+         return {robot:robot, world:world, code:code};
+     },
+
+     isSuccess: function(robot, world) {
+        return world.getBalls(2, 2) === 1;
+     },
+} x--></textarea>
+                </article>
+            </section>
+            <section class="col-md-12">
+                <article>
+                    <canvas class="world" style="border-style: solid; border-width: 2px; border-color: inherit; background: white;" width="300" height="300">
+                        <p>Please try loading this page in HTML5 enabled web browsers. All the latest versions of famous browsers such as Internet explorer, Chrome, Firefox, Opera support HTML5.</p>
+                    </canvas>
+                </article>
+            </section>
+        </div>
+    </div>
+    <p class="karel_caption karel_caption_text"> (Karel_intro_move_ball_in_2x2)</p>
+</p></div></div>
+
+</div>
+<div class="section" id="id10">
+<h3><strong>Грешке при извршавању</strong><a class="headerlink" href="#id10" title="Permalink to this headline">¶</a></h3>
+
+    <div class="course-box course-box-info">
+        <div class="course-content">
+            <p>
+<p>Имајте на уму да <strong>Карел не може у сваком тренутку да изврши сваку наредбу коју му задамо</strong>. Конкретније, Карел не може да иде напред ако је испред њега зид, не може да узме лоптицу тамо где је нема, и не може да је остави ако нема лоптица код себе.</p>
+<p>Пробајте да обришете прву наредбу <code class="docutils literal notranslate"><span class="pre">levo()</span></code> у претходном програму, па покрените програм и видите шта се дешава.</p>
+<p>Када програм који извршава наш програм дође до наредбе коју није могуће извршити, извршавање нашег програма се прекида и добијамо поруку о грешци при извршавању. Такве поруке су нормална ствар и виђаћемо их када год Карел није у могућности “да нас послуша”, или када је нека наредба нејасна (тачније, када није написана како треба). У таквим ситуацијама треба да се потрудимо да разумемо у чему је проблем, па да поправимо програм и поново га покренемо.</p>
+
+    </p></div></div>
+<p>У наставку је дато неколико задатка за самосталан рад. Уз сваки задатак понуђено је решење, које можете да видите када кликнете на дугме “решење”. Приказано решење можте да ископирате у простор за решавање и испробате га покретањем програма. Ваше решење може да буде сасвим добро иако је друкчије од нашег.</p>
+</div>
+</div>
+<div class="section" id="id11">
+<h2>Задаци за вежбу<a class="headerlink" href="#id11" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id12">
+<h3>Дођи до поља (3, 3)<a class="headerlink" href="#id12" title="Permalink to this headline">¶</a></h3>
+
+    <div class="course-box course-box-special">
+        <div class="course-content">
+            <h4 class="carbox-title">
+                <img class="corner-image float-right" src="_static/img/question-mark.png" />
+            </h4>
+            <p>
+<p>У овом задатку нема лоптица, потребно је само да доведете Карела до поља (3, 3).</p>
+
+    </p></div></div>
+
+<div data-childcomponent="Karel_intro_task_go_to_3_3" class="karel_section course-box course-box-problem">
+    <div class="course-content">
+        <p>
+
+    <div data-component="karel" id="Karel_intro_task_go_to_3_3" class="karel_section">
+        <div class="karel_actions col-md-12 mb-2"><button class="btn btn-success run-button">Покрени програм</button>
+        <button class="btn btn-default reset-button">Врати на почетак</button>
+        <button class="btn btn-default blockly-button" style="display: inline-block;">Blockly</button></div>
+        <div style="overflow: hidden;" class="karel_actions col-md-12" >
+            <section class="col-md-12">
+                <article>
+                    <textarea class="codeArea" id="Karel_intro_task_go_to_3_3" name="code" rows="10" style="width: 100%;height:300px"></textarea>
+                    <textarea class="configArea" style="display:none"><!--x {
+     setup:function() {
+         var world = new World(3, 3);
+         world.setRobotStartAvenue(1);
+         world.setRobotStartStreet(1);
+         world.setRobotStartDirection("N");
+         world.addNSWall(1, 1, 2);
+         world.addNSWall(2, 2, 2);
+
+     var robot = new Robot();
+
+     var code = ["from karel import *",
+                 "# dodajte naredbe koje nedostaju"];
+         return {robot:robot, world:world, code:code};
+     },
+
+     isSuccess: function(robot, world) {
+        return robot.getStreet() === 3 &&
+        robot.getAvenue() === 3;
+     },
+} x--></textarea>
+                </article>
+            </section>
+            <section class="col-md-12">
+                <article>
+                    <canvas class="world" style="border-style: solid; border-width: 2px; border-color: inherit; background: white;" width="300" height="300">
+                        <p>Please try loading this page in HTML5 enabled web browsers. All the latest versions of famous browsers such as Internet explorer, Chrome, Firefox, Opera support HTML5.</p>
+                    </canvas>
+                </article>
+            </section>
+        </div>
+    </div>
+    <p class="karel_caption karel_caption_text"> (Karel_intro_task_go_to_3_3)</p>
+</p></div></div>
+
+
+    <div data-component="reveal" id="Karel_intro_task_go_to_3_3_reveal"   data-showtitle="Решење" data-hidetitle="Сакриј решење">
+    
+<div data-childcomponent="Karel_intro_task_go_to_3_3_solution" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=Karel_intro_task_go_to_3_3_solution data-lang="python" 
+      data-timelimit=25000  data-codelens="true"  
+    data-audio=''   
+             data-passivecode="true"  data-hidehistory=true
+       >
+from karel import *
+napred(); napred()          # do polja (1, 3)
+desno(); napred()           # do polja (2, 3)
+desno(); napred(); napred() # do polja (2, 1)
+levo(); napred()            # do polja (3, 1)
+levo(); napred(); napred()  # do polja (3, 3)
+</textarea>
+</div>
+
+    </div>
+    </div>
+<div class="section" id="id13">
+<h3>Покупи лоптице<a class="headerlink" href="#id13" title="Permalink to this headline">¶</a></h3>
+
+    <div class="course-box course-box-special">
+        <div class="course-content">
+            <h4 class="carbox-title">
+                <img class="corner-image float-right" src="_static/img/question-mark.png" />
+            </h4>
+            <p>
+<p>Напишите програм на основу којега ће се Карел покупити лоптице.</p>
+
+    </p></div></div>
+
+<div data-childcomponent="Karel_intro_task_collect_balls_in_2x2" class="karel_section course-box course-box-problem">
+    <div class="course-content">
+        <p>
+
+    <div data-component="karel" id="Karel_intro_task_collect_balls_in_2x2" class="karel_section">
+        <div class="karel_actions col-md-12 mb-2"><button class="btn btn-success run-button">Покрени програм</button>
+        <button class="btn btn-default reset-button">Врати на почетак</button>
+        <button class="btn btn-default blockly-button" style="display: inline-block;">Blockly</button></div>
+        <div style="overflow: hidden;" class="karel_actions col-md-12" >
+            <section class="col-md-12">
+                <article>
+                    <textarea class="codeArea" id="Karel_intro_task_collect_balls_in_2x2" name="code" rows="10" style="width: 100%;height:300px"></textarea>
+                    <textarea class="configArea" style="display:none"><!--x {
+     setup:function() {
+         var world = new World(2, 2);
+         world.setRobotStartAvenue(1);
+         world.setRobotStartStreet(1);
+         world.setRobotStartDirection("E");
+         world.putBall(2, 1);
+         world.putBall(2, 2);
+         world.putBall(1, 2);
+         world.addEWWall(2, 1, 1);
+
+     var robot = new Robot();
+
+     var code = ["from karel import *",
+                 "# dodajte naredbe koje nedostaju",
+                 "uzmi()"];
+         return {robot:robot, world:world, code:code};
+     },
+
+     isSuccess: function(robot, world) {
+        return robot.getBalls() === 3;
+     },
+} x--></textarea>
+                </article>
+            </section>
+            <section class="col-md-12">
+                <article>
+                    <canvas class="world" style="border-style: solid; border-width: 2px; border-color: inherit; background: white;" width="300" height="300">
+                        <p>Please try loading this page in HTML5 enabled web browsers. All the latest versions of famous browsers such as Internet explorer, Chrome, Firefox, Opera support HTML5.</p>
+                    </canvas>
+                </article>
+            </section>
+        </div>
+    </div>
+    <p class="karel_caption karel_caption_text"> (Karel_intro_task_collect_balls_in_2x2)</p>
+</p></div></div>
+
+
+    <div data-component="reveal" id="Karel_intro_task_collect_balls_in_2x2_reveal"   data-showtitle="Решење" data-hidetitle="Сакриј решење">
+    
+<div data-childcomponent="Karel_intro_task_collect_balls_in_2x2_solution" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=Karel_intro_task_collect_balls_in_2x2_solution data-lang="python" 
+      data-timelimit=25000  data-codelens="true"  
+    data-audio=''   
+             data-passivecode="true"  data-hidehistory=true
+       >
+from karel import *
+napred(); uzmi()            # uzmi na polju (2, 1)
+desno(); desno(); napred()  # vrati se na polje (1, 1)
+desno(); napred(); uzmi()   # uzmi na polju (1, 2)
+desno(); napred(); uzmi()   # uzmi na polju (2, 2)
+</textarea>
+</div>
+
+    </div>
+    </div>
+<div class="section" id="id14">
+<h3>Кривудање<a class="headerlink" href="#id14" title="Permalink to this headline">¶</a></h3>
+
+    <div class="course-box course-box-special">
+        <div class="course-content">
+            <h4 class="carbox-title">
+                <img class="corner-image float-right" src="_static/img/question-mark.png" />
+            </h4>
+            <p>
+<p>Карел треба да стигне до поља (5, 1).</p>
+
+    </p></div></div>
+
+<div data-childcomponent="Karel_intro_task_stairs_fixed" class="karel_section course-box course-box-problem">
+    <div class="course-content">
+        <p>
+
+    <div data-component="karel" id="Karel_intro_task_stairs_fixed" class="karel_section">
+        <div class="karel_actions col-md-12 mb-2"><button class="btn btn-success run-button">Покрени програм</button>
+        <button class="btn btn-default reset-button">Врати на почетак</button>
+        <button class="btn btn-default blockly-button" style="display: inline-block;">Blockly</button></div>
+        <div style="overflow: hidden;" class="karel_actions col-md-12" >
+            <section class="col-md-12">
+                <article>
+                    <textarea class="codeArea" id="Karel_intro_task_stairs_fixed" name="code" rows="10" style="width: 100%;height:300px"></textarea>
+                    <textarea class="configArea" style="display:none"><!--x {
+   setup:function() {
+
+      var Y = 3;
+      var X = 2 * Y - 1;
+      var world = new World(X, Y);
+      world.setRobotStartAvenue(1);
+      world.setRobotStartStreet(1);
+      world.setRobotStartDirection("E");
+
+      // Vertical walls
+      for (let y = 1; y &lt; Y; y++) world.addNSWall(y, y, 1); // low left
+      for (let y = 1; y &lt; Y; y++) world.addNSWall(X - 1 - y, y, 1); // low right
+      for (let y = 3; y &lt;= Y; y++) world.addNSWall(y - 2, y, 1); // high left
+      for (let y = 2; y &lt;= Y; y++) world.addNSWall(X + 1 - y, y, 1); // high right
+
+      // Horizontal walls
+      for (let y = 1; y &lt; Y - 1; y++) world.addEWWall(y + 1, y, 1); // low left
+      for (let y = 2; y &lt; Y; y++) world.addEWWall(y - 1, y, 1); // high left
+      for (let y = 1; y &lt; Y - 1; y++) world.addEWWall(X - 1 - y, y, 1); // low right
+      for (let y = 1; y &lt; Y; y++) world.addEWWall(X + 1 - y, y, 1); // high right
+
+      var robot = new Robot();
+
+      var code = ["from karel import *",
+                  "# dodajte naredbe ",
+                  ""];
+
+      return {robot:robot, world:world, code:code};
+   },
+
+   isSuccess: function(robot, world) {
+      return robot.getAvenue() == world.getAvenues() &&
+         robot.getStreet() == 1;
+   },
+} x--></textarea>
+                </article>
+            </section>
+            <section class="col-md-12">
+                <article>
+                    <canvas class="world" style="border-style: solid; border-width: 2px; border-color: inherit; background: white;" width="300" height="300">
+                        <p>Please try loading this page in HTML5 enabled web browsers. All the latest versions of famous browsers such as Internet explorer, Chrome, Firefox, Opera support HTML5.</p>
+                    </canvas>
+                </article>
+            </section>
+        </div>
+    </div>
+    <p class="karel_caption karel_caption_text"> (Karel_intro_task_stairs_fixed)</p>
+</p></div></div>
+
+
+    <div data-component="reveal" id="Karel_intro_task_stairs_fixed_reveal"   data-showtitle="Решење" data-hidetitle="Сакриј решење">
+    
+<div data-childcomponent="Karel_intro_task_stairs_fixed_solution" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=Karel_intro_task_stairs_fixed_solution data-lang="python" 
+      data-timelimit=25000  data-codelens="true"  
+    data-audio=''   
+             data-passivecode="true"  data-hidehistory=true
+       >
+from karel import *
+levo(); napred()     # na (1, 2)
+desno(); napred()    # na (2, 2)
+levo(); napred()     # na (2, 3)
+desno(); napred()    # na (3, 3)
+desno(); napred()    # na (3, 2)
+levo(); napred()     # na (4, 2)
+desno(); napred()    # na (4, 1)
+levo(); napred()     # na (5, 1)
+</textarea>
+</div>
+
+    </div>
+    </div>
+<div class="section" id="id15">
+<h3>Право па лево, па опет<a class="headerlink" href="#id15" title="Permalink to this headline">¶</a></h3>
+
+    <div class="course-box course-box-special">
+        <div class="course-content">
+            <h4 class="carbox-title">
+                <img class="corner-image float-right" src="_static/img/question-mark.png" />
+            </h4>
+            <p>
+<p>Карел треба да стигне до поља (2, 3).</p>
+
+    </p></div></div>
+
+<div data-childcomponent="Karel_intro_task_spiral_left_fixed" class="karel_section course-box course-box-problem">
+    <div class="course-content">
+        <p>
+
+    <div data-component="karel" id="Karel_intro_task_spiral_left_fixed" class="karel_section">
+        <div class="karel_actions col-md-12 mb-2"><button class="btn btn-success run-button">Покрени програм</button>
+        <button class="btn btn-default reset-button">Врати на почетак</button>
+        <button class="btn btn-default blockly-button" style="display: inline-block;">Blockly</button></div>
+        <div style="overflow: hidden;" class="karel_actions col-md-12" >
+            <section class="col-md-12">
+                <article>
+                    <textarea class="codeArea" id="Karel_intro_task_spiral_left_fixed" name="code" rows="10" style="width: 100%;height:300px"></textarea>
+                    <textarea class="configArea" style="display:none"><!--x {
+   setup:function() {
+
+      var N = 4;
+      var world = new World(N, N);
+      world.setRobotStartAvenue(1);
+      world.setRobotStartStreet(1);
+      world.setRobotStartDirection("E");
+
+      var i = 1;
+      for (let d = N - 1; d > 0; d -= 2) { world.addEWWall(i, i, d); i++; }
+      i = 2;
+      for (let d = N - 2; d > 0; d -= 2) { world.addEWWall(i, N+1-i, d); i++; }
+      i = 2;
+      for (let d = N - 2; d > 0; d -= 2) { world.addNSWall(N+1-i, i, d); i++; }
+      i = 1;
+      for (let d = N - 3; d > 0; d -= 2) { world.addNSWall(i, i+2, d); i++; }
+
+      var robot = new Robot();
+
+      var code = ["from karel import *",
+                  "# dodajte naredbe ",
+                  ""];
+
+      return {robot:robot, world:world, code:code};
+   },
+
+   isSuccess: function(robot, world) {
+      var N = world.getAvenues();
+      return robot.getStreet() === Math.floor((N+2)/2) &&
+        robot.getAvenue() === Math.floor((N+1)/2);
+  },
+} x--></textarea>
+                </article>
+            </section>
+            <section class="col-md-12">
+                <article>
+                    <canvas class="world" style="border-style: solid; border-width: 2px; border-color: inherit; background: white;" width="300" height="300">
+                        <p>Please try loading this page in HTML5 enabled web browsers. All the latest versions of famous browsers such as Internet explorer, Chrome, Firefox, Opera support HTML5.</p>
+                    </canvas>
+                </article>
+            </section>
+        </div>
+    </div>
+    <p class="karel_caption karel_caption_text"> (Karel_intro_task_spiral_left_fixed)</p>
+</p></div></div>
+
+
+    <div data-component="reveal" id="Karel_intro_task_spiral_left_fixed_reveal"   data-showtitle="Решење" data-hidetitle="Сакриј решење">
+    
+<div data-childcomponent="Karel_intro_task_spiral_left_fixed_solution" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=Karel_intro_task_spiral_left_fixed_solution data-lang="python" 
+      data-timelimit=25000  data-codelens="true"  
+    data-audio=''   
+             data-passivecode="true"  data-hidehistory=true
+       >
+from karel import *
+napred(); napred(); napred(); levo() # do (4, 1)
+napred(); napred(); napred(); levo() # do (4, 4)
+napred(); napred(); napred(); levo() # do (1, 4)
+napred(); napred(); levo()           # do (1, 2)
+napred(); napred(); levo()           # do (3, 2)
+napred(); levo()                     # do (3, 3)
+napred();                            # do (2, 3)
+</textarea>
+</div>
+
+    </div>
+    </div>
+</div>
+</div>
+
+
+  
+      <div class="col-md-12">
+<ul class="pager">
+</ul>
+
+<!-- <ul class="pager"> -->
+    <!-- -->
+    <!-- -->
+<!-- </ul> -->
+
+<script type="text/javascript">
+
+  $('#relations-prev').tooltip({'placement':'right', 'selector': '', 'delay': { show: 100, hide: 50}});
+  $('#relations-next').tooltip({'placement':'left', 'selector': '', 'delay': { show: 100, hide: 50}});
+
+</script>
+</div>
+  
+</div>
+<footer class="footer col-md-12">
+    <div class="container">
+        <div class="text-center">
+            <hr>
+            <p class="text-muted">
+                <span class="pull-left">&copy; 2019 Petlja (Created using  <a href="https://pypi.org/project/Sphinx/">Swinx</a>, <a href="http://runestoneinteractive.org/">RunestoneComponents</a> and <a href="https://github.com/Petlja/PetljaDoc">PetljaDoc</a>)</span>
+            </p>
+        </div>
+    </div>
+</footer>
+
+
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-32029811-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+
+
+  </body>
+</html>

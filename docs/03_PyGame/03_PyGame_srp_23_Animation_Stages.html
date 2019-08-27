@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Анимација по фазама &#8212; Textual Programming in Python</title>
+    <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/activecode.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/codemirror.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/clickable.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pytutor.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/modal-basic.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/datafile.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/dragndrop.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/fitb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/matrixeq.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/parsons.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/lib/prettify.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/poll.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/showEval.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/tabbedstuff.css" />
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/video.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/karel.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/notes.css" />
+    <link rel="stylesheet" href="../_static/user-highlights.css" type="text/css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootstrap-4.0.0-dist/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/flatly.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/petlja.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../_static/runestonebase.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/language_data.js"></script>
+    <script type="text/javascript" src="../_static/jquery.highlight.js"></script>
+    <script type="text/javascript" src="../_static/bookfuncs.js"></script>
+    <script type="text/javascript" src="../_static/codemirror.js"></script>
+    <script type="text/javascript" src="../_static/xml.js"></script>
+    <script type="text/javascript" src="../_static/css.js"></script>
+    <script type="text/javascript" src="../_static/python.js"></script>
+    <script type="text/javascript" src="../_static/htmlmixed.js"></script>
+    <script type="text/javascript" src="../_static/javascript.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/CLDRPluralRuleParser.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.messagestore.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.fallbacks.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.language.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.parser.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.emitter.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.emitter.bidi.js"></script>
+    <script type="text/javascript" src="../_static/activecode-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/skulpt.min.js"></script>
+    <script type="text/javascript" src="../_static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="../_static/activecode.js"></script>
+    <script type="text/javascript" src="../_static/clike.js"></script>
+    <script type="text/javascript" src="../_static/timed_activecode.js"></script>
+    <script type="text/javascript" src="../_static/animationbase.js"></script>
+    <script type="text/javascript" src="../_static/mchoice.js"></script>
+    <script type="text/javascript" src="../_static/timedmc.js"></script>
+    <script type="text/javascript" src="../_static/timed.js"></script>
+    <script type="text/javascript" src="../_static/mchoice-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/clickable.js"></script>
+    <script type="text/javascript" src="../_static/timedclickable.js"></script>
+    <script type="text/javascript" src="../_static/d3.v2.min.js"></script>
+    <script type="text/javascript" src="../_static/jquery.ba-bbq.min.js"></script>
+    <script type="text/javascript" src="../_static/jquery.jsPlumb-1.3.10-all-min.js"></script>
+    <script type="text/javascript" src="../_static/pytutor.js"></script>
+    <script type="text/javascript" src="../_static/codelens.js"></script>
+    <script type="text/javascript" src="../_static/datafile.js"></script>
+    <script type="text/javascript" src="../_static/dragndrop.js"></script>
+    <script type="text/javascript" src="../_static/timeddnd.js"></script>
+    <script type="text/javascript" src="../_static/dragndrop-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/fitb.js"></script>
+    <script type="text/javascript" src="../_static/timedfitb.js"></script>
+    <script type="text/javascript" src="../_static/fitb-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/matrixeq.js"></script>
+    <script type="text/javascript" src="../_static/lib/prettify.js"></script>
+    <script type="text/javascript" src="../_static/lib/hammer.min.js"></script>
+    <script type="text/javascript" src="../_static/parsons.js"></script>
+    <script type="text/javascript" src="../_static/timedparsons.js"></script>
+    <script type="text/javascript" src="../_static/poll.js"></script>
+    <script type="text/javascript" src="../_static/reveal.js"></script>
+    <script type="text/javascript" src="../_static/shortanswer.js"></script>
+    <script type="text/javascript" src="../_static/timed_shortanswer.js"></script>
+    <script type="text/javascript" src="../_static/showEval.js"></script>
+    <script type="text/javascript" src="../_static/tabbedstuff.js"></script>
+    <script type="text/javascript" src="../_static/runestonevideo.js"></script>
+    <script type="text/javascript" src="../_static/karelCorner.js"></script>
+    <script type="text/javascript" src="../_static/karelRobot.js"></script>
+    <script type="text/javascript" src="../_static/karelWorld.js"></script>
+    <script type="text/javascript" src="../_static/karelRobotDrawer.js"></script>
+    <script type="text/javascript" src="../_static/karelUI.js"></script>
+    <script type="text/javascript" src="../_static/karel.js"></script>
+    <script type="text/javascript" src="../_static/karel-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/karel-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/notes.js"></script>
+    <script type="text/javascript" src="../_static/pygamelib-init.js"></script>
+    <script type="text/javascript" src="../_static/blockly/blockly_compressed.js"></script>
+    <script type="text/javascript" src="../_static/blockly/blocks_compressed.js"></script>
+    <script type="text/javascript" src="../_static/blockly/python_compressed.js"></script>
+    <script type="text/javascript" src="../_static/blockly/msg-sr.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/utilities.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/python_errors.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/ast_node_visitor.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/abstract_interpreter.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/pytifa.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/abstract_interpreter_definitions.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/python_to_blockly.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/imported.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/class.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/comment.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/comprehensions.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/dict.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/if.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/io.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/lists.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/sets.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/loops.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/parking.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/tuple.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/turtles.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/text.js"></script>
+    <script type="text/javascript" src="../_static/blockpy-modal.js"></script>
+    <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="../_static/jquery-ui-1.10.3.custom.min.js"></script>
+    <script type="text/javascript" src="../_static/jquery-fix.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-4.0.0-dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-4.0.0-dist/js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
+    <script type="text/javascript" src="../_static/waypoints.min.js"></script>
+    <script type="text/javascript" src="../_static/rangy-core.js"></script>
+    <script type="text/javascript" src="../_static/rangy-textrange.js"></script>
+    <script type="text/javascript" src="../_static/rangy-cssclassapplier.js"></script>
+    <script type="text/javascript" src="../_static/user-highlights.js"></script>
+    <script type="text/javascript" src="../_static/jquery.idle-timer.js"></script>
+    <script type="text/javascript" src="../_static/processing-1.4.1.min.js"></script>
+    <script type="text/javascript" src="../_static/jquery.hotkey.js"></script>
+    <script type="text/javascript" src="../_static/jquery-migrate-1.2.1.min.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+<link rel="shortcut icon" href="_static/favicon.ico" type="image/ico" />
+
+<script type="text/javascript">
+  eBookConfig = {};
+  eBookConfig.host = 'http://127.0.0.1:8000' ? 'http://127.0.0.1:8000' : 'http://127.0.0.1:8000';
+  eBookConfig.app = eBookConfig.host+'/runestone';
+  eBookConfig.ajaxURL = eBookConfig.app+'/ajax/';
+  eBookConfig.course = 'TxtProgInPython';
+  eBookConfig.logLevel = 0;
+  eBookConfig.loginRequired = false;
+  eBookConfig.build_info = "";
+  eBookConfig.isLoggedIn = false;
+  eBookConfig.useRunestoneServices = false;
+  eBookConfig.python3 = true;
+  eBookConfig.basecourse = 'TxtProgInPython';
+  eBookConfig.runestone_version = '3.1.1';
+  eBookConfig.imagesDir = '../_images/';
+  if(typeof(Sk) != "undefined")
+      Sk.imgPath = eBookConfig.imagesDir;
+</script>
+
+<div id="fb-root"></div>
+
+
+
+  </head><body>
+
+
+<!-- Begin navbar -->
+
+<nav id="navbar" class="navbar navbar-default navbar-fixed-top" role="navigation">
+
+  <div class="container">
+
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+     <img src="../_static/img/logo.png" style="width:80px; height: 80px;"> 
+    </div>
+
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" style="margin-top: 10px; margin-left: 25px;">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="../">Textual Programming in Python</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<div class="container col-md-12" id="continue-reading"></div>
+
+<div class="container col-md-8 col-md-offset-2" id="main-content">
+  
+  <div class="section" id="id1">
+<h1>Анимација по фазама<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="id2">
+<h2>Семафор<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<p>Један од најпознатијих примера уређаја који ради по фазама је семафор који регулише саобраћај. На примеру семафора ћемо објаснити рад по фазама и како можемо да анимирамо на рачунару догађања која се одвијају по фазама.</p>
+<p>Постоји неколико стања у којима семафор може да се нађе. На пример, може да светли црвено, да светли трепћуће жуто, да буде искључен итд. Период у току којег семафор не мења стање зваћемо фаза. При нормалном раду семафора фазе се циклично смењују и свака фаза има своје трајање. Узмимо као пример семафор на коме се смењују следеће четири фазе: 1 - црвено светло, 2 - црвено и жуто светло, 3 - зелено светло, и 4 - жуто светло.</p>
+<p>Да би анимација била једноставнија, трајање сваке фазе ћемо изразити бројем фрејмова (уместо секундама). Нека су трајања поменутих фаза <span class="math notranslate nohighlight">\(n_1\)</span>, <span class="math notranslate nohighlight">\(n_2\)</span>, <span class="math notranslate nohighlight">\(n_3\)</span> и <span class="math notranslate nohighlight">\(n_4\)</span> фрејмова редом. Тада цео циклус траје <span class="math notranslate nohighlight">\(N = n_1 + n_2 + n_3 + n_4\)</span> фрејмова. Од тих <span class="math notranslate nohighlight">\(N\)</span> фрејмова, првих <span class="math notranslate nohighlight">\(n_1\)</span> припада првој фази, следећих <span class="math notranslate nohighlight">\(n_2\)</span> другој итд.</p>
+<p>Да бисмо знали којој фази припада текући фрејм, можемо да уведемо глобалну променљиву која броји фрејмове. Пошто цео циклус траје <span class="math notranslate nohighlight">\(N\)</span> фрејмова, довољно је да бројимо по модулу <span class="math notranslate nohighlight">\(N\)</span>. То значи да када бројач фрејмова достигне вредност <span class="math notranslate nohighlight">\(N-1\)</span>, следећа вредност је нула (бројимо само у оквиру једног циклуса). При томе, за вредности од 0 до <span class="math notranslate nohighlight">\(n_1 - 1\)</span>, фрејм припада првој фази, за вредности од <span class="math notranslate nohighlight">\(n_1\)</span> до <span class="math notranslate nohighlight">\(n_1 + n_2 - 1\)</span>, другој фази, за вредности од <span class="math notranslate nohighlight">\(n_1 + n_2\)</span> до <span class="math notranslate nohighlight">\(n_1 + n_2 + n_3 - 1\)</span> трећој, а за вредности од <span class="math notranslate nohighlight">\(n_1 + n_2 + n_3\)</span> до <span class="math notranslate nohighlight">\(N-1\)</span> четвртој.</p>
+<p>Ево како може да изгледа програм написан на основу овог разматрања:</p>
+
+<div data-childcomponent="PyGame__anim_stages_traffic_lights1_srp" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=PyGame__anim_stages_traffic_lights1_srp data-lang="python" 
+      data-timelimit=25000    
+    data-audio=''   
+              data-modaloutput="true" data-hidehistory=true
+    data-includesrc="import pygame as pg, petljapg
+(sirina, visina) = (100, 300)
+prozor = petljapg.open_window(sirina, visina, &quot;Семафор&quot;)
+
+# faze su: crveno, crveno_zuto, zeleno, zuto
+trajanje_faze = (25, 10, 25, 10) # 25 frejmova za crveno, 10 za crveno_zuto itd.
+
+kraj_faze = []
+ukupno_frejmova = 0
+for f in trajanje_faze:
+    ukupno_frejmova += f
+    kraj_faze.append(ukupno_frejmova)
+
+x = 50             # x koordinata centara krugova
+y = [50, 150, 250] # y koordinate centara krugova
+r = 40             # poluprecnik (svih) krugova
+crvena_uklj  = (255,   0, 0)
+crvena_isklj = (128,   0, 0)
+zuta_uklj    = (255, 255, 0)
+zuta_isklj   = (128, 128, 0)
+zelena_uklj  = (  0, 255, 0)
+zelena_isklj = (  0, 128, 0)
+
+i_frejm  = 0
+fps = 10
+
+def crtaj_semafor(boja_gore, boja_sredina, boja_dole):
+    pg.draw.circle(prozor, boja_gore,    (x,  y[0]), r)
+    pg.draw.circle(prozor, boja_sredina, (x,  y[1]), r)
+    pg.draw.circle(prozor, boja_dole,    (x,  y[2]), r)
+        
+def nov_frejm():
+    global i_frejm
+    i_frejm = (i_frejm + 1) % ukupno_frejmova
+    
+    prozor.fill(pg.Color(&quot;darkgray&quot;)) # bojimo pozadinu prozora u sivo
+    if i_frejm &lt; kraj_faze[0]: # ako frejm pripada fazi &apos;crveno&apos;
+        crtaj_semafor(crvena_uklj, zuta_isklj, zelena_isklj)
+    elif i_frejm &lt; kraj_faze[1]: # ako frejm pripada fazi &apos;crveno_zuto&apos;
+        crtaj_semafor(crvena_uklj, zuta_uklj, zelena_isklj)
+    elif i_frejm &lt; kraj_faze[2]: # ako frejm pripada fazi &apos;zeleno&apos;
+        crtaj_semafor(crvena_isklj, zuta_isklj, zelena_uklj)
+    else: # frejm pripada poslednjoj fazi (&apos;zuto&apos;)
+        crtaj_semafor(crvena_isklj, zuta_uklj, zelena_isklj)
+
+petljapg.frame_loop(fps, nov_frejm)
+"   >
+
+
+</textarea>
+</div>
+</div>
+<div class="section" id="id3">
+<h2>Задаци<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
+
+    <div class="course-box course-box-special">
+        <div class="course-content">
+            <h4 class="carbox-title">
+                <img class="corner-image float-right" src="../_static/img/question-mark.png" />
+            </h4>
+            <p>
+<p><strong>Пета фаза:</strong> Копирајте претходни програм, па убаците фазу за трепћуће зелено светло после зеленог, а пре жутог светла (као у примеру - дугме “Прикажи пример”).</p>
+
+    </p></div></div>
+
+<div data-childcomponent="PyGame__anim_stages_traffic_lights1a_srp" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=PyGame__anim_stages_traffic_lights1a_srp data-lang="python" 
+      data-timelimit=25000    
+    data-audio=''   
+           data-playtask="true"   data-modaloutput="true" data-hidehistory=true
+     data-includehsrc="import pygame as pg, petljapg
+(sirina, visina) = (100, 300)
+prozor = petljapg.open_window(sirina, visina, &quot;Семафор&quot;)
+
+# faze su: crveno, crveno_zuto, zeleno, trepcuce zeleno, zuto
+trajanje_faze = (25, 10, 25, 6, 10) # 25 frejmova za crveno, 10 za crveno_zuto itd.
+
+kraj_faze = []
+ukupno_frejmova = 0
+for f in trajanje_faze:
+    ukupno_frejmova += f
+    kraj_faze.append(ukupno_frejmova)
+
+x = 50             # x koordinata centara krugova
+y = [50, 150, 250] # y koordinate centara krugova
+r = 40             # poluprecnik (svih) krugova
+crvena_uklj  = (255,   0, 0)
+crvena_isklj = (128,   0, 0)
+zuta_uklj    = (255, 255, 0)
+zuta_isklj   = (128, 128, 0)
+zelena_uklj  = (  0, 255, 0)
+zelena_isklj = (  0, 128, 0)
+
+i_frejm  = 0
+fps = 10
+
+def crtaj_semafor(boja_gore, boja_sredina, boja_dole):
+    pg.draw.circle(prozor, boja_gore,    (x,  y[0]), r)
+    pg.draw.circle(prozor, boja_sredina, (x,  y[1]), r)
+    pg.draw.circle(prozor, boja_dole,    (x,  y[2]), r)
+        
+def nov_frejm():
+    global i_frejm
+    i_frejm = (i_frejm + 1) % ukupno_frejmova
+    
+    prozor.fill(pg.Color(&quot;darkgray&quot;)) # bojimo pozadinu prozora u sivo
+    if i_frejm &lt; kraj_faze[0]: # ako frejm pripada fazi &apos;crveno&apos;
+        crtaj_semafor(crvena_uklj, zuta_isklj, zelena_isklj)
+    elif i_frejm &lt; kraj_faze[1]: # ako frejm pripada fazi &apos;crveno_zuto&apos;
+        crtaj_semafor(crvena_uklj, zuta_uklj, zelena_isklj)
+    elif i_frejm &lt; kraj_faze[2]: # ako frejm pripada fazi &apos;zeleno&apos;
+        crtaj_semafor(crvena_isklj, zuta_isklj, zelena_uklj)
+    elif i_frejm &lt; kraj_faze[3]: # ako frejm pripada fazi &apos;trepcuce zeleno&apos;
+        if i_frejm % 2 == 0:
+            crtaj_semafor(crvena_isklj, zuta_isklj, zelena_uklj)
+        else:
+            crtaj_semafor(crvena_isklj, zuta_isklj, zelena_isklj)
+    else: # frejm pripada poslednjoj fazi (&apos;zuto&apos;)
+        crtaj_semafor(crvena_isklj, zuta_uklj, zelena_isklj)
+
+petljapg.frame_loop(fps, nov_frejm)
+"  >
+
+
+</textarea>
+</div>
+<p><strong>Помоћ:</strong> У петој фази нећемо имати један позив функције <em>crtaj_semafor</em>, него део кода који отприлике изгледа овако:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="n">i_frejm</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+    <span class="n">crtaj_semafor</span><span class="p">(</span><span class="o">...</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="n">crtaj_semafor</span><span class="p">(</span><span class="o">...</span><span class="p">)</span>
+</pre></div>
+</div>
+
+    <div class="course-box course-box-special">
+        <div class="course-content">
+            <h4 class="carbox-title">
+                <img class="corner-image float-right" src="../_static/img/question-mark.png" />
+            </h4>
+            <p>
+<p><strong>Авион:</strong> Напишите програм који ради као у примеру (дугме “Прикажи пример”).</p>
+<p>Опис кретања: авион полази са средине леве ивице прозора. Креће се прво 20 фрејмова по 2 пиксела десно и горе, затим 20 фрејмова по 2 пиксела десно и доле. Када изађе кроз десну ивицу прозора, појављује се на истој висини са леве стране. Брзина приказивања је 50 фрејмова у секунди.</p>
+
+    </p></div></div>
+<a class="reference internal image-reference" href="../_images/airplane.png"><img alt="../_images/airplane.png" src="../_images/airplane.png" style="width: 50px;" /></a>
+<a class="reference internal image-reference" href="../_images/sun.png"><img alt="../_images/sun.png" src="../_images/sun.png" style="width: 50px;" /></a>
+
+<div data-childcomponent="PyGame__anim_stages_plane_srp" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=PyGame__anim_stages_plane_srp data-lang="python" 
+      data-timelimit=25000    
+    data-audio=''   
+           data-playtask="true"   data-modaloutput="true" data-hidehistory=true
+     data-includehsrc="import pygame as pg, petljapg
+(sirina, visina) = (800, 350)
+prozor = petljapg.open_window(sirina, visina, &quot;Авион&quot;)
+
+sunce_slika = pg.image.load(&quot;sun.png&quot;)      # slika sunca
+avion_slika = pg.image.load(&quot;airplane.png&quot;) # slika aviona
+avion_sirina = avion_slika.get_width()      # sirina slike aviona
+avion_visina = avion_slika.get_height()     # visina slike aviona
+
+# položaj aviona - na pocetku sredina leve ivice prozora
+(avion_x, avion_y) = (0, (visina - avion_visina)  // 2)
+i_frejm = 0
+KRAJ_PRVE_FAZE = 20
+UKUPNO_FREJMOVA = 40
+def nov_frejm():
+    global avion_x, avion_y, i_frejm    # menjacemo položaj aviona i brojac frejmova
+    i_frejm = (i_frejm + 1) % UKUPNO_FREJMOVA
+    if i_frejm &lt; KRAJ_PRVE_FAZE:
+        avion_y -= 2  # u prvoj fazi pomeramo avion 1 piksel na gore
+    else:
+        avion_y += 2  # u drugoj fazi pomeramo avion 1 piksel na dole
+
+    avion_x += 2      # pomeramo avion 1 piksel na desno
+    if avion_x &gt; sirina:
+        avion_x = -avion_sirina
+
+    prozor.fill(pg.Color(&quot;skyblue&quot;))               # bojimo pozadinu u plavo
+    prozor.blit(sunce_slika, (0, 0))               # crtamo sunce
+    prozor.blit(avion_slika, (avion_x, avion_y))   # crtamo avion
+
+petljapg.frame_loop(50, nov_frejm)
+"  >
+import pygame as pg, petljapg
+(sirina, visina) = (800, 350)
+prozor = petljapg.init(sirina, visina, "Авион")
+
+sunce_slika = pg.image.load("sun.png")      # slika sunca
+avion_slika = pg.image.load("airplane.png") # slika aviona
+avion_sirina = avion_slika.get_width()      # sirina slike aviona
+avion_visina = avion_slika.get_height()     # visina slike aviona
+# dovrsite
+</textarea>
+</div>
+
+    <div class="course-box course-box-special">
+        <div class="course-content">
+            <h4 class="carbox-title">
+                <img class="corner-image float-right" src="../_static/img/question-mark.png" />
+            </h4>
+            <p>
+<p><strong>Кртица:</strong> Напишите програм који ради као у примеру (дугме “Прикажи пример”).</p>
+<p>Учитава се 10 слика на којима кртица редом све више вири из рупе. Циклус има четири фазе, које заједно трају 28 фрејмова.</p>
+<ul class="simple">
+<li><p>Прва фаза траје 10 фрејмова и током ње кртица излази из рупе (приказују се редом слике од прве до десете).</p></li>
+<li><p>Друга фаза траје 5 фрејмова и током ње кртица је у највишем положају (приказује се десета слика).</p></li>
+<li><p>Трећа фаза траје 10 фрејмова и током ње кртица улази у рупу (приказују се слике од десете до прве).</p></li>
+<li><p>Четврта фаза траје 3 фрејма и током ње кртица је у рупи (приказује се прва слика).</p></li>
+</ul>
+
+    </p></div></div>
+<a class="reference internal image-reference" href="../_images/mole1.png"><img alt="../_images/mole1.png" src="../_images/mole1.png" style="width: 50px;" /></a>
+<a class="reference internal image-reference" href="../_images/mole2.png"><img alt="../_images/mole2.png" src="../_images/mole2.png" style="width: 50px;" /></a>
+<a class="reference internal image-reference" href="../_images/mole3.png"><img alt="../_images/mole3.png" src="../_images/mole3.png" style="width: 50px;" /></a>
+<a class="reference internal image-reference" href="../_images/mole4.png"><img alt="../_images/mole4.png" src="../_images/mole4.png" style="width: 50px;" /></a>
+<a class="reference internal image-reference" href="../_images/mole5.png"><img alt="../_images/mole5.png" src="../_images/mole5.png" style="width: 50px;" /></a>
+<a class="reference internal image-reference" href="../_images/mole6.png"><img alt="../_images/mole6.png" src="../_images/mole6.png" style="width: 50px;" /></a>
+<a class="reference internal image-reference" href="../_images/mole7.png"><img alt="../_images/mole7.png" src="../_images/mole7.png" style="width: 50px;" /></a>
+<a class="reference internal image-reference" href="../_images/mole8.png"><img alt="../_images/mole8.png" src="../_images/mole8.png" style="width: 50px;" /></a>
+<a class="reference internal image-reference" href="../_images/mole9.png"><img alt="../_images/mole9.png" src="../_images/mole9.png" style="width: 50px;" /></a>
+<a class="reference internal image-reference" href="../_images/mole10.png"><img alt="../_images/mole10.png" src="../_images/mole10.png" style="width: 50px;" /></a>
+
+<div data-childcomponent="PyGame__anim_stages_mole_srp" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=PyGame__anim_stages_mole_srp data-lang="python" 
+      data-timelimit=25000    
+    data-audio=''   
+           data-playtask="true"   data-modaloutput="true" data-hidehistory=true
+     data-includehsrc="import pygame as pg, petljapg
+(sirina, visina) = (150, 150)
+prozor = petljapg.open_window(sirina, visina, &quot;Кртица&quot;)
+
+slike = []   # niz koji ce da sadrzi slike
+for i in range(1, 11): # učitavamo u listu slike mole1.png, ..., mole10.png
+    naziv_slike = &quot;mole&quot; + str(i) + &quot;.png&quot;  # gradimo naziv slike od delova
+    slike.append(pg.image.load(naziv_slike))
+
+braon = (60, 42, 3)
+Y_HORIZONT = 125
+ZEMLJA = (0, Y_HORIZONT, sirina, visina - Y_HORIZONT) # deo slike ispod horizonta
+i_frejm = 0 # redni broj frejma u sekvenci
+
+def nov_frejm():
+    global i_frejm, i_slika
+    i_frejm = (i_frejm + 1) % 28 # ukupan broj frejmova je 28
+    if i_frejm &lt; 10:
+        i_slika = i_frejm        # prva faza - podizanje
+    elif i_frejm &lt; 15:
+        i_slika = 9              # druga faza - krtica je gore
+    elif i_frejm &lt; 25:
+        i_slika = 24 - i_frejm   # treca faza - spustanje
+    else:
+        i_slika = 0              # cetvrta faza - krtica je dole
+
+    prozor.fill(pg.Color(&quot;skyblue&quot;))     # bojimo pozadinu prozora u nebo-plavo
+    pg.draw.rect(prozor, braon, ZEMLJA)  # bojimo pravougaonik ZEMLJA u braon
+    prozor.blit(slike[i_slika], (0, 0))  # prikazujemo sliku
+
+petljapg.frame_loop(10, nov_frejm)
+"  >
+import pygame as pg, petljapg
+(sirina, visina) = (150, 150)
+prozor = petljapg.init(sirina, visina, "Кртица")
+
+slike = []   # niz koji ce da sadrzi slike
+for i in range(1, 11): # učitavamo u listu slike mole1.png, ..., mole10.png
+    naziv_slike = "mole" + str(i) + ".png"  # gradimo naziv slike od delova
+    slike.append(pg.image.load(naziv_slike))
+
+braon = (60, 42, 3)
+Y_HORIZONT = 125
+ZEMLJA = (0, Y_HORIZONT, sirina, visina - Y_HORIZONT) # deo slike ispod horizonta
+i_frejm = 0 # redni broj frejma u sekvenci
+
+def nov_frejm():
+    # dopunite - izracunajte koja slika se prikazuje u ovom frejmu
+
+    prozor.fill(pg.Color("skyblue"))     # bojimo pozadinu prozora u nebo-plavo
+    pg.draw.rect(prozor, braon, ZEMLJA)  # bojimo pravougaonik ZEMLJA u braon
+    prozor.blit(slike[i_slika], (0, 0))  # prikazujemo sliku
+
+petljapg.run(10, nov_frejm)
+</textarea>
+</div>
+</div>
+</div>
+
+
+  
+      <div class="col-md-12">
+<ul class="pager">
+</ul>
+
+<!-- <ul class="pager"> -->
+    <!-- -->
+    <!-- -->
+<!-- </ul> -->
+
+<script type="text/javascript">
+
+  $('#relations-prev').tooltip({'placement':'right', 'selector': '', 'delay': { show: 100, hide: 50}});
+  $('#relations-next').tooltip({'placement':'left', 'selector': '', 'delay': { show: 100, hide: 50}});
+
+</script>
+</div>
+  
+</div>
+<footer class="footer col-md-12">
+    <div class="container">
+        <div class="text-center">
+            <hr>
+            <p class="text-muted">
+                <span class="pull-left">&copy; 2019 Petlja (Created using  <a href="https://pypi.org/project/Sphinx/">Swinx</a>, <a href="http://runestoneinteractive.org/">RunestoneComponents</a> and <a href="https://github.com/Petlja/PetljaDoc">PetljaDoc</a>)</span>
+            </p>
+        </div>
+    </div>
+</footer>
+
+
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-32029811-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+
+
+  </body>
+</html>

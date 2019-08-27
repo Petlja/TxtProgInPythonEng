@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Changing the drawing size &#8212; Textual Programming in Python</title>
+    <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/activecode.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/codemirror.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/clickable.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pytutor.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/modal-basic.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/datafile.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/dragndrop.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/fitb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/matrixeq.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/parsons.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/lib/prettify.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/poll.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/showEval.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/tabbedstuff.css" />
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/video.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/karel.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/notes.css" />
+    <link rel="stylesheet" href="../_static/user-highlights.css" type="text/css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootstrap-4.0.0-dist/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/flatly.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/petlja.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../_static/runestonebase.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/language_data.js"></script>
+    <script type="text/javascript" src="../_static/jquery.highlight.js"></script>
+    <script type="text/javascript" src="../_static/bookfuncs.js"></script>
+    <script type="text/javascript" src="../_static/codemirror.js"></script>
+    <script type="text/javascript" src="../_static/xml.js"></script>
+    <script type="text/javascript" src="../_static/css.js"></script>
+    <script type="text/javascript" src="../_static/python.js"></script>
+    <script type="text/javascript" src="../_static/htmlmixed.js"></script>
+    <script type="text/javascript" src="../_static/javascript.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/CLDRPluralRuleParser.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.messagestore.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.fallbacks.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.language.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.parser.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.emitter.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.emitter.bidi.js"></script>
+    <script type="text/javascript" src="../_static/activecode-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/skulpt.min.js"></script>
+    <script type="text/javascript" src="../_static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="../_static/activecode.js"></script>
+    <script type="text/javascript" src="../_static/clike.js"></script>
+    <script type="text/javascript" src="../_static/timed_activecode.js"></script>
+    <script type="text/javascript" src="../_static/animationbase.js"></script>
+    <script type="text/javascript" src="../_static/mchoice.js"></script>
+    <script type="text/javascript" src="../_static/timedmc.js"></script>
+    <script type="text/javascript" src="../_static/timed.js"></script>
+    <script type="text/javascript" src="../_static/mchoice-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/clickable.js"></script>
+    <script type="text/javascript" src="../_static/timedclickable.js"></script>
+    <script type="text/javascript" src="../_static/d3.v2.min.js"></script>
+    <script type="text/javascript" src="../_static/jquery.ba-bbq.min.js"></script>
+    <script type="text/javascript" src="../_static/jquery.jsPlumb-1.3.10-all-min.js"></script>
+    <script type="text/javascript" src="../_static/pytutor.js"></script>
+    <script type="text/javascript" src="../_static/codelens.js"></script>
+    <script type="text/javascript" src="../_static/datafile.js"></script>
+    <script type="text/javascript" src="../_static/dragndrop.js"></script>
+    <script type="text/javascript" src="../_static/timeddnd.js"></script>
+    <script type="text/javascript" src="../_static/dragndrop-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/fitb.js"></script>
+    <script type="text/javascript" src="../_static/timedfitb.js"></script>
+    <script type="text/javascript" src="../_static/fitb-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/matrixeq.js"></script>
+    <script type="text/javascript" src="../_static/lib/prettify.js"></script>
+    <script type="text/javascript" src="../_static/lib/hammer.min.js"></script>
+    <script type="text/javascript" src="../_static/parsons.js"></script>
+    <script type="text/javascript" src="../_static/timedparsons.js"></script>
+    <script type="text/javascript" src="../_static/poll.js"></script>
+    <script type="text/javascript" src="../_static/reveal.js"></script>
+    <script type="text/javascript" src="../_static/shortanswer.js"></script>
+    <script type="text/javascript" src="../_static/timed_shortanswer.js"></script>
+    <script type="text/javascript" src="../_static/showEval.js"></script>
+    <script type="text/javascript" src="../_static/tabbedstuff.js"></script>
+    <script type="text/javascript" src="../_static/runestonevideo.js"></script>
+    <script type="text/javascript" src="../_static/karelCorner.js"></script>
+    <script type="text/javascript" src="../_static/karelRobot.js"></script>
+    <script type="text/javascript" src="../_static/karelWorld.js"></script>
+    <script type="text/javascript" src="../_static/karelRobotDrawer.js"></script>
+    <script type="text/javascript" src="../_static/karelUI.js"></script>
+    <script type="text/javascript" src="../_static/karel.js"></script>
+    <script type="text/javascript" src="../_static/karel-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/karel-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/notes.js"></script>
+    <script type="text/javascript" src="../_static/pygamelib-init.js"></script>
+    <script type="text/javascript" src="../_static/blockly/blockly_compressed.js"></script>
+    <script type="text/javascript" src="../_static/blockly/blocks_compressed.js"></script>
+    <script type="text/javascript" src="../_static/blockly/python_compressed.js"></script>
+    <script type="text/javascript" src="../_static/blockly/msg-sr.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/utilities.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/python_errors.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/ast_node_visitor.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/abstract_interpreter.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/pytifa.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/abstract_interpreter_definitions.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/python_to_blockly.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/imported.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/class.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/comment.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/comprehensions.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/dict.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/if.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/io.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/lists.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/sets.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/loops.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/parking.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/tuple.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/turtles.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/text.js"></script>
+    <script type="text/javascript" src="../_static/blockpy-modal.js"></script>
+    <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="../_static/jquery-ui-1.10.3.custom.min.js"></script>
+    <script type="text/javascript" src="../_static/jquery-fix.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-4.0.0-dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-4.0.0-dist/js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
+    <script type="text/javascript" src="../_static/waypoints.min.js"></script>
+    <script type="text/javascript" src="../_static/rangy-core.js"></script>
+    <script type="text/javascript" src="../_static/rangy-textrange.js"></script>
+    <script type="text/javascript" src="../_static/rangy-cssclassapplier.js"></script>
+    <script type="text/javascript" src="../_static/user-highlights.js"></script>
+    <script type="text/javascript" src="../_static/jquery.idle-timer.js"></script>
+    <script type="text/javascript" src="../_static/processing-1.4.1.min.js"></script>
+    <script type="text/javascript" src="../_static/jquery.hotkey.js"></script>
+    <script type="text/javascript" src="../_static/jquery-migrate-1.2.1.min.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Drawing with the help of loops" href="03_PyGame_eng_16a_Drawing_Using_Loops1.html" />
+    <link rel="prev" title="Moving the drawing" href="03_PyGame_eng_14_Drawing_Movable.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+<link rel="shortcut icon" href="_static/favicon.ico" type="image/ico" />
+
+<script type="text/javascript">
+  eBookConfig = {};
+  eBookConfig.host = 'http://127.0.0.1:8000' ? 'http://127.0.0.1:8000' : 'http://127.0.0.1:8000';
+  eBookConfig.app = eBookConfig.host+'/runestone';
+  eBookConfig.ajaxURL = eBookConfig.app+'/ajax/';
+  eBookConfig.course = 'TxtProgInPython';
+  eBookConfig.logLevel = 0;
+  eBookConfig.loginRequired = false;
+  eBookConfig.build_info = "";
+  eBookConfig.isLoggedIn = false;
+  eBookConfig.useRunestoneServices = false;
+  eBookConfig.python3 = true;
+  eBookConfig.basecourse = 'TxtProgInPython';
+  eBookConfig.runestone_version = '3.1.1';
+  eBookConfig.imagesDir = '../_images/';
+  if(typeof(Sk) != "undefined")
+      Sk.imgPath = eBookConfig.imagesDir;
+</script>
+
+<div id="fb-root"></div>
+
+
+
+  </head><body>
+
+
+<!-- Begin navbar -->
+
+<nav id="navbar" class="navbar navbar-default navbar-fixed-top" role="navigation">
+
+  <div class="container">
+
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+     <img src="../_static/img/logo.png" style="width:80px; height: 80px;"> 
+    </div>
+
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" style="margin-top: 10px; margin-left: 25px;">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="../">Textual Programming in Python</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<div class="container col-md-12" id="continue-reading"></div>
+
+<div class="container col-md-8 col-md-offset-2" id="main-content">
+  
+  <div class="section" id="changing-the-drawing-size">
+<h1>Changing the drawing size<a class="headerlink" href="#changing-the-drawing-size" title="Permalink to this headline">¶</a></h1>
+<p>When we talked about moving a drawing, we mentioned that it is better to do all the calculations in the program, because it is easier that way to move the drawing, or to draw it in several places when needed. The situation is similar when we want to draw the same drawing in different size, possibly in several places (each could be in different size). Instead of calculating all the coordinates from scratch, it may be enough to change one single number in our program to get a drawing of another size.</p>
+<p>To learn how to make drawings that can be resized easily, let’s first see what needs to be changed in a drawing program so that the drawing gets a different size. For example, if we drew a cloud using these statements:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">cloud</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">shade</span><span class="p">):</span>
+    <span class="c1"># draw a cloud of three circles</span>
+    <span class="n">gray</span> <span class="o">=</span> <span class="p">(</span><span class="n">shade</span><span class="p">,</span> <span class="n">shade</span><span class="p">,</span> <span class="n">shade</span><span class="p">)</span>
+    <span class="n">pg</span><span class="o">.</span><span class="n">draw</span><span class="o">.</span><span class="n">circle</span><span class="p">(</span><span class="n">canvas</span><span class="p">,</span> <span class="n">gray</span><span class="p">,</span> <span class="p">(</span><span class="n">x</span><span class="p">,</span>      <span class="n">y</span><span class="p">),</span> <span class="mi">50</span><span class="p">)</span>
+    <span class="n">pg</span><span class="o">.</span><span class="n">draw</span><span class="o">.</span><span class="n">circle</span><span class="p">(</span><span class="n">canvas</span><span class="p">,</span> <span class="n">gray</span><span class="p">,</span> <span class="p">(</span><span class="n">x</span> <span class="o">-</span> <span class="mi">50</span><span class="p">,</span> <span class="n">y</span><span class="p">),</span> <span class="mi">30</span><span class="p">)</span>
+    <span class="n">pg</span><span class="o">.</span><span class="n">draw</span><span class="o">.</span><span class="n">circle</span><span class="p">(</span><span class="n">canvas</span><span class="p">,</span> <span class="n">gray</span><span class="p">,</span> <span class="p">(</span><span class="n">x</span> <span class="o">+</span> <span class="mi">50</span><span class="p">,</span> <span class="n">y</span><span class="p">),</span> <span class="mi">30</span><span class="p">)</span>
+
+<span class="n">cloud</span><span class="p">(</span><span class="mi">200</span><span class="p">,</span> <span class="mi">200</span><span class="p">,</span> <span class="mi">180</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>and now we want the cloud to be twice as small and its midpoint to be still at point (200, 200), then we would change the function given above to:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">cloud</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">shade</span><span class="p">):</span>
+    <span class="c1"># draw a cloud of three circles</span>
+    <span class="n">gray</span> <span class="o">=</span> <span class="p">(</span><span class="n">shade</span><span class="p">,</span> <span class="n">shade</span><span class="p">,</span> <span class="n">shade</span><span class="p">)</span>
+    <span class="n">pg</span><span class="o">.</span><span class="n">draw</span><span class="o">.</span><span class="n">circle</span><span class="p">(</span><span class="n">canvas</span><span class="p">,</span> <span class="n">gray</span><span class="p">,</span> <span class="p">(</span><span class="n">x</span><span class="p">,</span>      <span class="n">y</span><span class="p">),</span> <span class="mi">25</span><span class="p">)</span>
+    <span class="n">pg</span><span class="o">.</span><span class="n">draw</span><span class="o">.</span><span class="n">circle</span><span class="p">(</span><span class="n">canvas</span><span class="p">,</span> <span class="n">gray</span><span class="p">,</span> <span class="p">(</span><span class="n">x</span> <span class="o">-</span> <span class="mi">25</span><span class="p">,</span> <span class="n">y</span><span class="p">),</span> <span class="mi">15</span><span class="p">)</span>
+    <span class="n">pg</span><span class="o">.</span><span class="n">draw</span><span class="o">.</span><span class="n">circle</span><span class="p">(</span><span class="n">canvas</span><span class="p">,</span> <span class="n">gray</span><span class="p">,</span> <span class="p">(</span><span class="n">x</span> <span class="o">+</span> <span class="mi">25</span><span class="p">,</span> <span class="n">y</span><span class="p">),</span> <span class="mi">15</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>The radii of all three circles should be cut to half the previous size (25 pixels instead of 50 and 15 instead of 30), but that is not enough. If the centers of the small circles remained where they were, we would get three separate circles (try it). In order for the drawing to still look like a cloud, we also need to bring the circles closer together. More specifically, the distances of the centers of the smaller circles from the center of the large circle should also be twice less than before, that is, 25 instead of 50 pixels.</p>
+<p>In general, we do not always want a cloud that is twice as small, but that the clouds can be of different sizes. In addition, we do not want to create a separate function for each cloud size, but to have one function that can draw a cloud of a given size. IUt would be the most comfortable if we could set the size of the cloud with only one number and change the size of the cloud by changing that one number. To do this, we need to express all the sizes that change with the change of cloud size (which is the distances between the centers of the circles and the radii of those circles) using one selected size. For example, for that selected size we can take the radius of the middle circle, which we will denote by <span class="math notranslate nohighlight">\(r\)</span>. The distances of the centers of the smaller circles to the center of the larger circle are exactly <span class="math notranslate nohighlight">\(r\)</span>, and the radius of the smaller circles is equal <span class="math notranslate nohighlight">\({3 \ over 5} r\)</span> regardless of the size of the cloud. When we use all these relations we have noticed, the function looks like this:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">cloud</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">r</span><span class="p">,</span> <span class="n">shade</span><span class="p">):</span>
+    <span class="c1"># draw a cloud of three circles</span>
+    <span class="n">gray</span> <span class="o">=</span> <span class="p">(</span><span class="n">shade</span><span class="p">,</span> <span class="n">shade</span><span class="p">,</span> <span class="n">shade</span><span class="p">)</span>
+    <span class="n">r_small</span> <span class="o">=</span> <span class="nb">round</span><span class="p">(</span><span class="mi">3</span> <span class="o">*</span> <span class="n">r</span> <span class="o">/</span> <span class="mi">5</span><span class="p">)</span>
+    <span class="n">pg</span><span class="o">.</span><span class="n">draw</span><span class="o">.</span><span class="n">circle</span><span class="p">(</span><span class="n">canvas</span><span class="p">,</span> <span class="n">gray</span><span class="p">,</span> <span class="p">(</span><span class="n">x</span><span class="p">,</span>     <span class="n">y</span><span class="p">),</span> <span class="n">r</span><span class="p">)</span>
+    <span class="n">pg</span><span class="o">.</span><span class="n">draw</span><span class="o">.</span><span class="n">circle</span><span class="p">(</span><span class="n">canvas</span><span class="p">,</span> <span class="n">gray</span><span class="p">,</span> <span class="p">(</span><span class="n">x</span> <span class="o">-</span> <span class="n">r</span><span class="p">,</span> <span class="n">y</span><span class="p">),</span> <span class="n">r_small</span><span class="p">)</span>
+    <span class="n">pg</span><span class="o">.</span><span class="n">draw</span><span class="o">.</span><span class="n">circle</span><span class="p">(</span><span class="n">canvas</span><span class="p">,</span> <span class="n">gray</span><span class="p">,</span> <span class="p">(</span><span class="n">x</span> <span class="o">+</span> <span class="n">r</span><span class="p">,</span> <span class="n">y</span><span class="p">),</span> <span class="n">r_small</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>The function has one parameter more - besides the position and the shade of gray, we also set the size of the cloud to this function. Now we can make drawings like this:</p>
+
+<div data-childcomponent="PyGame_clouds_scalable_eng" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=PyGame_clouds_scalable_eng data-lang="python" 
+      data-timelimit=25000    
+    data-audio=''   
+              data-modaloutput="true" data-hidehistory=true
+    data-includesrc="# -*- acsection: general-init -*-
+import pygame as pg, petljapg
+canvas = petljapg.open_window(400, 400, &quot;Clouds&quot;)
+# -*- acsection: main -*-
+
+canvas.fill(pg.Color(&quot;skyblue&quot;)) # paint background
+
+# draw the sun
+pg.draw.circle(canvas, pg.Color(&quot;yellow&quot;), (100, 100), 80)
+
+# function draws a cloud at a given position, given size and shade of gray
+def cloud(x, y, r, gray):
+    # draw a cloud of three circles
+    color = (gray, gray, gray)
+    pg.draw.circle(canvas, color, (x, y), r)
+    r_small = round(3 * r / 5)
+    pg.draw.circle(canvas, color, (x - r, y), r_small)
+    pg.draw.circle(canvas, color, (x + r, y), r_small)
+
+cloud(240, 200, 40, 180)
+cloud(270, 250, 50, 210)
+cloud(230, 100, 50, 230)
+cloud( 80,  80, 30, 190)
+cloud(110, 320, 60, 255)
+cloud(280,  70, 20, 210)
+cloud(310,  80, 15, 220)
+cloud(330,  55, 15, 240)
+
+# -*- acsection: after-main -*-
+petljapg.wait_loop()
+"   data-enablecopy="true">
+
+
+</textarea>
+</div>
+<p>Now, let’s list the steps for a general procedure to remake any movable drawing so that it can be resized as well:</p>
+<ul class="simple">
+<li><p>We need to determine one length in the drawing, which will be set directly. We can call this selected length <strong>basic length</strong> or <strong>unit of measure</strong>. In the example of clouds, the basic length is the radius of the middle circle.</p></li>
+<li><p>All radii of the circles of which the drawing consists are expressed in proportion to the basic length. This means that if our base length is denoted by <span class="math notranslate nohighlight">\(a\)</span>, all other lengths in the program will be multiples of <span class="math notranslate nohighlight">\(a\)</span>, for example <span class="math notranslate nohighlight">\(2a\)</span> or <span class="math notranslate nohighlight">\(5a\)</span>. We determine the number <span class="math notranslate nohighlight">\(a\)</span> from the ratio of the required length and the selected basic length in the initial drawing (this ratio remains the same when the size of the drawing changes). In the example with the cloud, the radius of the small circle is always <span class="math notranslate nohighlight">\({3 \over 5}\)</span> of the selected basic length <span class="math notranslate nohighlight">\(r\)</span>. If rectangles or ellipses appear in the drawing, the heights and widths of those rectangles and ellipses should also be expressed in proportion to the basic length, in the same way as the radii of the circles.</p></li>
+<li><p>We determine the coordinates of all points with respect to the principal point, by adding or subtracting a certain number of basic lengths to coordinates of the principal point. The required number of basic lengths is determined again from the relation in the initial drawing. In the example with the cloud, to obtain <span class="math notranslate nohighlight">\(x\)</span> coordinate of the center of the left circle, we subtract <strong>one</strong> basic length from <span class="math notranslate nohighlight">\(x\)</span> coordinate of the main point (center of the middle circle). We do so because the ratio of the difference of <span class="math notranslate nohighlight">\(x\)</span> coordinates and basic length equals to one. The same procedure applies in principle to <span class="math notranslate nohighlight">\(y\)</span> coordinates, though in this case it is particularly simple. Since <span class="math notranslate nohighlight">\(y\)</span> coordinates of the centers of the circles are the same, the ratio of the difference of the <span class="math notranslate nohighlight">\(y\)</span> coordinates and the basic length is zero, so zero basic lengths should be added to <span class="math notranslate nohighlight">\(y\)</span> coordinate of the anchor to get <span class="math notranslate nohighlight">\(y\)</span> coordinate of the center of a smaller circle.</p></li>
+</ul>
+<p>To better understand the process of resizing a drawing, we will also apply it to the example of a teddy bear.</p>
+<div class="section" id="teddy-size">
+<h2>Teddy - size<a class="headerlink" href="#teddy-size" title="Permalink to this headline">¶</a></h2>
+<p>The following program is presented, which shows the teddy bear’s head so that it can be easily moved:</p>
+
+<div data-childcomponent="PyGame_bear_movable_eng" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=PyGame_bear_movable_eng data-lang="python" 
+      data-timelimit=25000    
+    data-audio=''   
+              data-modaloutput="true" data-hidehistory=true
+    data-includesrc="# -*- acsection: general-init -*-
+import pygame as pg, petljapg
+(width, height) = (500, 300)
+canvas = petljapg.open_window(width, height, &quot;Teddy-bear&quot;)
+# -*- acsection: main -*-
+
+canvas.fill(pg.Color(&quot;white&quot;)) # paint background
+
+def framed_circle(canvas, color, center, radius):
+    pg.draw.circle(canvas, color, center, radius)
+    pg.draw.circle(canvas, pg.Color(&quot;black&quot;), center, radius, 1)
+
+def draw_teddy(cx, cy):
+    framed_circle(canvas, pg.Color(&quot;yellow&quot;), (cx - 60,  cy - 70),  45) # left ear
+    framed_circle(canvas, pg.Color(&quot;yellow&quot;), (cx + 60,  cy - 70),  45) # right ear
+    framed_circle(canvas, pg.Color(&quot;yellow&quot;), (cx,       cy),      100) # head
+    framed_circle(canvas, pg.Color(&quot;yellow&quot;), (cx,       cy + 50),  50) # snout
+    framed_circle(canvas, pg.Color(&quot;black&quot;),  (cx - 50,  cy - 30),  15) # left eye
+    framed_circle(canvas, pg.Color(&quot;black&quot;),  (cx + 50,  cy - 30),  15) # right eye
+    framed_circle(canvas, pg.Color(&quot;black&quot;),  (cx,       cy + 20),  15) # snout top
+
+draw_teddy(width // 2, height // 2)
+
+# -*- acsection: after-main -*-
+petljapg.wait_loop()
+"   data-enablecopy="true">
+
+
+</textarea>
+</div>
+<p>In order to resize the drawing, we introduce a basic length, for example <span class="math notranslate nohighlight">\(a = 5\)</span>. Now we can express all radii using <span class="math notranslate nohighlight">\(a\)</span> like this:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">framed_circle</span><span class="p">(</span><span class="n">canvas</span><span class="p">,</span> <span class="n">pg</span><span class="o">.</span><span class="n">Color</span><span class="p">(</span><span class="s2">&quot;yellow&quot;</span><span class="p">),</span> <span class="p">(</span><span class="n">cx</span> <span class="o">-</span> <span class="mi">60</span><span class="p">,</span>  <span class="n">cy</span> <span class="o">-</span> <span class="mi">70</span><span class="p">),</span>  <span class="mi">9</span><span class="o">*</span><span class="n">a</span><span class="p">)</span> <span class="c1"># left ear</span>
+<span class="n">framed_circle</span><span class="p">(</span><span class="n">canvas</span><span class="p">,</span> <span class="n">pg</span><span class="o">.</span><span class="n">Color</span><span class="p">(</span><span class="s2">&quot;yellow&quot;</span><span class="p">),</span> <span class="p">(</span><span class="n">cx</span> <span class="o">+</span> <span class="mi">60</span><span class="p">,</span>  <span class="n">cy</span> <span class="o">-</span> <span class="mi">70</span><span class="p">),</span>  <span class="mi">9</span><span class="o">*</span><span class="n">a</span><span class="p">)</span> <span class="c1"># right ear</span>
+<span class="n">framed_circle</span><span class="p">(</span><span class="n">canvas</span><span class="p">,</span> <span class="n">pg</span><span class="o">.</span><span class="n">Color</span><span class="p">(</span><span class="s2">&quot;yellow&quot;</span><span class="p">),</span> <span class="p">(</span><span class="n">cx</span><span class="p">,</span>       <span class="n">cy</span><span class="p">)</span>     <span class="p">,</span> <span class="mi">20</span><span class="o">*</span><span class="n">a</span><span class="p">)</span> <span class="c1"># head</span>
+<span class="n">framed_circle</span><span class="p">(</span><span class="n">canvas</span><span class="p">,</span> <span class="n">pg</span><span class="o">.</span><span class="n">Color</span><span class="p">(</span><span class="s2">&quot;yellow&quot;</span><span class="p">),</span> <span class="p">(</span><span class="n">cx</span><span class="p">,</span>       <span class="n">cy</span> <span class="o">+</span> <span class="mi">50</span><span class="p">),</span> <span class="mi">10</span><span class="o">*</span><span class="n">a</span><span class="p">)</span> <span class="c1"># snout</span>
+<span class="n">framed_circle</span><span class="p">(</span><span class="n">canvas</span><span class="p">,</span> <span class="n">pg</span><span class="o">.</span><span class="n">Color</span><span class="p">(</span><span class="s2">&quot;black&quot;</span><span class="p">),</span>  <span class="p">(</span><span class="n">cx</span> <span class="o">-</span> <span class="mi">50</span><span class="p">,</span>  <span class="n">cy</span> <span class="o">-</span> <span class="mi">30</span><span class="p">),</span>  <span class="mi">3</span><span class="o">*</span><span class="n">a</span><span class="p">)</span> <span class="c1"># left eye</span>
+<span class="n">framed_circle</span><span class="p">(</span><span class="n">canvas</span><span class="p">,</span> <span class="n">pg</span><span class="o">.</span><span class="n">Color</span><span class="p">(</span><span class="s2">&quot;black&quot;</span><span class="p">),</span>  <span class="p">(</span><span class="n">cx</span> <span class="o">+</span> <span class="mi">50</span><span class="p">,</span>  <span class="n">cy</span> <span class="o">-</span> <span class="mi">30</span><span class="p">),</span>  <span class="mi">3</span><span class="o">*</span><span class="n">a</span><span class="p">)</span> <span class="c1"># right eye</span>
+<span class="n">framed_circle</span><span class="p">(</span><span class="n">canvas</span><span class="p">,</span> <span class="n">pg</span><span class="o">.</span><span class="n">Color</span><span class="p">(</span><span class="s2">&quot;black&quot;</span><span class="p">),</span>  <span class="p">(</span><span class="n">cx</span><span class="p">,</span>       <span class="n">cy</span> <span class="o">+</span> <span class="mi">20</span><span class="p">),</span>  <span class="mi">3</span><span class="o">*</span><span class="n">a</span><span class="p">)</span> <span class="c1"># snout top</span>
+</pre></div>
+</div>
+<p>Any number can be chosen as the base length, and by choosing a base length of 5 pixels, we have no need to use real numbers - all radii are integer multiples of <span class="math notranslate nohighlight">\(a\)</span> and we can easily calculate them by heart. For example, we express the radius of 45 pixels as <span class="math notranslate nohighlight">\(45 = 9 \cdot 5 = 9 \cdot a\)</span>, and so on.</p>
+<p>Now we need to express the coordinates of the centers of all other circles starting from the main point <span class="math notranslate nohighlight">\((cx, cy)\)</span> and moving by the required number of lengths <span class="math notranslate nohighlight">\(a\)</span> in the <span class="math notranslate nohighlight">\(x\)</span> and <span class="math notranslate nohighlight">\(y\)</span> axis direction. Take the bear’s right ear as an example.</p>
+<p><span class="math notranslate nohighlight">\(x\)</span> coordinate of the center of the right ear is <span class="math notranslate nohighlight">\(cx + 60 = cx + 12 a\)</span>, while <span class="math notranslate nohighlight">\(y\)</span> coordinate is <span class="math notranslate nohighlight">\(cy - 70 = cy - 14 a\)</span>. When we do this for all the centers of the circles, we come to the following form of the program:</p>
+
+<div data-childcomponent="PyGame_bear_tmp2_eng" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=PyGame_bear_tmp2_eng data-lang="python" 
+      data-timelimit=25000    
+    data-audio=''   
+              data-modaloutput="true" data-hidehistory=true
+    data-includesrc="# -*- acsection: general-init -*-
+import pygame as pg, petljapg
+canvas = petljapg.open_window(300, 300, &quot;Teddy-bear&quot;)
+# -*- acsection: main -*-
+
+canvas.fill(pg.Color(&quot;white&quot;)) # paint background
+
+def framed_circle(canvas, color, center, radius):
+    pg.draw.circle(canvas, color, center, radius)
+    pg.draw.circle(canvas, pg.Color(&quot;black&quot;), center, radius, 1)
+
+def draw_teddy(cx, cy, a):
+    framed_circle(canvas, pg.Color(&quot;yellow&quot;), (cx - 12*a,  cy - 14*a),  9*a) # left ear
+    framed_circle(canvas, pg.Color(&quot;yellow&quot;), (cx + 12*a,  cy - 14*a),  9*a) # right ear
+    framed_circle(canvas, pg.Color(&quot;yellow&quot;), (cx,         cy),        20*a) # head
+    framed_circle(canvas, pg.Color(&quot;yellow&quot;), (cx,         cy + 10*a), 10*a) # snout
+    framed_circle(canvas, pg.Color(&quot;black&quot;),  (cx - 10*a,  cy - 6*a),   3*a) # left eye
+    framed_circle(canvas, pg.Color(&quot;black&quot;),  (cx + 10*a,  cy - 6*a),   3*a) # right eye
+    framed_circle(canvas, pg.Color(&quot;black&quot;),  (cx,         cy + 4*a),   3*a) # snout top
+
+draw_teddy(85, 100, 4)
+draw_teddy(235, 100, 3)
+draw_teddy(50, 250, 2)
+draw_teddy(150, 250, 2)
+draw_teddy(250, 250, 2)
+
+# -*- acsection: after-main -*-
+petljapg.wait_loop()
+"   data-enablecopy="true">
+
+
+</textarea>
+</div>
+<p>Now we can not only move or copy a teddy bear across the screen, but also display it in various sizes. To confirm that resizing really works, the function call</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">draw_teddy</span><span class="p">(</span><span class="n">sirina</span> <span class="o">//</span> <span class="mi">2</span><span class="p">,</span> <span class="n">visina</span> <span class="o">//</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">6</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>which draws a bear with the center point in the center of the window, can be replaced with the following five:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">draw_teddy</span><span class="p">(</span><span class="mi">85</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span>
+<span class="n">draw_teddy</span><span class="p">(</span><span class="mi">235</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+<span class="n">draw_teddy</span><span class="p">(</span><span class="mi">50</span><span class="p">,</span> <span class="mi">250</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+<span class="n">draw_teddy</span><span class="p">(</span><span class="mi">150</span><span class="p">,</span> <span class="mi">250</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+<span class="n">draw_teddy</span><span class="p">(</span><span class="mi">250</span><span class="p">,</span> <span class="mi">250</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Copy or retype these five lines of code into the program and try it out! Consider how much work it would be to have these five bears displayed without computing in the program.</p>
+<p>Now try to complete one started example.</p>
+</div>
+<div class="section" id="task-house-size">
+<h2>Task - house size<a class="headerlink" href="#task-house-size" title="Permalink to this headline">¶</a></h2>
+<p>We will start with a program that draws four houses in the given positions on the screen:</p>
+
+<div data-childcomponent="PyGame_house_detailed1_eng" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=PyGame_house_detailed1_eng data-lang="python" 
+      data-timelimit=25000    
+    data-audio=''   
+              data-modaloutput="true" data-hidehistory=true
+    data-includesrc="# -*- acsection: general-init -*-
+import pygame as pg, petljapg
+canvas = petljapg.open_window(500, 300, &quot;House&quot;)
+
+# -*- acsection: main -*-
+canvas.fill(pg.Color(&quot;darkgreen&quot;)) # paint background
+
+def draw_house(x, y, wall_color):
+    pg.draw.polygon(canvas, pg.Color(&quot;red&quot;), [(x, y), (x+70, y-50), (x+140, y)]) # roof
+    pg.draw.rect(canvas, wall_color,       (x,       y,     140, 100)) # walls
+    pg.draw.rect(canvas, pg.Color(&quot;brown&quot;), (x +  10, y + 20, 30,  30)) # left window
+    pg.draw.rect(canvas, pg.Color(&quot;brown&quot;), (x + 100, y + 20, 30,  30)) # right window
+    pg.draw.rect(canvas, pg.Color(&quot;brown&quot;), (x +  50, y + 30, 40,  70)) # door
+    
+draw_house(150,  90, (220, 220, 220))
+draw_house(220, 130, pg.Color(&quot;white&quot;))
+draw_house(350, 160, (255, 255, 150))
+draw_house( 50, 150, pg.Color(&quot;khaki&quot;))
+
+# -*- acsection: after-main -*-
+petljapg.wait_loop()
+"   data-enablecopy="true">
+
+
+</textarea>
+</div>
+<p>Complete the program remodel in the box below so that the houses can be easily resized. For example, you can take 10 pixels for the basic size, because in that case, expressing all lengths using basic length is very easy. When you confirm that the program after the remake displays the same image as the starting program above, replace the given <em>house</em> function calls with the following 4 and confirm that the resizing of the house is working properly (you should get the image as if you clicked on the button “Play task”):</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">house</span><span class="p">(</span><span class="mi">150</span><span class="p">,</span>  <span class="mi">90</span><span class="p">,</span>  <span class="mi">8</span><span class="p">,</span> <span class="n">pg</span><span class="o">.</span><span class="n">Color</span><span class="p">(</span><span class="mi">220</span><span class="p">,</span> <span class="mi">220</span><span class="p">,</span> <span class="mi">220</span><span class="p">))</span>
+<span class="n">house</span><span class="p">(</span><span class="mi">250</span><span class="p">,</span> <span class="mi">130</span><span class="p">,</span>  <span class="mi">9</span><span class="p">,</span> <span class="n">pg</span><span class="o">.</span><span class="n">Color</span><span class="p">(</span><span class="s2">&quot;white&quot;</span><span class="p">))</span>
+<span class="n">house</span><span class="p">(</span><span class="mi">350</span><span class="p">,</span> <span class="mi">160</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="p">(</span><span class="mi">255</span><span class="p">,</span><span class="mi">255</span><span class="p">,</span><span class="mi">150</span><span class="p">))</span>
+<span class="n">house</span><span class="p">(</span> <span class="mi">50</span><span class="p">,</span> <span class="mi">150</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="n">pg</span><span class="o">.</span><span class="n">Color</span><span class="p">(</span><span class="s2">&quot;khaki&quot;</span><span class="p">))</span>
+</pre></div>
+</div>
+
+<div data-childcomponent="PyGame_house_scalable1_eng" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=PyGame_house_scalable1_eng data-lang="python" 
+      data-timelimit=25000    
+    data-audio=''   
+           data-playtask="true"   data-modaloutput="true" data-hidehistory=true
+      data-includexsrc="# -*- acsection: general-init -*-
+import pygame as pg, petljapg
+canvas = petljapg.open_window(500, 300, &quot;House&quot;)
+# -*- acsection: main -*-
+canvas.fill(pg.Color(&quot;darkgreen&quot;)) # paint background
+
+def house(x, y, a, wall_color):
+    pg.draw.polygon(canvas, pg.Color(&quot;red&quot;), [(x, y), (x+7*a, y-5*a), (x+14*a, y)]) # roof
+    pg.draw.rect(canvas, wall_color,        (x,        y,      14*a, 10*a)) # walls
+    pg.draw.rect(canvas, pg.Color(&quot;brown&quot;), (x +  1*a, y + 2*a, 3*a,  3*a)) # left window
+    pg.draw.rect(canvas, pg.Color(&quot;brown&quot;), (x + 10*a, y + 2*a, 3*a,  3*a)) # right window
+    pg.draw.rect(canvas, pg.Color(&quot;brown&quot;), (x +  5*a, y + 3*a, 4*a,  7*a)) # door
+
+house(150,  90,  8, (220, 220, 220))
+house(250, 130,  9, pg.Color(&quot;white&quot;))
+house(350, 160, 10, (255, 255, 150))
+house( 50, 150, 10, pg.Color(&quot;khaki&quot;))
+
+# -*- acsection: after-main -*-
+petljapg.wait_loop()
+" data-enablecopy="true">
+canvas.fill(pg.Color("darkgreen")) # paint background
+
+def house(x, y, a, wall_color):
+    pg.draw.polygon(canvas, pg.Color("red"), [(x, y), (x + ???*a, y - ???*a), (x+14*a, y)]) # roof
+    pg.draw.rect(canvas, wall_color,       (x,       y,      14*a, 10*a)) # walls
+    pg.draw.rect(canvas, pg.Color("brown"), (x + ???, y + ???, 3*a,  3*a)) # left window
+    pg.draw.rect(canvas, pg.Color("brown"), (x + ???, y + ???, ???,  ???)) # right window
+    pg.draw.rect(canvas, pg.Color("brown"), (x + ???, y + ???, ???,  ???)) # door
+
+house(150,  90, 10, (220, 220, 220))
+house(220, 130, 10, pg.Color("white"))
+house(350, 160, 10, (255, 255, 150))
+house( 50, 150, 10, pg.Color("khaki"))
+</textarea>
+</div>
+<p>After successfully changing the <em>house</em> function, try different layouts, colors and sizes of houses, such as the one below, or some other you choose yourself:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">house</span><span class="p">(</span><span class="mi">278</span><span class="p">,</span> <span class="mi">110</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="p">(</span><span class="mi">211</span><span class="p">,</span> <span class="mi">207</span><span class="p">,</span> <span class="mi">169</span><span class="p">))</span>
+<span class="n">house</span><span class="p">(</span><span class="mi">231</span><span class="p">,</span> <span class="mi">119</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="p">(</span><span class="mi">217</span><span class="p">,</span> <span class="mi">211</span><span class="p">,</span> <span class="mi">164</span><span class="p">))</span>
+<span class="n">house</span><span class="p">(</span><span class="mi">174</span><span class="p">,</span> <span class="mi">130</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="p">(</span><span class="mi">228</span><span class="p">,</span> <span class="mi">221</span><span class="p">,</span> <span class="mi">152</span><span class="p">))</span>
+<span class="n">house</span><span class="p">(</span><span class="mi">112</span><span class="p">,</span> <span class="mi">142</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="p">(</span><span class="mi">231</span><span class="p">,</span> <span class="mi">222</span><span class="p">,</span> <span class="mi">150</span><span class="p">))</span>
+<span class="n">house</span><span class="p">(</span> <span class="mi">18</span><span class="p">,</span> <span class="mi">160</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="p">(</span><span class="mi">240</span><span class="p">,</span> <span class="mi">230</span><span class="p">,</span> <span class="mi">140</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+
+
+  
+      <div class="col-md-12">
+<ul class="pager">
+        <li id="relations-prev" title='Previous chapter - Moving the drawing' data-toggle="tooltip"><a href="03_PyGame_eng_14_Drawing_Movable.html">Previous chapter</a></li>
+    
+        <li id="relations-next" title='Next chapter - Drawing with the help of loops' data-toggle="tooltip"><a href="03_PyGame_eng_16a_Drawing_Using_Loops1.html">Next chapter</a></li>
+</ul>
+
+<!-- <ul class="pager"> -->
+    <!-- -->
+        <!-- <li id="relations-prev" title='Претходно поглавље - Moving the drawing' data-toggle="tooltip"><a href="03_PyGame_eng_14_Drawing_Movable.html">Претходно поглавље</a></li> -->
+    <!--  -->
+    <!-- -->
+        <!-- <li id="relations-next" title='Следеће поглавље - Drawing with the help of loops' data-toggle="tooltip"><a href="03_PyGame_eng_16a_Drawing_Using_Loops1.html">Следеће поглавље</a></li> -->
+    <!-- -->
+<!-- </ul> -->
+
+<script type="text/javascript">
+
+  $('#relations-prev').tooltip({'placement':'right', 'selector': '', 'delay': { show: 100, hide: 50}});
+  $('#relations-next').tooltip({'placement':'left', 'selector': '', 'delay': { show: 100, hide: 50}});
+
+</script>
+</div>
+  
+</div>
+<footer class="footer col-md-12">
+    <div class="container">
+        <div class="text-center">
+            <hr>
+            <p class="text-muted">
+                <span class="pull-left">&copy; 2019 Petlja (Created using  <a href="https://pypi.org/project/Sphinx/">Swinx</a>, <a href="http://runestoneinteractive.org/">RunestoneComponents</a> and <a href="https://github.com/Petlja/PetljaDoc">PetljaDoc</a>)</span>
+            </p>
+        </div>
+    </div>
+</footer>
+
+
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-32029811-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+
+
+  </body>
+</html>

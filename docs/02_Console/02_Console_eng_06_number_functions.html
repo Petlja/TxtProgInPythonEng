@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Math functions &#8212; Textual Programming in Python</title>
+    <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/activecode.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/codemirror.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/clickable.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pytutor.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/modal-basic.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/datafile.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/dragndrop.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/fitb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/matrixeq.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/parsons.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/lib/prettify.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/poll.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/showEval.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/tabbedstuff.css" />
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/video.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/karel.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/notes.css" />
+    <link rel="stylesheet" href="../_static/user-highlights.css" type="text/css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootstrap-4.0.0-dist/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/flatly.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/petlja.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../_static/runestonebase.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/language_data.js"></script>
+    <script type="text/javascript" src="../_static/jquery.highlight.js"></script>
+    <script type="text/javascript" src="../_static/bookfuncs.js"></script>
+    <script type="text/javascript" src="../_static/codemirror.js"></script>
+    <script type="text/javascript" src="../_static/xml.js"></script>
+    <script type="text/javascript" src="../_static/css.js"></script>
+    <script type="text/javascript" src="../_static/python.js"></script>
+    <script type="text/javascript" src="../_static/htmlmixed.js"></script>
+    <script type="text/javascript" src="../_static/javascript.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/CLDRPluralRuleParser.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.messagestore.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.fallbacks.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.language.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.parser.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.emitter.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.emitter.bidi.js"></script>
+    <script type="text/javascript" src="../_static/activecode-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/skulpt.min.js"></script>
+    <script type="text/javascript" src="../_static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="../_static/activecode.js"></script>
+    <script type="text/javascript" src="../_static/clike.js"></script>
+    <script type="text/javascript" src="../_static/timed_activecode.js"></script>
+    <script type="text/javascript" src="../_static/animationbase.js"></script>
+    <script type="text/javascript" src="../_static/mchoice.js"></script>
+    <script type="text/javascript" src="../_static/timedmc.js"></script>
+    <script type="text/javascript" src="../_static/timed.js"></script>
+    <script type="text/javascript" src="../_static/mchoice-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/clickable.js"></script>
+    <script type="text/javascript" src="../_static/timedclickable.js"></script>
+    <script type="text/javascript" src="../_static/d3.v2.min.js"></script>
+    <script type="text/javascript" src="../_static/jquery.ba-bbq.min.js"></script>
+    <script type="text/javascript" src="../_static/jquery.jsPlumb-1.3.10-all-min.js"></script>
+    <script type="text/javascript" src="../_static/pytutor.js"></script>
+    <script type="text/javascript" src="../_static/codelens.js"></script>
+    <script type="text/javascript" src="../_static/datafile.js"></script>
+    <script type="text/javascript" src="../_static/dragndrop.js"></script>
+    <script type="text/javascript" src="../_static/timeddnd.js"></script>
+    <script type="text/javascript" src="../_static/dragndrop-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/fitb.js"></script>
+    <script type="text/javascript" src="../_static/timedfitb.js"></script>
+    <script type="text/javascript" src="../_static/fitb-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/matrixeq.js"></script>
+    <script type="text/javascript" src="../_static/lib/prettify.js"></script>
+    <script type="text/javascript" src="../_static/lib/hammer.min.js"></script>
+    <script type="text/javascript" src="../_static/parsons.js"></script>
+    <script type="text/javascript" src="../_static/timedparsons.js"></script>
+    <script type="text/javascript" src="../_static/poll.js"></script>
+    <script type="text/javascript" src="../_static/reveal.js"></script>
+    <script type="text/javascript" src="../_static/shortanswer.js"></script>
+    <script type="text/javascript" src="../_static/timed_shortanswer.js"></script>
+    <script type="text/javascript" src="../_static/showEval.js"></script>
+    <script type="text/javascript" src="../_static/tabbedstuff.js"></script>
+    <script type="text/javascript" src="../_static/runestonevideo.js"></script>
+    <script type="text/javascript" src="../_static/karelCorner.js"></script>
+    <script type="text/javascript" src="../_static/karelRobot.js"></script>
+    <script type="text/javascript" src="../_static/karelWorld.js"></script>
+    <script type="text/javascript" src="../_static/karelRobotDrawer.js"></script>
+    <script type="text/javascript" src="../_static/karelUI.js"></script>
+    <script type="text/javascript" src="../_static/karel.js"></script>
+    <script type="text/javascript" src="../_static/karel-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/karel-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/notes.js"></script>
+    <script type="text/javascript" src="../_static/pygamelib-init.js"></script>
+    <script type="text/javascript" src="../_static/blockly/blockly_compressed.js"></script>
+    <script type="text/javascript" src="../_static/blockly/blocks_compressed.js"></script>
+    <script type="text/javascript" src="../_static/blockly/python_compressed.js"></script>
+    <script type="text/javascript" src="../_static/blockly/msg-sr.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/utilities.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/python_errors.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/ast_node_visitor.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/abstract_interpreter.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/pytifa.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/abstract_interpreter_definitions.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/python_to_blockly.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/imported.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/class.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/comment.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/comprehensions.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/dict.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/if.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/io.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/lists.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/sets.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/loops.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/parking.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/tuple.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/turtles.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/text.js"></script>
+    <script type="text/javascript" src="../_static/blockpy-modal.js"></script>
+    <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="../_static/jquery-ui-1.10.3.custom.min.js"></script>
+    <script type="text/javascript" src="../_static/jquery-fix.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-4.0.0-dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-4.0.0-dist/js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
+    <script type="text/javascript" src="../_static/waypoints.min.js"></script>
+    <script type="text/javascript" src="../_static/rangy-core.js"></script>
+    <script type="text/javascript" src="../_static/rangy-textrange.js"></script>
+    <script type="text/javascript" src="../_static/rangy-cssclassapplier.js"></script>
+    <script type="text/javascript" src="../_static/user-highlights.js"></script>
+    <script type="text/javascript" src="../_static/jquery.idle-timer.js"></script>
+    <script type="text/javascript" src="../_static/processing-1.4.1.min.js"></script>
+    <script type="text/javascript" src="../_static/jquery.hotkey.js"></script>
+    <script type="text/javascript" src="../_static/jquery-migrate-1.2.1.min.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Math Functions - Exercise" href="02_Console_eng_07_number_functions_practice.html" />
+    <link rel="prev" title="Programs with Computation - Exercise" href="02_Console_eng_05_simple_computing_practice.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+<link rel="shortcut icon" href="_static/favicon.ico" type="image/ico" />
+
+<script type="text/javascript">
+  eBookConfig = {};
+  eBookConfig.host = 'http://127.0.0.1:8000' ? 'http://127.0.0.1:8000' : 'http://127.0.0.1:8000';
+  eBookConfig.app = eBookConfig.host+'/runestone';
+  eBookConfig.ajaxURL = eBookConfig.app+'/ajax/';
+  eBookConfig.course = 'TxtProgInPython';
+  eBookConfig.logLevel = 0;
+  eBookConfig.loginRequired = false;
+  eBookConfig.build_info = "";
+  eBookConfig.isLoggedIn = false;
+  eBookConfig.useRunestoneServices = false;
+  eBookConfig.python3 = true;
+  eBookConfig.basecourse = 'TxtProgInPython';
+  eBookConfig.runestone_version = '3.1.1';
+  eBookConfig.imagesDir = '../_images/';
+  if(typeof(Sk) != "undefined")
+      Sk.imgPath = eBookConfig.imagesDir;
+</script>
+
+<div id="fb-root"></div>
+
+
+
+  </head><body>
+
+
+<!-- Begin navbar -->
+
+<nav id="navbar" class="navbar navbar-default navbar-fixed-top" role="navigation">
+
+  <div class="container">
+
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+     <img src="../_static/img/logo.png" style="width:80px; height: 80px;"> 
+    </div>
+
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" style="margin-top: 10px; margin-left: 25px;">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="../">Textual Programming in Python</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<div class="container col-md-12" id="continue-reading"></div>
+
+<div class="container col-md-8 col-md-offset-2" id="main-content">
+  
+  <div class="section" id="math-functions">
+<h1>Math functions<a class="headerlink" href="#math-functions" title="Permalink to this headline">¶</a></h1>
+<p>We use functions in programming all the time. For example, <em>print()</em>, <em>input()</em>, <em>int()</em>, <em>float()</em> and <em>str()</em> are functions of the Python language that we have used so far. There are many other functions in Python, and many of them are used in mathematics. We’ll see some of the simpler math functions below.</p>
+<div class="section" id="functions-abs-min-and-max">
+<h2>Functions <em>abs()</em>, <em>min()</em> and <em>max()</em><a class="headerlink" href="#functions-abs-min-and-max" title="Permalink to this headline">¶</a></h2>
+<p>The <em>abs()</em>, <em>min()</em> and <em>max()</em> functions are often used in computational tasks. You probably already used them somewhere, so let’s just explain them briefly:</p>
+<ul class="simple">
+<li><p>the <em>abs()</em> function returns the absolute value of a numeric expression, which is passed to it as an argument (the absolute value of a number is obtained by ignoring the sign of the number, see example below);</p></li>
+<li><p>the <em>min()</em> function can have two or more numeric arguments, and returns the value of the smallest of them;</p></li>
+<li><p>the <em>max()</em> function can have two or more numeric arguments, and returns the value of the greatest of them;</p></li>
+</ul>
+<p>Here’s how to use these functions in a program:</p>
+
+<div data-childcomponent="console__numberfunc_absminmax_example_eng" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=console__numberfunc_absminmax_example_eng data-lang="python" 
+      data-timelimit=25000  data-codelens="true"  
+    data-audio=''   
+               data-hidehistory=true
+       >
+print("abs(3) =", abs(3))
+print("abs(-7) =", abs(-7))
+print("abs(-5 - -2) =", abs(-5 - -2))
+print("min(5, 2, 7, 3) =", min(5, 2, 7, 3))
+print("max(5, 2, 7, 3) =", max(5, 2, 7, 3))
+</textarea>
+</div>
+</div>
+<div class="section" id="functions-abs-min-and-max-questions">
+<h2>Functions <em>abs()</em>, <em>min()</em> and <em>max()</em> - questions<a class="headerlink" href="#functions-abs-min-and-max-questions" title="Permalink to this headline">¶</a></h2>
+<p>Check your understanding of the above functions:</p>
+
+            <div class="course-box course-box-question course-content">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="console__numberfunc_min_eng">
+            <p>Q-14: What is the value of the expression <code class="docutils literal notranslate"><span class="pre">min(10,</span> <span class="pre">20,</span> <span class="pre">30)</span></code>?</p>
+
+            <li data-component="answer" data-correct id="console__numberfunc_min_eng_opt_a">10</li><li data-component="feedback" id="console__numberfunc_min_eng_opt_a">Correct!</li>
+            
+            <li data-component="answer"  id="console__numberfunc_min_eng_opt_b">20</li><li data-component="feedback" id="console__numberfunc_min_eng_opt_b">The min function returns the smallest of the values passed to it as arguments.</li>
+            
+            <li data-component="answer"  id="console__numberfunc_min_eng_opt_c">30</li><li data-component="feedback" id="console__numberfunc_min_eng_opt_c">The min function returns the smallest of the values passed to it as arguments.</li>
+            
+
+            </ul>
+            </div>
+            
+            <div class="course-box course-box-question course-content">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="console__numberfunc_max_eng">
+            <p>Q-15: What is the value of the expression <code class="docutils literal notranslate"><span class="pre">max(10,</span> <span class="pre">20,</span> <span class="pre">30)</span></code>?</p>
+
+            <li data-component="answer"  id="console__numberfunc_max_eng_opt_a">10</li><li data-component="feedback" id="console__numberfunc_max_eng_opt_a">The max function returns the largest of the values passed to it as arguments.</li>
+            
+            <li data-component="answer"  id="console__numberfunc_max_eng_opt_b">20</li><li data-component="feedback" id="console__numberfunc_max_eng_opt_b">The max function returns the largest of the values passed to it as arguments.</li>
+            
+            <li data-component="answer" data-correct id="console__numberfunc_max_eng_opt_c">30</li><li data-component="feedback" id="console__numberfunc_max_eng_opt_c">Correct!</li>
+            
+
+            </ul>
+            </div>
+            
+<div class="course-box course-box-problem course-content">
+<ul data-component="dragndrop" id="console__numberfunc_max_0x100_eng">
+    <span data-component="question">Match the values of the expression ``min(100, max(0, x))`` with the conditions for x.</span>
+	<span data-component=feedback>Try again!</span>
+
+    <li data-component="draggable" id="console__numberfunc_max_0x100_eng_drag1">the value of the expression is 0 </li>
+    <li data-component="dropzone" for="console__numberfunc_max_0x100_eng_drag1"> if x is less than zero</li>
+
+    <li data-component="draggable" id="console__numberfunc_max_0x100_eng_drag2">the value of the expression is x </li>
+    <li data-component="dropzone" for="console__numberfunc_max_0x100_eng_drag2"> if x is between 0 and 100</li>
+
+    <li data-component="draggable" id="console__numberfunc_max_0x100_eng_drag3">the value of the expression is 100 </li>
+    <li data-component="dropzone" for="console__numberfunc_max_0x100_eng_drag3"> if x is greater than 100</li>
+</ul></div>
+<div class="course-box course-box-problem course-content">
+<ul data-component="dragndrop" id="console__numberfunc_max_0x_eng">
+    <span data-component="question">Match expressions with their values.</span>
+	<span data-component=feedback>Try again!</span>
+
+    <li data-component="draggable" id="console__numberfunc_max_0x_eng_drag1">abs(x)</li>
+    <li data-component="dropzone" for="console__numberfunc_max_0x_eng_drag1"> x if x is greater than zero, and -x otherwise</li>
+
+    <li data-component="draggable" id="console__numberfunc_max_0x_eng_drag2">max(0, x)</li>
+    <li data-component="dropzone" for="console__numberfunc_max_0x_eng_drag2"> x if x is positive and zero otherwise</li>
+
+    <li data-component="draggable" id="console__numberfunc_max_0x_eng_drag3">min(0, x)</li>
+    <li data-component="dropzone" for="console__numberfunc_max_0x_eng_drag3"> x if x is negative and zero otherwise</li>
+
+    <li data-component="draggable" id="console__numberfunc_max_0x_eng_drag4">min(0, abs(x))</li>
+    <li data-component="dropzone" for="console__numberfunc_max_0x_eng_drag4"> always zero</li>
+</ul></div></div>
+<div class="section" id="value-rounding-functions">
+<h2>Value Rounding Functions<a class="headerlink" href="#value-rounding-functions" title="Permalink to this headline">¶</a></h2>
+<p>Rounding up real value to an integer is an operation we also often need. We have already seen that by converting a real number to a whole number, we round it towards zero. There are a few more functions that we can use in Python to round up a real number in different ways:</p>
+<ul class="simple">
+<li><p>function <em>round()</em> returns the integer closest to the argument (result is an integer type);</p></li>
+<li><p>function <em>floor()</em> returns the nearest integer less than or equal to the argument value (the result is real type);</p></li>
+<li><p>function <em>ceil()</em> returns the closest integer greater than or equal to the argument value (the result is real type);</p></li>
+</ul>
+<p>Run the following program to see how these functions work and to compare them.</p>
+
+<div data-childcomponent="console__numberfunc_rounding_example_eng" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=console__numberfunc_rounding_example_eng data-lang="python" 
+      data-timelimit=25000  data-codelens="true"  
+    data-audio=''   
+               data-hidehistory=true
+       >
+import math
+
+print("round(56.234) =", round(56.234))
+print("round(56.789) =", round(56.789))
+
+print("math.floor(56.234) =", math.floor(56.234))
+print("math.floor(56.789) =", math.floor(56.789))
+
+print("math.ceil(56.234) =", math.ceil(56.234))
+print("math.ceil(56.789) =", math.ceil(56.789))
+</textarea>
+</div>
+<p>Note that the <em>floor</em> and <em>ceil</em> functions are somewhat different from the <em>round</em> function and all previous functions - it says `` math.`` in front of their name in the program. This is because these functions are defined in a module called <em>math</em>. Modules are programmatic entities that contain various functions, constants, and other pieces of code that we can use in our programs. The <em>math</em> module contains many other functions in addition to the <em>floor</em> and <em>ceil</em> functions. For example, the known constant pi can be used as <em>math.pi</em>, and the function square root as <em>math.sqrt</em> (we will not use them here).</p>
+<p>In order to use the functions of the <em>math</em> module, we need to attach this module to our program. We did this by writing <code class="docutils literal notranslate"><span class="pre">import</span> <span class="pre">math</span></code> at the beginning of the program. This, of course, enables us to use all other mathematical functions and everything else defined in this module as well.</p>
+<p>No special module is required for the <em>round</em> function and all the previous functions, since these functions are built into Python itself, so they are always directly available to us.</p>
+</div>
+<div class="section" id="value-rounding-functions-questions">
+<h2>Value Rounding Functions - Questions<a class="headerlink" href="#value-rounding-functions-questions" title="Permalink to this headline">¶</a></h2>
+<p>Check your understanding of the functions explained in this lesson:</p>
+
+            <div class="course-box course-box-question course-content">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="console__numberfunc_abs_round_eng">
+            <p>Q-16: What is the value of the expression <code class="docutils literal notranslate"><span class="pre">abs(round(-2.7))</span></code>?</p>
+
+            <li data-component="answer"  id="console__numberfunc_abs_round_eng_opt_a">-2</li><li data-component="feedback" id="console__numberfunc_abs_round_eng_opt_a">Read the abs and round explanations again.</li>
+            
+            <li data-component="answer"  id="console__numberfunc_abs_round_eng_opt_b">2</li><li data-component="feedback" id="console__numberfunc_abs_round_eng_opt_b">The round function returns the closest integer.</li>
+            
+            <li data-component="answer"  id="console__numberfunc_abs_round_eng_opt_c">-3</li><li data-component="feedback" id="console__numberfunc_abs_round_eng_opt_c">The abs function returns the absolute value of a number, which is always greater than or equal to zero.</li>
+            
+            <li data-component="answer" data-correct id="console__numberfunc_abs_round_eng_opt_d">3</li><li data-component="feedback" id="console__numberfunc_abs_round_eng_opt_d">Correct!</li>
+            
+
+            </ul>
+            </div>
+            
+            <div class="course-box course-box-question course-content">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="console__numberfunc_max_abs_eng">
+            <p>Q-17: One cashier rounds the account to the nearest integer only if the amount is increased, otherwise it reports the amount as it is. What formula does this cashier apply (x is the starting value of the account)?</p>
+
+            <li data-component="answer" data-correct id="console__numberfunc_max_abs_eng_opt_a">max(x, round(x))</li><li data-component="feedback" id="console__numberfunc_max_abs_eng_opt_a">Correct!</li>
+            
+            <li data-component="answer"  id="console__numberfunc_max_abs_eng_opt_b">max(x)</li><li data-component="feedback" id="console__numberfunc_max_abs_eng_opt_b">The max function should have at least two arguments.</li>
+            
+            <li data-component="answer"  id="console__numberfunc_max_abs_eng_opt_c">round(x)</li><li data-component="feedback" id="console__numberfunc_max_abs_eng_opt_c">In this way, the amount can also be reduced.</li>
+            
+            <li data-component="answer"  id="console__numberfunc_max_abs_eng_opt_d">abs(x)</li><li data-component="feedback" id="console__numberfunc_max_abs_eng_opt_d">The amount is already positive, nothing is achieved here with the abs function.</li>
+            
+
+            </ul>
+            </div>
+            
+<div class="course-box course-box-problem course-content">
+<ul data-component="dragndrop" id="console__numberfunc_rounding_eng">
+    <span data-component="question">Match rounding functions with the way of rounding.</span>
+	<span data-component=feedback>Try again!</span>
+
+    <li data-component="draggable" id="console__numberfunc_rounding_eng_drag1">towards zero</li>
+    <li data-component="dropzone" for="console__numberfunc_rounding_eng_drag1">int()</li>
+
+    <li data-component="draggable" id="console__numberfunc_rounding_eng_drag2">to a closer whole number</li>
+    <li data-component="dropzone" for="console__numberfunc_rounding_eng_drag2">round()</li>
+
+    <li data-component="draggable" id="console__numberfunc_rounding_eng_drag3">to a smaller whole number</li>
+    <li data-component="dropzone" for="console__numberfunc_rounding_eng_drag3">floor()</li>
+
+    <li data-component="draggable" id="console__numberfunc_rounding_eng_drag4">to a greater whole number</li>
+    <li data-component="dropzone" for="console__numberfunc_rounding_eng_drag4">ceil()</li>
+</ul></div>
+    <div class="course-box course-box-special">
+        <div class="course-content">
+            <h4 class="carbox-title">
+                <img class="corner-image float-right" src="../_static/img/question-mark.png" />
+            </h4>
+            <p>
+<p><strong>The task for the curious</strong> - function <em>round</em></p>
+<p>The <em>round</em> function can also be called with two arguments (we won’t use it that way), where the second argument is usually a small integer. Check for example the values of <span class="math notranslate nohighlight">\(round(123.23456, 2)\)</span>, <span class="math notranslate nohighlight">\(round(123.23456, 3)\)</span> and <span class="math notranslate nohighlight">\(round(123.23456, -1)\)</span>. You can use the space below for trying things out quickly.</p>
+<p>Try explaining what the second argument of <em>round</em> is for when a function is called with two arguments.</p>
+
+    </p></div></div>
+
+<div data-childcomponent="console__givenfunc_round_eng" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=console__givenfunc_round_eng data-lang="python" 
+      data-timelimit=25000  data-codelens="true"  
+    data-audio=''   
+               data-hidehistory=true
+       >
+
+
+</textarea>
+</div>
+</div>
+</div>
+
+
+  
+      <div class="col-md-12">
+<ul class="pager">
+        <li id="relations-prev" title='Previous chapter - Programs with Computation - Exercise' data-toggle="tooltip"><a href="02_Console_eng_05_simple_computing_practice.html">Previous chapter</a></li>
+    
+        <li id="relations-next" title='Next chapter - Math Functions - Exercise' data-toggle="tooltip"><a href="02_Console_eng_07_number_functions_practice.html">Next chapter</a></li>
+</ul>
+
+<!-- <ul class="pager"> -->
+    <!-- -->
+        <!-- <li id="relations-prev" title='Претходно поглавље - Programs with Computation - Exercise' data-toggle="tooltip"><a href="02_Console_eng_05_simple_computing_practice.html">Претходно поглавље</a></li> -->
+    <!--  -->
+    <!-- -->
+        <!-- <li id="relations-next" title='Следеће поглавље - Math Functions - Exercise' data-toggle="tooltip"><a href="02_Console_eng_07_number_functions_practice.html">Следеће поглавље</a></li> -->
+    <!-- -->
+<!-- </ul> -->
+
+<script type="text/javascript">
+
+  $('#relations-prev').tooltip({'placement':'right', 'selector': '', 'delay': { show: 100, hide: 50}});
+  $('#relations-next').tooltip({'placement':'left', 'selector': '', 'delay': { show: 100, hide: 50}});
+
+</script>
+</div>
+  
+</div>
+<footer class="footer col-md-12">
+    <div class="container">
+        <div class="text-center">
+            <hr>
+            <p class="text-muted">
+                <span class="pull-left">&copy; 2019 Petlja (Created using  <a href="https://pypi.org/project/Sphinx/">Swinx</a>, <a href="http://runestoneinteractive.org/">RunestoneComponents</a> and <a href="https://github.com/Petlja/PetljaDoc">PetljaDoc</a>)</span>
+            </p>
+        </div>
+    </div>
+</footer>
+
+
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-32029811-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+
+
+  </body>
+</html>

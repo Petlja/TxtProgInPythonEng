@@ -1,0 +1,699 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Drawing with the help of loops &#8212; Textual Programming in Python</title>
+    <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/activecode.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/codemirror.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/clickable.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pytutor.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/modal-basic.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/datafile.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/dragndrop.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/fitb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/matrixeq.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/parsons.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/lib/prettify.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/poll.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/showEval.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/tabbedstuff.css" />
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/video.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/karel.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/notes.css" />
+    <link rel="stylesheet" href="../_static/user-highlights.css" type="text/css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootstrap-4.0.0-dist/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/flatly.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/petlja.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../_static/runestonebase.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/language_data.js"></script>
+    <script type="text/javascript" src="../_static/jquery.highlight.js"></script>
+    <script type="text/javascript" src="../_static/bookfuncs.js"></script>
+    <script type="text/javascript" src="../_static/codemirror.js"></script>
+    <script type="text/javascript" src="../_static/xml.js"></script>
+    <script type="text/javascript" src="../_static/css.js"></script>
+    <script type="text/javascript" src="../_static/python.js"></script>
+    <script type="text/javascript" src="../_static/htmlmixed.js"></script>
+    <script type="text/javascript" src="../_static/javascript.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/CLDRPluralRuleParser.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.messagestore.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.fallbacks.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.language.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.parser.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.emitter.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.emitter.bidi.js"></script>
+    <script type="text/javascript" src="../_static/activecode-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/skulpt.min.js"></script>
+    <script type="text/javascript" src="../_static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="../_static/activecode.js"></script>
+    <script type="text/javascript" src="../_static/clike.js"></script>
+    <script type="text/javascript" src="../_static/timed_activecode.js"></script>
+    <script type="text/javascript" src="../_static/animationbase.js"></script>
+    <script type="text/javascript" src="../_static/mchoice.js"></script>
+    <script type="text/javascript" src="../_static/timedmc.js"></script>
+    <script type="text/javascript" src="../_static/timed.js"></script>
+    <script type="text/javascript" src="../_static/mchoice-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/clickable.js"></script>
+    <script type="text/javascript" src="../_static/timedclickable.js"></script>
+    <script type="text/javascript" src="../_static/d3.v2.min.js"></script>
+    <script type="text/javascript" src="../_static/jquery.ba-bbq.min.js"></script>
+    <script type="text/javascript" src="../_static/jquery.jsPlumb-1.3.10-all-min.js"></script>
+    <script type="text/javascript" src="../_static/pytutor.js"></script>
+    <script type="text/javascript" src="../_static/codelens.js"></script>
+    <script type="text/javascript" src="../_static/datafile.js"></script>
+    <script type="text/javascript" src="../_static/dragndrop.js"></script>
+    <script type="text/javascript" src="../_static/timeddnd.js"></script>
+    <script type="text/javascript" src="../_static/dragndrop-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/fitb.js"></script>
+    <script type="text/javascript" src="../_static/timedfitb.js"></script>
+    <script type="text/javascript" src="../_static/fitb-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/matrixeq.js"></script>
+    <script type="text/javascript" src="../_static/lib/prettify.js"></script>
+    <script type="text/javascript" src="../_static/lib/hammer.min.js"></script>
+    <script type="text/javascript" src="../_static/parsons.js"></script>
+    <script type="text/javascript" src="../_static/timedparsons.js"></script>
+    <script type="text/javascript" src="../_static/poll.js"></script>
+    <script type="text/javascript" src="../_static/reveal.js"></script>
+    <script type="text/javascript" src="../_static/shortanswer.js"></script>
+    <script type="text/javascript" src="../_static/timed_shortanswer.js"></script>
+    <script type="text/javascript" src="../_static/showEval.js"></script>
+    <script type="text/javascript" src="../_static/tabbedstuff.js"></script>
+    <script type="text/javascript" src="../_static/runestonevideo.js"></script>
+    <script type="text/javascript" src="../_static/karelCorner.js"></script>
+    <script type="text/javascript" src="../_static/karelRobot.js"></script>
+    <script type="text/javascript" src="../_static/karelWorld.js"></script>
+    <script type="text/javascript" src="../_static/karelRobotDrawer.js"></script>
+    <script type="text/javascript" src="../_static/karelUI.js"></script>
+    <script type="text/javascript" src="../_static/karel.js"></script>
+    <script type="text/javascript" src="../_static/karel-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/karel-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/notes.js"></script>
+    <script type="text/javascript" src="../_static/pygamelib-init.js"></script>
+    <script type="text/javascript" src="../_static/blockly/blockly_compressed.js"></script>
+    <script type="text/javascript" src="../_static/blockly/blocks_compressed.js"></script>
+    <script type="text/javascript" src="../_static/blockly/python_compressed.js"></script>
+    <script type="text/javascript" src="../_static/blockly/msg-sr.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/utilities.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/python_errors.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/ast_node_visitor.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/abstract_interpreter.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/pytifa.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/abstract_interpreter_definitions.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/python_to_blockly.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/imported.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/class.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/comment.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/comprehensions.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/dict.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/if.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/io.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/lists.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/sets.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/loops.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/parking.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/tuple.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/turtles.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/text.js"></script>
+    <script type="text/javascript" src="../_static/blockpy-modal.js"></script>
+    <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="../_static/jquery-ui-1.10.3.custom.min.js"></script>
+    <script type="text/javascript" src="../_static/jquery-fix.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-4.0.0-dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-4.0.0-dist/js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
+    <script type="text/javascript" src="../_static/waypoints.min.js"></script>
+    <script type="text/javascript" src="../_static/rangy-core.js"></script>
+    <script type="text/javascript" src="../_static/rangy-textrange.js"></script>
+    <script type="text/javascript" src="../_static/rangy-cssclassapplier.js"></script>
+    <script type="text/javascript" src="../_static/user-highlights.js"></script>
+    <script type="text/javascript" src="../_static/jquery.idle-timer.js"></script>
+    <script type="text/javascript" src="../_static/processing-1.4.1.min.js"></script>
+    <script type="text/javascript" src="../_static/jquery.hotkey.js"></script>
+    <script type="text/javascript" src="../_static/jquery-migrate-1.2.1.min.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Drawing polygons with loops" href="03_PyGame_eng_16b_Drawing_Using_Loops2.html" />
+    <link rel="prev" title="Changing the drawing size" href="03_PyGame_eng_15_Drawing_Scalable_opt.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+<link rel="shortcut icon" href="_static/favicon.ico" type="image/ico" />
+
+<script type="text/javascript">
+  eBookConfig = {};
+  eBookConfig.host = 'http://127.0.0.1:8000' ? 'http://127.0.0.1:8000' : 'http://127.0.0.1:8000';
+  eBookConfig.app = eBookConfig.host+'/runestone';
+  eBookConfig.ajaxURL = eBookConfig.app+'/ajax/';
+  eBookConfig.course = 'TxtProgInPython';
+  eBookConfig.logLevel = 0;
+  eBookConfig.loginRequired = false;
+  eBookConfig.build_info = "";
+  eBookConfig.isLoggedIn = false;
+  eBookConfig.useRunestoneServices = false;
+  eBookConfig.python3 = true;
+  eBookConfig.basecourse = 'TxtProgInPython';
+  eBookConfig.runestone_version = '3.1.1';
+  eBookConfig.imagesDir = '../_images/';
+  if(typeof(Sk) != "undefined")
+      Sk.imgPath = eBookConfig.imagesDir;
+</script>
+
+<div id="fb-root"></div>
+
+
+
+  </head><body>
+
+
+<!-- Begin navbar -->
+
+<nav id="navbar" class="navbar navbar-default navbar-fixed-top" role="navigation">
+
+  <div class="container">
+
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+     <img src="../_static/img/logo.png" style="width:80px; height: 80px;"> 
+    </div>
+
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" style="margin-top: 10px; margin-left: 25px;">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="../">Textual Programming in Python</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<div class="container col-md-12" id="continue-reading"></div>
+
+<div class="container col-md-8 col-md-offset-2" id="main-content">
+  
+  <div class="section" id="drawing-with-the-help-of-loops">
+<h1>Drawing with the help of loops<a class="headerlink" href="#drawing-with-the-help-of-loops" title="Permalink to this headline">¶</a></h1>
+<p>Consider the following task: let’s draw 6 circles, as in this picture:</p>
+<a class="reference internal image-reference" href="../_images/target.png"><img alt="../_images/target.png" class="align-center" src="../_images/target.png" style="width: 300px;" /></a>
+<p>Looking at the picture, we can assume (or it could have been said in the problem setting) that the circles are equally spaced. This means that the radius difference of each two adjacent circles is the same.</p>
+<p>We choose the size of the circles to be as large as possible, but to fit in a given drawing space of 300x300 pixels. Since the width of the window is 300 pixels, the radius of the largest circle is 150. For the difference of radii of the two adjacent circles we can take <span class="math notranslate nohighlight">\({150 \over 6} = 25\)</span>. This gives radii of 25, 50, 75, 100, 125, 150.</p>
+<p>Based on the calculated values, we could write a program like this:</p>
+
+<div data-childcomponent="PyGame_loop__target_fixed_eng" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=PyGame_loop__target_fixed_eng data-lang="python" 
+      data-timelimit=25000    
+    data-audio=''   
+              data-modaloutput="true" data-hidehistory=true
+    data-includesrc="# -*- acsection: general-init -*-
+import pygame as pg, petljapg
+(width, height) = (300, 300)
+canvas = petljapg.open_window(width, height, &quot;Circles&quot;)
+# -*- acsection: main -*-
+
+canvas.fill(pg.Color(&quot;white&quot;)) # paint background
+
+# the center of the circle is in the center of the window
+center = (width // 2, height // 2)
+
+# drawing circles
+# the radius changes from 25 to 150, with step 25
+pg.draw.circle(canvas, pg.Color(&quot;red&quot;), center,  25, 2)
+pg.draw.circle(canvas, pg.Color(&quot;red&quot;), center,  50, 2)
+pg.draw.circle(canvas, pg.Color(&quot;red&quot;), center,  75, 2)
+pg.draw.circle(canvas, pg.Color(&quot;red&quot;), center, 100, 2)
+pg.draw.circle(canvas, pg.Color(&quot;red&quot;), center, 125, 2)
+pg.draw.circle(canvas, pg.Color(&quot;red&quot;), center, 150, 2)
+# -*- acsection: after-main -*-
+petljapg.wait_loop()
+"   data-enablecopy="true">
+
+
+</textarea>
+</div>
+<p>Let’s imagine that after this we were given the new task of making the same drawing, but with 5 circles. This is a very small change, isn’t it? We should be able to reuse the previously solved task.</p>
+<p>When we start working on a 5-circle drawing, we see that very little of the previous program can be used. In fact, we can only use the idea, and the size of the circles should be calculated from scratch.</p>
+<p>If we had written the program differently, customizing it would have been much easier. We could, for example, write the number of circles in a variable and then use that variable in all the necessary calculations. This program would look like this:</p>
+
+<div data-childcomponent="PyGame_loop__target_flexible_eng" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=PyGame_loop__target_flexible_eng data-lang="python" 
+      data-timelimit=25000    
+    data-audio=''   
+              data-modaloutput="true" data-hidehistory=true
+    data-includesrc="# -*- acsection: general-init -*-
+import pygame as pg, petljapg
+(width, height) = (300, 300)
+canvas = petljapg.open_window(width, height, &quot;Circles&quot;)
+# -*- acsection: main -*-
+
+canvas.fill(pg.Color(&quot;white&quot;)) # paint background
+
+# the center of the circle is in the center of the window
+center = (width // 2, height // 2)
+num_circles = 6
+r_step = width / (2*num_circles)
+
+for i in range(1, num_circles + 1):
+    pg.draw.circle(canvas, pg.Color(&quot;red&quot;), center, round(i * r_step), 2)
+
+# -*- acsection: after-main -*-
+petljapg.wait_loop()
+"   data-enablecopy="true">
+
+
+</textarea>
+</div>
+<p>In this program it is enough to change only one number so that it draws any given number of circles.</p>
+<p>Many drawings have some regularity, such as symmetry or some repeating part (and many other, more complex patterns). If we understand the regularity in such drawings and express it mathematically, we will be able to use it when writing a program to draw such drawings, as we did in the previous example. That way we get a program that is much easier to modify to get another, similar drawing. For drawings with a large number of repetitions of a part (identical or slightly modified), the program that uses regularity will also be much shorter.</p>
+
+    <div class="course-box course-box-info">
+        <div class="course-content">
+            <p>
+<p>Many programs used by millions of people are constantly being improved and refined and new versions of such programs are being published. Therefore, program changes are something completely normal that happens all the time. The situation is similar with the programs we write ourselves. When we write a program, it can easily happen that we later think of something new and want to modify a part of the program that has already been written.</p>
+<p>Therefore, when writing programs, we should keep in mind that someone (possibly ourselves) will want to create a similar program and may want to use our program as an initial version.</p>
+
+    </p></div></div>
+<p>Let’s look at another example of how we can use the regularities in a drawing to write a more flexible program (a program that is easier to adapt to a slightly different purpose).</p>
+<div class="section" id="example-antenna">
+<h2>Example - antenna<a class="headerlink" href="#example-antenna" title="Permalink to this headline">¶</a></h2>
+<p>We have already seen a program drawing this antenna. Now the program is written so that it is not too difficult to change the number of transverse segments, the spacing between them, the difference of lengths of successive segments and the like.</p>
+
+<div data-childcomponent="PyGame_loop__antenna_eng" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=PyGame_loop__antenna_eng data-lang="python" 
+      data-timelimit=25000    
+    data-audio=''   
+              data-modaloutput="true" data-hidehistory=true
+    data-includesrc="# -*- acsection: general-init -*-
+import pygame as pg, petljapg
+canvas = petljapg.open_window(300, 300, &quot;Antenna&quot;)
+
+# -*- acsection: main -*-
+canvas.fill(pg.Color(&quot;skyblue&quot;)) # paint background
+
+pg.draw.line(canvas, pg.Color(&apos;black&apos;), (150,  50), (150, 250), 4)
+x1, x2, y, thickness = 120, 180, 75, 1.0
+for i in range(6):
+    pg.draw.line(canvas, pg.Color(&apos;black&apos;), (x1, y), (x2, y), int(thickness))
+    x1 -= 10
+    x2 += 10
+    y += 25
+    thickness += 0.5
+
+# -*- acsection: after-main -*-
+petljapg.wait_loop()
+"   data-enablecopy="true">
+
+
+</textarea>
+</div>
+<p>Part of the program that draws the transverse segments of the antenna could be written as follows:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">6</span><span class="p">):</span>
+    <span class="n">pg</span><span class="o">.</span><span class="n">draw</span><span class="o">.</span><span class="n">line</span><span class="p">(</span><span class="n">canvas</span><span class="p">,</span> <span class="n">pg</span><span class="o">.</span><span class="n">Color</span><span class="p">(</span><span class="s1">&#39;darkgray&#39;</span><span class="p">),</span> <span class="p">(</span><span class="mi">120</span> <span class="o">-</span> <span class="mi">10</span> <span class="o">*</span> <span class="n">i</span><span class="p">,</span>  <span class="mi">75</span> <span class="o">+</span> <span class="mi">25</span> <span class="o">*</span> <span class="n">i</span><span class="p">),</span> <span class="p">(</span><span class="mi">180</span> <span class="o">+</span>  <span class="mi">10</span> <span class="o">*</span> <span class="n">i</span><span class="p">,</span>  <span class="mi">75</span> <span class="o">+</span> <span class="mi">25</span> <span class="o">*</span> <span class="n">i</span><span class="p">),</span> <span class="mi">1</span> <span class="o">+</span> <span class="n">i</span><span class="o">//</span><span class="mi">2</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>The program written in this way would be slightly shorter, but the first one is clearer, so each has its advantages. Let’s just point out that both of these programs are better than drawing 6 lines one by one for transverse segments (we used to do). If this part of the program consisted of six calls to the line drawing function, it would be more difficult to modify and adjust the program to draw a different antenna.</p>
+</div>
+<div class="section" id="equidistant-numbers">
+<h2>Equidistant numbers<a class="headerlink" href="#equidistant-numbers" title="Permalink to this headline">¶</a></h2>
+<p>In both previous examples, it was necessary to enumerate one or more series of equidistant numbers. In the task with circles, these were numbers 25, 50, 75, 100, 125, 150 (radii of circles), and in the task with the antenna, we needed as many as four series of numbers - <em>x</em> and <em>y</em> coordinates of the ends of the transverse antenna segments. In particular, these numbers are:</p>
+<ul class="simple">
+<li><p><em>x</em> coordinates of left ends: 120, 110, 100, 90, 80, 70</p></li>
+<li><p><em>y</em> coordinates of left ends: 75, 100, 125, 150, 175, 200</p></li>
+<li><p><em>x</em> coordinates of right ends: 180, 190, 200, 210, 220, 230</p></li>
+<li><p><em>y</em> coordinates of right ends: 75, 100, 125, 150, 175, 200</p></li>
+</ul>
+<p>We have seen that there are different ways to get the values we need. For example, in a task with concentric circles, values 25, 50, 75, 100, 125, 150 we could obtain in any of the following (equally good) ways:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">25</span><span class="p">,</span> <span class="mi">151</span><span class="p">,</span> <span class="mi">25</span><span class="p">):</span>
+    <span class="n">pg</span><span class="o">.</span><span class="n">draw</span><span class="o">.</span><span class="n">circle</span><span class="p">(</span><span class="n">canvas</span><span class="p">,</span> <span class="n">pg</span><span class="o">.</span><span class="n">Color</span><span class="p">(</span><span class="s2">&quot;red&quot;</span><span class="p">),</span> <span class="n">center</span><span class="p">,</span> <span class="n">r</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">br_krugova</span><span class="p">):</span>
+    <span class="n">pg</span><span class="o">.</span><span class="n">draw</span><span class="o">.</span><span class="n">circle</span><span class="p">(</span><span class="n">canvas</span><span class="p">,</span> <span class="n">pg</span><span class="o">.</span><span class="n">Color</span><span class="p">(</span><span class="s2">&quot;red&quot;</span><span class="p">),</span> <span class="n">center</span><span class="p">,</span> <span class="nb">round</span><span class="p">(</span><span class="mi">25</span> <span class="o">+</span> <span class="n">i</span> <span class="o">*</span> <span class="mi">25</span><span class="p">),</span> <span class="mi">2</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">r</span> <span class="o">=</span> <span class="mi">25</span>
+<span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">br_krugova</span><span class="p">):</span>
+    <span class="n">pg</span><span class="o">.</span><span class="n">draw</span><span class="o">.</span><span class="n">circle</span><span class="p">(</span><span class="n">canvas</span><span class="p">,</span> <span class="n">pg</span><span class="o">.</span><span class="n">Color</span><span class="p">(</span><span class="s2">&quot;red&quot;</span><span class="p">),</span> <span class="n">center</span><span class="p">,</span> <span class="n">r</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+    <span class="n">r</span> <span class="o">+=</span> <span class="mi">25</span>
+</pre></div>
+</div>
+<p>In the general case, if we need to get a series of values of <em>a</em>, <em>a+d</em>, <em>a+2d</em>, … <em>a+(n-1)d</em>, the previous three methods can be used as follows:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">a</span> <span class="o">+</span> <span class="n">n</span><span class="o">*</span><span class="n">d</span><span class="p">,</span> <span class="n">d</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="o">+</span><span class="n">i</span><span class="o">*</span><span class="n">d</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="n">a</span>
+<span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+    <span class="n">x</span> <span class="o">+=</span> <span class="n">d</span>
+</pre></div>
+</div>
+<p>We will see that many tasks with drawing equidistant shapes can be solved by applying loops like this.</p>
+<p>Note that the <code class="docutils literal notranslate"><span class="pre">range</span></code> function with a step (with three arguments) must receive integer arguments, so in situations where the step is not an integer its use is not possible.</p>
+<p>When we need (as in an antenna assignment) to make several series in one loop, the first mode is less convenient, so we have to choose one of the other two ways.</p>
+<p>The following questions will help you consolidate your knowledge of forming a series of equidistant numbers.</p>
+
+<div class="course-box course-box-problem course-content">
+<ul data-component="dragndrop" id="pygame__loop_quiz_match_series_eng">
+    <span data-component="question">Match a series of numbers with a loop that generates it.</span>
+	<span data-component=feedback>try again!</span>
+
+    <li data-component="draggable" id="pygame__loop_quiz_match_series_eng_drag1">100, 200, 300, 400, 500</li>
+    <li data-component="dropzone" for="pygame__loop_quiz_match_series_eng_drag1">for i in range(100, 600, 100)</li>
+
+    <li data-component="draggable" id="pygame__loop_quiz_match_series_eng_drag2">100, 300, 500</li>
+    <li data-component="dropzone" for="pygame__loop_quiz_match_series_eng_drag2">for i in range(100, 601, 200)</li>
+
+    <li data-component="draggable" id="pygame__loop_quiz_match_series_eng_drag3">100, 200, 300, 400, 500, 600</li>
+    <li data-component="dropzone" for="pygame__loop_quiz_match_series_eng_drag3">for i in range(100, 601, 100)</li>
+
+    <li data-component="draggable" id="pygame__loop_quiz_match_series_eng_drag4">200, 300, 400, 500, 600</li>
+    <li data-component="dropzone" for="pygame__loop_quiz_match_series_eng_drag4">for i in range(200, 601, 100)</li>
+</ul></div>
+<div class="course-box course-box-problem course-content">
+<ul data-component="dragndrop" id="pygame__loop_quiz_match_series2_eng">
+    <span data-component="question">Match the numbers obtained with the expression in the "for i in range (5):" loop that generates them.</span>
+	<span data-component=feedback>try again!</span>
+
+    <li data-component="draggable" id="pygame__loop_quiz_match_series2_eng_drag1">100, 150, 200, 250, 300</li>
+    <li data-component="dropzone" for="pygame__loop_quiz_match_series2_eng_drag1">x = 100 + i*50</li>
+
+    <li data-component="draggable" id="pygame__loop_quiz_match_series2_eng_drag2">50, 150, 250, 350, 450</li>
+    <li data-component="dropzone" for="pygame__loop_quiz_match_series2_eng_drag2">x = 50 + i*100</li>
+
+    <li data-component="draggable" id="pygame__loop_quiz_match_series2_eng_drag3">0, 100, 200, 300, 400</li>
+    <li data-component="dropzone" for="pygame__loop_quiz_match_series2_eng_drag3">x = i*100</li>
+
+    <li data-component="draggable" id="pygame__loop_quiz_match_series2_eng_drag4">100, 200, 300, 400, 500</li>
+    <li data-component="dropzone" for="pygame__loop_quiz_match_series2_eng_drag4">x = 100+i*100</li>
+</ul></div>
+            <div class="course-box course-box-question course-content">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="pygame__loop_quiz_range01_eng">
+            <p>Q-70: Which expression should be used in the loop</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>for i in range(19):
+    x = ???
+    ...
+</pre></div>
+</div>
+<p>for <em>x</em> to have the same values as in a loop</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">25</span><span class="p">,</span> <span class="mi">500</span><span class="p">,</span> <span class="mi">50</span><span class="p">):</span>
+    <span class="o">...</span>
+</pre></div>
+</div>
+
+            <li data-component="answer"  id="pygame__loop_quiz_range01_eng_opt_a">x = 25 * i + 50</li><li data-component="feedback" id="pygame__loop_quiz_range01_eng_opt_a">No.</li>
+            
+            <li data-component="answer"  id="pygame__loop_quiz_range01_eng_opt_b">x = (25 + i) * 50</li><li data-component="feedback" id="pygame__loop_quiz_range01_eng_opt_b">No.</li>
+            
+            <li data-component="answer"  id="pygame__loop_quiz_range01_eng_opt_c">x = 25 * 2*i+1</li><li data-component="feedback" id="pygame__loop_quiz_range01_eng_opt_c">No.</li>
+            
+            <li data-component="answer" data-correct id="pygame__loop_quiz_range01_eng_opt_d">x = 25 + 50 * i</li><li data-component="feedback" id="pygame__loop_quiz_range01_eng_opt_d">Correct!</li>
+            
+
+            </ul>
+            </div>
+            <p>The following are the tasks for the exercise.</p>
+</div>
+<div class="section" id="ladder">
+<h2>Ladder<a class="headerlink" href="#ladder" title="Permalink to this headline">¶</a></h2>
+<p>Modify the program so that the ladder steps are drawn in a loop.</p>
+
+<div data-childcomponent="PyGame_loop__ladder_eng" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=PyGame_loop__ladder_eng data-lang="python" 
+      data-timelimit=25000    
+    data-audio=''   
+           data-playtask="true"   data-modaloutput="true" data-hidehistory=true
+      data-includexsrc="# -*- acsection: general-init -*-
+import pygame as pg, petljapg
+(width, height) = (300, 300)
+canvas = petljapg.open_window(width, height, &quot;Ladder&quot;)
+
+# -*- acsection: main -*-
+canvas.fill(pg.Color(&quot;green&quot;)) # paint background
+
+pg.draw.line(canvas, pg.Color(&quot;brown&quot;), (100, 10), (100, height - 10), 10)    # left side
+pg.draw.line(canvas, pg.Color(&quot;brown&quot;), (200, 10), (200, height - 10), 10)    # right side
+
+for i in range(1, 6):
+    pg.draw.line(canvas, pg.Color(&quot;brown&quot;), (100, i * 50), (200, i * 50), 10) # step
+
+# -*- acsection: after-main -*-
+petljapg.wait_loop()
+" data-enablecopy="true">
+canvas.fill(pg.Color("green")) # paint background
+
+pg.draw.line(canvas, pg.Color("brown"), (100, 10), (100, height - 10), 10)    # left side
+pg.draw.line(canvas, pg.Color("brown"), (200, 10), (200, height - 10), 10)    # right side
+
+# change (rewrite) this part
+pg.draw.line(canvas, pg.Color("brown"), (100,  50), (200, 50), 10) # step
+pg.draw.line(canvas, pg.Color("brown"), (100, 100), (200, 100), 10) # step
+pg.draw.line(canvas, pg.Color("brown"), (100, 150), (200, 150), 10) # step
+pg.draw.line(canvas, pg.Color("brown"), (100, 200), (200, 200), 10) # step
+pg.draw.line(canvas, pg.Color("brown"), (100, 250), (200, 250), 10) # step
+</textarea>
+</div>
+
+    <div data-component="reveal" id="PyGame_loop__ladder_reveal_eng"   data-showtitle="Hint" data-hidetitle="Hide hint">
+    <p>Instead of 5 line drawing statements, you can use a loop of the following form:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>for y in ???:
+    pg.draw.line(canvas, pg.Color(&quot;brown&quot;), (100, y), (200, y), 10)
+</pre></div>
+</div>
+<p>To complete the loop correctly, you need to answer the following question:</p>
+
+            <div class="course-box course-box-question course-content">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="pygame__loop_quiz_range1_eng">
+            <p>Q-71: Which of the ranges offered gives values 50, 100, 150, 200, 250?</p>
+
+            <li data-component="answer"  id="pygame__loop_quiz_range1_eng_opt_a">range(0, 50, 250)</li><li data-component="feedback" id="pygame__loop_quiz_range1_eng_opt_a">No, the first number is not appropriate for that range.</li>
+            
+            <li data-component="answer"  id="pygame__loop_quiz_range1_eng_opt_b">range(250, 50)</li><li data-component="feedback" id="pygame__loop_quiz_range1_eng_opt_b">No, try again.</li>
+            
+            <li data-component="answer" data-correct id="pygame__loop_quiz_range1_eng_opt_c">range(50, 251, 50)</li><li data-component="feedback" id="pygame__loop_quiz_range1_eng_opt_c">Correct!</li>
+            
+            <li data-component="answer"  id="pygame__loop_quiz_range1_eng_opt_d">range(50, 250, 50)</li><li data-component="feedback" id="pygame__loop_quiz_range1_eng_opt_d">No, the last number is not appropriate for that range.</li>
+            
+
+            </ul>
+            </div>
+            
+    </div>
+    </div>
+<div class="section" id="trees">
+<h2>Trees<a class="headerlink" href="#trees" title="Permalink to this headline">¶</a></h2>
+<p>Modify the program so that one tree is drawn in each or the three passes through the loop.</p>
+
+<div data-childcomponent="PyGame_loop__trees_eng" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=PyGame_loop__trees_eng data-lang="python" 
+      data-timelimit=25000    
+    data-audio=''   
+           data-playtask="true"   data-modaloutput="true" data-hidehistory=true
+      data-includexsrc="# -*- acsection: general-init -*-
+import pygame as pg, petljapg
+canvas = petljapg.open_window(300, 300, &quot;Trees&quot;)
+
+# -*- acsection: main -*-
+canvas.fill(pg.Color(&quot;green&quot;)) # paint background
+
+for i in range(3):
+    pg.draw.rect(canvas, pg.Color(&quot;brown&quot;), (100*i + 40, 180, 20, 100))        # tree
+    pg.draw.ellipse(canvas, pg.Color(&quot;darkgreen&quot;), (100*i + 10, 50, 80, 150))  # treetop
+
+# -*- acsection: after-main -*-
+petljapg.wait_loop()
+" data-enablecopy="true">
+canvas.fill(pg.Color("green")) # paint background
+
+pg.draw.rect(canvas, pg.Color("brown"), (40, 180, 20, 100))        # first tree
+pg.draw.ellipse(canvas, pg.Color("darkgreen"), (10, 50, 80, 150))  # first treetop
+pg.draw.rect(canvas, pg.Color("brown"), (140, 180, 20, 100))       # second tree
+pg.draw.ellipse(canvas, pg.Color("darkgreen"), (110, 50, 80, 150)) # second treetop
+pg.draw.rect(canvas, pg.Color("brown"), (240, 180, 20, 100))       # third tree
+pg.draw.ellipse(canvas, pg.Color("darkgreen"), (210, 50, 80, 150)) # third treetop
+</textarea>
+</div>
+
+    <div data-component="reveal" id="PyGame_loop__trees_reveal_eng"   data-showtitle="Hint" data-hidetitle="Hide hint">
+    <p>The program can look like this:</p>
+
+<div data-childcomponent="PyGame_loop__trees_solution_eng" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=PyGame_loop__trees_solution_eng data-lang="python" 
+      data-timelimit=25000    
+    data-audio=''   
+              data-modaloutput="true" data-hidehistory=true
+      data-includexsrc="# -*- acsection: general-init -*-
+import pygame as pg, petljapg
+canvas = petljapg.open_window(300, 300, &quot;Trees&quot;)
+
+# -*- acsection: main -*-
+canvas.fill(pg.Color(&quot;green&quot;)) # paint background
+
+for i in range(3):
+    pg.draw.rect(canvas, pg.Color(&quot;brown&quot;), (100*i + 40, 180, 20, 100))        # tree
+    pg.draw.ellipse(canvas, pg.Color(&quot;darkgreen&quot;), (100*i + 10, 50, 80, 150))  # treetop
+
+# -*- acsection: after-main -*-
+petljapg.wait_loop()
+" data-enablecopy="true">
+canvas.fill(pg.Color("green")) # paint background
+
+for i in range(3):
+    pg.draw.rect(canvas, pg.Color("brown"), (???, 180, 20, 100))        # tree
+    pg.draw.ellipse(canvas, pg.Color("darkgreen"), (???, 50, 80, 150))  # treetop
+</textarea>
+</div>
+<p>whereby appropriate expressions for the <em>x</em> coordinate should be placed instead of the question marks. When <em>i</em> takes the values 0, 1, 2 in order, the expression in the first statement should take the values 40, 140, 240 and the expression in the second statement should take the values 10, 110, 210.</p>
+
+    </div>
+    </div>
+<div class="section" id="grid">
+<h2>Grid<a class="headerlink" href="#grid" title="Permalink to this headline">¶</a></h2>
+<p>Modify the program so that vertical lines are drawn in one loop and horizontal lines in the second loop.</p>
+
+<div data-childcomponent="PyGame_loop__grid_eng" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=PyGame_loop__grid_eng data-lang="python" 
+      data-timelimit=25000    
+    data-audio=''   
+           data-playtask="true"   data-modaloutput="true" data-hidehistory=true
+      data-includexsrc="# -*- acsection: general-init -*-
+import pygame as pg, petljapg
+(width, height) = (500, 300)
+canvas = petljapg.open_window(width, height, &quot;Grid&quot;)
+
+# -*- acsection: main -*-
+canvas.fill(pg.Color(&quot;gray&quot;))
+
+for x in range(10, width, 20):
+    pg.draw.line(canvas, pg.Color(&quot;black&quot;), (x, 10), (x, height - 10), 1)
+
+for y in range(10, height, 20):
+    pg.draw.line(canvas, pg.Color(&quot;black&quot;), (10, y), (width - 10, y), 1)
+
+# -*- acsection: after-main -*-
+petljapg.wait_loop()
+" data-enablecopy="true">
+pg.draw.line(canvas, pg.Color("black"), (10, 10), (10, height - 10), 1)
+pg.draw.line(canvas, pg.Color("black"), (30, 10), (30, height - 10), 1)
+pg.draw.line(canvas, pg.Color("black"), (50, 10), (50, height - 10), 1)
+pg.draw.line(canvas, pg.Color("black"), (70, 10), (70, height - 10), 1)
+pg.draw.line(canvas, pg.Color("black"), (90, 10), (90, height - 10), 1)
+pg.draw.line(canvas, pg.Color("black"), (110, 10), (110, height - 10), 1)
+pg.draw.line(canvas, pg.Color("black"), (130, 10), (130, height - 10), 1)
+pg.draw.line(canvas, pg.Color("black"), (150, 10), (150, height - 10), 1)
+pg.draw.line(canvas, pg.Color("black"), (170, 10), (170, height - 10), 1)
+pg.draw.line(canvas, pg.Color("black"), (190, 10), (190, height - 10), 1)
+pg.draw.line(canvas, pg.Color("black"), (210, 10), (210, height - 10), 1)
+pg.draw.line(canvas, pg.Color("black"), (230, 10), (230, height - 10), 1)
+pg.draw.line(canvas, pg.Color("black"), (250, 10), (250, height - 10), 1)
+pg.draw.line(canvas, pg.Color("black"), (270, 10), (270, height - 10), 1)
+pg.draw.line(canvas, pg.Color("black"), (290, 10), (290, height - 10), 1)
+pg.draw.line(canvas, pg.Color("black"), (310, 10), (310, height - 10), 1)
+pg.draw.line(canvas, pg.Color("black"), (330, 10), (330, height - 10), 1)
+pg.draw.line(canvas, pg.Color("black"), (350, 10), (350, height - 10), 1)
+pg.draw.line(canvas, pg.Color("black"), (370, 10), (370, height - 10), 1)
+pg.draw.line(canvas, pg.Color("black"), (390, 10), (390, height - 10), 1)
+pg.draw.line(canvas, pg.Color("black"), (410, 10), (410, height - 10), 1)
+pg.draw.line(canvas, pg.Color("black"), (430, 10), (430, height - 10), 1)
+pg.draw.line(canvas, pg.Color("black"), (450, 10), (450, height - 10), 1)
+pg.draw.line(canvas, pg.Color("black"), (470, 10), (470, height - 10), 1)
+pg.draw.line(canvas, pg.Color("black"), (490, 10), (490, height - 10), 1)
+
+pg.draw.line(canvas, pg.Color("black"), (10, 10), (width - 10, 10), 1)
+pg.draw.line(canvas, pg.Color("black"), (10, 30), (width - 10, 30), 1)
+pg.draw.line(canvas, pg.Color("black"), (10, 50), (width - 10, 50), 1)
+pg.draw.line(canvas, pg.Color("black"), (10, 70), (width - 10, 70), 1)
+pg.draw.line(canvas, pg.Color("black"), (10, 90), (width - 10, 90), 1)
+pg.draw.line(canvas, pg.Color("black"), (10, 110), (width - 10, 110), 1)
+pg.draw.line(canvas, pg.Color("black"), (10, 130), (width - 10, 130), 1)
+pg.draw.line(canvas, pg.Color("black"), (10, 150), (width - 10, 150), 1)
+pg.draw.line(canvas, pg.Color("black"), (10, 170), (width - 10, 170), 1)
+pg.draw.line(canvas, pg.Color("black"), (10, 190), (width - 10, 190), 1)
+pg.draw.line(canvas, pg.Color("black"), (10, 210), (width - 10, 210), 1)
+pg.draw.line(canvas, pg.Color("black"), (10, 230), (width - 10, 230), 1)
+pg.draw.line(canvas, pg.Color("black"), (10, 250), (width - 10, 250), 1)
+pg.draw.line(canvas, pg.Color("black"), (10, 270), (width - 10, 270), 1)
+pg.draw.line(canvas, pg.Color("black"), (10, 290), (width - 10, 290), 1)
+</textarea>
+</div>
+</div>
+</div>
+
+
+  
+      <div class="col-md-12">
+<ul class="pager">
+        <li id="relations-prev" title='Previous chapter - Changing the drawing size' data-toggle="tooltip"><a href="03_PyGame_eng_15_Drawing_Scalable_opt.html">Previous chapter</a></li>
+    
+        <li id="relations-next" title='Next chapter - Drawing polygons with loops' data-toggle="tooltip"><a href="03_PyGame_eng_16b_Drawing_Using_Loops2.html">Next chapter</a></li>
+</ul>
+
+<!-- <ul class="pager"> -->
+    <!-- -->
+        <!-- <li id="relations-prev" title='Претходно поглавље - Changing the drawing size' data-toggle="tooltip"><a href="03_PyGame_eng_15_Drawing_Scalable_opt.html">Претходно поглавље</a></li> -->
+    <!--  -->
+    <!-- -->
+        <!-- <li id="relations-next" title='Следеће поглавље - Drawing polygons with loops' data-toggle="tooltip"><a href="03_PyGame_eng_16b_Drawing_Using_Loops2.html">Следеће поглавље</a></li> -->
+    <!-- -->
+<!-- </ul> -->
+
+<script type="text/javascript">
+
+  $('#relations-prev').tooltip({'placement':'right', 'selector': '', 'delay': { show: 100, hide: 50}});
+  $('#relations-next').tooltip({'placement':'left', 'selector': '', 'delay': { show: 100, hide: 50}});
+
+</script>
+</div>
+  
+</div>
+<footer class="footer col-md-12">
+    <div class="container">
+        <div class="text-center">
+            <hr>
+            <p class="text-muted">
+                <span class="pull-left">&copy; 2019 Petlja (Created using  <a href="https://pypi.org/project/Sphinx/">Swinx</a>, <a href="http://runestoneinteractive.org/">RunestoneComponents</a> and <a href="https://github.com/Petlja/PetljaDoc">PetljaDoc</a>)</span>
+            </p>
+        </div>
+    </div>
+</footer>
+
+
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-32029811-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+
+
+  </body>
+</html>

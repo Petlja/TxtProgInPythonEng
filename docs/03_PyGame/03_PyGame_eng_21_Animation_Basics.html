@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>How to make an animation &#8212; Textual Programming in Python</title>
+    <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/activecode.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/codemirror.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/clickable.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pytutor.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/modal-basic.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/datafile.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/dragndrop.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/fitb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/matrixeq.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/parsons.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/lib/prettify.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/poll.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/showEval.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/tabbedstuff.css" />
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/video.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/karel.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/notes.css" />
+    <link rel="stylesheet" href="../_static/user-highlights.css" type="text/css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootstrap-4.0.0-dist/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/flatly.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/petlja.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../_static/runestonebase.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/language_data.js"></script>
+    <script type="text/javascript" src="../_static/jquery.highlight.js"></script>
+    <script type="text/javascript" src="../_static/bookfuncs.js"></script>
+    <script type="text/javascript" src="../_static/codemirror.js"></script>
+    <script type="text/javascript" src="../_static/xml.js"></script>
+    <script type="text/javascript" src="../_static/css.js"></script>
+    <script type="text/javascript" src="../_static/python.js"></script>
+    <script type="text/javascript" src="../_static/htmlmixed.js"></script>
+    <script type="text/javascript" src="../_static/javascript.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/CLDRPluralRuleParser.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.messagestore.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.fallbacks.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.language.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.parser.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.emitter.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.emitter.bidi.js"></script>
+    <script type="text/javascript" src="../_static/activecode-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/skulpt.min.js"></script>
+    <script type="text/javascript" src="../_static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="../_static/activecode.js"></script>
+    <script type="text/javascript" src="../_static/clike.js"></script>
+    <script type="text/javascript" src="../_static/timed_activecode.js"></script>
+    <script type="text/javascript" src="../_static/animationbase.js"></script>
+    <script type="text/javascript" src="../_static/mchoice.js"></script>
+    <script type="text/javascript" src="../_static/timedmc.js"></script>
+    <script type="text/javascript" src="../_static/timed.js"></script>
+    <script type="text/javascript" src="../_static/mchoice-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/clickable.js"></script>
+    <script type="text/javascript" src="../_static/timedclickable.js"></script>
+    <script type="text/javascript" src="../_static/d3.v2.min.js"></script>
+    <script type="text/javascript" src="../_static/jquery.ba-bbq.min.js"></script>
+    <script type="text/javascript" src="../_static/jquery.jsPlumb-1.3.10-all-min.js"></script>
+    <script type="text/javascript" src="../_static/pytutor.js"></script>
+    <script type="text/javascript" src="../_static/codelens.js"></script>
+    <script type="text/javascript" src="../_static/datafile.js"></script>
+    <script type="text/javascript" src="../_static/dragndrop.js"></script>
+    <script type="text/javascript" src="../_static/timeddnd.js"></script>
+    <script type="text/javascript" src="../_static/dragndrop-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/fitb.js"></script>
+    <script type="text/javascript" src="../_static/timedfitb.js"></script>
+    <script type="text/javascript" src="../_static/fitb-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/matrixeq.js"></script>
+    <script type="text/javascript" src="../_static/lib/prettify.js"></script>
+    <script type="text/javascript" src="../_static/lib/hammer.min.js"></script>
+    <script type="text/javascript" src="../_static/parsons.js"></script>
+    <script type="text/javascript" src="../_static/timedparsons.js"></script>
+    <script type="text/javascript" src="../_static/poll.js"></script>
+    <script type="text/javascript" src="../_static/reveal.js"></script>
+    <script type="text/javascript" src="../_static/shortanswer.js"></script>
+    <script type="text/javascript" src="../_static/timed_shortanswer.js"></script>
+    <script type="text/javascript" src="../_static/showEval.js"></script>
+    <script type="text/javascript" src="../_static/tabbedstuff.js"></script>
+    <script type="text/javascript" src="../_static/runestonevideo.js"></script>
+    <script type="text/javascript" src="../_static/karelCorner.js"></script>
+    <script type="text/javascript" src="../_static/karelRobot.js"></script>
+    <script type="text/javascript" src="../_static/karelWorld.js"></script>
+    <script type="text/javascript" src="../_static/karelRobotDrawer.js"></script>
+    <script type="text/javascript" src="../_static/karelUI.js"></script>
+    <script type="text/javascript" src="../_static/karel.js"></script>
+    <script type="text/javascript" src="../_static/karel-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/karel-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/notes.js"></script>
+    <script type="text/javascript" src="../_static/pygamelib-init.js"></script>
+    <script type="text/javascript" src="../_static/blockly/blockly_compressed.js"></script>
+    <script type="text/javascript" src="../_static/blockly/blocks_compressed.js"></script>
+    <script type="text/javascript" src="../_static/blockly/python_compressed.js"></script>
+    <script type="text/javascript" src="../_static/blockly/msg-sr.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/utilities.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/python_errors.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/ast_node_visitor.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/abstract_interpreter.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/pytifa.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/abstract_interpreter_definitions.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/python_to_blockly.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/imported.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/class.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/comment.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/comprehensions.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/dict.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/if.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/io.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/lists.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/sets.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/loops.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/parking.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/tuple.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/turtles.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/text.js"></script>
+    <script type="text/javascript" src="../_static/blockpy-modal.js"></script>
+    <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="../_static/jquery-ui-1.10.3.custom.min.js"></script>
+    <script type="text/javascript" src="../_static/jquery-fix.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-4.0.0-dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-4.0.0-dist/js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
+    <script type="text/javascript" src="../_static/waypoints.min.js"></script>
+    <script type="text/javascript" src="../_static/rangy-core.js"></script>
+    <script type="text/javascript" src="../_static/rangy-textrange.js"></script>
+    <script type="text/javascript" src="../_static/rangy-cssclassapplier.js"></script>
+    <script type="text/javascript" src="../_static/user-highlights.js"></script>
+    <script type="text/javascript" src="../_static/jquery.idle-timer.js"></script>
+    <script type="text/javascript" src="../_static/processing-1.4.1.min.js"></script>
+    <script type="text/javascript" src="../_static/jquery.hotkey.js"></script>
+    <script type="text/javascript" src="../_static/jquery-migrate-1.2.1.min.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Drawings movement" href="03_PyGame_eng_22_Animation_Motion.html" />
+    <link rel="prev" title="Animation" href="03_PyGame_eng_20_Animation.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+<link rel="shortcut icon" href="_static/favicon.ico" type="image/ico" />
+
+<script type="text/javascript">
+  eBookConfig = {};
+  eBookConfig.host = 'http://127.0.0.1:8000' ? 'http://127.0.0.1:8000' : 'http://127.0.0.1:8000';
+  eBookConfig.app = eBookConfig.host+'/runestone';
+  eBookConfig.ajaxURL = eBookConfig.app+'/ajax/';
+  eBookConfig.course = 'TxtProgInPython';
+  eBookConfig.logLevel = 0;
+  eBookConfig.loginRequired = false;
+  eBookConfig.build_info = "";
+  eBookConfig.isLoggedIn = false;
+  eBookConfig.useRunestoneServices = false;
+  eBookConfig.python3 = true;
+  eBookConfig.basecourse = 'TxtProgInPython';
+  eBookConfig.runestone_version = '3.1.1';
+  eBookConfig.imagesDir = '../_images/';
+  if(typeof(Sk) != "undefined")
+      Sk.imgPath = eBookConfig.imagesDir;
+</script>
+
+<div id="fb-root"></div>
+
+
+
+  </head><body>
+
+
+<!-- Begin navbar -->
+
+<nav id="navbar" class="navbar navbar-default navbar-fixed-top" role="navigation">
+
+  <div class="container">
+
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+     <img src="../_static/img/logo.png" style="width:80px; height: 80px;"> 
+    </div>
+
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" style="margin-top: 10px; margin-left: 25px;">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="../">Textual Programming in Python</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<div class="container col-md-12" id="continue-reading"></div>
+
+<div class="container col-md-8 col-md-offset-2" id="main-content">
+  
+  <div class="section" id="how-to-make-an-animation">
+<h1>How to make an animation<a class="headerlink" href="#how-to-make-an-animation" title="Permalink to this headline">¶</a></h1>
+<p>A simple way to get an animation is to place the part of a program that draws one frame in a separate function. As a rule, we will call this function <em>new_frame</em> in programs, though it may have any other name.</p>
+<div class="section" id="altering-the-drawings">
+<h2>Altering the drawings<a class="headerlink" href="#altering-the-drawings" title="Permalink to this headline">¶</a></h2>
+<p>In order to get an animation, the function that draws a frame has to create a drawing slightly different from the previous one on the next call, since without changes there is no animation. For the new drawing to be different, the drawing itself must depend on the values of some variables. Changing the values of the variables on which the drawing depends will result in a different drawing.</p>
+<p>For example, here’s how we can create a program that alternately displays a smaller and a larger heart.</p>
+<a class="reference internal image-reference" href="../_images/heart_smaller.png"><img alt="../_images/heart_smaller.png" src="../_images/heart_smaller.png" style="width: 120px;" /></a>
+<a class="reference internal image-reference" href="../_images/heart_bigger.png"><img alt="../_images/heart_bigger.png" src="../_images/heart_bigger.png" style="width: 120px;" /></a>
+
+<div data-childcomponent="PyGame__anim_heart_blinking_eng" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=PyGame__anim_heart_blinking_eng data-lang="python" 
+      data-timelimit=25000    
+    data-audio=''   
+              data-modaloutput="true" data-hidehistory=true
+    data-includesrc="import pygame as pg, petljapg
+canvas = petljapg.open_window(200, 181, &quot;Heart&quot;)
+
+# images of the smaller and the bigger heart
+heart_images = [
+    pg.image.load(&quot;heart_smaller.png&quot;), 
+    pg.image.load(&quot;heart_bigger.png&quot;)
+]
+
+image_index = 0 # index of an image to be displayed
+
+def new_frame():
+    global image_index
+    image_index = 1 - image_index       # chosing the other image
+
+    canvas.fill(pg.Color(&quot;blue&quot;))         # paint background
+    canvas.blit(heart_images[image_index], (0, 0))
+
+petljapg.frame_loop(2, new_frame)
+"   data-enablecopy="true">
+
+
+</textarea>
+</div>
+<p>The function uses the <em>image_index</em> variable, which only gets values 0 or 1. This variable is used as the index (sequence number) of an image in the image list, which consists of two images. Based on the variable <em>image_index</em>, the program decides which of the two images will be displayed. With each new execution of the <em>new_frame</em> function, the variable <em>image_index</em> changes the value (if it was 0, it gets a value of 1 and vice versa), thus changing the image to be displayed.</p>
+<p>The variables on which the drawing depends are said to describe the scene. There can be one or more such variables. In the example with the heart, the scene is described by one variable, which is the variable <em>image_index</em>.</p>
+<p>In the general case, when creating a new animation frame, we use the old values of scene-describing variables to calculate their new values. In doing so, new values may or may not be different from old ones. We call this computation a scene update.</p>
+</div>
+<div class="section" id="global-variables">
+<h2>Global variables<a class="headerlink" href="#global-variables" title="Permalink to this headline">¶</a></h2>
+<p>To be able to update a scene in the <em>new_frame</em> function, variables describing the scene have need to have values before and after executing the <em>new_frame</em> function. Therefore, we need to form these variables (assign them the first values) in the main part of the program. When we use such variables in a function, we call them global variables. In contrast, variables made in the function itself are called local variables, and they exist only during function execution.</p>
+<p>When assigning values to a global variable in a function, we should indicate at the beginning of the function that these are variables that already exist and are formed outside that function. For the variable <em>image_index</em> in the example above, we achieved this by writing <code class="docutils literal notranslate"><span class="pre">global</span> <span class="pre">image_index</span></code> in the first row of the function. If we did not declare the variable global, Python would attempt to form a new local variable of the same name when assigning a value to the variable.</p>
+<p>When there are multiple global variables that we intend to modify in a function, after the word <em>global</em> we should list the names of all such variables, separated by commas.</p>
+</div>
+<div class="section" id="animation-speed">
+<h2>Animation speed<a class="headerlink" href="#animation-speed" title="Permalink to this headline">¶</a></h2>
+<p>Animation speed is determined by the duration of each frame, that is, the number of frames displayed in a unit of time. To indicate rate at which consecutive frames appear we use the abbreviation (also unit of measurement) fps - frames per second. When creating an animation, one of the things we need to do is choose the speed of rendering and set it in our program as the number of frames that we want the program to create and display per second.</p>
+<p>In the previous program, we used 2 frames per second to get a rhythm similar to the heart rate. In doing so, we have clearly distinguished two frames that appear alternately. To get the impression of movement we only need higher speeds and more images.</p>
+
+    <div class="course-box course-box-info">
+        <div class="course-content">
+            <p>
+<p>Commonly at least 15 fps are used for motion animation, because at slower rendering speeds movement can seem intermittent. For example, TV shows generally use 24 fps, and nowadays, video games under 30 fps are not considered to provide a good enough experience. Even faster animations can provide even better effects for some viewers, but those are also more expensive to create and render.</p>
+<p>If we set a very high speed in our programs, it may not be possible for our computer to achieve such a speed of image generation, nor such a speed of display. In this case, no errors will occur, but the actual (effective) frame rate will be smaller (one that the computer can achieve).</p>
+
+    </p></div></div>
+<p>The animation of running from the introductory text can be achieved with a program very similar to the heart example. The only fundamental difference is that it uses a larger number of images (eight instead of two) and a higher frame rate.</p>
+<a class="reference internal image-reference" href="../_images/running1.png"><img alt="../_images/running1.png" src="../_images/running1.png" style="width: 50px;" /></a>
+<a class="reference internal image-reference" href="../_images/running2.png"><img alt="../_images/running2.png" src="../_images/running2.png" style="width: 50px;" /></a>
+<a class="reference internal image-reference" href="../_images/running3.png"><img alt="../_images/running3.png" src="../_images/running3.png" style="width: 50px;" /></a>
+<a class="reference internal image-reference" href="../_images/running4.png"><img alt="../_images/running4.png" src="../_images/running4.png" style="width: 50px;" /></a>
+<a class="reference internal image-reference" href="../_images/running5.png"><img alt="../_images/running5.png" src="../_images/running5.png" style="width: 50px;" /></a>
+<a class="reference internal image-reference" href="../_images/running6.png"><img alt="../_images/running6.png" src="../_images/running6.png" style="width: 50px;" /></a>
+<a class="reference internal image-reference" href="../_images/running7.png"><img alt="../_images/running7.png" src="../_images/running7.png" style="width: 50px;" /></a>
+<a class="reference internal image-reference" href="../_images/running8.png"><img alt="../_images/running8.png" src="../_images/running8.png" style="width: 50px;" /></a>
+
+<div data-childcomponent="PyGame__anim_running_eng" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=PyGame__anim_running_eng data-lang="python" 
+      data-timelimit=25000    
+    data-audio=''   
+              data-modaloutput="true" data-hidehistory=true
+    data-includesrc="import pygame as pg, petljapg
+
+# setting the canvas to be the same size as images
+(width, height) = (300, 264)
+canvas = petljapg.open_window(width, height, &quot;Running&quot;)
+
+num_images = 8
+images = []   # list that will contain images
+for i in range(1, num_images+1): # reading images running1.png, ..., running8.png into the list
+    image_name = &quot;running&quot; + str(i) + &quot;.png&quot;  # building image name from parts
+    images.append(pg.image.load(image_name))
+
+image_index = 0 # index of an image to be displayed
+
+def new_frame():
+    global image_index
+    image_index = image_index + 1 # switching to the next image
+    if image_index == num_images:    # if there is no next image ...
+        image_index = 0            # turn back to the first image
+    canvas.blit(images[image_index], (0, 0))
+
+petljapg.frame_loop(15, new_frame)
+"   data-enablecopy="true">
+
+
+</textarea>
+</div>
+<p>Try different frame rates and see how that parameter affects the appearance of the animation. Of course, apart from the number of frames per second, the overall experience is also affected by how much consecutive images differ (more images with smaller differences give a better effect, but it requires a higher frame rate).</p>
+<hr class="docutils" />
+<p>Let’s summarize what you need to do to create an animation:</p>
+<ul class="simple">
+<li><p>define global variables that describe the scene (this data will change during the animation);</p></li>
+<li><p>define a function <code class="docutils literal notranslate"><span class="pre">new_frame</span></code> that updates the data about characters and objects in the scene, and then plot the scene (remember to list the global variables being modified in the function after the word <code class="docutils literal notranslate"><span class="pre">global</span></code>);</p></li>
+<li><p>at the end of the program, call the <code class="docutils literal notranslate"><span class="pre">petljapg.frame_loop(fps,</span> <span class="pre">new_frame)</span></code> function, where <em>fps</em> is the desired frame rate. The <em>frame_loop</em> function, in addition to everything <em>wait_loop</em> did, also calls the <em>new_frame</em> function a requested number of times per second. That is why in animations we will end programs with <em>frame_loop</em> instead of <em>wait_loop</em>.</p></li>
+</ul>
+</div>
+<div class="section" id="animations-questions">
+<h2>Animations - questions<a class="headerlink" href="#animations-questions" title="Permalink to this headline">¶</a></h2>
+
+<div class="course-box course-box-problem course-content">
+<ul data-component="dragndrop" id="pygame__anim_quiz_frametime1_eng">
+    <span data-component="question">Link the duration of the frame to the number of frames per second.</span>
+	<span data-component=feedback>Try again!</span>
+
+    <li data-component="draggable" id="pygame__anim_quiz_frametime1_eng_drag1">10 fps </li>
+    <li data-component="dropzone" for="pygame__anim_quiz_frametime1_eng_drag1"> 100 milliseconds</li>
+
+    <li data-component="draggable" id="pygame__anim_quiz_frametime1_eng_drag2">20 fps </li>
+    <li data-component="dropzone" for="pygame__anim_quiz_frametime1_eng_drag2"> 50 milliseconds</li>
+
+    <li data-component="draggable" id="pygame__anim_quiz_frametime1_eng_drag3">50 fps </li>
+    <li data-component="dropzone" for="pygame__anim_quiz_frametime1_eng_drag3"> 20 milliseconds</li>
+
+    <li data-component="draggable" id="pygame__anim_quiz_frametime1_eng_drag4">100 fps </li>
+    <li data-component="dropzone" for="pygame__anim_quiz_frametime1_eng_drag4"> 10 milliseconds</li>
+</ul></div>
+    <div class="course-box course-box-special">
+        <div class="course-content">
+            <h4 class="carbox-title">
+                <img class="corner-image float-right" src="../_static/img/question-mark.png" />
+            </h4>
+            <p>
+<p><strong>Task - suggestion:</strong> If you like, try creating a Python program that will cyclically display your selected photos or other images of your choice (if all your pictures are the same size, you have already learned everything you need). Keep in mind that frame rate may be less than 1 fps and may not be an integer (but should be positive). For example, in the “slideshow” program we suggest, there is a natural need for each image to last longer than one second.</p>
+
+    </p></div></div>
+
+        <div class="course-box course-box-question course-content">
+        <div data-component="fillintheblank" id="pygame__anim_quiz_frametime2_eng">
+            <p>To display each frame for two seconds, how many frames per second should be set in the program?</p>
+<input type="text">
+        <script type="application/json">
+            [[{"regex": "^ *0[,\\.]5 *$", "regexFlags": "", "feedback": "<p>Correct!</p>\n"}, {"regex": "^ *[0-9]+[,\\.]?[0-9]* *$", "regexFlags": "", "feedback": "<p>no, try again.</p>\n"}, {"regex": "^ *.* *$", "regexFlags": "", "feedback": "<p>the result should be a number.</p>\n"}]]
+        </script>
+
+        </div>
+        </div>
+            
+            <div class="course-box course-box-question course-content">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="pygame__anim_quiz_toggle_eng">
+            <p>Q-72:  In the “Running” example, it was required that the variable <em>image_index</em> cyclically take only those values that correspond to the positions of the images in the list. When we have eight images, these values are 0, 1, 2, 3, 4, 5, 6, 7, 0, 1, 2, etc. In the general case, for <em>n</em> images these values are 0, 1, 2, … n-1, 0, 1, 2, etc.</p>
+<blockquote>
+<div><p>Recall that the operator % denotes the operation of calculating the remainder after division. With this operation, we can achieve the same goal in shorter notation. Which of the following commands can equally replace this part of the program?</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">image_index</span> <span class="o">=</span> <span class="n">image_index</span> <span class="o">+</span> <span class="mi">1</span> <span class="c1"># move on to the next picture</span>
+<span class="k">if</span> <span class="n">image_index</span> <span class="o">==</span> <span class="n">num_images</span><span class="p">:</span>    <span class="c1"># if there is no next picture ...</span>
+    <span class="n">image_index</span> <span class="o">=</span> <span class="mi">0</span>            <span class="c1"># return to the first picture</span>
+</pre></div>
+</div>
+</div></blockquote>
+
+            <li data-component="answer"  id="pygame__anim_quiz_toggle_eng_opt_a">image_index = image_index + 1 % num_images</li><li data-component="feedback" id="pygame__anim_quiz_toggle_eng_opt_a">Try again</li>
+            
+            <li data-component="answer"  id="pygame__anim_quiz_toggle_eng_opt_b">image_index = (image_index % num_images) + 1</li><li data-component="feedback" id="pygame__anim_quiz_toggle_eng_opt_b">Try again</li>
+            
+            <li data-component="answer" data-correct id="pygame__anim_quiz_toggle_eng_opt_c">image_index = (image_index + 1) % num_images</li><li data-component="feedback" id="pygame__anim_quiz_toggle_eng_opt_c">Correct</li>
+            
+            <li data-component="answer"  id="pygame__anim_quiz_toggle_eng_opt_d">image_index = image_index % (num_images + 1)</li><li data-component="feedback" id="pygame__anim_quiz_toggle_eng_opt_d">Try again</li>
+            
+
+            </ul>
+            </div>
+            </div>
+</div>
+
+
+  
+      <div class="col-md-12">
+<ul class="pager">
+        <li id="relations-prev" title='Previous chapter - Animation' data-toggle="tooltip"><a href="03_PyGame_eng_20_Animation.html">Previous chapter</a></li>
+    
+        <li id="relations-next" title='Next chapter - Drawings movement' data-toggle="tooltip"><a href="03_PyGame_eng_22_Animation_Motion.html">Next chapter</a></li>
+</ul>
+
+<!-- <ul class="pager"> -->
+    <!-- -->
+        <!-- <li id="relations-prev" title='Претходно поглавље - Animation' data-toggle="tooltip"><a href="03_PyGame_eng_20_Animation.html">Претходно поглавље</a></li> -->
+    <!--  -->
+    <!-- -->
+        <!-- <li id="relations-next" title='Следеће поглавље - Drawings movement' data-toggle="tooltip"><a href="03_PyGame_eng_22_Animation_Motion.html">Следеће поглавље</a></li> -->
+    <!-- -->
+<!-- </ul> -->
+
+<script type="text/javascript">
+
+  $('#relations-prev').tooltip({'placement':'right', 'selector': '', 'delay': { show: 100, hide: 50}});
+  $('#relations-next').tooltip({'placement':'left', 'selector': '', 'delay': { show: 100, hide: 50}});
+
+</script>
+</div>
+  
+</div>
+<footer class="footer col-md-12">
+    <div class="container">
+        <div class="text-center">
+            <hr>
+            <p class="text-muted">
+                <span class="pull-left">&copy; 2019 Petlja (Created using  <a href="https://pypi.org/project/Sphinx/">Swinx</a>, <a href="http://runestoneinteractive.org/">RunestoneComponents</a> and <a href="https://github.com/Petlja/PetljaDoc">PetljaDoc</a>)</span>
+            </p>
+        </div>
+    </div>
+</footer>
+
+
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-32029811-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+
+
+  </body>
+</html>

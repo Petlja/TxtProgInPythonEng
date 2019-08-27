@@ -1,0 +1,805 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Цртање задатих цртежа &#8212; Textual Programming in Python</title>
+    <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/activecode.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/codemirror.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/clickable.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pytutor.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/modal-basic.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/datafile.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/dragndrop.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/fitb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/matrixeq.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/parsons.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/lib/prettify.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/poll.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/showEval.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/tabbedstuff.css" />
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/video.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/karel.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/notes.css" />
+    <link rel="stylesheet" href="../_static/user-highlights.css" type="text/css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootstrap-4.0.0-dist/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/flatly.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/petlja.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../_static/runestonebase.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/language_data.js"></script>
+    <script type="text/javascript" src="../_static/jquery.highlight.js"></script>
+    <script type="text/javascript" src="../_static/bookfuncs.js"></script>
+    <script type="text/javascript" src="../_static/codemirror.js"></script>
+    <script type="text/javascript" src="../_static/xml.js"></script>
+    <script type="text/javascript" src="../_static/css.js"></script>
+    <script type="text/javascript" src="../_static/python.js"></script>
+    <script type="text/javascript" src="../_static/htmlmixed.js"></script>
+    <script type="text/javascript" src="../_static/javascript.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/CLDRPluralRuleParser.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.messagestore.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.fallbacks.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.language.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.parser.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.emitter.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.emitter.bidi.js"></script>
+    <script type="text/javascript" src="../_static/activecode-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/skulpt.min.js"></script>
+    <script type="text/javascript" src="../_static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="../_static/activecode.js"></script>
+    <script type="text/javascript" src="../_static/clike.js"></script>
+    <script type="text/javascript" src="../_static/timed_activecode.js"></script>
+    <script type="text/javascript" src="../_static/animationbase.js"></script>
+    <script type="text/javascript" src="../_static/mchoice.js"></script>
+    <script type="text/javascript" src="../_static/timedmc.js"></script>
+    <script type="text/javascript" src="../_static/timed.js"></script>
+    <script type="text/javascript" src="../_static/mchoice-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/clickable.js"></script>
+    <script type="text/javascript" src="../_static/timedclickable.js"></script>
+    <script type="text/javascript" src="../_static/d3.v2.min.js"></script>
+    <script type="text/javascript" src="../_static/jquery.ba-bbq.min.js"></script>
+    <script type="text/javascript" src="../_static/jquery.jsPlumb-1.3.10-all-min.js"></script>
+    <script type="text/javascript" src="../_static/pytutor.js"></script>
+    <script type="text/javascript" src="../_static/codelens.js"></script>
+    <script type="text/javascript" src="../_static/datafile.js"></script>
+    <script type="text/javascript" src="../_static/dragndrop.js"></script>
+    <script type="text/javascript" src="../_static/timeddnd.js"></script>
+    <script type="text/javascript" src="../_static/dragndrop-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/fitb.js"></script>
+    <script type="text/javascript" src="../_static/timedfitb.js"></script>
+    <script type="text/javascript" src="../_static/fitb-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/matrixeq.js"></script>
+    <script type="text/javascript" src="../_static/lib/prettify.js"></script>
+    <script type="text/javascript" src="../_static/lib/hammer.min.js"></script>
+    <script type="text/javascript" src="../_static/parsons.js"></script>
+    <script type="text/javascript" src="../_static/timedparsons.js"></script>
+    <script type="text/javascript" src="../_static/poll.js"></script>
+    <script type="text/javascript" src="../_static/reveal.js"></script>
+    <script type="text/javascript" src="../_static/shortanswer.js"></script>
+    <script type="text/javascript" src="../_static/timed_shortanswer.js"></script>
+    <script type="text/javascript" src="../_static/showEval.js"></script>
+    <script type="text/javascript" src="../_static/tabbedstuff.js"></script>
+    <script type="text/javascript" src="../_static/runestonevideo.js"></script>
+    <script type="text/javascript" src="../_static/karelCorner.js"></script>
+    <script type="text/javascript" src="../_static/karelRobot.js"></script>
+    <script type="text/javascript" src="../_static/karelWorld.js"></script>
+    <script type="text/javascript" src="../_static/karelRobotDrawer.js"></script>
+    <script type="text/javascript" src="../_static/karelUI.js"></script>
+    <script type="text/javascript" src="../_static/karel.js"></script>
+    <script type="text/javascript" src="../_static/karel-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/karel-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/notes.js"></script>
+    <script type="text/javascript" src="../_static/pygamelib-init.js"></script>
+    <script type="text/javascript" src="../_static/blockly/blockly_compressed.js"></script>
+    <script type="text/javascript" src="../_static/blockly/blocks_compressed.js"></script>
+    <script type="text/javascript" src="../_static/blockly/python_compressed.js"></script>
+    <script type="text/javascript" src="../_static/blockly/msg-sr.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/utilities.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/python_errors.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/ast_node_visitor.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/abstract_interpreter.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/pytifa.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/abstract_interpreter_definitions.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/python_to_blockly.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/imported.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/class.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/comment.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/comprehensions.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/dict.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/if.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/io.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/lists.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/sets.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/loops.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/parking.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/tuple.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/turtles.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/text.js"></script>
+    <script type="text/javascript" src="../_static/blockpy-modal.js"></script>
+    <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="../_static/jquery-ui-1.10.3.custom.min.js"></script>
+    <script type="text/javascript" src="../_static/jquery-fix.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-4.0.0-dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-4.0.0-dist/js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
+    <script type="text/javascript" src="../_static/waypoints.min.js"></script>
+    <script type="text/javascript" src="../_static/rangy-core.js"></script>
+    <script type="text/javascript" src="../_static/rangy-textrange.js"></script>
+    <script type="text/javascript" src="../_static/rangy-cssclassapplier.js"></script>
+    <script type="text/javascript" src="../_static/user-highlights.js"></script>
+    <script type="text/javascript" src="../_static/jquery.idle-timer.js"></script>
+    <script type="text/javascript" src="../_static/processing-1.4.1.min.js"></script>
+    <script type="text/javascript" src="../_static/jquery.hotkey.js"></script>
+    <script type="text/javascript" src="../_static/jquery-migrate-1.2.1.min.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+<link rel="shortcut icon" href="_static/favicon.ico" type="image/ico" />
+
+<script type="text/javascript">
+  eBookConfig = {};
+  eBookConfig.host = 'http://127.0.0.1:8000' ? 'http://127.0.0.1:8000' : 'http://127.0.0.1:8000';
+  eBookConfig.app = eBookConfig.host+'/runestone';
+  eBookConfig.ajaxURL = eBookConfig.app+'/ajax/';
+  eBookConfig.course = 'TxtProgInPython';
+  eBookConfig.logLevel = 0;
+  eBookConfig.loginRequired = false;
+  eBookConfig.build_info = "";
+  eBookConfig.isLoggedIn = false;
+  eBookConfig.useRunestoneServices = false;
+  eBookConfig.python3 = true;
+  eBookConfig.basecourse = 'TxtProgInPython';
+  eBookConfig.runestone_version = '3.1.1';
+  eBookConfig.imagesDir = '../_images/';
+  if(typeof(Sk) != "undefined")
+      Sk.imgPath = eBookConfig.imagesDir;
+</script>
+
+<div id="fb-root"></div>
+
+
+
+  </head><body>
+
+
+<!-- Begin navbar -->
+
+<nav id="navbar" class="navbar navbar-default navbar-fixed-top" role="navigation">
+
+  <div class="container">
+
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+     <img src="../_static/img/logo.png" style="width:80px; height: 80px;"> 
+    </div>
+
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" style="margin-top: 10px; margin-left: 25px;">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="../">Textual Programming in Python</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<div class="container col-md-12" id="continue-reading"></div>
+
+<div class="container col-md-8 col-md-offset-2" id="main-content">
+  
+  <div class="section" id="id1">
+<h1>Цртање задатих цртежа<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
+<p>Као што смо већ рекли, слике које можемо да генеришемо у PyGame окружењу помоћу функција за цртање састоје се од пиксела. То су такозване растерске слике или битмапе. Видели смо да је за цртање основних облика потребно знати координате пиксела које одређују сваки такав облик. Међутим, у реалнијој ситуацији ове координате нису директно задате и треба да их сами одредимо.</p>
+<p>Уколико желимо да програмски генеришемо слику по узору на неку постојећу битмапу, координате тачака можемо да одредимо са дате слике. Слику можемо да увећамо у неком од програма за гледање слика, тако да сваки пиксел изгледа као квадратић. То на пример може да изгледа овако:</p>
+<a class="reference internal image-reference" href="../_images/ladder_grid.png"><img alt="../_images/ladder_grid.png" class="align-center" src="../_images/ladder_grid.png" style="width: 300px;" /></a>
+<p>Видимо да је ова слика генерисана цртањем 4 водоравне и 2 усправне линије, као и да је свих 6 линија црне боје и дебљине 1. Пошто смо научили да се координате <em>x</em> рачунају слева на десно, а <em>y</em> одозго на доле, као и да се броји од нуле, бројањем можемо да одредимо координате почетних и крајњих тачака свих шест линија.</p>
+<div class="section" id="id2">
+<h2>Мердевине<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<p>Очитајте координате са увећане слике горе и напишите програм који црта такве мердевине.</p>
+<p><strong>Помоћ:</strong> бројањем (од нуле) можемо да установимо да су координате крајева леве усправне линије (5, 3) и (5, 36). На исти начин треба одредити координате крајњих тачака осталих 5 линија.</p>
+
+<div data-childcomponent="PyGame_ladder_assist_srp" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=PyGame_ladder_assist_srp data-lang="python" 
+      data-timelimit=25000    
+    data-audio=''   
+              data-modaloutput="true" data-hidehistory=true
+      data-includexsrc="# -*- acsection: general-init -*-
+import pygame as pg, petljapg
+prozor = petljapg.open_window(20, 40, &quot;Мердевине&quot;)
+
+# -*- acsection: main -*-
+prozor.fill(pg.Color(&quot;white&quot;)) # bojimo pozadinu ekrana u belo
+
+pg.draw.line(prozor, pg.Color(&quot;black&quot;), ( 5, 3), ( 5, 36), 1)  # leva strana
+pg.draw.line(prozor, pg.Color(&quot;black&quot;), (14, 3), (14, 36), 1)  # desna strana
+
+pg.draw.line(prozor, pg.Color(&quot;black&quot;), (5,  9), (14,  9), 1) # precaga
+pg.draw.line(prozor, pg.Color(&quot;black&quot;), (5, 16), (14, 16), 1) # precaga
+pg.draw.line(prozor, pg.Color(&quot;black&quot;), (5, 23), (14, 23), 1) # precaga
+pg.draw.line(prozor, pg.Color(&quot;black&quot;), (5, 30), (14, 30), 1) # precaga
+
+# -*- acsection: after-main -*-
+petljapg.wait_loop()
+" data-enablecopy="true">
+ prozor.fill(pg.Color("white")) # bojimo pozadinu ekrana u belo
+
+ pg.draw.line(prozor, pg.Color("black"), (5, 3), (5, 36), 1)  # leva strana
+ pg.draw.line(prozor, pg.Color("black"), (???, ???), (???, ???), 1)  # desna strana
+
+ pg.draw.line(prozor, pg.Color("black"), (???, ???), (???, ???), 1) # precaga
+ pg.draw.line(prozor, pg.Color("black"), (???, ???), (???, ???), 1) # precaga
+ pg.draw.line(prozor, pg.Color("black"), (???, ???), (???, ???), 1) # precaga
+ pg.draw.line(prozor, pg.Color("black"), (???, ???), (???, ???), 1) # precaga
+</textarea>
+</div>
+<p>Слика у правој величини је веома мала, широка је свега 20 а висока 40 пиксела. Бројањем би могле да се одреде координате тачака и за веће слике, али би то бројање било заморно и подложно грешкама (зато смо у овом примеру изабрали тако малу слику). Добра вест је да програми за гледање и уређивање слика по правилу приказују координате пиксела на коме се налази курсор миша. Координате курсора су обично исписане негде у статусној линији на дну прозора у коме се програм извршава, често у доњем левом углу.</p>
+<p>На пример, у прораму за цртање <em>Paint</em>, када се слика увећа 8 пута и укључи решетка која истиче појединачне пикселе (grid), можемо лако да се се позиционирамо на било који пиксел и да очитамо његове координате. На овој слици, курсор миша је био на црвеном пикселу, који, као што смо већ рекли, има координате (5, 36).</p>
+<a class="reference internal image-reference" href="../_images/read_xy.png"><img alt="../_images/read_xy.png" class="align-center" src="../_images/read_xy.png" style="width: 600px;" /></a>
+<hr class="docutils" />
+<p>У задацима који следе треба да напишете програм који црта цртеж што приближнији датом. Цртеже које треба да нацртате можете да видите када кликнете на дугме “Прикажи пример”.</p>
+<p>Да бисте лакше могли да одредите координате важних тачака на цртежу, програм који покрећете кликом на дугме “Прикажи пример” ће осим цртежа приказати и координате тачке на којој се налази курсор миша. Ради лакшег очитавања, у свим примерима су координате свих битних тачака заокружене на 5 пиксела (завршавају се нулом или петицом).</p>
+<p>Ако желите да решите ове задатке ван веб прегледача у свом окружењу за писање програма, можете овде да преузмете слике које треба да исцртају ваши програми, да их отворите у неком програму за гледање слика и у њему очитате координате важних тачака.</p>
+<a class="reference internal image-reference" href="../_images/drawing_grid_antenna.png"><img alt="../_images/drawing_grid_antenna.png" src="../_images/drawing_grid_antenna.png" style="width: 120px;" /></a>
+<a class="reference internal image-reference" href="../_images/drawing_grid_balance.png"><img alt="../_images/drawing_grid_balance.png" src="../_images/drawing_grid_balance.png" style="width: 120px;" /></a>
+<a class="reference internal image-reference" href="../_images/drawing_grid_house.png"><img alt="../_images/drawing_grid_house.png" src="../_images/drawing_grid_house.png" style="width: 120px;" /></a>
+<a class="reference internal image-reference" href="../_images/drawing_grid_smiley.png"><img alt="../_images/drawing_grid_smiley.png" src="../_images/drawing_grid_smiley.png" style="width: 120px;" /></a>
+<a class="reference internal image-reference" href="../_images/drawing_grid_trees.png"><img alt="../_images/drawing_grid_trees.png" src="../_images/drawing_grid_trees.png" style="width: 120px;" /></a>
+</div>
+<div class="section" id="id3">
+<h2>Антена<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
+<p>Пре кабловске телевизије телевизијски сигнал се примао помоћу антена које су људи углавном постављали на кровове својих кућа и зграда. У овом задатку се црта једна таква антена.</p>
+<p>Као што се види када покренете пример, цртеж се састоји од седам линија. Усправна линија је дебљине 4 пиксела, горње две водоравне су дебљине 1, средње две дебљине 2, а доње две дебљине 3. Боја позадине је “skyblue”.</p>
+
+<div data-childcomponent="PyGame_antenna_simple_assist_srp" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=PyGame_antenna_simple_assist_srp data-lang="python" 
+      data-timelimit=25000    
+    data-audio=''   
+           data-playtask="true"   data-modaloutput="true" data-hidehistory=true
+      data-includexsrc="# -*- acsection: general-init -*-
+import pygame as pg, petljapg
+prozor = petljapg.open_window(300, 300, &quot;Пример&quot;)
+
+# -*- acsection: main -*-
+(sirina, visina) = (300, 300)
+
+def crtanje():
+    prozor.blit(platno, (0, 0))  # crtanje onoga sto je zadato
+    
+    # ose
+    pg.draw.line(prozor, pg.Color(&quot;black&quot;), (mis_x, 0), (mis_x, visina), 1) # uspravna linija misa
+    pg.draw.line(prozor, pg.Color(&quot;black&quot;), (0, mis_y), (sirina, mis_y), 1) # vodoravna linija misa
+
+    # ispis koordinata
+    str_x, str_y = str(mis_x), str(mis_y)
+    xt_y, yt_y = (5, mis_y - 25) if 2 * mis_y &gt; visina else (visina - 25, mis_y + 5)
+    xt_x, yt_x = (mis_x - 50, 5) if 2 * mis_x &gt; sirina else (mis_x + 5, sirina - 50)
+    sl_x = font.render(str_x, True, pg.Color(&quot;black&quot;))
+    sl_y = font.render(str_y, True, pg.Color(&quot;black&quot;))
+    prozor.blit(sl_x, (xt_x, xt_y))
+    prozor.blit(sl_y, (yt_x, yt_y))
+
+def obradi_dogadjaj(dogadjaj):
+    global mis_x, mis_y
+    if dogadjaj.type == pg.MOUSEMOTION:   # miš je pomeren
+        mis_x, mis_y = dogadjaj.pos
+        return True                         # ponovo iscrtavamo scenu
+    return False                            # nema potrebe da iscrtavamo scenu
+
+################# crtez
+platno = pg.Surface((sirina, visina)) # platno na kome je slika nacrtana
+platno.fill(pg.Color(&quot;skyblue&quot;)) # bojimo pozadinu ekrana u nebo-plavo
+
+pg.draw.line(platno, pg.Color(&apos;black&apos;), (150,  50), (150, 250), 4)
+pg.draw.line(platno, pg.Color(&apos;black&apos;), (120,  75), (180,  75), 1)
+pg.draw.line(platno, pg.Color(&apos;black&apos;), (110, 100), (190, 100), 1)
+pg.draw.line(platno, pg.Color(&apos;black&apos;), (100, 125), (200, 125), 2)
+pg.draw.line(platno, pg.Color(&apos;black&apos;), ( 90, 150), (210, 150), 2)
+pg.draw.line(platno, pg.Color(&apos;black&apos;), ( 80, 175), (220, 175), 3)
+pg.draw.line(platno, pg.Color(&apos;black&apos;), ( 70, 200), (230, 200), 3)
+#################
+
+font = pg.font.SysFont(&quot;Arial&quot;, 20)         # font kojim će biti prikazan tekst
+font.set_bold(True)
+mis_x, mis_y = 0, 0
+
+treba_crtati = True
+kraj = False
+while not kraj:
+    if treba_crtati:    # ako je potrebno nacrtati lopticu
+        crtanje()
+        pg.display.update()        # ažuriramo prikaz sadržaja prozora
+        treba_crtati = False
+
+    dogadjaj = pg.event.wait()     # čekamo naredni događaj
+    if dogadjaj.type == pg.QUIT:   # isključivanje prozora
+        kraj = True
+    else:
+        treba_crtati = obradi_dogadjaj(dogadjaj)
+
+# Zavrsetak skrivenog programa, koji radi kao primer
+pg.quit()
+import sys 
+sys.exit()
+
+# Zavrsetak korisnickog programa je posebnoj sekciji
+
+# -*- acsection: after-main -*-
+petljapg.wait_loop()
+" data-enablecopy="true">
+pg.draw.line(prozor, boja???, (150, y1???,), (150, y2???,), 4)
+pg.draw.line(prozor, ???
+pg.draw.line(prozor, ???
+pg.draw.line(prozor, ???
+pg.draw.line(prozor, ???
+pg.draw.line(prozor, ???
+pg.draw.line(prozor, ???
+</textarea>
+</div>
+
+    <div data-component="reveal" id="PyGame_antenna_simple_reveal"   data-showtitle="Прикажи решење" data-hidetitle="Сакриј решење">
+    <p>Дат је комплетан програм, можете да га испробате и овде.</p>
+
+<div data-childcomponent="PyGame_antenna_simple_solution_srp" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=PyGame_antenna_simple_solution_srp data-lang="python" 
+      data-timelimit=25000    
+    data-audio=''   
+              data-modaloutput="true" data-hidehistory=true
+    data-includesrc="# -*- acsection: general-init -*-
+import pygame as pg, petljapg
+prozor = petljapg.open_window(300, 300, &quot;Антена&quot;)
+
+# -*- acsection: main -*-
+prozor.fill(pg.Color(&quot;skyblue&quot;)) # bojimo pozadinu ekrana u nebo-plavo
+
+pg.draw.line(prozor, pg.Color(&apos;black&apos;), (150,  50), (150, 250), 4)
+pg.draw.line(prozor, pg.Color(&apos;black&apos;), (120,  75), (180,  75), 1)
+pg.draw.line(prozor, pg.Color(&apos;black&apos;), (110, 100), (190, 100), 1)
+pg.draw.line(prozor, pg.Color(&apos;black&apos;), (100, 125), (200, 125), 2)
+pg.draw.line(prozor, pg.Color(&apos;black&apos;), ( 90, 150), (210, 150), 2)
+pg.draw.line(prozor, pg.Color(&apos;black&apos;), ( 80, 175), (220, 175), 3)
+pg.draw.line(prozor, pg.Color(&apos;black&apos;), ( 70, 200), (230, 200), 3)
+
+# -*- acsection: after-main -*-
+petljapg.wait_loop()
+"   data-enablecopy="true">
+
+
+</textarea>
+</div>
+
+    </div>
+    </div>
+<div class="section" id="id4">
+<h2>Вага<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h2>
+<p>Овај цртеж се састоји од линије (чија је дебљина 2) и три троугла. Средњи троугао, који представља ослонац ваге, попуњен је бојом, па при његовом цртању треба изоставити параметар који задаје дебљину, док за остала два троугла треба навести дебљину 2.</p>
+
+<div data-childcomponent="PyGame_practice1a_balance_srp" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=PyGame_practice1a_balance_srp data-lang="python" 
+      data-timelimit=25000    
+    data-audio=''   
+           data-playtask="true"   data-modaloutput="true" data-hidehistory=true
+      data-includexsrc="# -*- acsection: general-init -*-
+import pygame as pg, petljapg
+prozor = petljapg.open_window(300, 300, &quot;Вага&quot;)
+
+# -*- acsection: main -*-
+(sirina, visina) = (300, 300)
+def crtanje():
+    prozor.blit(platno, (0, 0))  # crtanje onoga sto je zadato
+    
+    # ose
+    pg.draw.line(prozor, pg.Color(&quot;black&quot;), (mis_x, 0), (mis_x, visina), 1) # uspravna linija misa
+    pg.draw.line(prozor, pg.Color(&quot;black&quot;), (0, mis_y), (sirina, mis_y), 1) # vodoravna linija misa
+
+    # ispis koordinata
+    str_x, str_y = str(mis_x), str(mis_y)
+    xt_y, yt_y = (5, mis_y - 25) if 2 * mis_y &gt; visina else (visina - 25, mis_y + 5)
+    xt_x, yt_x = (mis_x - 50, 5) if 2 * mis_x &gt; sirina else (mis_x + 5, sirina - 50)
+    sl_x = font.render(str_x, True, pg.Color(&quot;black&quot;))
+    sl_y = font.render(str_y, True, pg.Color(&quot;black&quot;))
+    prozor.blit(sl_x, (xt_x, xt_y))
+    prozor.blit(sl_y, (yt_x, yt_y))
+
+def obradi_dogadjaj(dogadjaj):
+    global mis_x, mis_y
+    if dogadjaj.type == pg.MOUSEMOTION:   # miš je pomeren
+        mis_x, mis_y = dogadjaj.pos
+        return True                         # ponovo iscrtavamo scenu
+    return False                            # nema potrebe da iscrtavamo scenu
+
+################# crtez
+platno = pg.Surface((sirina, visina)) # platno na kome je slika nacrtana
+platno.fill(pg.Color(&quot;green&quot;)) # bojimo pozadinu ekrana u zeleno
+
+pg.draw.line(platno, pg.Color(&quot;brown&quot;), (60, 100), (240,  100), 2)                              # letva
+pg.draw.polygon(platno, pg.Color(&quot;brown&quot;), [(100, 120), (150, 100), (200, 120), (100, 120)])   # oslonac
+pg.draw.polygon(platno, pg.Color(&quot;brown&quot;), [( 30, 200), ( 60, 100), ( 90, 200), ( 30, 200)], 2)  # levi tas
+pg.draw.polygon(platno, pg.Color(&quot;brown&quot;), [(210, 200), (240, 100), (270, 200), (210, 200)], 2) # desni tas
+#################
+
+font = pg.font.SysFont(&quot;Arial&quot;, 20)         # font kojim će biti prikazan tekst
+font.set_bold(True)
+mis_x, mis_y = 0, 0
+
+treba_crtati = True
+kraj = False
+while not kraj:
+    if treba_crtati:    # ako je potrebno nacrtati lopticu
+        crtanje()
+        pg.display.update()        # ažuriramo prikaz sadržaja prozora
+        treba_crtati = False
+
+    dogadjaj = pg.event.wait()     # čekamo naredni događaj
+    if dogadjaj.type == pg.QUIT:   # isključivanje prozora
+        kraj = True
+    else:
+        treba_crtati = obradi_dogadjaj(dogadjaj)
+
+# Zavrsetak skrivenog programa, koji radi kao primer
+pg.quit()
+import sys 
+sys.exit()
+
+# Zavrsetak korisnickog programa je posebnoj sekciji
+
+# -*- acsection: after-main -*-
+petljapg.wait_loop()
+" data-enablecopy="true">
+prozor.fill(boja?) # bojimo pozadinu ekrana u zeleno
+pg.draw.line(prozor, boja???, (x1???, y1???), (x2???,  y2???), 2) # letva
+
+# oslonac
+pg.draw.polygon(prozor, pg.Color("brown"), [(???, ???), ...
+
+# levi tas
+pg.draw.polygon(prozor, pg.Color("brown"), [(???, ???), ...
+
+# desni tas
+pg.draw.polygon(prozor, pg.Color("brown"), [(???, ???), ...
+</textarea>
+</div>
+</div>
+<div class="section" id="id5">
+<h2>Емотикон<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h2>
+<p>У овом задатку је посао нешто сложенији. Пошто се цртеж састоји од кругова и елипси, не можемо потпуно тачно да директно очитамо све координате и величине које су нам потребне. Оно што можемо је да за сваку елипсу очитамо <span class="math notranslate nohighlight">\(x\)</span> координате крајње леве и крајње десне тачке (<span class="math notranslate nohighlight">\(X_L\)</span> и <span class="math notranslate nohighlight">\(X_D\)</span>), као и <span class="math notranslate nohighlight">\(y\)</span> координате највише и најниже тачке (<span class="math notranslate nohighlight">\(Y_V\)</span> и <span class="math notranslate nohighlight">\(Y_N\)</span>). Након тога, ширину и висину елипсе можемо да израчунамо као разлике одговарајућих <span class="math notranslate nohighlight">\(x\)</span> (за ширину), односно <span class="math notranslate nohighlight">\(y\)</span> координата (за висину).</p>
+<p>Што се тиче круга, имамо више могућности:</p>
+<ul class="simple">
+<li><p>можемо да нацртамо круг као елипсу уписану у квадрат (користећи функцију <em>pg.draw.ellipse</em>)</p></li>
+<li><p>можемо да приближно очитамо координате центра круга</p></li>
+<li><p>ако желимо да прецизније одредимо координате центра круга, можемо прво да одредимо тачке <span class="math notranslate nohighlight">\(X_L\)</span>, <span class="math notranslate nohighlight">\(X_D\)</span>, <span class="math notranslate nohighlight">\(Y_V\)</span> и <span class="math notranslate nohighlight">\(Y_N\)</span> као за елипсе у првом делу објашњења поступка, а затим да координате центра круга израчунамо из формула <span class="math notranslate nohighlight">\(X_c = {{X_D + X_L} \over 2}\)</span>, <span class="math notranslate nohighlight">\(Y_c = {{Y_V + Y_N} \over 2}\)</span>.</p></li>
+</ul>
+
+<div data-childcomponent="PyGame_practice1a_smiley" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=PyGame_practice1a_smiley data-lang="python" 
+      data-timelimit=25000    
+    data-audio=''   
+           data-playtask="true"   data-modaloutput="true" data-hidehistory=true
+      data-includexsrc="# -*- acsection: general-init -*-
+import pygame as pg, petljapg
+prozor = petljapg.open_window(300, 300, &quot;Pygame&quot;)
+
+# -*- acsection: main -*-
+(sirina, visina) = (300, 300)
+def crtanje():
+    prozor.blit(platno, (0, 0))  # crtanje onoga sto je zadato
+    
+    # ose
+    pg.draw.line(prozor, pg.Color(&quot;black&quot;), (mis_x, 0), (mis_x, visina), 1) # uspravna linija misa
+    pg.draw.line(prozor, pg.Color(&quot;black&quot;), (0, mis_y), (sirina, mis_y), 1) # vodoravna linija misa
+
+    # ispis koordinata
+    str_x, str_y = str(mis_x), str(mis_y)
+    xt_y, yt_y = (5, mis_y - 25) if 2 * mis_y &gt; visina else (visina - 25, mis_y + 5)
+    xt_x, yt_x = (mis_x - 50, 5) if 2 * mis_x &gt; sirina else (mis_x + 5, sirina - 50)
+    sl_x = font.render(str_x, True, pg.Color(&quot;black&quot;))
+    sl_y = font.render(str_y, True, pg.Color(&quot;black&quot;))
+    prozor.blit(sl_x, (xt_x, xt_y))
+    prozor.blit(sl_y, (yt_x, yt_y))
+
+def obradi_dogadjaj(dogadjaj):
+    global mis_x, mis_y
+    if dogadjaj.type == pg.MOUSEMOTION:   # miš je pomeren
+        mis_x, mis_y = dogadjaj.pos
+        return True                         # ponovo iscrtavamo scenu
+    return False                            # nema potrebe da iscrtavamo scenu
+
+################# crtez
+platno = pg.Surface((sirina, visina)) # platno na kome je slika nacrtana
+platno.fill(pg.Color(&quot;white&quot;)) # bojimo pozadinu ekrana u belo
+
+pg.draw.circle(platno, pg.Color(&quot;yellow&quot;), (150, 150), 100) # glava
+pg.draw.ellipse(platno, pg.Color(&quot;black&quot;), (100, 90, 30, 60)) # levo oko
+pg.draw.ellipse(platno, pg.Color(&quot;black&quot;), (170, 90, 30, 60)) # desno oko
+pg.draw.ellipse(platno, pg.Color(&quot;white&quot;), (100, 190, 100, 20)) # unutrasnjost usta
+pg.draw.ellipse(platno, pg.Color(&quot;black&quot;), (100, 190, 100, 20), 2) # ivica usta
+#################
+
+font = pg.font.SysFont(&quot;Arial&quot;, 20)         # font kojim će biti prikazan tekst
+font.set_bold(True)
+mis_x, mis_y = 0, 0
+
+treba_crtati = True
+kraj = False
+while not kraj:
+    if treba_crtati:    # ako je potrebno nacrtati lopticu
+        crtanje()
+        pg.display.update()        # ažuriramo prikaz sadržaja prozora
+        treba_crtati = False
+
+    dogadjaj = pg.event.wait()     # čekamo naredni događaj
+    if dogadjaj.type == pg.QUIT:   # isključivanje prozora
+        kraj = True
+    else:
+        treba_crtati = obradi_dogadjaj(dogadjaj)
+
+# Zavrsetak skrivenog programa, koji radi kao primer
+pg.quit()
+import sys 
+sys.exit()
+
+# Zavrsetak korisnickog programa je posebnoj sekciji
+
+# -*- acsection: after-main -*-
+petljapg.wait_loop()
+" data-enablecopy="true">
+prozor.fill(boja?) # bojimo pozadinu ekrana u belo
+pg.draw.circle(prozor, boja???, (x???, y???), r???)        # glava
+pg.draw.ellipse(prozor, boja???, (x???, y???, w???, h???)) # levo oko
+pg.draw.ellipse(prozor, ???, (???, ???, ???, ???))         # desno oko
+pg.draw.ellipse(prozor, ???, (???, ???, ???, ???))         # unutrasnjost usta
+pg.draw.ellipse(prozor, ???, (???, ???, ???, ???), debljina?) # ivica usta
+</textarea>
+</div>
+</div>
+<div class="section" id="id6">
+<h2>Кућа<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h2>
+<p>Цртеж куће се састоји од браон правоугаоника и црвеног троугла. Троугао можемо да нацртамо као многоугао са три темена. Сунце је приказано као наранџасти круг, а трава као зелени правоугаоник. Потребно је водити рачуна о редоследу приказивања траве и сунца.</p>
+<p>Довољно је да координате центра круга који представља Сунце очитате приближно. За оне оји желе мали математички изазов, напомињемо да се координате центра могу прецизније одредити слично као у претходном задатку, иако најнижа тачка није видљива и координата <span class="math notranslate nohighlight">\(Y_N\)</span> не може да се очита.</p>
+<p>Ако желите да видите како можете да одредите координате центра прецизнијим очитавањем и рачунањем, кликните на дугме “Одређивање центра”.</p>
+
+    <div data-component="reveal" id="PyGame_practice1a_house_circle_center_reveal_srp"   data-showtitle="Одређивање центра" data-hidetitle="Сакриј одређивање центра">
+    <blockquote>
+<div><p>Нека су, као и у претходном задатку, са <span class="math notranslate nohighlight">\(X_L\)</span> и <span class="math notranslate nohighlight">\(X_D\)</span> означене <span class="math notranslate nohighlight">\(x\)</span> координате крајње леве и крајње десне тачке круга који представља Сунце, а са <span class="math notranslate nohighlight">\(Y_V\)</span> и <span class="math notranslate nohighlight">\(Y_N\)</span> <span class="math notranslate nohighlight">\(y\)</span> координате највише и најниже тачке тог круга.</p>
+<p><span class="math notranslate nohighlight">\(X\)</span> координату центра круга можемо да одредимо као у претходном примеру, <span class="math notranslate nohighlight">\(X_c = {{X_D + X_L} \over 2}\)</span>.</p>
+<p>Пошто се најнижа тачка круга не види, не можемо да очитамо вредност <span class="math notranslate nohighlight">\(Y_N\)</span>, али можемо да одредимо полупречник <span class="math notranslate nohighlight">\(r\)</span> користећи <span class="math notranslate nohighlight">\(r =X_c - X_L\)</span> или <span class="math notranslate nohighlight">\(r =X_D - X_c\)</span>. Сада се <span class="math notranslate nohighlight">\(y\)</span> координата центра круга лако добија: <span class="math notranslate nohighlight">\(Y_c = Y_V + r\)</span>, па нам <span class="math notranslate nohighlight">\(Y_N\)</span> није ни било потребно.</p>
+</div></blockquote>
+
+    </div>
+    
+<div data-childcomponent="PyGame_practice1a_house" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=PyGame_practice1a_house data-lang="python" 
+      data-timelimit=25000    
+    data-audio=''   
+           data-playtask="true"   data-modaloutput="true" data-hidehistory=true
+      data-includexsrc="# -*- acsection: general-init -*-
+import pygame as pg, petljapg
+prozor = petljapg.open_window(300, 300, &quot;Кућа&quot;)
+
+# -*- acsection: main -*-
+(sirina, visina) = (300, 300)
+def crtanje():
+    prozor.blit(platno, (0, 0))  # crtanje onoga sto je zadato
+    
+    # ose
+    pg.draw.line(prozor, pg.Color(&quot;black&quot;), (mis_x, 0), (mis_x, visina), 1) # uspravna linija misa
+    pg.draw.line(prozor, pg.Color(&quot;black&quot;), (0, mis_y), (sirina, mis_y), 1) # vodoravna linija misa
+
+    # ispis koordinata
+    str_x, str_y = str(mis_x), str(mis_y)
+    xt_y, yt_y = (5, mis_y - 25) if 2 * mis_y &gt; visina else (visina - 25, mis_y + 5)
+    xt_x, yt_x = (mis_x - 50, 5) if 2 * mis_x &gt; sirina else (mis_x + 5, sirina - 50)
+    sl_x = font.render(str_x, True, pg.Color(&quot;black&quot;))
+    sl_y = font.render(str_y, True, pg.Color(&quot;black&quot;))
+    prozor.blit(sl_x, (xt_x, xt_y))
+    prozor.blit(sl_y, (yt_x, yt_y))
+
+def obradi_dogadjaj(dogadjaj):
+    global mis_x, mis_y
+    if dogadjaj.type == pg.MOUSEMOTION:   # miš je pomeren
+        mis_x, mis_y = dogadjaj.pos
+        return True                         # ponovo iscrtavamo scenu
+    return False                            # nema potrebe da iscrtavamo scenu
+
+################# crtez
+platno = pg.Surface((sirina, visina)) # platno na kome je slika nacrtana
+platno.fill(pg.Color(&quot;lightblue&quot;)) # bojimo pozadinu ekrana u svetlo plavo
+
+pg.draw.circle(platno, pg.Color(&quot;orange&quot;), (250, 180), 30)   # sunce
+pg.draw.rect(platno, pg.Color(&quot;green&quot;), (0, 200, 300, 100))  # trava
+pg.draw.rect(platno, pg.Color(&quot;brown&quot;), (50, 150, 150, 100)) # kuca
+pg.draw.polygon(platno, pg.Color(&quot;red&quot;), [(50, 150), (125, 100), (200, 150)]) # krov
+#################
+
+font = pg.font.SysFont(&quot;Arial&quot;, 20)         # font kojim će biti prikazan tekst
+font.set_bold(True)
+mis_x, mis_y = 0, 0
+
+treba_crtati = True
+kraj = False
+while not kraj:
+    if treba_crtati:    # ako je potrebno nacrtati lopticu
+        crtanje()
+        pg.display.update()        # ažuriramo prikaz sadržaja prozora
+        treba_crtati = False
+
+    dogadjaj = pg.event.wait()     # čekamo naredni događaj
+    if dogadjaj.type == pg.QUIT:   # isključivanje prozora
+        kraj = True
+    else:
+        treba_crtati = obradi_dogadjaj(dogadjaj)
+
+# Zavrsetak skrivenog programa, koji radi kao primer
+pg.quit()
+import sys 
+sys.exit()
+
+# Zavrsetak korisnickog programa je posebnoj sekciji
+
+# -*- acsection: after-main -*-
+petljapg.wait_loop()
+" data-enablecopy="true">
+prozor.fill(boja?) # bojimo pozadinu ekrana u svetlo plavo
+???
+???
+pg.draw.rect(prozor, boja???, (x???, y???, w???, h???)) # kuca
+pg.draw.polygon(prozor, boja???, [(x1???, y1???), (x2???, y2???), (x3???, y3???)]) # krov
+</textarea>
+</div>
+</div>
+<div class="section" id="id7">
+<h2>Дрвеће<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h2>
+<p>Потребно је нацртати три потпуно једнака дрвета, тако да се свако следеће дрво добија померањем претходног надесно. Овај задатак је очигледно могао да буде задат и само описом првог дрвета и задавањем размака између два суседна дрвета. Програм који црта слику је ипак остављен, јер је задавање помоћу слике јасније и једноствније.</p>
+<p>Да би задатак мало више личио на реалну ситуацију (у којој слике нема), у овом примеру очитавање <span class="math notranslate nohighlight">\(x\)</span> координата је намерно онемогућено за десну страну слике. Све потребне координате које не можете да очитате, можете да израчунате.</p>
+
+<div data-childcomponent="PyGame_practice1a_trees" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=PyGame_practice1a_trees data-lang="python" 
+      data-timelimit=25000    
+    data-audio=''   
+           data-playtask="true"   data-modaloutput="true" data-hidehistory=true
+      data-includexsrc="# -*- acsection: general-init -*-
+import pygame as pg, petljapg
+prozor = petljapg.open_window(300, 300, &quot;Pygame&quot;)
+
+# -*- acsection: main -*-
+(sirina, visina) = (300, 300)
+def crtanje():
+    prozor.blit(platno, (0, 0))  # crtanje onoga sto je zadato
+    
+    # ose
+    pg.draw.line(prozor, pg.Color(&quot;black&quot;), (mis_x, 0), (mis_x, visina), 1) # uspravna linija misa
+    pg.draw.line(prozor, pg.Color(&quot;black&quot;), (0, mis_y), (sirina, mis_y), 1) # vodoravna linija misa
+
+    # ispis koordinata
+    str_x, str_y = str(mis_x), str(mis_y)
+    xt_y, yt_y = (5, mis_y - 25) if 2 * mis_y &gt; visina else (visina - 25, mis_y + 5)
+    xt_x, yt_x = (mis_x - 50, 5) if 2 * mis_x &gt; sirina else (mis_x + 5, sirina - 50)
+    sl_x = font.render(str_x, True, pg.Color(&quot;black&quot;))
+    sl_y = font.render(str_y, True, pg.Color(&quot;black&quot;))
+    if 2 * mis_x &lt; sirina: # x ispisujemo samo za levu stranu ekrana
+        prozor.blit(sl_x, (xt_x, xt_y))
+    prozor.blit(sl_y, (yt_x, yt_y))
+
+def obradi_dogadjaj(dogadjaj):
+    global mis_x, mis_y
+    if dogadjaj.type == pg.MOUSEMOTION:   # miš je pomeren
+        mis_x, mis_y = dogadjaj.pos
+        return True                         # ponovo iscrtavamo scenu
+    return False                            # nema potrebe da iscrtavamo scenu
+
+################# crtez
+platno = pg.Surface((sirina, visina)) # platno na kome je slika nacrtana
+platno.fill(pg.Color(&quot;green&quot;)) # bojimo pozadinu ekrana u zeleno
+
+pg.draw.rect(platno, pg.Color(&quot;brown&quot;), (40, 180, 20, 100))        # prvo stablo
+pg.draw.ellipse(platno, pg.Color(&quot;darkgreen&quot;), (10, 50, 80, 150))  # prva krosnja
+pg.draw.rect(platno, pg.Color(&quot;brown&quot;), (140, 180, 20, 100))       # drugo stablo
+pg.draw.ellipse(platno, pg.Color(&quot;darkgreen&quot;), (110, 50, 80, 150)) # druga krosnja
+pg.draw.rect(platno, pg.Color(&quot;brown&quot;), (240, 180, 20, 100))       # trece stablo
+pg.draw.ellipse(platno, pg.Color(&quot;darkgreen&quot;), (210, 50, 80, 150)) # treca krosnja
+#################
+
+font = pg.font.SysFont(&quot;Arial&quot;, 20)         # font kojim će biti prikazan tekst
+font.set_bold(True)
+mis_x, mis_y = 0, 0
+
+treba_crtati = True
+kraj = False
+while not kraj:
+    if treba_crtati:    # ako je potrebno nacrtati lopticu
+        crtanje()
+        pg.display.update()        # ažuriramo prikaz sadržaja prozora
+        treba_crtati = False
+
+    dogadjaj = pg.event.wait()     # čekamo naredni događaj
+    if dogadjaj.type == pg.QUIT:   # isključivanje prozora
+        kraj = True
+    else:
+        treba_crtati = obradi_dogadjaj(dogadjaj)
+
+# Zavrsetak skrivenog programa, koji radi kao primer
+pg.quit()
+import sys 
+sys.exit()
+
+# Zavrsetak korisnickog programa je posebnoj sekciji
+
+# -*- acsection: after-main -*-
+petljapg.wait_loop()
+" data-enablecopy="true">
+
+
+</textarea>
+</div>
+</div>
+</div>
+
+
+  
+      <div class="col-md-12">
+<ul class="pager">
+</ul>
+
+<!-- <ul class="pager"> -->
+    <!-- -->
+    <!-- -->
+<!-- </ul> -->
+
+<script type="text/javascript">
+
+  $('#relations-prev').tooltip({'placement':'right', 'selector': '', 'delay': { show: 100, hide: 50}});
+  $('#relations-next').tooltip({'placement':'left', 'selector': '', 'delay': { show: 100, hide: 50}});
+
+</script>
+</div>
+  
+</div>
+<footer class="footer col-md-12">
+    <div class="container">
+        <div class="text-center">
+            <hr>
+            <p class="text-muted">
+                <span class="pull-left">&copy; 2019 Petlja (Created using  <a href="https://pypi.org/project/Sphinx/">Swinx</a>, <a href="http://runestoneinteractive.org/">RunestoneComponents</a> and <a href="https://github.com/Petlja/PetljaDoc">PetljaDoc</a>)</span>
+            </p>
+        </div>
+    </div>
+</footer>
+
+
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-32029811-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+
+
+  </body>
+</html>
