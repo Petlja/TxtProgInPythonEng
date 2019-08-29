@@ -61,7 +61,7 @@ Go forward as far as you can and pick up the ball
     
    **The program should run multiple times**, because at different launches, Karel's world will have different number of squares. Here are some examples of how the task may look:
      
-   .. image:: ../_images/Karel/While_01.jpg
+   .. image:: ../../_images/Karel/While_01.jpg
       :width: 600px   
       :align: center
 

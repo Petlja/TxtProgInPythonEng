@@ -1,0 +1,844 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Combining loops &#8212; Textual Programming in Python</title>
+    <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/activecode.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/codemirror.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/clickable.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pytutor.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/modal-basic.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/datafile.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/dragndrop.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/fitb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/matrixeq.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/parsons.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/lib/prettify.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/poll.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/showEval.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/tabbedstuff.css" />
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/video.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/karel.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/notes.css" />
+    <link rel="stylesheet" href="../_static/user-highlights.css" type="text/css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootstrap-4.0.0-dist/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/flatly.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/petlja.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../_static/runestonebase.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/language_data.js"></script>
+    <script type="text/javascript" src="../_static/jquery.highlight.js"></script>
+    <script type="text/javascript" src="../_static/bookfuncs.js"></script>
+    <script type="text/javascript" src="../_static/codemirror.js"></script>
+    <script type="text/javascript" src="../_static/xml.js"></script>
+    <script type="text/javascript" src="../_static/css.js"></script>
+    <script type="text/javascript" src="../_static/python.js"></script>
+    <script type="text/javascript" src="../_static/htmlmixed.js"></script>
+    <script type="text/javascript" src="../_static/javascript.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/CLDRPluralRuleParser.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.messagestore.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.fallbacks.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.language.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.parser.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.emitter.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.emitter.bidi.js"></script>
+    <script type="text/javascript" src="../_static/activecode-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/skulpt.min.js"></script>
+    <script type="text/javascript" src="../_static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="../_static/activecode.js"></script>
+    <script type="text/javascript" src="../_static/clike.js"></script>
+    <script type="text/javascript" src="../_static/timed_activecode.js"></script>
+    <script type="text/javascript" src="../_static/animationbase.js"></script>
+    <script type="text/javascript" src="../_static/mchoice.js"></script>
+    <script type="text/javascript" src="../_static/timedmc.js"></script>
+    <script type="text/javascript" src="../_static/timed.js"></script>
+    <script type="text/javascript" src="../_static/mchoice-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/clickable.js"></script>
+    <script type="text/javascript" src="../_static/timedclickable.js"></script>
+    <script type="text/javascript" src="../_static/d3.v2.min.js"></script>
+    <script type="text/javascript" src="../_static/jquery.ba-bbq.min.js"></script>
+    <script type="text/javascript" src="../_static/jquery.jsPlumb-1.3.10-all-min.js"></script>
+    <script type="text/javascript" src="../_static/pytutor.js"></script>
+    <script type="text/javascript" src="../_static/codelens.js"></script>
+    <script type="text/javascript" src="../_static/datafile.js"></script>
+    <script type="text/javascript" src="../_static/dragndrop.js"></script>
+    <script type="text/javascript" src="../_static/timeddnd.js"></script>
+    <script type="text/javascript" src="../_static/dragndrop-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/fitb.js"></script>
+    <script type="text/javascript" src="../_static/timedfitb.js"></script>
+    <script type="text/javascript" src="../_static/fitb-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/matrixeq.js"></script>
+    <script type="text/javascript" src="../_static/lib/prettify.js"></script>
+    <script type="text/javascript" src="../_static/lib/hammer.min.js"></script>
+    <script type="text/javascript" src="../_static/parsons.js"></script>
+    <script type="text/javascript" src="../_static/timedparsons.js"></script>
+    <script type="text/javascript" src="../_static/poll.js"></script>
+    <script type="text/javascript" src="../_static/reveal.js"></script>
+    <script type="text/javascript" src="../_static/shortanswer.js"></script>
+    <script type="text/javascript" src="../_static/timed_shortanswer.js"></script>
+    <script type="text/javascript" src="../_static/showEval.js"></script>
+    <script type="text/javascript" src="../_static/tabbedstuff.js"></script>
+    <script type="text/javascript" src="../_static/runestonevideo.js"></script>
+    <script type="text/javascript" src="../_static/karelCorner.js"></script>
+    <script type="text/javascript" src="../_static/karelRobot.js"></script>
+    <script type="text/javascript" src="../_static/karelWorld.js"></script>
+    <script type="text/javascript" src="../_static/karelRobotDrawer.js"></script>
+    <script type="text/javascript" src="../_static/karelUI.js"></script>
+    <script type="text/javascript" src="../_static/karel.js"></script>
+    <script type="text/javascript" src="../_static/karel-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/notes.js"></script>
+    <script type="text/javascript" src="../_static/pygamelib-init.js"></script>
+    <script type="text/javascript" src="../_static/blockly/blockly_compressed.js"></script>
+    <script type="text/javascript" src="../_static/blockly/blocks_compressed.js"></script>
+    <script type="text/javascript" src="../_static/blockly/python_compressed.js"></script>
+    <script type="text/javascript" src="../_static/blockly/msg-sr.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/utilities.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/python_errors.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/ast_node_visitor.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/abstract_interpreter.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/pytifa.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/abstract_interpreter_definitions.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/python_to_blockly.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/imported.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/class.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/comment.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/comprehensions.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/dict.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/if.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/io.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/lists.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/sets.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/loops.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/parking.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/tuple.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/turtles.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/text.js"></script>
+    <script type="text/javascript" src="../_static/blockpy-modal.js"></script>
+    <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="../_static/jquery-ui-1.10.3.custom.min.js"></script>
+    <script type="text/javascript" src="../_static/jquery-fix.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-4.0.0-dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-4.0.0-dist/js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
+    <script type="text/javascript" src="../_static/waypoints.min.js"></script>
+    <script type="text/javascript" src="../_static/rangy-core.js"></script>
+    <script type="text/javascript" src="../_static/rangy-textrange.js"></script>
+    <script type="text/javascript" src="../_static/rangy-cssclassapplier.js"></script>
+    <script type="text/javascript" src="../_static/user-highlights.js"></script>
+    <script type="text/javascript" src="../_static/jquery.idle-timer.js"></script>
+    <script type="text/javascript" src="../_static/processing-1.4.1.min.js"></script>
+    <script type="text/javascript" src="../_static/jquery.hotkey.js"></script>
+    <script type="text/javascript" src="../_static/jquery-migrate-1.2.1.min.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Check out and decide" href="01_Karel_07_if.html" />
+    <link rel="prev" title="Solve multiple tasks at once" href="01_Karel_05_while.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+<link rel="shortcut icon" href="../_static/favicon.ico" type="image/ico" />
+
+<script type="text/javascript">
+  eBookConfig = {};
+  eBookConfig.host = 'http://127.0.0.1:8000' ? 'http://127.0.0.1:8000' : 'http://127.0.0.1:8000';
+  eBookConfig.app = eBookConfig.host+'/runestone';
+  eBookConfig.ajaxURL = eBookConfig.app+'/ajax/';
+  eBookConfig.course = 'TxtProgInPython';
+  eBookConfig.logLevel = 0;
+  eBookConfig.loginRequired = false;
+  eBookConfig.build_info = "";
+  eBookConfig.isLoggedIn = false;
+  eBookConfig.useRunestoneServices = false;
+  eBookConfig.python3 = true;
+  eBookConfig.basecourse = 'TxtProgInPython';
+  eBookConfig.runestone_version = '3.1.1';
+  eBookConfig.imagesDir = '../_images/';
+  eBookConfig.staticDir = '../_static/';
+  if(typeof(Sk) != "undefined")
+      Sk.imgPath = eBookConfig.imagesDir;
+</script>
+
+<div id="fb-root"></div>
+
+
+
+  </head><body>
+
+
+<!-- Begin navbar -->
+
+<nav id="navbar" class="navbar navbar-default navbar-fixed-top" role="navigation">
+
+  <div class="container">
+
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+     <img src="../_static/img/logo.png" style="width:80px; height: 80px;"> 
+    </div>
+
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" style="margin-top: 10px; margin-left: 25px;">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="../">Textual Programming in Python</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<div class="container col-md-12" id="continue-reading"></div>
+
+<div class="container col-md-8 col-md-offset-2" id="main-content">
+  
+  <div class="section" id="combining-loops">
+<h1>Combining loops<a class="headerlink" href="#combining-loops" title="Permalink to this headline">¶</a></h1>
+<p>We’ve seen that in the body of a <em>for</em> statement, we can place several different statements. Similarly to the <em>for</em> statement, in the <code class="docutils literal notranslate"><span class="pre">while</span></code> statement we can also (in addition to other commands) place a new loop statement, and it could be either a <em>while</em> or a <em>for</em> loop. That way, we can build different combinations of inserted loops.</p>
+<p>When the two loops are inserted into one another, we call them a double loop, while three nested loops are called a triple loop. Similarly, we can nest any number of loops into one another, we just rarely need a large number of nested loops.</p>
+<p>In this lesson we will practice writing combinations of the nested <em>while</em> and <em>for</em> loops.</p>
+<div class="section" id="various-double-and-multiple-loops-tasks">
+<h2>Various double and multiple loops - tasks<a class="headerlink" href="#various-double-and-multiple-loops-tasks" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="take-4-balls-at-each-square-until-the-end-of-a-row">
+<h3>Take 4 balls at each square until the end of a row<a class="headerlink" href="#take-4-balls-at-each-square-until-the-end-of-a-row" title="Permalink to this headline">¶</a></h3>
+
+    <div class="course-box course-box-special">
+        <div class="course-content">
+            <h4 class="carbox-title">
+                <img class="corner-image float-right" src="../_static/img/question-mark.png" />
+            </h4>
+            <p>
+<p>There are one or more squares in front of Karel, and on each of these squares there are four balls (there are no balls on the starting square). Karel needs to pick them all up.</p>
+
+    </p></div></div>
+<p>Now, until he reaches the wall, Karel needs to repeat stepping forward and taking 4 balls. Try complementing the program.</p>
+<p>Recall, as in the earlier examples of nesting loops, the statement in the body of the inner loop (here it will be the statement <code class="docutils literal notranslate"><span class="pre">pick_ball()</span></code>) should be indented further.</p>
+
+<div data-childcomponent="Karel_while__many_squares_four_bals_per_square" class="karel_section course-box course-box-problem">
+    <div class="course-content">
+        <p>
+
+    <div data-component="karel" id="Karel_while__many_squares_four_bals_per_square" class="karel_section">
+        <div class="karel_actions col-md-12 mb-2"><button class="btn btn-success run-button">Покрени програм</button>
+        <button class="btn btn-default reset-button">Врати на почетак</button>
+        <button class="btn btn-default blockly-button" style="display: inline-block;">Blockly</button></div>
+        <div style="overflow: hidden;" class="karel_actions col-md-12" >
+            <section class="col-md-12">
+                <article>
+                    <textarea class="codeArea" id="Karel_while__many_squares_four_bals_per_square" name="code" rows="10" style="width: 100%;height:300px"></textarea>
+                    <textarea class="configArea" style="display:none"><!--x {
+   setup:function() {
+      function random(n) {
+         return Math.floor(n * Math.random());
+      }
+
+      var N = 2 + random(9);
+      var world = new World(N, 1);
+      world.setRobotStartAvenue(1);
+      world.setRobotStartStreet(1);
+      world.setRobotStartDirection("E");
+      for (var k = 2; k &lt;= N; k++)
+          world.putBalls(k, 1, 4);
+
+      var robot = new Robot();
+
+      var code = ["from karel import *",
+                  "while front_is_clear():",
+                  "    move()",
+                  "    # add missing statements",
+                  ""];
+                  //from karel import *
+                  //while front_is_clear():
+                  //    move()
+                  //    for i in range(4):
+                  //        pick_ball()
+      return {robot:robot, world:world, code:code};
+   },
+
+   isSuccess: function(robot, world) {
+      var N = world.getAvenues();
+      for (var k = 1; k &lt;= N; k++)
+         if (world.getBalls(k, 1) > 0)
+            return false;
+
+      return true;
+   }
+} x--></textarea>
+                </article>
+            </section>
+            <section class="col-md-12">
+                <article>
+                    <canvas class="world" style="border-style: solid; border-width: 2px; border-color: inherit; background: white;" width="300" height="300">
+                        <p>Please try loading this page in HTML5 enabled web browsers. All the latest versions of famous browsers such as Internet explorer, Chrome, Firefox, Opera support HTML5.</p>
+                    </canvas>
+                </article>
+            </section>
+        </div>
+    </div>
+    <p class="karel_caption karel_caption_text"> (Karel_while__many_squares_four_bals_per_square)</p>
+</p></div></div>
+
+</div>
+<div class="section" id="pick-up-all-the-balls">
+<h3>Pick up all the balls<a class="headerlink" href="#pick-up-all-the-balls" title="Permalink to this headline">¶</a></h3>
+
+    <div class="course-box course-box-special">
+        <div class="course-content">
+            <h4 class="carbox-title">
+                <img class="corner-image float-right" src="../_static/img/question-mark.png" />
+            </h4>
+            <p>
+<p>There is at least one square in front of Karel, and there may be any number of them. On each of the squares <strong>in front of</strong> Karel there are zero or more balls (the starting square is empty). Karel needs to pick up all the balls.</p>
+
+    </p></div></div>
+<p>This task is the generalization of the previous one, so the program that solves this task can be used in the previous one as well. The difference is that now the inner loop must be a <em>while</em> loop, while in the previous task it could have been a <em>for</em> loop as well.</p>
+<p>Again, the statement <code class="docutils literal notranslate"><span class="pre">pick_ball()</span></code> should be indented further in. This way, it will repeat while the condition of the inner <em>while</em> statement holds, that is, while there is a ball on the square Karel is on at that moment. Taking all the balls, together with the <code class="docutils literal notranslate"><span class="pre">move</span></code> statement is repeated in the outer <code class="docutils literal notranslate"><span class="pre">while</span></code> loop as long as there are squares in front of Karel. The overall effect of nesting loops is that all the balls from each square will be taken.</p>
+
+<div data-childcomponent="Karel_while__many_squares_many_balls" class="karel_section course-box course-box-problem">
+    <div class="course-content">
+        <p>
+
+    <div data-component="karel" id="Karel_while__many_squares_many_balls" class="karel_section">
+        <div class="karel_actions col-md-12 mb-2"><button class="btn btn-success run-button">Покрени програм</button>
+        <button class="btn btn-default reset-button">Врати на почетак</button>
+        <button class="btn btn-default blockly-button" style="display: inline-block;">Blockly</button></div>
+        <div style="overflow: hidden;" class="karel_actions col-md-12" >
+            <section class="col-md-12">
+                <article>
+                    <textarea class="codeArea" id="Karel_while__many_squares_many_balls" name="code" rows="10" style="width: 100%;height:300px"></textarea>
+                    <textarea class="configArea" style="display:none"><!--x {
+   setup:function() {
+      function random(n) {
+         return Math.floor(n * Math.random());
+      }
+
+      var N = 2 + random(9);
+      var world = new World(N, 1);
+      world.setRobotStartAvenue(1);
+      world.setRobotStartStreet(1);
+      world.setRobotStartDirection("E");
+
+      for (var k = 2; k &lt;= N; k++) {
+         let B = random(7);
+         world.putBalls(k, 1, B);
+      }
+
+      var robot = new Robot();
+
+      var code = ["from karel import *",
+                  "while front_is_clear():",
+                  "    # go forward",
+                  "    while ... # finish the program",
+                  ""];
+      return {robot:robot, world:world, code:code};
+   },
+
+   isSuccess: function(robot, world) {
+      var N = world.getAvenues();
+      for (var k = 1; k &lt;= N; k++)
+         if (world.getBalls(k, 1) > 0)
+            return false;
+
+      return true;
+   }
+} x--></textarea>
+                </article>
+            </section>
+            <section class="col-md-12">
+                <article>
+                    <canvas class="world" style="border-style: solid; border-width: 2px; border-color: inherit; background: white;" width="300" height="300">
+                        <p>Please try loading this page in HTML5 enabled web browsers. All the latest versions of famous browsers such as Internet explorer, Chrome, Firefox, Opera support HTML5.</p>
+                    </canvas>
+                </article>
+            </section>
+        </div>
+    </div>
+    <p class="karel_caption karel_caption_text"> (Karel_while__many_squares_many_balls)</p>
+</p></div></div>
+
+</div>
+<div class="section" id="bring-all-the-balls">
+<h3>Bring all the balls<a class="headerlink" href="#bring-all-the-balls" title="Permalink to this headline">¶</a></h3>
+
+    <div class="course-box course-box-special">
+        <div class="course-content">
+            <h4 class="carbox-title">
+                <img class="corner-image float-right" src="../_static/img/question-mark.png" />
+            </h4>
+            <p>
+<p>There is a path of unknown length in front of Karel. Karel should collect all the balls from all the squares and bring them to the starting square.</p>
+
+    </p></div></div>
+<p>The program has been broken down to smaller pieces by the comments. Add missing statements.</p>
+
+<div data-childcomponent="Karel_while__bring_all_balls" class="karel_section course-box course-box-problem">
+    <div class="course-content">
+        <p>
+
+    <div data-component="karel" id="Karel_while__bring_all_balls" class="karel_section">
+        <div class="karel_actions col-md-12 mb-2"><button class="btn btn-success run-button">Покрени програм</button>
+        <button class="btn btn-default reset-button">Врати на почетак</button>
+        <button class="btn btn-default blockly-button" style="display: inline-block;">Blockly</button></div>
+        <div style="overflow: hidden;" class="karel_actions col-md-12" >
+            <section class="col-md-12">
+                <article>
+                    <textarea class="codeArea" id="Karel_while__bring_all_balls" name="code" rows="10" style="width: 100%;height:300px"></textarea>
+                    <textarea class="configArea" style="display:none"><!--x {
+   setup:function() {
+      function random(n) {
+         return Math.floor(n * Math.random());
+      }
+
+      var N = 2 + random(9);
+      var world = new World(N, 1);
+      world.setRobotStartAvenue(1);
+      world.setRobotStartStreet(1);
+      world.setRobotStartDirection("E");
+
+      for (var k = 1; k &lt;= N; k++) {
+         let B = random(7);
+         world.putBalls(k, 1, B);
+      }
+
+      var robot = new Robot();
+
+      var code = ["from karel import *",
+                  "# use double loop to take all balls from all squares",
+                  "",
+                  "",
+                  "turn_left(); turn_left()                # turn back",
+                  "# tell Karel to go back to the starting square ",
+                  "# (that is, to move forward while he can)",
+                  "",
+                  "while any_balls_with_karel():",
+                  "    # drop one ball",
+                  ""];
+
+        return {robot:robot, world:world, code:code};
+     },
+
+     isSuccess: function(robot, world) {
+        var N = world.getAvenues();
+        for (var k = 2; k &lt;= N; k++)
+           if (world.getBalls(k, 1) > 0)
+              return false;
+
+        if (robot.getBalls() > 0)
+              return false;
+
+        return true;
+     },
+} x--></textarea>
+                </article>
+            </section>
+            <section class="col-md-12">
+                <article>
+                    <canvas class="world" style="border-style: solid; border-width: 2px; border-color: inherit; background: white;" width="300" height="300">
+                        <p>Please try loading this page in HTML5 enabled web browsers. All the latest versions of famous browsers such as Internet explorer, Chrome, Firefox, Opera support HTML5.</p>
+                    </canvas>
+                </article>
+            </section>
+        </div>
+    </div>
+    <p class="karel_caption karel_caption_text"> (Karel_while__bring_all_balls)</p>
+</p></div></div>
+
+</div>
+<div class="section" id="up-and-down">
+<h3>Up and down<a class="headerlink" href="#up-and-down" title="Permalink to this headline">¶</a></h3>
+
+    <div class="course-box course-box-special">
+        <div class="course-content">
+            <h4 class="carbox-title">
+                <img class="corner-image float-right" src="../_static/img/question-mark.png" />
+            </h4>
+            <p>
+<p>Karel is on a rectangular board of unknown size (the number of columns is always odd), without any balls on the squares. The goal is for Karel to reach the bottom right square. In order to achieve this, Karel will have to move through the columns alternately up and down.</p>
+
+    </p></div></div>
+<p>   These are some of the possible looks of the labyrinth:</p>
+<blockquote>
+<div><a class="reference internal image-reference" href="../_images/While_UpDown.jpg"><img alt="../_images/While_UpDown.jpg" class="align-center" src="../_images/While_UpDown.jpg" style="width: 600px;" /></a>
+</div></blockquote>
+
+<div data-childcomponent="Karel_while__up_col_down_col" class="karel_section course-box course-box-problem">
+    <div class="course-content">
+        <p>
+
+    <div data-component="karel" id="Karel_while__up_col_down_col" class="karel_section">
+        <div class="karel_actions col-md-12 mb-2"><button class="btn btn-success run-button">Покрени програм</button>
+        <button class="btn btn-default reset-button">Врати на почетак</button>
+        <button class="btn btn-default blockly-button" style="display: inline-block;">Blockly</button></div>
+        <div style="overflow: hidden;" class="karel_actions col-md-12" >
+            <section class="col-md-12">
+                <article>
+                    <textarea class="codeArea" id="Karel_while__up_col_down_col" name="code" rows="10" style="width: 100%;height:300px"></textarea>
+                    <textarea class="configArea" style="display:none"><!--x {
+   setup:function() {
+      function random(n) {
+         return Math.floor(n * Math.random());
+      }
+
+      var X2 = 1 + random(4);
+      var Y = 2 + random(5);
+      var world = new World(2*X2+1, Y);
+      world.setRobotStartAvenue(1);
+      world.setRobotStartStreet(1);
+      world.setRobotStartDirection("E");
+
+      world.addEWWall(1, 1, 1);
+      for (let x = 0; x &lt; X2; x++) {
+         world.addNSWall(2*x + 1, 2, Y - 1);
+         world.addNSWall(2*x + 2, 1, Y - 1);
+      }
+
+      var robot = new Robot();
+
+      var code = ["from karel import *",
+                  "# add the missing statements",
+                  ""];
+                  //from karel import *
+                  //while front_is_clear():        # while you are not in the bottom right corner
+                  //    move(); turn_left()            # enter the next column and turn north
+                  //    while front_is_clear():        # go to the top edge
+                  //        move()
+                  //
+                  //    turn_right(); move(); turn_right() # move to the next column and turn south
+                  //    while front_is_clear():        # go to the bottom edge
+                  //        move()
+                  //
+                  //    turn_left()                    # turn east
+
+      return {robot:robot, world:world, code:code};
+   },
+
+   isSuccess: function(robot, world) {
+      return robot.getAvenue() == world.getAvenues() &&
+         robot.getStreet() == 1;
+   },
+} x--></textarea>
+                </article>
+            </section>
+            <section class="col-md-12">
+                <article>
+                    <canvas class="world" style="border-style: solid; border-width: 2px; border-color: inherit; background: white;" width="300" height="300">
+                        <p>Please try loading this page in HTML5 enabled web browsers. All the latest versions of famous browsers such as Internet explorer, Chrome, Firefox, Opera support HTML5.</p>
+                    </canvas>
+                </article>
+            </section>
+        </div>
+    </div>
+    <p class="karel_caption karel_caption_text"> (Karel_while__up_col_down_col)</p>
+</p></div></div>
+
+
+    <div data-component="reveal" id="Karel_while__up_col_down_col_reveal"   data-showtitle="Hint" data-hidetitle="Hide hint">
+    
+<div data-childcomponent="Karel_while__up_col_down_col_solution" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=Karel_while__up_col_down_col_solution data-lang="python" 
+      data-timelimit=25000  data-codelens="true"  
+    data-audio=''   
+             data-passivecode="true"  data-hidehistory=true
+       >
+from karel import *
+while front_is_clear(): # while you are not in the bottom right corner
+    move(); turn_left()     # enter the next column and turn north
+    ... # finish this part  # go to the top edge
+
+    turn_right(); move()    # move to the next column
+    turn_right()            # turn south
+    ... # finish this part  # go to the bottom edge
+
+    turn_left()             # turn east
+</textarea>
+</div>
+
+    </div>
+    </div>
+<div class="section" id="stairs">
+<h3>Stairs<a class="headerlink" href="#stairs" title="Permalink to this headline">¶</a></h3>
+
+    <div class="course-box course-box-special">
+        <div class="course-content">
+            <h4 class="carbox-title">
+                <img class="corner-image float-right" src="../_static/img/question-mark.png" />
+            </h4>
+            <p>
+<p>Karel should climb up the first stairs, then go down the other ones and end up in the lower right corner. The table size is not known, but the number of columns will always be odd. The table might look like this:</p>
+<blockquote>
+<div><a class="reference internal image-reference" href="../_images/While_Stairs.jpg"><img alt="../_images/While_Stairs.jpg" class="align-center" src="../_images/While_Stairs.jpg" style="width: 600px;" /></a>
+</div></blockquote>
+
+    </p></div></div>
+
+<div data-childcomponent="Karel_while__stairs" class="karel_section course-box course-box-problem">
+    <div class="course-content">
+        <p>
+
+    <div data-component="karel" id="Karel_while__stairs" class="karel_section">
+        <div class="karel_actions col-md-12 mb-2"><button class="btn btn-success run-button">Покрени програм</button>
+        <button class="btn btn-default reset-button">Врати на почетак</button>
+        <button class="btn btn-default blockly-button" style="display: inline-block;">Blockly</button></div>
+        <div style="overflow: hidden;" class="karel_actions col-md-12" >
+            <section class="col-md-12">
+                <article>
+                    <textarea class="codeArea" id="Karel_while__stairs" name="code" rows="10" style="width: 100%;height:300px"></textarea>
+                    <textarea class="configArea" style="display:none"><!--x {
+   setup:function() {
+      function random(n) {
+         return Math.floor(n * Math.random());
+      }
+
+      var Y = 2 + random(6);
+      var X = 2 * Y - 1;
+      var world = new World(X, Y);
+      world.setRobotStartAvenue(1);
+      world.setRobotStartStreet(1);
+      world.setRobotStartDirection("E");
+
+      // Vertical walls
+      for (let y = 1; y &lt; Y; y++) world.addNSWall(y, y, 1); // low left
+      for (let y = 1; y &lt; Y; y++) world.addNSWall(X - 1 - y, y, 1); // low right
+      for (let y = 3; y &lt;= Y; y++) world.addNSWall(y - 2, y, 1); // high left
+      for (let y = 2; y &lt;= Y; y++) world.addNSWall(X + 1 - y, y, 1); // high right
+
+      // Horizontal walls
+      for (let y = 1; y &lt; Y - 1; y++) world.addEWWall(y + 1, y, 1); // low left
+      for (let y = 2; y &lt; Y; y++) world.addEWWall(y - 1, y, 1); // high left
+      for (let y = 1; y &lt; Y - 1; y++) world.addEWWall(X - 1 - y, y, 1); // low right
+      for (let y = 1; y &lt; Y; y++) world.addEWWall(X + 1 - y, y, 1); // high right
+
+      var robot = new Robot();
+
+      var code = ["from karel import *",
+                  "# add missing statements",
+                  ""];
+                  //from karel import *
+                  //turn_left()                       # northwards
+                  //while front_is_clear():           # while there are stairs up
+                  //    move(); turn_right(); move(); turn_left() #    climb up one stair
+                  //
+                  //turn_right(); turn_right()        # southwards
+                  //
+                  //while front_is_clear():           # while there are srairs down
+                  //    move(); turn_left(); move(); turn_right() #    come down one stair
+
+      return {robot:robot, world:world, code:code};
+   },
+
+   isSuccess: function(robot, world) {
+      return robot.getAvenue() == world.getAvenues() &&
+         robot.getStreet() == 1;
+   },
+} x--></textarea>
+                </article>
+            </section>
+            <section class="col-md-12">
+                <article>
+                    <canvas class="world" style="border-style: solid; border-width: 2px; border-color: inherit; background: white;" width="300" height="300">
+                        <p>Please try loading this page in HTML5 enabled web browsers. All the latest versions of famous browsers such as Internet explorer, Chrome, Firefox, Opera support HTML5.</p>
+                    </canvas>
+                </article>
+            </section>
+        </div>
+    </div>
+    <p class="karel_caption karel_caption_text"> (Karel_while__stairs)</p>
+</p></div></div>
+
+
+    <div data-component="reveal" id="Karel_while__stairs_reveal"   data-showtitle="Hint" data-hidetitle="Hide hint">
+    
+<div data-childcomponent="Karel_while__stairs_solution" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=Karel_while__stairs_solution data-lang="python" 
+      data-timelimit=25000  data-codelens="true"  
+    data-audio=''   
+             data-passivecode="true"  data-hidehistory=true
+       >
+from karel import *
+turn_left()                        # northwards
+while front_is_clear():            # while there are stairs up
+    move(); turn_right(); move(); turn_left() # climb up one stair
+
+turn_right(); turn_right()         # southwards
+
+while ... # add the condition      # while there are srairs down
+    ... # add 4 statements             # come down one stair
+</textarea>
+</div>
+
+    </div>
+    </div>
+<div class="section" id="spiral-to-the-left">
+<h3>Spiral to the left<a class="headerlink" href="#spiral-to-the-left" title="Permalink to this headline">¶</a></h3>
+
+    <div class="course-box course-box-special">
+        <div class="course-content">
+            <h4 class="carbox-title">
+                <img class="corner-image float-right" src="../_static/img/question-mark.png" />
+            </h4>
+            <p>
+<p>In all displayed cases, Karel should come to a square marked with a red circle (there are no balls in this task).</p>
+<blockquote>
+<div><a class="reference internal image-reference" href="../_images/While_SpiralLeft.jpg"><img alt="../_images/While_SpiralLeft.jpg" class="align-center" src="../_images/While_SpiralLeft.jpg" style="width: 600px;" /></a>
+</div></blockquote>
+
+    </p></div></div>
+
+<div data-childcomponent="Karel_while__spiral_left" class="karel_section course-box course-box-problem">
+    <div class="course-content">
+        <p>
+
+    <div data-component="karel" id="Karel_while__spiral_left" class="karel_section">
+        <div class="karel_actions col-md-12 mb-2"><button class="btn btn-success run-button">Покрени програм</button>
+        <button class="btn btn-default reset-button">Врати на почетак</button>
+        <button class="btn btn-default blockly-button" style="display: inline-block;">Blockly</button></div>
+        <div style="overflow: hidden;" class="karel_actions col-md-12" >
+            <section class="col-md-12">
+                <article>
+                    <textarea class="codeArea" id="Karel_while__spiral_left" name="code" rows="10" style="width: 100%;height:300px"></textarea>
+                    <textarea class="configArea" style="display:none"><!--x {
+   setup:function() {
+      function random(n) {
+         return Math.floor(n * Math.random());
+      }
+
+   var N = 1 + random(7);
+   var world = new World(N, N);
+   world.setRobotStartAvenue(1);
+   world.setRobotStartStreet(1);
+   world.setRobotStartDirection("E");
+
+   var i = 1;
+   for (let d = N - 1; d > 0; d -= 2) { world.addEWWall(i, i, d); i++; }
+   i = 2;
+   for (let d = N - 2; d > 0; d -= 2) { world.addEWWall(i, N+1-i, d); i++; }
+   i = 2;
+   for (let d = N - 2; d > 0; d -= 2) { world.addNSWall(N+1-i, i, d); i++; }
+   i = 1;
+   for (let d = N - 3; d > 0; d -= 2) { world.addNSWall(i, i+2, d); i++; }
+
+   var robot = new Robot();
+
+   var code = ["from karel import *",
+               "# finish the incomplete statements",
+               "while front_is_clear():",
+               "    while ... ",
+               "        ... ",
+               "    turn_left()",
+               ""];
+
+     return {robot:robot, world:world, code:code};
+  },
+
+  isSuccess: function(robot, world) {
+     var N = world.getAvenues();
+     return robot.getStreet() === Math.floor((N+2)/2) &&
+        robot.getAvenue() === Math.floor((N+1)/2);
+  },
+} x--></textarea>
+                </article>
+            </section>
+            <section class="col-md-12">
+                <article>
+                    <canvas class="world" style="border-style: solid; border-width: 2px; border-color: inherit; background: white;" width="300" height="300">
+                        <p>Please try loading this page in HTML5 enabled web browsers. All the latest versions of famous browsers such as Internet explorer, Chrome, Firefox, Opera support HTML5.</p>
+                    </canvas>
+                </article>
+            </section>
+        </div>
+    </div>
+    <p class="karel_caption karel_caption_text"> (Karel_while__spiral_left)</p>
+</p></div></div>
+
+
+    <div data-component="reveal" id="Karel_while__spiral_left_reveal"   data-showtitle="Solution" data-hidetitle="Hide solution">
+    
+<div data-childcomponent="Karel_while__spiral_left_solution" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=Karel_while__spiral_left_solution data-lang="python" 
+      data-timelimit=25000  data-codelens="true"  
+    data-audio=''   
+             data-passivecode="true"  data-hidehistory=true
+       >
+from karel import *
+while front_is_clear():
+    while front_is_clear():
+        move()
+    turn_left()
+</textarea>
+</div>
+
+    </div>
+    </div>
+</div>
+</div>
+
+
+  
+      <div class="col-md-12">
+<ul class="pager">
+        <li id="relations-prev" title='Previous chapter - Solve multiple tasks at once' data-toggle="tooltip"><a href="01_Karel_05_while.html">Previous chapter</a></li>
+    
+        <li id="relations-next" title='Next chapter - Check out and decide' data-toggle="tooltip"><a href="01_Karel_07_if.html">Next chapter</a></li>
+</ul>
+
+<!-- <ul class="pager"> -->
+    <!-- -->
+        <!-- <li id="relations-prev" title='Претходно поглавље - Solve multiple tasks at once' data-toggle="tooltip"><a href="01_Karel_05_while.html">Претходно поглавље</a></li> -->
+    <!--  -->
+    <!-- -->
+        <!-- <li id="relations-next" title='Следеће поглавље - Check out and decide' data-toggle="tooltip"><a href="01_Karel_07_if.html">Следеће поглавље</a></li> -->
+    <!-- -->
+<!-- </ul> -->
+
+<script type="text/javascript">
+
+  $('#relations-prev').tooltip({'placement':'right', 'selector': '', 'delay': { show: 100, hide: 50}});
+  $('#relations-next').tooltip({'placement':'left', 'selector': '', 'delay': { show: 100, hide: 50}});
+
+</script>
+</div>
+  
+</div>
+<footer class="footer col-md-12">
+    <div class="container">
+        <div class="text-center">
+            <hr>
+            <p class="text-muted">
+                <span class="pull-left">&copy; 2019 Petlja (Created using  <a href="https://pypi.org/project/Sphinx/">Swinx</a>, <a href="http://runestoneinteractive.org/">RunestoneComponents</a> and <a href="https://github.com/Petlja/PetljaDoc">PetljaDoc</a>)</span>
+            </p>
+        </div>
+    </div>
+</footer>
+
+
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-32029811-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+
+
+  </body>
+</html>

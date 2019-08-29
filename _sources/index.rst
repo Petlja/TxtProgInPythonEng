@@ -36,6 +36,6 @@ Content
 .. toctree::
     :maxdepth: 3
 
-    01_Karel_00_intro.rst
+    01_Karel/toctree.rst
     02_Console/toctree.rst
     03_PyGame/toctree.rst

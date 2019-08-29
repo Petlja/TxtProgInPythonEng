@@ -3,7 +3,7 @@ Even shorter programs
 
 Let's get back to the last program of the previous lesson. We needed Karel to take five balls from each of the three squares in fornt of him.
 
-.. image:: ../_images/Karel/nested_for_3x5.png
+.. image:: ../../_images/Karel/nested_for_3x5.png
     :width: 300px
     :align: center
 

@@ -220,7 +220,7 @@ Up and down
   
    These are some of the possible looks of the labyrinth:
 
-   .. image:: ../_images/Karel/While_UpDown.jpg
+   .. image:: ../../_images/Karel/While_UpDown.jpg
       :width: 600px   
       :align: center
 
@@ -297,7 +297,7 @@ Stairs
 
   Karel should climb up the first stairs, then go down the other ones and end up in the lower right corner. The table size is not known, but the number of columns will always be odd. The table might look like this:
   
-   .. image:: ../_images/Karel/While_Stairs.jpg
+   .. image:: ../../_images/Karel/While_Stairs.jpg
       :width: 600px   
       :align: center
 
@@ -378,7 +378,7 @@ Spiral to the left
 
   In all displayed cases, Karel should come to a square marked with a red circle (there are no balls in this task).
    
-   .. image:: ../_images/Karel/While_SpiralLeft.jpg
+   .. image:: ../../_images/Karel/While_SpiralLeft.jpg
       :width: 600px   
       :align: center
 

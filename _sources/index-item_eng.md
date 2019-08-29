@@ -1,5 +1,5 @@
 ---
-title: Programming in Python, handbook
+title: Textual Programming in Python
 author: Milan Vugdelija
 thumb: media/python.png
 ---
