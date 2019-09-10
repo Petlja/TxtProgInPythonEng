@@ -3,11 +3,11 @@ Data collections
 
 In the previous lesson, we used a tuple to perform some commands (computing and printing) over each value from the tuple using the *for* loop.
 
-Torques are also a type of data in Python, such as numbers, strings, or logical values. The types *int* (integer), *float* (real number), *str* (string) and *bool* (logical value) are **basic types**. The difference between tuples and basic types is that the value of a tuple consists of more than one value of a simpler type.
+Tuples are also a type of data in Python, such as numbers, strings, or logical values. The types *int* (integer), *float* (real number), *str* (string) and *bool* (logical value) are **basic types**. The difference between tuples and basic types is that the value of a tuple consists of multiple values of a simpler type.
 
 Each value that consists of multiple values of a simpler type will be called a **collection**. The data the collection consists of are called **collection elements**.
 
-We can say that tuple is one kind of collection, and it is the first kind of collection we encounter.
+We can say that tuple is a kind of collection, and it is the first kind of collection we encounter.
 
 Tuple and its elements
 ----------------------
@@ -15,7 +15,7 @@ Tuple and its elements
 Packing and unpacking tuples
 ''''''''''''''''''''''''''''
 
-We can fit the whole tuples into a variable, as we do with values of a simpler type. In the following example, the *temperatures* variable contains the entire tuple as its value.
+We can fit the whole tuple into a variable, as we do with values of a simpler type. In the following example, the *temperatures* variable contains the entire tuple as its value.
 
 .. activecode:: console__collections_tuple1
     
@@ -23,7 +23,7 @@ We can fit the whole tuples into a variable, as we do with values of a simpler t
     for t in temperatures:
         print(t)
         
-This kind of value assignment (as in the first line of the program) is also called tuple packing. The reverse assignment is also possible: when we know how many elements are there in a tuple, we can assign the tuple elements to the corresponding number of variables:
+This kind of value assignment (as in the first line of the program) is known as tuple packing. The reverse assignment is also possible: when we know how many elements are there in a tuple, we can assign the tuple elements to the corresponding number of variables:
 
 .. activecode:: console__collections_tuple2
     
@@ -94,7 +94,7 @@ For example, it is possible to create a tuple of tuples:
     
 Tuple *t* contains two simpler tuples, therefore the number of its elements is 2.
 
-In Python, the elements of a tuple can be of different types, and we will soon see such examples as well.
+In Python, the elements of a tuple can be of different types, and we will see such examples latter.
 
 
 Range
@@ -126,7 +126,7 @@ Since the *range(n)* range contains a total of *n* values, this range is often u
 
 The *print* function was executed for each value *i* of sequence 0, 1, 2, 3, 4, but in this example, those values are not used in the loop body. Thus, we achieved that the *print* function was executed 5 times in exactly the same way, that is, it was repeated 5 times.
 
-Another common use of this type of range is to get through all the elements of a tuple. In such case, the loop variable serves as an index. This way of passing through the values of the tuple is suitable when besides these tuple values in the loop we also need their sequence numbers (this way of passing through the collection is more common in other programming languages than Python).
+Another common use of this type of range is to get through all the elements of a tuple. In such case, the loop variable serves as an index. This way of going through the values of the tuple is suitable when besides these tuple values in the loop we also need their sequence numbers (this way of going through the collection is more common in other programming languages than Python).
 
 
 .. activecode:: console__collections_for_range_len
@@ -140,7 +140,7 @@ Another common use of this type of range is to get through all the elements of a
 Range with two arguments
 ''''''''''''''''''''''''
 
-When we need a sequence of consecutive integers that does not start at zero, we set the range as *range(a, b)*, where *a* and *b* are integers such that: math:`a<b`. Then the sequence is made up of integers from *a* to *b*, not including *b*. For example, the range *range(1, 6)* gives the sequence of numbers 1, 2, 3, 4, 5:
+When we need a sequence of consecutive integers that does not start at zero, we set the range as *range(a, b)*, where *a* and *b* are integers such that :math:`a<b`. Then the sequence is made up of integers from *a* to *b*, not including *b*. For example, the range *range(1, 6)* gives the sequence of numbers 1, 2, 3, 4, 5:
 
 .. activecode:: console__collections_range_a_b
     
@@ -188,36 +188,37 @@ We have used strings as the basic type so far, but strings can also be used as c
 Functions of collections
 ------------------------
 
-There are many functions in Python that accept the collection as an argument. One of them is the *len* function, which we have already met. Some other commonly used functions that apply to collections are:
+There are many functions in Python that accept a collection as an argument. One of them is the *len* function, which we have already met. Some other commonly used functions that apply to collections are:
 
-- *sum*, a function that gives the sum of the elements of a collection
 - *min*, a function that gives the smallest element of a collection
 - *max*, a function that gives the largest element of a collection
+- *sum*, a function that gives the sum of the elements of a collection
 
 .. activecode:: console__collections_aggregation
     
     print('Tuple:')
     t = (2, 8, 4, 15, 3)
     print('len(t) =', len(t))
-    print('sum(t) =', sum(t))
     print('min(t) =', min(t))
     print('max(t) =', max(t))
+    print('sum(t) =', sum(t))
 
     print('Range:')
     r = range(1, 10, 2)
     print('len(r) =', len(r))
-    print('sum(r) =', sum(r))
     print('min(r) =', min(r))
     print('max(r) =', max(r))
+    print('sum(r) =', sum(r))
 
     print('String:')
     s = 'Python'
     print('len(s) =', len(s))
-    print('sum(s) =', sum(s))
     print('min(s) =', min(s))
     print('max(s) =', max(s))
+    # elements of s are not numbers, so uncommenting the next statement would cause an error
+    # print('sum(s) =', sum(s)) 
 
-The values of the functions *len*, *sum*, *min*, *max* for the range can also be determined from the parameters of the range, but here we wanted to point out that these functions accept different collections as their argument.
+The values of the functions *len*, *sum*, *min*, *max* for the range can also be determined from the parameters of the range, but here we wanted to point out that all these functions accept different collections as their argument (including range).
 
 Questions
 '''''''''
@@ -271,7 +272,7 @@ Questions
    :feedback_c: Try again
    :feedback_d: Try again
 
-   Which range contains values 1, 2, 3?
+   Which range contains just values 1, 2, 3?
 
 .. mchoice:: console__collections_quiz_range2
    :answer_a: 5

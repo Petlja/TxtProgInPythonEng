@@ -227,7 +227,7 @@
 </pre></div>
 </div>
 <p>The radii of all three circles should be cut to half the previous size (25 pixels instead of 50 and 15 instead of 30), but that is not enough. If the centers of the small circles remained where they were, we would get three separate circles (try it). In order for the drawing to still look like a cloud, we also need to bring the circles closer together. More specifically, the distances of the centers of the smaller circles from the center of the large circle should also be twice less than before, that is, 25 instead of 50 pixels.</p>
-<p>In general, we do not always want a cloud that is twice as small, but that the clouds can be of different sizes. In addition, we do not want to create a separate function for each cloud size, but to have one function that can draw a cloud of a given size. IUt would be the most comfortable if we could set the size of the cloud with only one number and change the size of the cloud by changing that one number. To do this, we need to express all the sizes that change with the change of cloud size (which is the distances between the centers of the circles and the radii of those circles) using one selected size. For example, for that selected size we can take the radius of the middle circle, which we will denote by <span class="math notranslate nohighlight">\(r\)</span>. The distances of the centers of the smaller circles to the center of the larger circle are exactly <span class="math notranslate nohighlight">\(r\)</span>, and the radius of the smaller circles is equal <span class="math notranslate nohighlight">\({3 \ over 5} r\)</span> regardless of the size of the cloud. When we use all these relations we have noticed, the function looks like this:</p>
+<p>In general, we do not always want a cloud that is twice as small, but that the clouds can be of different sizes. In addition, we do not want to create a separate function for each cloud size, but to have one function that can draw a cloud of a given size. IUt would be the most comfortable if we could set the size of the cloud with only one number and change the size of the cloud by changing that one number. To do this, we need to express all the sizes that change with the change of cloud size (which is the distances between the centers of the circles and the radii of those circles) using one selected size. For example, for that selected size we can take the radius of the middle circle, which we will denote by <span class="math notranslate nohighlight">\(r\)</span>. The distances of the centers of the smaller circles to the center of the larger circle are exactly <span class="math notranslate nohighlight">\(r\)</span>, and the radius of the smaller circles is equal <span class="math notranslate nohighlight">\({3 \over 5} r\)</span> regardless of the size of the cloud. When we use all these relations we have noticed, the function looks like this:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">cloud</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">r</span><span class="p">,</span> <span class="n">shade</span><span class="p">):</span>
     <span class="c1"># draw a cloud of three circles</span>
     <span class="n">gray</span> <span class="o">=</span> <span class="p">(</span><span class="n">shade</span><span class="p">,</span> <span class="n">shade</span><span class="p">,</span> <span class="n">shade</span><span class="p">)</span>
@@ -256,9 +256,9 @@ canvas.fill(pg.Color(&quot;skyblue&quot;)) # paint background
 pg.draw.circle(canvas, pg.Color(&quot;yellow&quot;), (100, 100), 80)
 
 # function draws a cloud at a given position, given size and shade of gray
-def cloud(x, y, r, gray):
+def cloud(x, y, r, shade):
     # draw a cloud of three circles
-    color = (gray, gray, gray)
+    color = (shade, shade, shade)
     pg.draw.circle(canvas, color, (x, y), r)
     r_small = round(3 * r / 5)
     pg.draw.circle(canvas, color, (x - r, y), r_small)
@@ -284,7 +284,7 @@ pygamebg.wait_loop()
 <ul class="simple">
 <li><p>We need to determine one length in the drawing, which will be set directly. We can call this selected length <strong>basic length</strong> or <strong>unit of measure</strong>. In the example of clouds, the basic length is the radius of the middle circle.</p></li>
 <li><p>All radii of the circles of which the drawing consists are expressed in proportion to the basic length. This means that if our base length is denoted by <span class="math notranslate nohighlight">\(a\)</span>, all other lengths in the program will be multiples of <span class="math notranslate nohighlight">\(a\)</span>, for example <span class="math notranslate nohighlight">\(2a\)</span> or <span class="math notranslate nohighlight">\(5a\)</span>. We determine the number <span class="math notranslate nohighlight">\(a\)</span> from the ratio of the required length and the selected basic length in the initial drawing (this ratio remains the same when the size of the drawing changes). In the example with the cloud, the radius of the small circle is always <span class="math notranslate nohighlight">\({3 \over 5}\)</span> of the selected basic length <span class="math notranslate nohighlight">\(r\)</span>. If rectangles or ellipses appear in the drawing, the heights and widths of those rectangles and ellipses should also be expressed in proportion to the basic length, in the same way as the radii of the circles.</p></li>
-<li><p>We determine the coordinates of all points with respect to the principal point, by adding or subtracting a certain number of basic lengths to coordinates of the principal point. The required number of basic lengths is determined again from the relation in the initial drawing. In the example with the cloud, to obtain <span class="math notranslate nohighlight">\(x\)</span> coordinate of the center of the left circle, we subtract <strong>one</strong> basic length from <span class="math notranslate nohighlight">\(x\)</span> coordinate of the main point (center of the middle circle). We do so because the ratio of the difference of <span class="math notranslate nohighlight">\(x\)</span> coordinates and basic length equals to one. The same procedure applies in principle to <span class="math notranslate nohighlight">\(y\)</span> coordinates, though in this case it is particularly simple. Since <span class="math notranslate nohighlight">\(y\)</span> coordinates of the centers of the circles are the same, the ratio of the difference of the <span class="math notranslate nohighlight">\(y\)</span> coordinates and the basic length is zero, so zero basic lengths should be added to <span class="math notranslate nohighlight">\(y\)</span> coordinate of the anchor to get <span class="math notranslate nohighlight">\(y\)</span> coordinate of the center of a smaller circle.</p></li>
+<li><p>We determine the coordinates of all points with respect to the main point, by adding or subtracting a certain number of basic lengths to coordinates of the main point. The required number of basic lengths is determined again from the relation in the initial drawing. In the example with the cloud, to obtain <span class="math notranslate nohighlight">\(x\)</span> coordinate of the center of the left circle, we subtract <strong>one</strong> basic length from <span class="math notranslate nohighlight">\(x\)</span> coordinate of the main point (center of the middle circle). We do so because the ratio of the difference of <span class="math notranslate nohighlight">\(x\)</span> coordinates and basic length equals to one. The same procedure applies in principle to <span class="math notranslate nohighlight">\(y\)</span> coordinates, though in this case it is particularly simple. Since <span class="math notranslate nohighlight">\(y\)</span> coordinates of the centers of the circles are the same, the ratio of the difference of the <span class="math notranslate nohighlight">\(y\)</span> coordinates and the basic length is zero, so zero basic lengths should be added to <span class="math notranslate nohighlight">\(y\)</span> coordinate of the anchor to get <span class="math notranslate nohighlight">\(y\)</span> coordinate of the center of a smaller circle.</p></li>
 </ul>
 <p>To better understand the process of resizing a drawing, we will also apply it to the example of a teddy bear.</p>
 <div class="section" id="teddy-size">
@@ -349,7 +349,8 @@ pygamebg.wait_loop()
               data-modaloutput="true" data-hidehistory=true
     data-includesrc="# -*- acsection: general-init -*-
 import pygame as pg, pygamebg
-canvas = pygamebg.open_window(300, 300, &quot;Teddy-bear&quot;)
+(width, height) = (300, 300)
+canvas = pygamebg.open_window(width, height, &quot;Teddy-bear&quot;)
 # -*- acsection: main -*-
 
 canvas.fill(pg.Color(&quot;white&quot;)) # paint background
@@ -367,11 +368,7 @@ def draw_teddy(cx, cy, a):
     framed_circle(canvas, pg.Color(&quot;black&quot;),  (cx + 10*a,  cy - 6*a),   3*a) # right eye
     framed_circle(canvas, pg.Color(&quot;black&quot;),  (cx,         cy + 4*a),   3*a) # snout top
 
-draw_teddy(85, 100, 4)
-draw_teddy(235, 100, 3)
-draw_teddy(50, 250, 2)
-draw_teddy(150, 250, 2)
-draw_teddy(250, 250, 2)
+draw_teddy(width // 2, height // 2, 6)
 
 # -*- acsection: after-main -*-
 pygamebg.wait_loop()
@@ -381,7 +378,7 @@ pygamebg.wait_loop()
 </textarea>
 </div>
 <p>Now we can not only move or copy a teddy bear across the screen, but also display it in various sizes. To confirm that resizing really works, the function call</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">draw_teddy</span><span class="p">(</span><span class="n">sirina</span> <span class="o">//</span> <span class="mi">2</span><span class="p">,</span> <span class="n">visina</span> <span class="o">//</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">6</span><span class="p">)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">draw_teddy</span><span class="p">(</span><span class="n">width</span> <span class="o">//</span> <span class="mi">2</span><span class="p">,</span> <span class="n">height</span> <span class="o">//</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">6</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>which draws a bear with the center point in the center of the window, can be replaced with the following five:</p>

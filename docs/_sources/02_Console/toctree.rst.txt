@@ -24,4 +24,4 @@ Now, we will more systematically go through the basics of the Python programming
       ./02_Console_13_list.rst
       ./02_Console_14_computing_with_lists.rst
       ./02_Console_15_defining_functions.rst
-      ./02_Console_16_dict_set.rst
+      ./02_Console_16_dict.rst

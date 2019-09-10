@@ -220,11 +220,11 @@
     <div class="course-box course-box-info">
         <div class="course-content">
             <p>
-<p>The statement <code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">+</span> <span class="pre">=</span> <span class="pre">a</span></code> increases the value of the variable <em>x</em> by <em>a</em>. This is actually an abbreviated form of the statement <code class="code docutils literal notranslate"><span class="pre">x</span> <span class="pre">=</span> <span class="pre">x</span> <span class="pre">+</span> <span class="pre">a</span></code>, which assigns the value <em>x + a</em> to the variable <em>x</em>.</p>
+<p>The statement <code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">+=</span> <span class="pre">a</span></code> increases the value of the variable <em>x</em> by <em>a</em>. This is actually an abbreviated form of the statement <code class="code docutils literal notranslate"><span class="pre">x</span> <span class="pre">=</span> <span class="pre">x</span> <span class="pre">+</span> <span class="pre">a</span></code>, which assigns the value <em>x + a</em> to the variable <em>x</em>.</p>
 <p>The statement <code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">-=</span> <span class="pre">a</span></code> decreases the value of the variable <em>x</em> by <em>a</em>. This is an abbreviated form of the statement <code class="code docutils literal notranslate"><span class="pre">x</span> <span class="pre">=</span> <span class="pre">x</span> <span class="pre">-</span> <span class="pre">a</span></code>, which assigns the value <em>x - a</em> to the variable <em>x</em>.</p>
 
     </p></div></div>
-<p>In our example, the statement <em>br += 1</em> increases the value of the variable <em>br</em> by 1.</p>
+<p>In our example, the statement <em>num += 1</em> increases the value of the variable <em>br</em> by 1.</p>
 <div class="section" id="examples-and-tasks">
 <h3>Examples and tasks<a class="headerlink" href="#examples-and-tasks" title="Permalink to this headline">¶</a></h3>
 
@@ -235,8 +235,8 @@
             </h4>
             <p>
 <p><strong>Example - meeting:</strong></p>
-<p>The team leader has offered two options for the time of the meeting to be held tomorrow. Each team member wrote in the table which term would be more appropriate for him (1 for the first term, 2 for the second). This information was transferred to the first line of the program.</p>
-<p>Complete the program - script, so that the given data on voting of team members, it prints how many voted for the first and how many for the second term.</p>
+<p>The team leader has offered two options for the time of the meeting to be held tomorrow. Each team member wrote in a table which term would be more appropriate for him/her (1 for the first term, 2 for the second). This information was transferred to the first line of the following program.</p>
+<p>Complete the program - script, so that given the data on voting of team members, it prints how many voted for the first and how many for the second term.</p>
 
     </p></div></div>
 
@@ -371,8 +371,8 @@ print(passed)
             </h4>
             <p>
 <p><strong>Task - swimming pool</strong></p>
-<p>A visit to the pool is being prepared for a group of children. Anyone less than 160 centimeters can only go into the smaller pool. The organizer is interested in how many children are below 160 centimeters in order to plan the groups.</p>
-<p>Children’s heights are given at the beginning of the program. Complete the program to print the number of children less than 160 centimeters.</p>
+<p>A visit to the pool is being prepared for a group of children. Anyone lower than 160 centimeters can only go into the smaller pool. The organizer is interested in how many children are below 160 centimeters in order to plan the groups.</p>
+<p>Children’s heights are given at the beginning of the program. Complete the program to print the number of children lower than 160 centimeters.</p>
 
     </p></div></div>
 
@@ -394,7 +394,7 @@ heights = (160, 161, 174, 149, 153, 160, 158, 182, 144)
             </h4>
             <p>
 <p><strong>Task - humidity</strong></p>
-<p>In a botanical garden, soil moisture is measured once a day for rare and sensitive species. Humidity is expressed in numbers from 0 to 1, and conditions for the development of bottles are considered to be good when the humidity is between 0.3 and 0.7 (including boundaries).</p>
+<p>In a botanical garden, soil moisture is measured once a day for rare and sensitive species. Humidity is expressed in numbers from 0 to 1, and conditions for the development of plants are considered to be good when the humidity is between 0.3 and 0.7 (including boundaries).</p>
 <p>Values of humidity (measured over a period of time) are given at the beginning of the script. Complete the script by printing the number of days when the humidity was not good.</p>
 
     </p></div></div>
@@ -442,6 +442,7 @@ humidity = (0.2, 0.5, 0.61, 0.40, 0.72, 0.51, 0.43, 0.35, 0.28)
 <span class="nb">print</span><span class="p">(</span><span class="n">total</span> <span class="o">/</span> <span class="n">counter</span><span class="p">)</span>
 </pre></div>
 </div>
+<p>Note that in Python, the sum and mean of the selected elements of the collection can be obtained in a shorter and more efficient way. We chose the above method because it looks almost the same as in other programming languages.</p>
 <div class="section" id="id1">
 <h3>Examples and tasks<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
 
@@ -499,8 +500,8 @@ else:
             </h4>
             <p>
 <p><strong>Task - on duty:</strong></p>
-<p>In Company X, all employees occasionally remain on duty. The norm for the previous period is 20 hours on duty. Every extra hour (over 20 hours) on duty is additionally paid. The number of on-call hours for each employee is given, and the director wants to know the total number of on-call hours <strong>over the norm</strong>.</p>
-<p>Complete the program by computing and printing the total number of overtime hours on duty.</p>
+<p>In Company X, all employees occasionally remain on-call. The norm for the previous period is 20 hours on-call. Every extra hour (over 20 hours) on-call is additionally paid. The number of on-call hours for each employee is given, and the director wants to know the total number of on-call hours <strong>over the norm</strong>.</p>
+<p>Complete the program by computing and printing the total number of overtime hours on-call.</p>
 
     </p></div></div>
 <p>If you solve the task correctly, you should get a score of 25 for the data given, since <span class="math notranslate nohighlight">\((21-20)+(23-20)+(34-20)+(25-20)+(22-20)=25\)</span>.</p>
@@ -517,7 +518,7 @@ hours_on_duty = (21, 23, 19, 34, 25, 22, 17)
 total_overtime = 0
 # complete the program
 
-print('Total overtime on duty is', total_overtime)
+print('Total overtime on call is', total_overtime)
 </textarea>
 </div>
 

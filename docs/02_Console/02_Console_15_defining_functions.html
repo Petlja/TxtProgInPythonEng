@@ -140,7 +140,7 @@
     <script type="text/javascript" src="../_static/jquery-migrate-1.2.1.min.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Dictionaries and sets" href="02_Console_16_dict_set.html" />
+    <link rel="next" title="Dictionaries" href="02_Console_16_dict.html" />
     <link rel="prev" title="Computing with lists" href="02_Console_14_computing_with_lists.html" />
 <meta charset='utf-8'>
 <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
@@ -205,7 +205,7 @@
   
   <div class="section" id="defining-functions">
 <h1>Defining functions<a class="headerlink" href="#defining-functions" title="Permalink to this headline">¶</a></h1>
-<p>In the part dedicated to managing Karel, we mentioned that we can separate a group of commands into a separate entity called a function. Let’s recall how general a Python function looks like:</p>
+<p>In the part dedicated to managing Karel, we mentioned that we can separate a group of commands into a separate entity called a function. Let’s recall what a function written in Python looks like:</p>
 
 <div data-childcomponent="Console__functions__function_def" class="course-box course-box-problem course-content">
 
@@ -227,16 +227,17 @@ def function_name(argument_list):
             <p>
 <p><strong>Function writing rules:</strong></p>
 <ul class="simple">
-<li><p>Any properly written name may appear as a <em>function_name</em> (the rules are the same as for variable names)</p></li>
+<li><p>The function definition begins with the word <code class="docutils literal notranslate"><span class="pre">def</span></code>, followed by the function name, then a list of arguments in parentheses, and the <code class="docutils literal notranslate"><span class="pre">:</span></code> character (colon) at the end of the line.</p></li>
+<li><p>Any properly written name may appear as a <em>function_name</em> (the rules are the same as for variable names).</p></li>
 <li><p>An empty list (nothing) may appear as <em>argument_list</em> if the function does not use arguments, or one or more comma-separated arguments.</p></li>
 <li><p>Any Python statements may appear in the function body (<em>statement_1</em>, … <em>statement_k</em>). These commands are written indented with respect to the row containing the function name and arguments.</p></li>
 </ul>
 
     </p></div></div>
-<p>Functions may or may not return some value. So far we have had the opportunity to see both types of functions. For example, the functions by which the Karel robot moves forward, turns around, picks up and leaves balls are all functions that do not return value. On the other hand, mathematical functions like <em>abs</em> or <em>round</em>, as well as functions to check if Karel has balls with him, whether there are any balls on the square, or whether Karel can go forward are functions that return value.</p>
+<p>Functions may or may not return some value. So far we have had the opportunity to see both types of functions. For example, the functions by which Karel (the robot) moves forward, turns around, picks up and leaves balls are all functions that do not return any value. On the other hand, mathematical functions like <em>abs</em> or <em>round</em>, as well as functions to check if Karel has balls with him, whether there are any balls on the square, or whether Karel can go forward are functions that do return a value.</p>
 <div class="section" id="writing-functions-that-return-value">
 <h2>Writing functions that return value<a class="headerlink" href="#writing-functions-that-return-value" title="Permalink to this headline">¶</a></h2>
-<p>In order for a function to return a value, it is necessary to specify at least once in the body of the function the <code class="docutils literal notranslate"><span class="pre">return</span></code> statement, which after the word <em>return</em> specifies the expression whose value the function is to return.</p>
+<p>In order for a function to return a value, it is necessary to specify the <code class="docutils literal notranslate"><span class="pre">return</span></code> statement at least once in the body of the function. The <code class="docutils literal notranslate"><span class="pre">return</span></code> statement consists of the word <em>return</em>, folowed by an expression whose value the function is to return.</p>
 
 <div data-childcomponent="console__functions_return_example" class="course-box course-box-problem course-content">
 
@@ -251,7 +252,7 @@ def square(x):
 print(square(3))
 </textarea>
 </div>
-<p>The <em>return</em> statement can appear in multiple places in a function (with different values), and must be specified at the end of the function body. The <em>abs</em> function, if it had not been embedded, could have been defined as follows:</p>
+<p>The <em>return</em> statement can appear in multiple places in a function (usually with different values), and must be specified at the end of the function body. The <em>abs</em> function, if it had not been embedded, could have been defined as follows:</p>
 
 <div data-childcomponent="console__functions_def_abs" class="course-box course-box-problem course-content">
 
@@ -352,7 +353,7 @@ print("A total of", total_paint_needed, "kilograms of paint is required")
 <p>Write a program that for a given coordinate in degrees, minutes and seconds, prints a real number of degrees.</p>
 
     </p></div></div>
-<p>The program is almost completely written. An expression needs to be added to calculate the real number of degrees. To convert the (angular) minutes into degrees, we divide them by <span class="math notranslate nohighlight">\(60\)</span>, and we convert the seconds into degrees by dividing by <span class="math notranslate nohighlight">\(60 \ cdot 60 = 3600\)</span>.</p>
+<p>The program is almost completely written. An expression needs to be added to calculate the real number of degrees. To convert the (angular) minutes into degrees, we divide them by <span class="math notranslate nohighlight">\(60\)</span>, and we convert the seconds into degrees by dividing by <span class="math notranslate nohighlight">\(60 \cdot 60 = 3600\)</span>.</p>
 
 <div data-childcomponent="console__functions_GPS_1" class="course-box course-box-problem course-content">
 
@@ -380,7 +381,7 @@ print(float_degrees)
             </h4>
             <p>
 <p><strong>Task - Geographic coordinates in the format for the old map</strong></p>
-<p>After you realized that the old map from the previous assignment was a joke, you decided to make a similar joke to someone. You have selected a nearby location and read coordinates from your GPS device. Now you need to convert the coordinates from the device in real degrees into whole degrees, minutes and seconds, to create a proper “old” map.</p>
+<p>After you realized that the old map from the previous assignment was a joke, you decided to make a similar joke to someone. You have selected a nearby location and read coordinates from your GPS device. Now you need to convert the coordinates from the device in real degrees into whole degrees, whole minutes and rounded seconds, to create a proper “old” map.</p>
 
     </p></div></div>
 <p>     Complete the started program that performs this conversion.</p>
@@ -472,9 +473,9 @@ def process_family_member(which_one, travel_duration):
     departure_hour, departure_minute = int(s_hour), int(s_min)
     if departure_hour >= 16:
         travel_duration += 15
-    arrival_total_minutes = departure_hour * 60 + departure_minute + duration
+    arrival_total_minutes = departure_hour * 60 + departure_minute + travel_duration
     arrival_hour = arrival_total_minutes // 60
-    minut_dolaska = arrival_total_minutes % 60
+    arrival_minute = arrival_total_minutes % 60
     print('The', which_one, "member arrived home at", arrival_hour, "hours and", arrival_minute, "minutes.")
 
 process_family_member("first", 55)
@@ -552,7 +553,7 @@ for f in range(50, 111, 10):
 <ul class="simple">
 <li><p>Functions in long programs are often used to decompose the main part of a program and make it shorter and easier to understand. Our programs are not so long that it would be necessary to decompose them, but they show how it could be done with longer programs.</p></li>
 <li><p>Functions can help us avoid repeating the same or similar code in programs. Repeating the code should be avoided as such code is harder to maintain - every change should be made in multiple places, which is tedious and subject to errors and omissions.</p></li>
-<li><p>When we write functions, we enable others to use parts of our code more easily. The functions we write can be separated into a separate module, which other people can easily include in their programs.</p></li>
+<li><p>When we write functions, we enable others to use parts of our code more easily. The functions we write can be extracted into a separate module, which other people can easily include in their programs.</p></li>
 <li><p>For very large programs, forming functions allows the program to be split into multiple files instead of one huge and incomprehensible file.</p></li>
 </ul>
 </div>
@@ -565,7 +566,7 @@ for f in range(50, 111, 10):
 <ul class="pager">
         <li id="relations-prev" title='Previous chapter - Computing with lists' data-toggle="tooltip"><a href="02_Console_14_computing_with_lists.html">Previous chapter</a></li>
     
-        <li id="relations-next" title='Next chapter - Dictionaries and sets' data-toggle="tooltip"><a href="02_Console_16_dict_set.html">Next chapter</a></li>
+        <li id="relations-next" title='Next chapter - Dictionaries' data-toggle="tooltip"><a href="02_Console_16_dict.html">Next chapter</a></li>
 </ul>
 
 <!-- <ul class="pager"> -->
@@ -573,7 +574,7 @@ for f in range(50, 111, 10):
         <!-- <li id="relations-prev" title='Претходно поглавље - Computing with lists' data-toggle="tooltip"><a href="02_Console_14_computing_with_lists.html">Претходно поглавље</a></li> -->
     <!--  -->
     <!-- -->
-        <!-- <li id="relations-next" title='Следеће поглавље - Dictionaries and sets' data-toggle="tooltip"><a href="02_Console_16_dict_set.html">Следеће поглавље</a></li> -->
+        <!-- <li id="relations-next" title='Следеће поглавље - Dictionaries' data-toggle="tooltip"><a href="02_Console_16_dict.html">Следеће поглавље</a></li> -->
     <!-- -->
 <!-- </ul> -->
 

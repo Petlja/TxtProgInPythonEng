@@ -206,14 +206,14 @@
   <div class="section" id="data-collections">
 <h1>Data collections<a class="headerlink" href="#data-collections" title="Permalink to this headline">¶</a></h1>
 <p>In the previous lesson, we used a tuple to perform some commands (computing and printing) over each value from the tuple using the <em>for</em> loop.</p>
-<p>Torques are also a type of data in Python, such as numbers, strings, or logical values. The types <em>int</em> (integer), <em>float</em> (real number), <em>str</em> (string) and <em>bool</em> (logical value) are <strong>basic types</strong>. The difference between tuples and basic types is that the value of a tuple consists of more than one value of a simpler type.</p>
+<p>Tuples are also a type of data in Python, such as numbers, strings, or logical values. The types <em>int</em> (integer), <em>float</em> (real number), <em>str</em> (string) and <em>bool</em> (logical value) are <strong>basic types</strong>. The difference between tuples and basic types is that the value of a tuple consists of multiple values of a simpler type.</p>
 <p>Each value that consists of multiple values of a simpler type will be called a <strong>collection</strong>. The data the collection consists of are called <strong>collection elements</strong>.</p>
-<p>We can say that tuple is one kind of collection, and it is the first kind of collection we encounter.</p>
+<p>We can say that tuple is a kind of collection, and it is the first kind of collection we encounter.</p>
 <div class="section" id="tuple-and-its-elements">
 <h2>Tuple and its elements<a class="headerlink" href="#tuple-and-its-elements" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="packing-and-unpacking-tuples">
 <h3>Packing and unpacking tuples<a class="headerlink" href="#packing-and-unpacking-tuples" title="Permalink to this headline">¶</a></h3>
-<p>We can fit the whole tuples into a variable, as we do with values of a simpler type. In the following example, the <em>temperatures</em> variable contains the entire tuple as its value.</p>
+<p>We can fit the whole tuple into a variable, as we do with values of a simpler type. In the following example, the <em>temperatures</em> variable contains the entire tuple as its value.</p>
 
 <div data-childcomponent="console__collections_tuple1" class="course-box course-box-problem course-content">
 
@@ -227,7 +227,7 @@ for t in temperatures:
     print(t)
 </textarea>
 </div>
-<p>This kind of value assignment (as in the first line of the program) is also called tuple packing. The reverse assignment is also possible: when we know how many elements are there in a tuple, we can assign the tuple elements to the corresponding number of variables:</p>
+<p>This kind of value assignment (as in the first line of the program) is known as tuple packing. The reverse assignment is also possible: when we know how many elements are there in a tuple, we can assign the tuple elements to the corresponding number of variables:</p>
 
 <div data-childcomponent="console__collections_tuple2" class="course-box course-box-problem course-content">
 
@@ -313,7 +313,7 @@ print(len(t))
 </textarea>
 </div>
 <p>Tuple <em>t</em> contains two simpler tuples, therefore the number of its elements is 2.</p>
-<p>In Python, the elements of a tuple can be of different types, and we will soon see such examples as well.</p>
+<p>In Python, the elements of a tuple can be of different types, and we will see such examples latter.</p>
 </div>
 </div>
 <div class="section" id="range">
@@ -350,7 +350,7 @@ for i in range(5):
 </textarea>
 </div>
 <p>The <em>print</em> function was executed for each value <em>i</em> of sequence 0, 1, 2, 3, 4, but in this example, those values are not used in the loop body. Thus, we achieved that the <em>print</em> function was executed 5 times in exactly the same way, that is, it was repeated 5 times.</p>
-<p>Another common use of this type of range is to get through all the elements of a tuple. In such case, the loop variable serves as an index. This way of passing through the values of the tuple is suitable when besides these tuple values in the loop we also need their sequence numbers (this way of passing through the collection is more common in other programming languages than Python).</p>
+<p>Another common use of this type of range is to get through all the elements of a tuple. In such case, the loop variable serves as an index. This way of going through the values of the tuple is suitable when besides these tuple values in the loop we also need their sequence numbers (this way of going through the collection is more common in other programming languages than Python).</p>
 
 <div data-childcomponent="console__collections_for_range_len" class="course-box course-box-problem course-content">
 
@@ -368,7 +368,7 @@ for i in range(n):
 </div>
 <div class="section" id="range-with-two-arguments">
 <h3>Range with two arguments<a class="headerlink" href="#range-with-two-arguments" title="Permalink to this headline">¶</a></h3>
-<p>When we need a sequence of consecutive integers that does not start at zero, we set the range as <em>range(a, b)</em>, where <em>a</em> and <em>b</em> are integers such that: math:<cite>a&lt;b</cite>. Then the sequence is made up of integers from <em>a</em> to <em>b</em>, not including <em>b</em>. For example, the range <em>range(1, 6)</em> gives the sequence of numbers 1, 2, 3, 4, 5:</p>
+<p>When we need a sequence of consecutive integers that does not start at zero, we set the range as <em>range(a, b)</em>, where <em>a</em> and <em>b</em> are integers such that <span class="math notranslate nohighlight">\(a&lt;b\)</span>. Then the sequence is made up of integers from <em>a</em> to <em>b</em>, not including <em>b</em>. For example, the range <em>range(1, 6)</em> gives the sequence of numbers 1, 2, 3, 4, 5:</p>
 
 <div data-childcomponent="console__collections_range_a_b" class="course-box course-box-problem course-content">
 
@@ -445,11 +445,11 @@ for c in s:
 </div>
 <div class="section" id="functions-of-collections">
 <h2>Functions of collections<a class="headerlink" href="#functions-of-collections" title="Permalink to this headline">¶</a></h2>
-<p>There are many functions in Python that accept the collection as an argument. One of them is the <em>len</em> function, which we have already met. Some other commonly used functions that apply to collections are:</p>
+<p>There are many functions in Python that accept a collection as an argument. One of them is the <em>len</em> function, which we have already met. Some other commonly used functions that apply to collections are:</p>
 <ul class="simple">
-<li><p><em>sum</em>, a function that gives the sum of the elements of a collection</p></li>
 <li><p><em>min</em>, a function that gives the smallest element of a collection</p></li>
 <li><p><em>max</em>, a function that gives the largest element of a collection</p></li>
+<li><p><em>sum</em>, a function that gives the sum of the elements of a collection</p></li>
 </ul>
 
 <div data-childcomponent="console__collections_aggregation" class="course-box course-box-problem course-content">
@@ -462,26 +462,27 @@ for c in s:
 print('Tuple:')
 t = (2, 8, 4, 15, 3)
 print('len(t) =', len(t))
-print('sum(t) =', sum(t))
 print('min(t) =', min(t))
 print('max(t) =', max(t))
+print('sum(t) =', sum(t))
 
 print('Range:')
 r = range(1, 10, 2)
 print('len(r) =', len(r))
-print('sum(r) =', sum(r))
 print('min(r) =', min(r))
 print('max(r) =', max(r))
+print('sum(r) =', sum(r))
 
 print('String:')
 s = 'Python'
 print('len(s) =', len(s))
-print('sum(s) =', sum(s))
 print('min(s) =', min(s))
 print('max(s) =', max(s))
+# elements of s are not numbers, so uncommenting the next statement would cause an error
+# print('sum(s) =', sum(s))
 </textarea>
 </div>
-<p>The values of the functions <em>len</em>, <em>sum</em>, <em>min</em>, <em>max</em> for the range can also be determined from the parameters of the range, but here we wanted to point out that these functions accept different collections as their argument.</p>
+<p>The values of the functions <em>len</em>, <em>sum</em>, <em>min</em>, <em>max</em> for the range can also be determined from the parameters of the range, but here we wanted to point out that all these functions accept different collections as their argument (including range).</p>
 <div class="section" id="questions">
 <h3>Questions<a class="headerlink" href="#questions" title="Permalink to this headline">¶</a></h3>
 
@@ -528,7 +529,7 @@ print('max(s) =', max(s))
             
             <div class="course-box course-box-question course-content">
             <ul data-component="multiplechoice" data-multipleanswers="false"  id="console__collections_quiz_range1">
-            <p>Q-20: Which range contains values 1, 2, 3?</p>
+            <p>Q-20: Which range contains just values 1, 2, 3?</p>
 
             <li data-component="answer"  id="console__collections_quiz_range1_opt_a">range(4)</li><li data-component="feedback" id="console__collections_quiz_range1_opt_a">Try again</li>
             

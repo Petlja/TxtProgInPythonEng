@@ -31,7 +31,7 @@ Let's go through the statements of this program in order to explain in more deta
 
 First we have a group of statements that will need to appear at the beginning of each program:
 
-- using the ``import pygame as pg`` statement, we link our program with the *pygame* module. Here we use a slightly different form of the *import* statement from the one we used before. Also, we give the *pygame* module an abbreviated name, *pg*, and from that point we use that abbreviated name in the program as the name of the module. We could have also put just ``import pygame`` with no change in functionality, but then we would have to write *pygame.Color*, *pygame.draw.line*, etc. instead of *pg.Color*, *pg.draw.line* and the like.
+- using the ``import pygame as pg`` statement, we include the *pygame* module into our program. Here we use a slightly different form of the *import* statement from the one we used before. Also, we give the *pygame* module an abbreviated name, *pg*, and from that point we use that abbreviated name in the program as the name of the module. We could have also put just ``import pygame`` with no change in functionality, but then we would have to write *pygame.Color*, *pygame.draw.line*, etc. instead of *pg.Color*, *pg.draw.line* and the like.
 - using the ``import pygamebg`` statement we import module *pygamebg* into our program. This statement can be combined with the previous one to get a single statement: ``import pygame as pg, pygamebg``, and we will often do this.
 - The ``canvas = pygamebg.open_window(400, 400, "Pygame")`` statement calls the ``open_window`` function from the ``pygamebg`` module, which we imported into the program. This function performs all the necessary preparatory actions that we mentioned earlier. The function parameters are the width, height and title of the window opened by calling this function. The variable *canvas* returned by this function is later used in the program to draw in that window.
 
@@ -136,7 +136,7 @@ Test your knowledge of coordinates through the following few questions.
 Specifying colors
 -----------------
 
-Of course, when drawing, different colors can be used. We can specify a color by its name (in English), which we forward as a parameter to the ``pg.Color`` function. You can use colors by forwarding the appropriate string: ``'black'`` for black, ``'white'`` for white, ``'gray'`` for gray, ``'blue'`` for blue, ``'green'`` for green, ``'orange'`` for orange, ``'yellow'`` for yellow, etc. Recall that stings are specified either between single or double quotes (e.g. 'blue' and "blue" can be used interchangeably). For example, if you call function ``py.draw.line(canvas, pg.Color('blue'), (0, 0), (200, 200), 3)`` a blue line segment, 3 pixels wide, whose end points' coordinates are :math:`(0, 0)` and :math:`(200, 200)` will appear in the window
+Of course, when drawing, different colors can be used. We can specify a color by its name (in English), which we forward as a parameter to the ``pg.Color`` function. You can use colors by forwarding the appropriate string: ``'black'`` for black, ``'white'`` for white, ``'gray'`` for gray, ``'blue'`` for blue, ``'green'`` for green, ``'orange'`` for orange, ``'yellow'`` for yellow, etc. Recall that strings are specified either between single or double quotes (e.g. 'blue' and "blue" can be used interchangeably). For example, if you call function ``py.draw.line(canvas, pg.Color('blue'), (0, 0), (200, 200), 3)`` a blue line segment, 3 pixels wide, whose end points' coordinates are :math:`(0, 0)` and :math:`(200, 200)` will appear in the window
 
 Some of the color names commonly used in programs are:
 
@@ -228,7 +228,7 @@ In the following program, you can also try specifying colors in the RGB format. 
    # -*- acsection: main -*-
 
    # painting the background
-   prozor.fill([???, ???, ???])
+   canvas.fill([???, ???, ???])
    
    # -*- acsection: after-main -*-
    # finishing work with the PyGame library

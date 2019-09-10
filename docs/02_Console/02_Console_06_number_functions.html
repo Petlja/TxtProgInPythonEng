@@ -298,9 +298,9 @@ print("max(5, 2, 7, 3) =", max(5, 2, 7, 3))
 <h2>Value Rounding Functions<a class="headerlink" href="#value-rounding-functions" title="Permalink to this headline">¶</a></h2>
 <p>Rounding up real value to an integer is an operation we also often need. We have already seen that by converting a real number to a whole number, we round it towards zero. There are a few more functions that we can use in Python to round up a real number in different ways:</p>
 <ul class="simple">
-<li><p>function <em>round()</em> returns the integer closest to the argument (result is an integer type);</p></li>
-<li><p>function <em>floor()</em> returns the nearest integer less than or equal to the argument value (the result is real type);</p></li>
-<li><p>function <em>ceil()</em> returns the closest integer greater than or equal to the argument value (the result is real type);</p></li>
+<li><p>function <em>round()</em> returns the integer closest to the argument (type of the result is int);</p></li>
+<li><p>function <em>floor()</em> returns the nearest integer less than or equal to the argument value (type of the result is float);</p></li>
+<li><p>function <em>ceil()</em> returns the closest integer greater than or equal to the argument value (type of the result is float);</p></li>
 </ul>
 <p>Run the following program to see how these functions work and to compare them.</p>
 
@@ -335,7 +335,7 @@ print("math.ceil(56.789) =", math.ceil(56.789))
             <ul data-component="multiplechoice" data-multipleanswers="false"  id="console__numberfunc_abs_round">
             <p>Q-14: What is the value of the expression <code class="docutils literal notranslate"><span class="pre">abs(round(-2.7))</span></code>?</p>
 
-            <li data-component="answer"  id="console__numberfunc_abs_round_opt_a">-2</li><li data-component="feedback" id="console__numberfunc_abs_round_opt_a">Read the abs and round explanations again.</li>
+            <li data-component="answer"  id="console__numberfunc_abs_round_opt_a">-2</li><li data-component="feedback" id="console__numberfunc_abs_round_opt_a">Read the explanations about abs and round functions again.</li>
             
             <li data-component="answer"  id="console__numberfunc_abs_round_opt_b">2</li><li data-component="feedback" id="console__numberfunc_abs_round_opt_b">The round function returns the closest integer.</li>
             
@@ -349,7 +349,7 @@ print("math.ceil(56.789) =", math.ceil(56.789))
             
             <div class="course-box course-box-question course-content">
             <ul data-component="multiplechoice" data-multipleanswers="false"  id="console__numberfunc_max_abs">
-            <p>Q-15: One cashier rounds the account to the nearest integer only if the amount is increased, otherwise it reports the amount as it is. What formula does this cashier apply (x is the starting value of the account)?</p>
+            <p>Q-15: One cashier rounds the bill to the nearest integer only if the amount is increased by rounding, otherwise it reports the amount as it is. What formula does this cashier apply (x is the starting value of the bill)?</p>
 
             <li data-component="answer" data-correct id="console__numberfunc_max_abs_opt_a">max(x, round(x))</li><li data-component="feedback" id="console__numberfunc_max_abs_opt_a">Correct!</li>
             

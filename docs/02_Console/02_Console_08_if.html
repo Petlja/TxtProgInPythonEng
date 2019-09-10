@@ -205,14 +205,14 @@
   
   <div class="section" id="branching-statements">
 <h1>Branching statements<a class="headerlink" href="#branching-statements" title="Permalink to this headline">¶</a></h1>
-<p>In the Karel lessons, we regularly checked if a robot could go ahead. These checks were necessary because if we tried to move the robot forward when the square in front of it did not exist, the program would report an error and stop working. For the same reason, we checked that there is a ball on a square before taking it, and we checked that Karel had a ball with him before dropping the ball.</p>
+<p>In the Karel lessons, every time we wanted Karel to move forward, we needed to check first if Karel could go ahead. These checks were necessary because if we tried to move the robot forward when the square in front of it did not exist, the program would report an error and stop working. For the same reason, we had been checking if there was a ball on a square before taking it, and we had been checking if Karel had a ball with him before dropping the ball.</p>
 <p>Similarly, in programs with numbers we often need to compare two values, that is, to determine whether they are equal, whether one is smaller than the other, different from the other, and the like. Depending on the outcome of the comparison, the program may continue to execute in different ways.</p>
 <p>Some of the symbols used for comparison are the same as in mathematics (for example <code class="docutils literal notranslate"><span class="pre">&lt;</span></code> and <code class="docutils literal notranslate"><span class="pre">&gt;</span></code>) and some are not. The following table gives the notation of all standard comparisons used in mathematics and in Python (and also in many other programming languages).</p>
 <table class="docutils align-default">
 <colgroup>
-<col style="width: 28%" />
-<col style="width: 28%" />
-<col style="width: 44%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 50%" />
 </colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>Math</p></th>
@@ -247,7 +247,7 @@
 </tr>
 </tbody>
 </table>
-<p>Notation <span class="math notranslate nohighlight">\(a&lt;b\)</span> can be understood as an expression whose value is true or false in each case. These values are written in Python as <em>True</em> and <em>False</em> and they are <strong>logical constants</strong>, that is, constants of the type <code class="docutils literal notranslate"><span class="pre">bool</span></code> which we call the logical type. Expressions whose value is true or false (logical type) are called <strong>logical expressions</strong>. All the expressions in the table above are logical expressions (we will see different logical expressions later).</p>
+<p>Notation <span class="math notranslate nohighlight">\(a&lt;b\)</span> can be understood as an expression whose value is true or false in each case. These values are written in Python as <em>True</em> and <em>False</em> and they are <strong>logical constants</strong>, that is, constants of the type <code class="docutils literal notranslate"><span class="pre">bool</span></code> which we call the logical type. Expressions whose value is true or false (logical type) are called <strong>logical expressions</strong>. All the expressions in the table above are logical expressions (we will see more logical expressions later).</p>
 <div class="section" id="if-statement">
 <h2>if statement<a class="headerlink" href="#if-statement" title="Permalink to this headline">¶</a></h2>
 <p>The <em>if</em> statement was already introduced in the Karel lessons, let’s remind ourselves:</p>
@@ -260,7 +260,7 @@
     data-audio=''   
              data-passivecode="true"  data-hidehistory=true
        >
-if uslov:
+if condition:
     statement_a1
     ...
     statement_ak
@@ -295,7 +295,7 @@ else:
     data-audio=''   
              data-passivecode="true"  data-hidehistory=true
        >
-if uslov:
+if condition:
     statement_a1
     ...
     statement_ak
@@ -312,7 +312,7 @@ if uslov:
             </h4>
             <p>
 <p><strong>Example - who is younger:</strong></p>
-<p>Peter and Mark want to play a game of pool. They agreed that the younger player plays first. Write a program that reads the age of Peter and Mark (not equal) and prints who will make the first move.</p>
+<p>Peter and Mark want to play a game of pool. They agreed that the younger player plays first. Write a program that reads the age of Peter and Mark (that are not equal) and prints who will make the first move.</p>
 
     </p></div></div>
 
@@ -342,7 +342,7 @@ else:
 <p>The eggs on the farm are packed in 10-pack boxes and full boxes are sent to the store. Write a program that takes the number of eggs ready for packing and prints whether all the eggs can be packed and shipped to the store, or whether a few eggs will be left unpacked temporarily.</p>
 
     </p></div></div>
-<p>Here we need to check that the number of eggs is divisible by 10. For this reason, we use the operator <code class="docutils literal notranslate"><span class="pre">%</span></code>, which gives the remainder after division. If the remainder after dividing the number of eggs by 10 is equal to zero, all the eggs can be sent.</p>
+<p>Here we need to check that the number of eggs is divisible by 10. For this reason, we use the operator <code class="docutils literal notranslate"><span class="pre">%</span></code>, which gives the remainder after division. If the remainder after dividing the number of eggs by 10 is equal to zero, all the eggs can be packed and sent.</p>
 
 <div data-childcomponent="console__branching_eggs" class="course-box course-box-problem course-content">
 
@@ -412,9 +412,9 @@ popcorn_price = int(input("How much for the popcorn: "))
 <h2>Logical expressions<a class="headerlink" href="#logical-expressions" title="Permalink to this headline">¶</a></h2>
 <p>In some tasks we need to express conditions that are more complex than simply comparing two values. The words <strong>and</strong>, <strong>or</strong> and <strong>not</strong> are used to connect the simpler terms, and Python uses exactly the same words for that. Here is how to evaluate such complex contidions. If <em>a</em> and <em>b</em> are any conditions, then:</p>
 <ul class="simple">
-<li><p>condition <em>a and b</em> will be fulfilled if both conditions <em>a</em> and <em>b</em> are fulfilled;</p></li>
-<li><p>condition <em>a or b</em> will be fulfilled if at least one of conditions <em>a</em> and <em>b</em> is fulfilled;</p></li>
-<li><p>condition <em>not a</em> will be fulfilled if condition <em>a</em> is not fulfilled (which we have already mentioned in the lessons on Karel);</p></li>
+<li><p>condition <code class="docutils literal notranslate"><span class="pre">a</span> <span class="pre">and</span> <span class="pre">b</span></code> will be fulfilled if both conditions <em>a</em> and <em>b</em> are fulfilled;</p></li>
+<li><p>condition <code class="docutils literal notranslate"><span class="pre">a</span> <span class="pre">or</span> <span class="pre">b</span></code> will be fulfilled if at least one of conditions <em>a</em> and <em>b</em> is fulfilled;</p></li>
+<li><p>condition <code class="docutils literal notranslate"><span class="pre">not</span> <span class="pre">a</span></code> will be fulfilled if condition <em>a</em> is not fulfilled (which we have already mentioned in the lessons on Karel);</p></li>
 </ul>
 <p>These conditions can be further combined into even more complex ones according to the needs of the task. In complex conditions, we can use parentheses to influence the order in which the conditions are calculated (also when we are not sure which is the default order), and to make the program clearer to other people reading it. If there are no parentheses in the complex condition, <em>not</em> is applied first, then <em>and</em>, and finally <em>or</em>.</p>
 <div class="section" id="logical-expressions-examples">
@@ -491,7 +491,7 @@ h = int(input())
 if (7 <= h and h < 11) or (17 <= h and h < 22):
     print("Peter came across during office hours.")
 else:
-    print("Peter came out of business hours.")
+    print("Peter came across out of business hours.")
 </textarea>
 </div>
 <p>We can also come to a solution by gradually computing logical values, using logical variables:</p>
@@ -510,7 +510,7 @@ at_office_hours = at_morning_office_hours or at_evening_office_hours
 if at_office_hours:
     print("Peter came across during office hours.")
 else:
-    print("Peter came out of business hours.")
+    print("Peter came across out of business hours.")
 </textarea>
 </div>
 <p>In this solution, only <em>h</em> is an integer variable, and all others (<em>at_morning_office_hours</em>, <em>at_evening_office_hours</em>, <em>at_office_hours</em>) are logical, which means that they will get values <em>True</em> or <em>False</em> when executing the program.</p>
@@ -594,7 +594,7 @@ else:
             </h4>
             <p>
 <p><strong>Task - numbers in order:</strong></p>
-<p>Write a program that takes integers <em>a</em>, <em>b</em>, <em>c</em> answers the question whether these numbers are given in order from smallest to largest.</p>
+<p>Write a program that takes integers <em>a</em>, <em>b</em>, <em>c</em> and answers the question whether these numbers are given in order from smallest to largest.</p>
 
     </p></div></div>
 
@@ -644,7 +644,7 @@ c = int(input("c = "))
             </h4>
             <p>
 <p><strong>Task - watching the dog:</strong></p>
-<p>Anna and Mark live toghether and have adog named Bobby. The two are scheduled to travel the same month, Anna from <em>a1</em> to <em>a2</em>, and Mark from <em>m1</em> to <em>m2</em>. They both leave in the morning and return in the evening. Since they don’t want to leave Bobby alone, they wonder if their trips overlap.</p>
+<p>Anna and Mark live together and have a dog named Bobby. The two are scheduled to travel the same month, Anna from day <em>a1</em> to <em>a2</em>, and Mark from day <em>m1</em> to <em>m2</em>. They both leave in the morning and return in the evening. Since they don’t want to leave Bobby alone, they wonder if their trips overlap.</p>
 <p>Write a program that takes integers <em>a1</em>, <em>a2</em>, <em>m1</em> and <em>m2</em>, and answers the question of whether Anna’s and Mark’s travels overlap.</p>
 
     </p></div></div>

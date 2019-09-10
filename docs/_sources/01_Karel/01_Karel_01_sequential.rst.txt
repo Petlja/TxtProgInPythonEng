@@ -3,6 +3,10 @@ Managing Karel
 
 To see what programming looks like, we will introduce you to Karel. Karel is an animated robot that moves along a maze-like table by following our instructions in the form of a program. Through managing Karel, we will adopt a logic that is very important for writing any program, and we can also have some fun along the way.
 
+.. infonote::
+
+    The idea of learning programming through controlling a robot dates back to the 1970s, when Richard E. Pattis, as a graduate student at Stanford University, created the first such environment with a programming language specially designed for this purpose. The language, like the robot, was named Karel, after Karel Čapek, the Czech writer who first started using the word robot. Patis's book *Karel The Robot: A Gentle Introduction to the Art of Programming* was published in 1981 and quickly became the best-selling introductory book in programming courses.
+    
 To manage Karel we can use these functions:
 
 - ``move()`` - move one square forward,

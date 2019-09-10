@@ -46,7 +46,7 @@ Most often we don't need all these digits. Real numbers can look more readable i
     s = format(x, '.2f')
     print(s)
     
-To specify the number of decimal places to display, we called the *format* function like this: the first argument of the function is the value we print, and the second argument is the description of the printing format. In this description, the part '.2' means that we want two decimal places, and the part 'f', abbreviated from *float*, means that we give a description for a real number (the type of real numbers is called *float*). The function returns a string where the number *x* is written as specified.
+To specify the number of decimal places to display, we called the *format* function like this: the first argument of the function is the value we print, and the second argument is the description of the printing format. In this description, the part '.2' means that we want two decimal places, and the part 'f', abbreviated from *float*, means that we give a description for a real number (the type of real numbers is called *float*). The function returns a string in which the number *x* is written as specified.
 
 Note that this formatted printing does not change the value of the variable *x*.
 
@@ -93,7 +93,7 @@ Strings can be joined together with a **string concatenation** operation. This o
     s = 'continu' + 'ation'
     print(s)
 
-Occasionally, we may have an integer or a real number wiitten in a string, so it is important to understand when the sign ``+`` refers to the addition of numbers, and when concatenation of strings. For example, in the following program, the first *a + b* is the addition of numbers, and the second is the addition of strings. Accordingly, the printed results also differ (try it out).
+Sometimes, we may have an integer or a real number wiitten in a string, so it is important to understand when the sign ``+`` refers to the addition of numbers, and when concatenation of strings. For example, in the following program, the first *a + b* is the addition of numbers, and the second is the addition of strings. Accordingly, the printed results also differ (try it out).
 
 .. activecode:: console__text_concat2
 
@@ -107,7 +107,7 @@ Occasionally, we may have an integer or a real number wiitten in a string, so it
 
 It is likely that occasionally you may be confused by the result when executing a program. The result may be different than expected for many reasons, and one possibility is that you unintentionally added up strings instead of numbers.
 
-The ``+`` character can stand between two numeric expressions or between two strings, but not between a string and a number (in any oredr). Such combinations result in a *TypeError* (try it).
+The ``+`` character can stand between two numeric expressions or between two strings, but not between a string and a number (in any order). Such combinations result in a *TypeError* (try it).
 
 .. activecode:: console__text_concat3
 
@@ -152,7 +152,7 @@ Questions and Tasks
     :answer_c: s = 'ab'
     :correct: b
     :feedback_a: Try again
-    :feedback_b: Тачно
+    :feedback_b: Correct!
     :feedback_c: Try again
     
     Which of the statements is faulty?

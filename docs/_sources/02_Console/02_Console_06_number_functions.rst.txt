@@ -71,9 +71,9 @@ Value Rounding Functions
 
 Rounding up real value to an integer is an operation we also often need. We have already seen that by converting a real number to a whole number, we round it towards zero. There are a few more functions that we can use in Python to round up a real number in different ways:
 
-- function *round()* returns the integer closest to the argument (result is an integer type);
-- function *floor()* returns the nearest integer less than or equal to the argument value (the result is real type);
-- function *ceil()* returns the closest integer greater than or equal to the argument value (the result is real type);
+- function *round()* returns the integer closest to the argument (type of the result is int);
+- function *floor()* returns the nearest integer less than or equal to the argument value (type of the result is float);
+- function *ceil()* returns the closest integer greater than or equal to the argument value (type of the result is float);
 
 Run the following program to see how these functions work and to compare them.
 
@@ -108,7 +108,7 @@ Check your understanding of the functions explained in this lesson:
    :answer_c: -3
    :answer_d: 3
    :correct: d
-   :feedback_a: Read the abs and round explanations again.
+   :feedback_a: Read the explanations about abs and round functions again.
    :feedback_b: The round function returns the closest integer.
    :feedback_c: The abs function returns the absolute value of a number, which is always greater than or equal to zero.
    :feedback_d: Correct!
@@ -126,7 +126,7 @@ Check your understanding of the functions explained in this lesson:
    :feedback_c: In this way, the amount can also be reduced.
    :feedback_d: The amount is already positive, nothing is achieved here with the abs function.
 		
-   One cashier rounds the account to the nearest integer only if the amount is increased, otherwise it reports the amount as it is. What formula does this cashier apply (x is the starting value of the account)?
+   One cashier rounds the bill to the nearest integer only if the amount is increased by rounding, otherwise it reports the amount as it is. What formula does this cashier apply (x is the starting value of the bill)?
 
 .. dragndrop:: console__numberfunc_rounding
     :feedback: Try again!

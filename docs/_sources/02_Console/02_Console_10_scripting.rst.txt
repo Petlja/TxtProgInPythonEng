@@ -62,7 +62,7 @@ Running the program we see that it prints:
     120 96.0
     310 248.0
 
-We notice that the last two lines of the program were executed three times, with the variable *regular_cost* receiving the values 250, 120, 310 in that order. We achieved this with the statement ``for``. The parts of the program that are repeated are called loops, so we can say that in the previous example we used a **for loop**.
+We notice that the last two lines of the program were executed three times, with the variable *regular_price* receiving the values 250, 120, 310 in that order. We achieved this with the statement ``for``. The parts of the program that are repeated are called loops, so we can say that in the previous example we used a **for loop**.
 
 The following figure shows the main elements of the *for* loop:
 
@@ -106,13 +106,13 @@ A program that solves this task could look like this:
 
     **Task - trip duration**
 
-    George intends to start a 600-kilometer car trip at 9 a.m. and is interested in arriving time if he was traveling at an average speed of 90, 100, 120 or 130 kilometers per hour. Finish the program to lists the time of arrival at the destination for each of the aforementioned average speeds.
+    George intends to start a 600-kilometer car trip at 9 a.m. and is interested in arriving time if he was traveling at an average speed of 90, 100, 120 or 130 kilometers per hour. Finish the program to list the time of arrival at the destination for each of the aforementioned average speeds.
     
 .. activecode:: console__scripting_speed
 
     path_length = 600 # Km
     leaving = 9       # h
-    for a in ():  # fix and finish
+    for a in ():  # fix
         trip_duration = path_length / speed # h
         arrival = leaving + trip_duration    # h
         arrival_hours = int(arrival)
@@ -143,7 +143,7 @@ A program that solves this task could look like this:
 
     sum_grades_so_far = 23
     num_grades_so_far = 5
-    for # finish
+    for # complete the statement
         average_grade = 0 # fix
         print("With the final grade", final_grade, "average grade would be", average_grade)
 

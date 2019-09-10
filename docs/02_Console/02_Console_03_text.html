@@ -268,7 +268,7 @@ s = format(x, '.2f')
 print(s)
 </textarea>
 </div>
-<p>To specify the number of decimal places to display, we called the <em>format</em> function like this: the first argument of the function is the value we print, and the second argument is the description of the printing format. In this description, the part ‘.2’ means that we want two decimal places, and the part ‘f’, abbreviated from <em>float</em>, means that we give a description for a real number (the type of real numbers is called <em>float</em>). The function returns a string where the number <em>x</em> is written as specified.</p>
+<p>To specify the number of decimal places to display, we called the <em>format</em> function like this: the first argument of the function is the value we print, and the second argument is the description of the printing format. In this description, the part ‘.2’ means that we want two decimal places, and the part ‘f’, abbreviated from <em>float</em>, means that we give a description for a real number (the type of real numbers is called <em>float</em>). The function returns a string in which the number <em>x</em> is written as specified.</p>
 <p>Note that this formatted printing does not change the value of the variable <em>x</em>.</p>
 <p>We’ve broken the example down into steps to make it clearer, though it could also be written in one line of code. For example, to print with 4 decimal places:</p>
 
@@ -331,7 +331,7 @@ s = 'continu' + 'ation'
 print(s)
 </textarea>
 </div>
-<p>Occasionally, we may have an integer or a real number wiitten in a string, so it is important to understand when the sign <code class="docutils literal notranslate"><span class="pre">+</span></code> refers to the addition of numbers, and when concatenation of strings. For example, in the following program, the first <em>a + b</em> is the addition of numbers, and the second is the addition of strings. Accordingly, the printed results also differ (try it out).</p>
+<p>Sometimes, we may have an integer or a real number wiitten in a string, so it is important to understand when the sign <code class="docutils literal notranslate"><span class="pre">+</span></code> refers to the addition of numbers, and when concatenation of strings. For example, in the following program, the first <em>a + b</em> is the addition of numbers, and the second is the addition of strings. Accordingly, the printed results also differ (try it out).</p>
 
 <div data-childcomponent="console__text_concat2" class="course-box course-box-problem course-content">
 
@@ -350,7 +350,7 @@ print(a + b)
 </textarea>
 </div>
 <p>It is likely that occasionally you may be confused by the result when executing a program. The result may be different than expected for many reasons, and one possibility is that you unintentionally added up strings instead of numbers.</p>
-<p>The <code class="docutils literal notranslate"><span class="pre">+</span></code> character can stand between two numeric expressions or between two strings, but not between a string and a number (in any oredr). Such combinations result in a <em>TypeError</em> (try it).</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">+</span></code> character can stand between two numeric expressions or between two strings, but not between a string and a number (in any order). Such combinations result in a <em>TypeError</em> (try it).</p>
 
 <div data-childcomponent="console__text_concat3" class="course-box course-box-problem course-content">
 
@@ -417,7 +417,7 @@ print(format(zbir, '12.2f'))
 
             <li data-component="answer"  id="console__text_quiz_quotes_opt_a">s = 'a' + "b"</li><li data-component="feedback" id="console__text_quiz_quotes_opt_a">Try again</li>
             
-            <li data-component="answer" data-correct id="console__text_quiz_quotes_opt_b">s = 'ab"</li><li data-component="feedback" id="console__text_quiz_quotes_opt_b">Тачно</li>
+            <li data-component="answer" data-correct id="console__text_quiz_quotes_opt_b">s = 'ab"</li><li data-component="feedback" id="console__text_quiz_quotes_opt_b">Correct!</li>
             
             <li data-component="answer"  id="console__text_quiz_quotes_opt_c">s = 'ab'</li><li data-component="feedback" id="console__text_quiz_quotes_opt_c">Try again</li>
             

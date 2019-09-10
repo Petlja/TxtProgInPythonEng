@@ -237,11 +237,11 @@ print("You wrote", s)
 </textarea>
 </div>
 <p>Whether we choose one or the other form of the <em>input</em> function, depends on the purpose of the program. When writing a program in which other people will enter data, we use a form with an argument, serving as an instruction. When we write a program only for personal short-term (maybe even one-time) use, then we have no need for instructions and can use a form without arguments.</p>
-<p>Also, we can set some of the environments in which the program is running, to read data from another location where we prepared it instead of from the keyboard. In such cases there is no waiting for the data to be entered, it is loaded automatically and there is no need to print the instruction. That is why programs designed for such use also exploit the <em>input</em> function without arguments.</p>
+<p>Also, be aware that for some of the environments in which the program is running, we can arrange that data is being read from another location where we prepared it n advance, instead of reading the data from the keyboard. In such cases there is no waiting for the data to be entered, it is loaded automatically and there is no need to print the instruction. Therefore, in such cases we would also use the <em>input</em> function without arguments.</p>
 </div>
 <div class="section" id="reading-numbers">
 <h2>Reading numbers<a class="headerlink" href="#reading-numbers" title="Permalink to this headline">¶</a></h2>
-<p>We have seen that the <em>input()</em> function returns a string (typed text). This means that if we need data of another type, we need to change the type of resulting data from the string to the desired type. Changing the data type is also called <strong>conversion</strong>. For example, if we want an integer, then we need to convert the resulting text to an integer. Here’s how to do it in Python:</p>
+<p>We have seen that the <em>input()</em> function returns a string (text typed by a user). This means that if we need data of another type, we need to change the type of data returned by the <em>input()</em> function from string to the desired type. Changing the data type is also called <strong>conversion</strong>. For example, if we want an integer, then we need to convert the resulting text to an integer. Here’s how to do it in Python:</p>
 
 <div data-childcomponent="console__text_input_int1" class="course-box course-box-problem course-content">
 
@@ -301,7 +301,7 @@ print(2*a)
 </div>
 <div class="section" id="about-conversions">
 <h2>About conversions<a class="headerlink" href="#about-conversions" title="Permalink to this headline">¶</a></h2>
-<p>We have seen that when a string contains an integer or a real number, that string can be converted to an integer or real type using the <em>int()</em> or <em>float()</em> functions. On the other side, integers and real numbers can always be converted to string. The <em>str()</em> function is used to convert to a string.</p>
+<p>We have seen that when a string contains an integer or a real number, that string can be converted to an integer or real type using the <em>int()</em> or <em>float()</em> functions. On the other side, integers and real numbers can always be converted to a string. The <em>str()</em> function is used to convert to a string.</p>
 
 <div data-childcomponent="console__text_convert_to_str" class="course-box course-box-problem course-content">
 

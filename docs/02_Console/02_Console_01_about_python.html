@@ -260,7 +260,7 @@
 <span class="go">16</span>
 </pre></div>
 </div>
-<p>Computers distinguish between integers and real numbers, write them differently in their memory, and do computations with them in different ways. So in programming 2.0 it is not quite the same as 2, although the values are mathematically equal (the sign <code class="docutils literal notranslate"><span class="pre">==</span></code> is used to compare the two values).</p>
+<p>Computers distinguish between integers and real numbers, write them differently in their memory, and do computations with them in different ways. So in programming, value 2.0 is not quite the same as 2, although the values are mathematically equal (the sign <code class="docutils literal notranslate"><span class="pre">==</span></code> is used to compare the two values).</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="mf">2.0</span> <span class="o">==</span> <span class="mi">2</span>
 <span class="go">True</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="nb">type</span><span class="p">(</span><span class="mf">2.0</span><span class="p">)</span>
@@ -270,7 +270,7 @@
 </pre></div>
 </div>
 <p>What we see means that the first number is real and the second is integer (the word <em>float</em> denotes real numbers, and <em>int</em> denostes integers).</p>
-<p>In this regard, note that in Python, the result of the ordinary division <code class="docutils literal notranslate"><span class="pre">/</span></code> is always a real number, even when the integers are divisible and there is no remainder. When we want the result of the division between two integers be an integer, we should use the integer division operator <code class="docutils literal notranslate"><span class="pre">//</span></code>.</p>
+<p>In this regard, note that in Python, the result of the ordinary division <code class="docutils literal notranslate"><span class="pre">/</span></code> is always a real number, even when the operands are integers and are divisible (there is no remainder). When we want the result of the division between two integers to be an integer, we should use the integer division operator <code class="docutils literal notranslate"><span class="pre">//</span></code>.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="mi">6</span><span class="o">/</span><span class="mi">2</span>
 <span class="go">3.0</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="mi">6</span><span class="o">//</span><span class="mi">2</span>
@@ -290,7 +290,7 @@
 </div>
 <p>The rules for calculating expression values are the same as in mathematics:</p>
 <ul class="simple">
-<li><p>The power is computed before the other operations. If there are multiple sequencing poser operations, they are performed from right to left.</p></li>
+<li><p>The power is computed before the other operations. If there are multiple sequencing power operations, they are performed from right to left.</p></li>
 <li><p>Multiplication, division and remainder operations are applied before addition and subtraction. When there are more in a row, they are executed from left to right.</p></li>
 <li><p>When we need a different order of computation, we use parentheses (the part in parentheses is calculated first).</p></li>
 </ul>

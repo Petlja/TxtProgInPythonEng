@@ -205,7 +205,7 @@
   
   <div class="section" id="drawing-rectangles-ellipses-and-circles">
 <h1>Drawing rectangles, ellipses, and circles<a class="headerlink" href="#drawing-rectangles-ellipses-and-circles" title="Permalink to this headline">¶</a></h1>
-<p>All drawing functions in the PyGame library begin with <code class="docutils literal notranslate"><span class="pre">py.draw</span></code>. Depending on what shape we want to draw, we call different functions. In the explanations that follow, the meaning of the parameters is:</p>
+<p>All drawing functions in the PyGame library begin with <code class="docutils literal notranslate"><span class="pre">pg.draw</span></code>. Depending on what shape we want to draw, we call different functions. In the explanations that follow, the meaning of the parameters is:</p>
 <ul class="simple">
 <li><p>The <em>canvas</em> parameter is the area in which we draw. In this guide, programs will already have a formed variable (more specifically object) <em>canvas</em>, obtained as the result from a call of the <code class="docutils literal notranslate"><span class="pre">pygamebg.open_window</span></code> function.</p></li>
 <li><p>The <em>color</em> parameter is the color we use to draw. As it was said earlier, a color can be specified by its name (for example <code class="code docutils literal notranslate"><span class="pre">pg.Color(&quot;black&quot;)</span></code>), or as a tuple or a list of 3 elements (for example <code class="code docutils literal notranslate"><span class="pre">[255,</span> <span class="pre">0,</span> <span class="pre">0]</span></code> for red).</p></li>
@@ -445,12 +445,12 @@ pixels high, which function call needs to be made?</p>
            data-playtask="true"   data-modaloutput="true" data-hidehistory=true
       data-includexsrc="# -*- acsection: general-init -*-
 import pygame as pg, pygamebg
-(sirina, visina) = (200, 200)
-canvas = pygamebg.open_window(sirina, visina, &quot;Three circles&quot;)
+(width, height) = (200, 200)
+canvas = pygamebg.open_window(width, height, &quot;Three circles&quot;)
 # -*- acsection: main -*-
 
 canvas.fill(pg.Color(&quot;white&quot;)) # paint background
-(cx, cy) = (sirina // 2, visina // 2) # the center of the circles is in the middle of the window
+(cx, cy) = (width // 2, height // 2) # the center of the circles is in the middle of the window
 pg.draw.circle(canvas, pg.Color(&quot;red&quot;), (cx, cy), 100)   # red circle
 pg.draw.circle(canvas, pg.Color(&quot;blue&quot;), (cx, cy), 75)   # blue circle
 pg.draw.circle(canvas, pg.Color(&quot;green&quot;), (cx, cy), 50)  # green circle
