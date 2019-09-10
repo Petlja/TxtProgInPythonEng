@@ -9,9 +9,9 @@ canvas.fill(pg.Color("skyblue")) # paint background
 pg.draw.circle(canvas, pg.Color("yellow"), (100, 100), 80)
 
 # function draws a cloud at a given position, given size and shade of gray
-def cloud(x, y, r, gray):
+def cloud(x, y, r, shade):
     # draw a cloud of three circles
-    color = (gray, gray, gray)
+    color = (shade, shade, shade)
     pg.draw.circle(canvas, color, (x, y), r)
     r_small = round(3 * r / 5)
     pg.draw.circle(canvas, color, (x - r, y), r_small)

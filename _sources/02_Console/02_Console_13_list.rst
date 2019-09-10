@@ -27,7 +27,7 @@ The lists are in many ways similar to tuples. All of the features of the tuples 
     print("names[0] =", names[0])
     print("len(names) =", len(names))
 
-The lists also have some features that set them apart from the Tuesdays. For example, lists can be extended using the *append* function:
+The lists also have some features that set them apart from the tuples. For example, lists can be extended using the *append* function:
     
 .. activecode:: console__collections_list_append
 
@@ -58,16 +58,16 @@ Also, list elements can change their values and can be deleted from the list:
     for x in a:
         print(x)
 
-Such operations with tuples are not possible. Once made, the tuple remains as it is. A tuple cannot be modified - it cannot change its length or the values of individual elements. A variable containing a tuple can only get a whole new tuple as a value, but thus the previous tuple was not modified but ceased to exist. That is why tuples are said to be immutable.
+Such operations with tuples are not possible. Once made, the tuple remains as it is. A tuple cannot be modified - it cannot change its length or the values of individual elements. A variable containing a tuple can only get a whole new tuple as a value, however by doing so, the previous tuple was not modified but ceased to exist. That is why tuples are said to be immutable.
 
-Tuples can be used for collections of data that we do not intend to modify while executing a program (we can change them manually before executing a program). In this way, we ensure that the data will not change accidentally, and program will work slightly more efficiently with the tuple than it would do with the list.
+Tuples can be used for collections of data that we do not intend to modify while executing a program (although we can change them manually before executing a program). By using tuples, we ensure that the data will not change accidentally, and program will work slightly more efficiently with the tuple than it would do with the list.
 
-Tuple *t* can be converted to a list *a* during the program execution, and vice versa: ``a = list (t)`` or ``t = tuple (a)``, but such conversions are seldom needed and better avoid them (if they are often applied to large collections, conversions like this can slow the program significantly).
+Tuple *t* can be converted to a list *a* during the program execution, and vice versa: ``a = list(t)`` or ``t = tuple(a)``, but such conversions are seldom needed and better avoid them (if they are often applied to large collections, conversions like this can slow the program significantly).
 
 Building a list
 ---------------
 
-We can gradually build lists in a program. For example, if we are given a tuple of numbers from which we want to copy those that are greater than zero (and perform some extra task with these numbers latter), we can do this:
+as we have already seen, we can gradually build lists in a program. For example, if we are given a tuple of numbers from which we want to copy those that are greater than zero (and perform some extra task with these numbers latter), we can do this:
 
 .. activecode:: console__collections_list_create
 
@@ -134,15 +134,15 @@ We used the *split()* function to parse the entered text into shorter strings co
 
 .. infonote::
 
-    *split()* function:
+    *split()* **function**:
     
-    The *split()* function parameter is a character or text that we want to use as a separator. If a separator is not specified, a space ' ' is assumed as default.
+    The *split()* function parameter is a character or text that we want to use as a separator. If a separator is not specified, a space ``' '`` is assumed as default.
     
     :code:`"1234 56".split() -> ["1234", "56"]`
     
-    :code:`"1234,6".split(',') -> ["1234", "56"]`
+    :code:`"1234,56".split(',') -> ["1234", "56"]`
     
-    The result of the *split()* function is a string list. The number of shorter strings we get as a result depends on the number and layout of the separator characters in the argument string. For example, if the text contains only one separator somewhere in the middle, we will get two shorter strings. Each new appearance of the separator character can produce one string more in the resulting list (if it really separates some part of the starting string from the rest of the text).
+    The result of the *split()* function is a string list. The number of shorter strings we get as a result depends on the number and layout of the separator characters in the starting string. For example, if the text contains only one separator somewhere in the middle, we will get two shorter strings. Each new appearance of the separator character can produce one string more in the resulting list (if it really separates some part of the starting string from the rest of the text).
     
     :code:`"1;23;456;7".split(';') -> ["1", "23", "456", "7"]`
     
@@ -267,18 +267,18 @@ One possible solution is:
 
     **Task - below zero**
     
-    A tuple of numbers is given. Extract the numbers that are negative and their predecessors are positive, then print the separated numbers.
+    A tuple of numbers is given. Extract the numbers that are negative and their predecessors are positive, then print the extracted numbers.
     
 .. activecode:: console__collections_list_neg_after_pos
 
     a = (1, -2, 3, 5, -4, -1, -3, 2, -7)
-    separated = []
+    extracted = []
     
 .. commented out
 
     for i in range(1, len(a)):
         if a[i] < 0 and a[i - 1] > 0:
-            separated.append(a[i])
+            extracted.append(a[i])
 
-    for x in separated:
+    for x in extracted:
         print(x)

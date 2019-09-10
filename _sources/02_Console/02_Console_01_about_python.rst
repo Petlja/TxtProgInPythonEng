@@ -80,7 +80,7 @@ In addition to these basic and most commonly used ones, we sometimes need a few 
     >>> 2 ** 4
     16
 
-Computers distinguish between integers and real numbers, write them differently in their memory, and do computations with them in different ways. So in programming 2.0 it is not quite the same as 2, although the values are mathematically equal (the sign ``==`` is used to compare the two values).
+Computers distinguish between integers and real numbers, write them differently in their memory, and do computations with them in different ways. So in programming, value 2.0 is not quite the same as 2, although the values are mathematically equal (the sign ``==`` is used to compare the two values).
 
 .. code::
 
@@ -93,7 +93,7 @@ Computers distinguish between integers and real numbers, write them differently 
 
 What we see means that the first number is real and the second is integer (the word *float* denotes real numbers, and *int* denostes integers).
 
-In this regard, note that in Python, the result of the ordinary division ``/`` is always a real number, even when the integers are divisible and there is no remainder. When we want the result of the division between two integers be an integer, we should use the integer division operator ``//``.
+In this regard, note that in Python, the result of the ordinary division ``/`` is always a real number, even when the operands are integers and are divisible (there is no remainder). When we want the result of the division between two integers to be an integer, we should use the integer division operator ``//``.
 
 .. code::
 
@@ -131,7 +131,7 @@ For the other operations specified, the result is an integer when both operands 
 
 The rules for calculating expression values are the same as in mathematics:
 
-- The power is computed before the other operations. If there are multiple sequencing poser operations, they are performed from right to left.
+- The power is computed before the other operations. If there are multiple sequencing power operations, they are performed from right to left.
 - Multiplication, division and remainder operations are applied before addition and subtraction. When there are more in a row, they are executed from left to right.
 - When we need a different order of computation, we use parentheses (the part in parentheses is calculated first).
 

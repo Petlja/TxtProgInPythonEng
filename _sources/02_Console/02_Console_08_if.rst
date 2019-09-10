@@ -1,24 +1,24 @@
 Branching statements
 ====================
 
-In the Karel lessons, we regularly checked if a robot could go ahead. These checks were necessary because if we tried to move the robot forward when the square in front of it did not exist, the program would report an error and stop working. For the same reason, we checked that there is a ball on a square before taking it, and we checked that Karel had a ball with him before dropping the ball.
+In the Karel lessons, every time we wanted Karel to move forward, we needed to check first if Karel could go ahead. These checks were necessary because if we tried to move the robot forward when the square in front of it did not exist, the program would report an error and stop working. For the same reason, we had been checking if there was a ball on a square before taking it, and we had been checking if Karel had a ball with him before dropping the ball.
 
 Similarly, in programs with numbers we often need to compare two values, that is, to determine whether they are equal, whether one is smaller than the other, different from the other, and the like. Depending on the outcome of the comparison, the program may continue to execute in different ways.
 
 Some of the symbols used for comparison are the same as in mathematics (for example ``<`` and ``>``) and some are not. The following table gives the notation of all standard comparisons used in mathematics and in Python (and also in many other programming languages).
 
-====================   ==================== ========================
+====================   ==================== ========================================
 Math                   Python               Meaning
-====================   ==================== ========================
+====================   ==================== ========================================
 :math:`а < b`          a < b                a is less than b
 :math:`a \leq b`       a <= b               a is less than or equal to b
 :math:`a > b`          a > b                a is greater than b
 :math:`a \geq b`       a >= b               a is greater than or equal to b
 :math:`a = b`          a == b               a is equal to b
 :math:`a \neq b`       a != b               a is not equal to b
-====================   ==================== ========================
+====================   ==================== ========================================
 
-Notation :math:`a<b` can be understood as an expression whose value is true or false in each case. These values are written in Python as *True* and *False* and they are **logical constants**, that is, constants of the type ``bool`` which we call the logical type. Expressions whose value is true or false (logical type) are called **logical expressions**. All the expressions in the table above are logical expressions (we will see different logical expressions later).
+Notation :math:`a<b` can be understood as an expression whose value is true or false in each case. These values are written in Python as *True* and *False* and they are **logical constants**, that is, constants of the type ``bool`` which we call the logical type. Expressions whose value is true or false (logical type) are called **logical expressions**. All the expressions in the table above are logical expressions (we will see more logical expressions later).
 
 if statement
 ------------
@@ -30,7 +30,7 @@ The *if* statement is used to decide which of the two groups of statements to ex
 .. activecode:: console__if_else_syntax
    :passivecode: true
 
-   if uslov:
+   if condition:
        statement_a1
        ...
        statement_ak
@@ -59,7 +59,7 @@ In case the program does not need to do anything when the condition of the *if* 
 .. activecode:: console__if_syntax
    :passivecode: true
 
-   if uslov:
+   if condition:
        statement_a1
        ...
        statement_ak
@@ -73,7 +73,7 @@ If statement - examples and tasks
     
     **Example - who is younger:** 
     
-    Peter and Mark want to play a game of pool. They agreed that the younger player plays first. Write a program that reads the age of Peter and Mark (not equal) and prints who will make the first move.
+    Peter and Mark want to play a game of pool. They agreed that the younger player plays first. Write a program that reads the age of Peter and Mark (that are not equal) and prints who will make the first move.
     
 .. activecode:: console__branching_younger
 
@@ -94,7 +94,7 @@ If statement - examples and tasks
     
     The eggs on the farm are packed in 10-pack boxes and full boxes are sent to the store. Write a program that takes the number of eggs ready for packing and prints whether all the eggs can be packed and shipped to the store, or whether a few eggs will be left unpacked temporarily.
     
-Here we need to check that the number of eggs is divisible by 10. For this reason, we use the operator ``%``, which gives the remainder after division. If the remainder after dividing the number of eggs by 10 is equal to zero, all the eggs can be sent.
+Here we need to check that the number of eggs is divisible by 10. For this reason, we use the operator ``%``, which gives the remainder after division. If the remainder after dividing the number of eggs by 10 is equal to zero, all the eggs can be packed and sent.
 
 .. activecode:: console__branching_eggs
 
@@ -145,9 +145,9 @@ Logical expressions
 
 In some tasks we need to express conditions that are more complex than simply comparing two values. The words **and**, **or** and **not** are used to connect the simpler terms, and Python uses exactly the same words for that. Here is how to evaluate such complex contidions. If *a* and *b* are any conditions, then:
 
-- condition *a and b* will be fulfilled if both conditions *a* and *b* are fulfilled;
-- condition *a or b* will be fulfilled if at least one of conditions *a* and *b* is fulfilled;
-- condition *not a* will be fulfilled if condition *a* is not fulfilled (which we have already mentioned in the lessons on Karel);
+- condition ``a and b`` will be fulfilled if both conditions *a* and *b* are fulfilled;
+- condition ``a or b`` will be fulfilled if at least one of conditions *a* and *b* is fulfilled;
+- condition ``not a`` will be fulfilled if condition *a* is not fulfilled (which we have already mentioned in the lessons on Karel);
 
 These conditions can be further combined into even more complex ones according to the needs of the task. In complex conditions, we can use parentheses to influence the order in which the conditions are calculated (also when we are not sure which is the default order), and to make the program clearer to other people reading it. If there are no parentheses in the complex condition, *not* is applied first, then *and*, and finally *or*.
 
@@ -199,7 +199,7 @@ We get an equally good solution if we use the description for leap years given i
     if (7 <= h and h < 11) or (17 <= h and h < 22):
         print("Peter came across during office hours.")
     else:
-        print("Peter came out of business hours.")
+        print("Peter came across out of business hours.")
     
 We can also come to a solution by gradually computing logical values, using logical variables:
 
@@ -212,7 +212,7 @@ We can also come to a solution by gradually computing logical values, using logi
     if at_office_hours:
         print("Peter came across during office hours.")
     else:
-        print("Peter came out of business hours.")
+        print("Peter came across out of business hours.")
 
 In this solution, only *h* is an integer variable, and all others (*at_morning_office_hours*, *at_evening_office_hours*, *at_office_hours*) are logical, which means that they will get values *True* or *False* when executing the program.
 
@@ -273,7 +273,7 @@ Logical expression - tasks
 
     **Task - numbers in order:** 
     
-    Write a program that takes integers *a*, *b*, *c* answers the question whether these numbers are given in order from smallest to largest.
+    Write a program that takes integers *a*, *b*, *c* and answers the question whether these numbers are given in order from smallest to largest.
 
     
 .. activecode:: console__branching_increasing3
@@ -305,7 +305,7 @@ Logical expression - tasks
 
     **Task - watching the dog:** 
     
-    Anna and Mark live toghether and have adog named Bobby. The two are scheduled to travel the same month, Anna from *a1* to *a2*, and Mark from *m1* to *m2*. They both leave in the morning and return in the evening. Since they don't want to leave Bobby alone, they wonder if their trips overlap.
+    Anna and Mark live together and have a dog named Bobby. The two are scheduled to travel the same month, Anna from day *a1* to *a2*, and Mark from day *m1* to *m2*. They both leave in the morning and return in the evening. Since they don't want to leave Bobby alone, they wonder if their trips overlap.
     
     Write a program that takes integers *a1*, *a2*, *m1* and *m2*, and answers the question of whether Anna's and Mark's travels overlap.
     

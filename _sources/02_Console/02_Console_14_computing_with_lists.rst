@@ -22,7 +22,7 @@ This task is a combination of the tasks we have done so far. In the first part o
 
     print(min(positive))
 
-We mentioned that the functions *min*, *max*, *sum*, *len* can be applied to different collections, and we have shown this with examples of tuple and range. We now see that the *min* function also accepts a list as its argument. The same holds to the functions *max*, *sum*, *len*.
+We mentioned that the functions *min*, *max*, *sum*, *len* can be applied to different collections, and we have shown this with examples of tuple, range and string (except the sum of the elements of a string). We now see that the *min* function also accepts a list as its argument. The same holds to the functions *max*, *sum*, *len*.
 
 
 
@@ -40,7 +40,7 @@ We mentioned that the functions *min*, *max*, *sum*, *len* can be applied to dif
 
     failures = (0, 2, 1, 3, 2, 4, 2, 6, 4, 7, 4, 8)
 
-The first part of the assignment requires that we count the number of times each number appears in the input data. To solve this part of the task, we create the list *num_failures* of 10 elements, in which each element corresponds to one machine and counts its failures.
+The first part of the assignment requires that we count the number of times each number appears in the input data. To solve this part of the task, we create the list *num_failures* of 10 elements (that are initially zero), in which each element corresponds to one machine and counts its failures.
 
 .. code::
     
@@ -105,7 +105,7 @@ Here's what the whole program looks like:
     Football fans from 8 countries are coming to the tournament in the city *X*. Tournament organizers want to know how many fans come from each country.
     
     
-    Each country is represented by a number from 0 to 7. The given numbers for each fan tell what country he comes from. Complete the program below that lists for each country how many fans come from it.
+    Each country is represented by a number from 0 to 7. The given numbers for each fan tell what country he or she comes from. Complete the program below that lists for each country how many fans come from it.
 
 The assignment asks for each number 0 to 7 to count how many times that number appears among the given numbers. The missing part in the script is very similar to counting the failures in the given example.
 

@@ -58,11 +58,12 @@ while not done:
         done = True
     else:
         should_redraw = handle_event(event)
-
+        
 # Completion of the hidden part of the program, that works as an example
 pg.quit()
-import sys 
-sys.exit()
+pg.time.set_timer(pg.QUIT,50)
+pg.time.wait(70)
+pg.time.set_timer(pg.QUIT,0)
 
 # Completion of user program is in the separate section
 

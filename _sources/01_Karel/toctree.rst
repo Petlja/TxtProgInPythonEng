@@ -8,7 +8,7 @@ A **Program** is a set of instructions for a computer. Everything that computers
 
 To speak to a computer, we have to use special languages, which are called **programming languages​​**. One of these languages is Python. Here we will practice writing programs in Python.
 
-Some programming skills do not depend on the programming language we use to write a computer program in. The aim of these lessons is to help you master those general skills, which some people call *computational thinking*. We will deal with Python's special features (that are not present in other programming languages) only occasionally, when those features are necessary for understanding parts of a program being disscussed.
+Some programming skills do not depend on the programming language we use to write a computer program in. The aim of these lessons is to help you master those general skills, which some people call *computational thinking*. We will deal with Python's special features (that are not present in other programming languages) only occasionally, when those features are necessary for understanding parts of a program being discussed.
 
    .. toctree::
       :maxdepth: 2

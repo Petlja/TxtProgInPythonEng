@@ -117,11 +117,9 @@ html_theme = 'custom_theme'
 #html_theme_options = {'nosidebar': 'true'}
 html_theme_options = {
     # Navigation bar title. (Default: ``project`` value)
-    # 'navbar_title': "Пајтон за свакога",
     'navbar_title': "Textual Programming in Python",
 
     # Tab name for entire site. (Default: "Site")
-    # 'navbar_site_name': "Пајтон за свакога - Поглавља",
     'navbar_site_name': "Textual Programming in Python - Chapters",
 
     # Global TOC depth for "site" navbar tab. (Default: 1)
@@ -165,11 +163,9 @@ html_theme_path = ["_templates/plugin_layouts"]
 
 # The name for this set of Sphinx documents.  If None, it defaults to
 # "<project> v<release> documentation".
-# html_title = 'Пајтон за свакога'
 html_title = 'Textual Programming in Python'
 
 # A shorter title for the navigation bar.  Default is the same as html_title.
-# html_short_title ='Пајтон за свакога'
 html_short_title ='Textual Programming in Python'
 
 # The name of an image file (relative to this directory) to place at the top

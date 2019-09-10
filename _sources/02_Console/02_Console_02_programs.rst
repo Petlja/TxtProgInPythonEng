@@ -97,7 +97,7 @@ Starting a program
 
 **Running programs in browser**
 
-To help you get started, we used the **ActiveCode** component of the `Runestone Interactive <http://runestoneinteractive.org/>`__ project and enabled you to run Python programs in the web pages of this course. For example, below are the statements we previously entered interactively, but this time written as a program. You can start the program by clicking the "Save & Run" button.
+To help you get started, we used the **ActiveCode** component of the `Runestone Interactive <http://runestoneinteractive.org/>`__ project and enabled you to run Python programs in the web pages of this course. For example, below are the statements we previously entered interactively, but this time written as a program. You can start the program by clicking the "Run" button.
 
 .. activecode:: console__program_first
 
@@ -144,7 +144,7 @@ Sometimes, you may not type a statement in the program exactly as required by th
 
 The occurrence of errors (also known as bugs) should not worry you as it is a common thing and happens to experienced developers as well. Look at the message carefully, make sure you understand what is wrong, then correct it and run the program again. Understanding error messages is an integral part of programming and can be practiced like many other skills.
 
-To help you understand the error messages you will be getting (to become less anxious about errors), we recommend that you now try to deliberately make some small mistakes that might anyway happen to you when writing a program.
+To help you understand the error messages you will be getting (and to become less anxious about errors), we recommend that you now try to deliberately make some small mistakes that might anyway happen to you when writing a program.
 
 When you know exactly what you did wrong and look at the message, it will be easier to understand the same message latter when you see it after an unintentional error.
 

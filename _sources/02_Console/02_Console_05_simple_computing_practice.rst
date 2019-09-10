@@ -112,7 +112,7 @@ Example
     
     Philip prepares to paint the ceiling in one room. In order to know how much paint to buy, he needs to know the dimensions of the room and how many square meters covers one kilogram of paint. Write a program that loads the length of the room, the width of the room, an area that covers one kilogram of paint, and prints the required number of kilograms of paint.
     
-Решење:
+Solution:
 
 .. activecode:: console__computing_painting
 

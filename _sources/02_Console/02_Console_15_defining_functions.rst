@@ -1,8 +1,7 @@
 Defining functions
 ==================
 
-In the part dedicated to managing Karel, we mentioned that we can separate a group of commands into a separate entity called a function. Let's recall how general a Python function looks like:
-
+In the part dedicated to managing Karel, we mentioned that we can separate a group of commands into a separate entity called a function. Let's recall what a function written in Python looks like:
 
 .. activecode:: Console__functions__function_def
     :passivecode: true
@@ -18,16 +17,17 @@ The following rules apply to writing functions in Python:
 
     **Function writing rules:**
 
-    - Any properly written name may appear as a *function_name* (the rules are the same as for variable names)
+    - The function definition begins with the word ``def``, followed by the function name, then a list of arguments in parentheses, and the ``:`` character (colon) at the end of the line.
+    - Any properly written name may appear as a *function_name* (the rules are the same as for variable names).
     - An empty list (nothing) may appear as *argument_list* if the function does not use arguments, or one or more comma-separated arguments.
     - Any Python statements may appear in the function body (*statement_1*, ... *statement_k*). These commands are written indented with respect to the row containing the function name and arguments.
 
-Functions may or may not return some value. So far we have had the opportunity to see both types of functions. For example, the functions by which the Karel robot moves forward, turns around, picks up and leaves balls are all functions that do not return value. On the other hand, mathematical functions like *abs* or *round*, as well as functions to check if Karel has balls with him, whether there are any balls on the square, or whether Karel can go forward are functions that return value.
+Functions may or may not return some value. So far we have had the opportunity to see both types of functions. For example, the functions by which Karel (the robot) moves forward, turns around, picks up and leaves balls are all functions that do not return any value. On the other hand, mathematical functions like *abs* or *round*, as well as functions to check if Karel has balls with him, whether there are any balls on the square, or whether Karel can go forward are functions that do return a value.
 
 Writing functions that return value
 -----------------------------------
 
-In order for a function to return a value, it is necessary to specify at least once in the body of the function the ``return`` statement, which after the word *return* specifies the expression whose value the function is to return.
+In order for a function to return a value, it is necessary to specify the ``return`` statement at least once in the body of the function. The ``return`` statement consists of the word *return*, folowed by an expression whose value the function is to return. 
 
 .. activecode:: console__functions_return_example
 
@@ -36,7 +36,7 @@ In order for a function to return a value, it is necessary to specify at least o
     
     print(square(3))
 
-The *return* statement can appear in multiple places in a function (with different values), and must be specified at the end of the function body. The *abs* function, if it had not been embedded, could have been defined as follows:
+The *return* statement can appear in multiple places in a function (usually with different values), and must be specified at the end of the function body. The *abs* function, if it had not been embedded, could have been defined as follows:
 
 .. activecode:: console__functions_def_abs
     :passivecode: true
@@ -110,7 +110,7 @@ Tasks for Exercise:
     
     Write a program that for a given coordinate in degrees, minutes and seconds, prints a real number of degrees.
 
-The program is almost completely written. An expression needs to be added to calculate the real number of degrees. To convert the (angular) minutes into degrees, we divide them by :math:`60`, and we convert the seconds into degrees by dividing by :math:`60 \ cdot 60 = 3600`.
+The program is almost completely written. An expression needs to be added to calculate the real number of degrees. To convert the (angular) minutes into degrees, we divide them by :math:`60`, and we convert the seconds into degrees by dividing by :math:`60 \cdot 60 = 3600`.
 
 .. activecode:: console__functions_GPS_1
 
@@ -130,7 +130,7 @@ The program is almost completely written. An expression needs to be added to cal
 
     **Task - Geographic coordinates in the format for the old map**
     
-    After you realized that the old map from the previous assignment was a joke, you decided to make a similar joke to someone. You have selected a nearby location and read coordinates from your GPS device. Now you need to convert the coordinates from the device in real degrees into whole degrees, minutes and seconds, to create a proper "old" map.
+    After you realized that the old map from the previous assignment was a joke, you decided to make a similar joke to someone. You have selected a nearby location and read coordinates from your GPS device. Now you need to convert the coordinates from the device in real degrees into whole degrees, whole minutes and rounded seconds, to create a proper "old" map.
     
      Complete the started program that performs this conversion.
 
@@ -199,9 +199,9 @@ The *process_family_member* function performs all the necessary actions for one 
         departure_hour, departure_minute = int(s_hour), int(s_min)
         if departure_hour >= 16:
             travel_duration += 15
-        arrival_total_minutes = departure_hour * 60 + departure_minute + duration
+        arrival_total_minutes = departure_hour * 60 + departure_minute + travel_duration
         arrival_hour = arrival_total_minutes // 60
-        minut_dolaska = arrival_total_minutes % 60
+        arrival_minute = arrival_total_minutes % 60
         print('The', which_one, "member arrived home at", arrival_hour, "hours and", arrival_minute, "minutes.")
         
     process_family_member("first", 55)
@@ -267,6 +267,6 @@ Finally, let's mention some of the benefits of writing functions that, because o
 
 - Functions in long programs are often used to decompose the main part of a program and make it shorter and easier to understand. Our programs are not so long that it would be necessary to decompose them, but they show how it could be done with longer programs.
 - Functions can help us avoid repeating the same or similar code in programs. Repeating the code should be avoided as such code is harder to maintain - every change should be made in multiple places, which is tedious and subject to errors and omissions.
-- When we write functions, we enable others to use parts of our code more easily. The functions we write can be separated into a separate module, which other people can easily include in their programs.
+- When we write functions, we enable others to use parts of our code more easily. The functions we write can be extracted into a separate module, which other people can easily include in their programs.
 - For very large programs, forming functions allows the program to be split into multiple files instead of one huge and incomprehensible file.
 

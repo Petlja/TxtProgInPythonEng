@@ -1,6 +1,7 @@
 # -*- acsection: general-init -*-
 import pygame as pg, pygamebg
-canvas = pygamebg.open_window(300, 300, "Teddy-bear")
+(width, height) = (300, 300)
+canvas = pygamebg.open_window(width, height, "Teddy-bear")
 # -*- acsection: main -*-
 
 canvas.fill(pg.Color("white")) # paint background

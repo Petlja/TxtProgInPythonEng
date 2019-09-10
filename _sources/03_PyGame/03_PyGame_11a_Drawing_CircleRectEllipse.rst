@@ -1,7 +1,7 @@
 Drawing rectangles, ellipses, and circles
 -----------------------------------------
 
-All drawing functions in the PyGame library begin with ``py.draw``. Depending on what shape we want to draw, we call different functions. In the explanations that follow, the meaning of the parameters is:
+All drawing functions in the PyGame library begin with ``pg.draw``. Depending on what shape we want to draw, we call different functions. In the explanations that follow, the meaning of the parameters is:
 
 - The *canvas* parameter is the area in which we draw. In this guide, programs will already have a formed variable (more specifically object) *canvas*, obtained as the result from a call of the ``pygamebg.open_window`` function.
 - The *color* parameter is the color we use to draw. As it was said earlier, a color can be specified by its name (for example :code:`pg.Color("black")`), or as a tuple or a list of 3 elements (for example :code:`[255, 0, 0]` for red).

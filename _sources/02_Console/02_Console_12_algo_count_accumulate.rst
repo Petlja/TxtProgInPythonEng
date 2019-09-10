@@ -18,11 +18,11 @@ The general form of a program (algorithm) by which we count the elements of a co
     
 .. infonote::
 
-    The statement ``x + = a`` increases the value of the variable *x* by *a*. This is actually an abbreviated form of the statement :code:`x = x + a`, which assigns the value *x + a* to the variable *x*.
+    The statement ``x += a`` increases the value of the variable *x* by *a*. This is actually an abbreviated form of the statement :code:`x = x + a`, which assigns the value *x + a* to the variable *x*.
 
     The statement ``x -= a`` decreases the value of the variable *x* by *a*. This is an abbreviated form of the statement :code:`x = x - a`, which assigns the value *x - a* to the variable *x*.
     
-In our example, the statement *br += 1* increases the value of the variable *br* by 1.
+In our example, the statement *num += 1* increases the value of the variable *br* by 1.
 
 
 Examples and tasks
@@ -32,9 +32,9 @@ Examples and tasks
 
     **Example - meeting:** 
     
-    The team leader has offered two options for the time of the meeting to be held tomorrow. Each team member wrote in the table which term would be more appropriate for him (1 for the first term, 2 for the second). This information was transferred to the first line of the program.
+    The team leader has offered two options for the time of the meeting to be held tomorrow. Each team member wrote in a table which term would be more appropriate for him/her (1 for the first term, 2 for the second). This information was transferred to the first line of the following program.
     
-    Complete the program - script, so that the given data on voting of team members, it prints how many voted for the first and how many for the second term.
+    Complete the program - script, so that given the data on voting of team members, it prints how many voted for the first and how many for the second term.
     
 .. activecode:: console__counting_meeting
 
@@ -134,9 +134,9 @@ At the beginning of this program, we load the number of votes *n*, then use the 
 
     **Task - swimming pool** 
     
-    A visit to the pool is being prepared for a group of children. Anyone less than 160 centimeters can only go into the smaller pool. The organizer is interested in how many children are below 160 centimeters in order to plan the groups.
+    A visit to the pool is being prepared for a group of children. Anyone lower than 160 centimeters can only go into the smaller pool. The organizer is interested in how many children are below 160 centimeters in order to plan the groups.
     
-    Children's heights are given at the beginning of the program. Complete the program to print the number of children less than 160 centimeters.
+    Children's heights are given at the beginning of the program. Complete the program to print the number of children lower than 160 centimeters.
     
 .. activecode:: console__counting_swimmingpool
 
@@ -149,7 +149,7 @@ At the beginning of this program, we load the number of votes *n*, then use the 
 
     **Task - humidity** 
     
-    In a botanical garden, soil moisture is measured once a day for rare and sensitive species. Humidity is expressed in numbers from 0 to 1, and conditions for the development of bottles are considered to be good when the humidity is between 0.3 and 0.7 (including boundaries).
+    In a botanical garden, soil moisture is measured once a day for rare and sensitive species. Humidity is expressed in numbers from 0 to 1, and conditions for the development of plants are considered to be good when the humidity is between 0.3 and 0.7 (including boundaries).
     
     Values of humidity (measured over a period of time) are given at the beginning of the script. Complete the script by printing the number of days when the humidity was not good.
 
@@ -200,6 +200,8 @@ In order to obtain the mean of the data that fulfills a condition, it is necessa
             counter += 1
     print(total / counter)
 
+Note that in Python, the sum and mean of the selected elements of the collection can be obtained in a shorter and more efficient way. We chose the above method because it looks almost the same as in other programming languages.
+
 Examples and tasks
 ''''''''''''''''''
 
@@ -237,9 +239,9 @@ We can write the program like this:
 
     **Task - on duty:**  
     
-    In Company X, all employees occasionally remain on duty. The norm for the previous period is 20 hours on duty. Every extra hour (over 20 hours) on duty is additionally paid. The number of on-call hours for each employee is given, and the director wants to know the total number of on-call hours **over the norm**.
+    In Company X, all employees occasionally remain on-call. The norm for the previous period is 20 hours on-call. Every extra hour (over 20 hours) on-call is additionally paid. The number of on-call hours for each employee is given, and the director wants to know the total number of on-call hours **over the norm**.
     
-    Complete the program by computing and printing the total number of overtime hours on duty.
+    Complete the program by computing and printing the total number of overtime hours on-call.
     
 If you solve the task correctly, you should get a score of 25 for the data given, since :math:`(21-20)+(23-20)+(34-20)+(25-20)+(22-20)=25`.
 
@@ -251,7 +253,7 @@ If you solve the task correctly, you should get a score of 25 for the data given
     total_overtime = 0
     # complete the program
     
-    print('Total overtime on duty is', total_overtime)
+    print('Total overtime on call is', total_overtime)
     
 .. commented out
     

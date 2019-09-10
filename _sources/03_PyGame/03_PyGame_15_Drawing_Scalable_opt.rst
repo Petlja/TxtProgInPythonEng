@@ -29,7 +29,7 @@ and now we want the cloud to be twice as small and its midpoint to be still at p
     
 The radii of all three circles should be cut to half the previous size (25 pixels instead of 50 and 15 instead of 30), but that is not enough. If the centers of the small circles remained where they were, we would get three separate circles (try it). In order for the drawing to still look like a cloud, we also need to bring the circles closer together. More specifically, the distances of the centers of the smaller circles from the center of the large circle should also be twice less than before, that is, 25 instead of 50 pixels.
 
-In general, we do not always want a cloud that is twice as small, but that the clouds can be of different sizes. In addition, we do not want to create a separate function for each cloud size, but to have one function that can draw a cloud of a given size. IUt would be the most comfortable if we could set the size of the cloud with only one number and change the size of the cloud by changing that one number. To do this, we need to express all the sizes that change with the change of cloud size (which is the distances between the centers of the circles and the radii of those circles) using one selected size. For example, for that selected size we can take the radius of the middle circle, which we will denote by :math:`r`. The distances of the centers of the smaller circles to the center of the larger circle are exactly :math:`r`, and the radius of the smaller circles is equal :math:`{3 \ over 5} r` regardless of the size of the cloud. When we use all these relations we have noticed, the function looks like this:
+In general, we do not always want a cloud that is twice as small, but that the clouds can be of different sizes. In addition, we do not want to create a separate function for each cloud size, but to have one function that can draw a cloud of a given size. IUt would be the most comfortable if we could set the size of the cloud with only one number and change the size of the cloud by changing that one number. To do this, we need to express all the sizes that change with the change of cloud size (which is the distances between the centers of the circles and the radii of those circles) using one selected size. For example, for that selected size we can take the radius of the middle circle, which we will denote by :math:`r`. The distances of the centers of the smaller circles to the center of the larger circle are exactly :math:`r`, and the radius of the smaller circles is equal :math:`{3 \over 5} r` regardless of the size of the cloud. When we use all these relations we have noticed, the function looks like this:
 
 .. code::
 
@@ -53,7 +53,7 @@ Now, let's list the steps for a general procedure to remake any movable drawing 
 
 - We need to determine one length in the drawing, which will be set directly. We can call this selected length **basic length** or **unit of measure**. In the example of clouds, the basic length is the radius of the middle circle.
 - All radii of the circles of which the drawing consists are expressed in proportion to the basic length. This means that if our base length is denoted by :math:`a`, all other lengths in the program will be multiples of :math:`a`, for example :math:`2a` or :math:`5a`. We determine the number :math:`a` from the ratio of the required length and the selected basic length in the initial drawing (this ratio remains the same when the size of the drawing changes). In the example with the cloud, the radius of the small circle is always :math:`{3 \over 5}` of the selected basic length :math:`r`. If rectangles or ellipses appear in the drawing, the heights and widths of those rectangles and ellipses should also be expressed in proportion to the basic length, in the same way as the radii of the circles.
-- We determine the coordinates of all points with respect to the principal point, by adding or subtracting a certain number of basic lengths to coordinates of the principal point. The required number of basic lengths is determined again from the relation in the initial drawing. In the example with the cloud, to obtain :math:`x` coordinate of the center of the left circle, we subtract **one** basic length from :math:`x` coordinate of the main point (center of the middle circle). We do so because the ratio of the difference of :math:`x` coordinates and basic length equals to one. The same procedure applies in principle to :math:`y` coordinates, though in this case it is particularly simple. Since :math:`y` coordinates of the centers of the circles are the same, the ratio of the difference of the :math:`y` coordinates and the basic length is zero, so zero basic lengths should be added to :math:`y` coordinate of the anchor to get :math:`y` coordinate of the center of a smaller circle.
+- We determine the coordinates of all points with respect to the main point, by adding or subtracting a certain number of basic lengths to coordinates of the main point. The required number of basic lengths is determined again from the relation in the initial drawing. In the example with the cloud, to obtain :math:`x` coordinate of the center of the left circle, we subtract **one** basic length from :math:`x` coordinate of the main point (center of the middle circle). We do so because the ratio of the difference of :math:`x` coordinates and basic length equals to one. The same procedure applies in principle to :math:`y` coordinates, though in this case it is particularly simple. Since :math:`y` coordinates of the centers of the circles are the same, the ratio of the difference of the :math:`y` coordinates and the basic length is zero, so zero basic lengths should be added to :math:`y` coordinate of the anchor to get :math:`y` coordinate of the center of a smaller circle.
 
 To better understand the process of resizing a drawing, we will also apply it to the example of a teddy bear.
 
@@ -90,13 +90,13 @@ Now we need to express the coordinates of the centers of all other circles start
     :nocodelens:
     :enablecopy:
     :modaloutput:
-    :includesrc: src\PyGame\1_Drawing\6_Scalable\teddy-bear_scalable1b.py
+    :includesrc: src\PyGame\1_Drawing\6_Scalable\teddy-bear_scalable1a.py
     
 Now we can not only move or copy a teddy bear across the screen, but also display it in various sizes. To confirm that resizing really works, the function call
 
 .. code::
 
-    draw_teddy(sirina // 2, visina // 2, 6)
+    draw_teddy(width // 2, height // 2, 6)
     
 which draws a bear with the center point in the center of the window, can be replaced with the following five:
 

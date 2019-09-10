@@ -64,7 +64,7 @@ Stickman
 
 In this example, the coordinates of the points on the right leg cannot be read, but it is symmetrical to the left leg. Since the width of the image is known (see the beginning of the program), the coordinates of the two unknown points on the right can be calculated using the known symmetric points on the left.
 
-**Hint:** Let :math:`A` be a point on the left side of the image, and: math:`B` a point on the right side of the image, symmetrical to the point :math:`A`. The two points then have the same :math:`y` coordinate, and the sum of the :math:`x` coordinates of the points :math:`A` and :math:`B` equals the width of the image.
+**Hint:** Let :math:`A` be a point on the left side of the image, and :math:`B` a point on the right side of the image, symmetrical to the point :math:`A`. The two points then have the same :math:`y` coordinate, and the sum of the :math:`x` coordinates of the points :math:`A` and :math:`B` equals the width of the image.
 
 .. activecode:: PyGame__drawing_stickman
    :nocodelens:

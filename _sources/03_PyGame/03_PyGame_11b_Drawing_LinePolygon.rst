@@ -3,7 +3,7 @@ Drawing straight lines and polygons
 
 The functions for drawing straight lines and polygons are similar to the functions for drawing rectangles, ellipses, and circles, which we have already learned. The parameters *canvas*, *color* and *thickness* are used here as well, with the same meaning as before. We will explain new parameters as we come across them.
 
-We will repeat the "empty" program here, which only handles the PyGame library and the drawing window (and does not draw anything by itself), in case you want to try something.
+We will repeat the "empty" program here, which only handles the PyGame library and the drawing window (and does not draw anything by itself), in case you want to try something out quickly.
 
 .. activecode:: pygame__drawing_primirives_def_copy
     :nocodelens:

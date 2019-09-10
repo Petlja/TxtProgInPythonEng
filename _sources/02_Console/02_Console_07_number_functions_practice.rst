@@ -16,8 +16,8 @@ To finish the program insert one of the mathematical functions you have learned.
     num_calendars = int(input("How many calendars are there?"))
     num_keychains = int(input("How many keychains are there?"))
     num_pens = int(input("How many pens are there?"))
-    num_least = 0 # complete the statement
-    print(num_least, "packages can be made.")
+    num_packages = 0 # complete the statement
+    print(num_packages, "packages can be made.")
 
 
 .. questionnote::
@@ -48,7 +48,7 @@ To finish the program insert one of the mathematical functions you have learned.
 
     **Task - the game:**
     
-    The six friends agreed to get on the court at a certain time and play a game. Write a program that loads the delay time of each player in minutes (as whole numbers) and prints with how many minutes of delay the match could have started.
+    The six friends agreed to get on the playground at a certain time and play a game. Write a program that loads the delay time of each player in minutes (as whole numbers) and prints with how many minutes of delay the match could have started.
     
 .. activecode:: console__mathfunc_late_game
 
@@ -109,6 +109,6 @@ To finish the program insert one of the mathematical functions you have learned.
 
     **Task - Video lessons**
 
-    The course consists of several video lessons that all last equally. You have decided to devote 90 minutes to this course every day and you are interested in how many days it will take for the whole course. Write a program that loads the number of lessons and the duration of one lesson in minutes, and prints the required number of days, rounded to the nearest integer.
+    The course consists of several video lessons that all last equally. You have decided to devote 90 minutes to this course every day and you want to know how many days it will take for the whole course. Write a program that loads the number of lessons and the duration of one lesson in minutes, and prints the required number of days, rounded to the nearest integer.
     
 .. activecode:: console__mathfunc_videolessons

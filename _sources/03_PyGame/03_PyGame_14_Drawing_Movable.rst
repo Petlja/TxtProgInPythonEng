@@ -89,7 +89,7 @@ We presented the cloud with three circles, one larger in the middle and two smal
     pg.draw.circle(canvas, pg.Color("white"), (150, 200), 30)
     pg.draw.circle(canvas, pg.Color("white"), (250, 200), 30)
 
-If we wanted to draw that cloud at different heights, we could repeat these three commands, each time with some new value for :math:`y` coordinate of the centers of these three circles instead of 200, as it is inthe first drawing. For example:
+If we wanted to draw that cloud at different heights, we could repeat these three commands, each time with some new value for :math:`y` coordinate of the centers of these three circles instead of 200, as it is in the first drawing. For example:
 
 .. code::
 
@@ -346,36 +346,41 @@ Let the main point be: code: `(x, y) = (50, 150)`. Complete the started remodeli
 
 
 
-Task - a constantly moving drawing
-''''''''''''''''''''''''''''''''''
+.. commented out
 
-The following function draws some drawing.
-   
-.. activecode:: PyGame__drawing_movable_scalable_given
+    The task is non-active (commented out) until a related technical issue is resolved.
 
-   def draw():
-       prozor.fill(pg.Color("white"))
-       pg.draw.circle(canvas, pg.Color("blue"), (100, 100), 60)
-       pg.draw.circle(canvas, pg.Color("yellow"), (75, 75), 15)
-       pg.draw.circle(canvas, pg.Color("black"), (80, 80), 5)
-       pg.draw.circle(canvas, pg.Color("yellow"), (125, 75), 15)
-       pg.draw.circle(canvas, pg.Color("black"), (120, 80), 5)
-       pg.draw.ellipse(canvas, pg.Color("red"), (75, 110, 50, 10))
+    Task - a constantly moving drawing
+    ''''''''''''''''''''''''''''''''''
 
-In the program that follows, the drawing function is just started. Complete it by drawing the same drawing, but using the anchor :math:`(x, y)`, which is located in the center of the blue circle (initially this is the point :math:`(100, 100)`).
+    The following function draws some drawing.
+       
+    .. activecode:: PyGame__drawing_movable_scalable_given
+        :passivecode: true
 
-When you finish the function, make sure it works the same as when you click the "Play task" button.
+        def draw():
+            prozor.fill(pg.Color("white"))
+            pg.draw.circle(canvas, pg.Color("blue"), (100, 100), 60)
+            pg.draw.circle(canvas, pg.Color("yellow"), (75, 75), 15)
+            pg.draw.circle(canvas, pg.Color("black"), (80, 80), 5)
+            pg.draw.circle(canvas, pg.Color("yellow"), (125, 75), 15)
+            pg.draw.circle(canvas, pg.Color("black"), (120, 80), 5)
+            pg.draw.ellipse(canvas, pg.Color("red"), (75, 110, 50, 10))
 
-.. activecode:: PyGame__drawing_movable
-   :nocodelens:
-   :enablecopy:
-   :modaloutput:
-   :playtask:
-   :includexsrc: src\PyGame\1_Drawing\5_Movable\movable_scalable.py
-   
-                 
-   def draw():
-       prozor.fill(pg.Color("white"))
+    In the program that follows, the drawing function is just started. Complete it by drawing the same drawing, but using the anchor :math:`(x, y)`, which is located in the center of the blue circle (initially this is the point :math:`(100, 100)`).
+
+    When you finish the function, make sure it works the same as when you click the "Play task" button.
+
+    .. activecode:: PyGame__drawing_movable
+       :nocodelens:
+       :enablecopy:
+       :modaloutput:
+       :playtask:
+       :includexsrc: src\PyGame\1_Drawing\5_Movable\movable_scalable.py
+       
+                     
+       def draw():
+           canvas.fill(pg.Color("white"))
 
 .. commented out
 
@@ -386,8 +391,8 @@ When you finish the function, make sure it works the same as when you click the 
        .. activecode:: PyGame_movable_code
           :passivecode:
 
-          def crtanje():
-              prozor.fill(pg.Color("white"))
+          def draw():
+              canvas.fill(pg.Color("white"))
               pg.draw.circle(canvas, pg.Color("blue"), (x, y), 60)
               pg.draw.circle(canvas, pg.Color("yellow"), (x-25, y-25), 15)
               pg.draw.circle(canvas, pg.Color("black"), (x-20, y-20), 5)

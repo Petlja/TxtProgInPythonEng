@@ -26,12 +26,12 @@ To help the user understand what is expected of them, we can also use the form o
 
 Whether we choose one or the other form of the *input* function, depends on the purpose of the program. When writing a program in which other people will enter data, we use a form with an argument, serving as an instruction. When we write a program only for personal short-term (maybe even one-time) use, then we have no need for instructions and can use a form without arguments.
 
-Also, we can set some of the environments in which the program is running, to read data from another location where we prepared it instead of from the keyboard. In such cases there is no waiting for the data to be entered, it is loaded automatically and there is no need to print the instruction. That is why programs designed for such use also exploit the *input* function without arguments.
+Also, be aware that for some of the environments in which the program is running, we can arrange that data is being read from another location where we prepared it n advance, instead of reading the data from the keyboard. In such cases there is no waiting for the data to be entered, it is loaded automatically and there is no need to print the instruction. Therefore, in such cases we would also use the *input* function without arguments.
 
 Reading numbers
 ---------------
 
-We have seen that the *input()* function returns a string (typed text). This means that if we need data of another type, we need to change the type of resulting data from the string to the desired type. Changing the data type is also called **conversion**. For example, if we want an integer, then we need to convert the resulting text to an integer. Here's how to do it in Python:
+We have seen that the *input()* function returns a string (text typed by a user). This means that if we need data of another type, we need to change the type of data returned by the *input()* function from string to the desired type. Changing the data type is also called **conversion**. For example, if we want an integer, then we need to convert the resulting text to an integer. Here's how to do it in Python:
 
 .. activecode:: console__text_input_int1
 
@@ -71,7 +71,7 @@ Check out what happens in these two examples when you enter something else rathe
 About conversions
 -----------------
 
-We have seen that when a string contains an integer or a real number, that string can be converted to an integer or real type using the *int()* or *float()* functions. On the other side, integers and real numbers can always be converted to string. The *str()* function is used to convert to a string.
+We have seen that when a string contains an integer or a real number, that string can be converted to an integer or real type using the *int()* or *float()* functions. On the other side, integers and real numbers can always be converted to a string. The *str()* function is used to convert to a string.
 
 .. activecode:: console__text_convert_to_str
 

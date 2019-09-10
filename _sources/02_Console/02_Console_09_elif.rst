@@ -49,8 +49,6 @@ Examples and tasks
     - from 25 to 30: overweight
     - over 30: obese person
     
-    Write a program that loads a person's weight and height and then writes to which category that person belongs (attach limit values to a lower category).
-    
     Write a program that takes a person's weight and height and then writes to which category that person belongs (limit values belong to a lower category).
 
 One possible solution is given below. Consider why it is not necessary to use complex logical conditions (built with words *and*, *or*, *not*) in this solution.
@@ -184,7 +182,7 @@ Note that programs with nested branches can be modified to use only consecutive 
     
     **Task - crossroads:** 
     
-    Theре ис ан intersection of A and B streets. The even house numbers in Street A are on the right and odd ones are on the left. On the even (right) side, the numbers up to the intersection are from 2 to 200, and after the intersection are greater than 200. On the odd (left) side, the numbers up to the intersection are from 1 to 177, and after the intersection they are from 179 onwards.
+    There is an intersection of A and B streets. The even house numbers in Street A are on the right and odd ones are on the left. On the even (right) side, the numbers up to the intersection are from 2 to 200, and after the intersection are those greater than 200. On the odd (left) side, the numbers up to the intersection are from 1 to 177, and after the intersection they are those from 179 onwards.
     
     Write a program that loads one house number on street A and answers whether that number is before or after the intersection and which side of street A it is on. For example:
     
@@ -193,7 +191,7 @@ Note that programs with nested branches can be modified to use only consecutive 
     - for number 177, enter "on the left side, before the intersection"
     - for number 219 write "on the left side, after the intersection"
 
-**Hint:** After loading, you should first check if *n* is even, that is, if :math:`n % 2 == 0`.
+**Hint:** After loading, you should first check if *n* is even, that is, if :math:`n \% 2 == 0`.
 
 .. activecode:: console__more_branching_quart
 
@@ -207,16 +205,14 @@ Note that programs with nested branches can be modified to use only consecutive 
     
     **Task - studying:** 
     
-    John's parents told John that if he received fours or fives in maths and English, he could go to an afternoon football tournament, otherwise he had to learn a subject or subjects from which he received grades less than 4.
-    
-    John's parents told John that if he received fours or fives in maths and English, he could go to an afternoon football tournament, otherwise he had to learn a subject or subjects from which he received grades less than 4 (grades are from 1 to 5).
+    John's parents told John that if he received fours or fives in maths and English, he could go to an afternoon football tournament, otherwise he had to learn the subject or subjects from which he received grade(s) less than 4 (grades are from 1 to 5).
     
     Write a program that first loads John's math grade and then English grade and prints a message for John. For example:
     
-    - for grades 2, 3 print "learn math and english"
+    - for grades 2, 3 print "learn math and English"
     - for grades 3, 4 print "learn math"
-    - for grades 4, 2 print "learn english"
-    - for grades 5, 4 print "go to tournament"
+    - for grades 4, 2 print "learn English"
+    - for grades 5, 4 print "go to the tournament"
 
 .. activecode:: console__more_branching_grades
 
@@ -235,7 +231,7 @@ Note that programs with nested branches can be modified to use only consecutive 
     - when the temperature is 21 or higher and the chance of rain is over 50, the recommendation is: "bring an umbrella"
     - when the temperature is 21 or higher and the chance of rain is up to 50, the advice should be "you can go in a T-shirt"
     
-    The task for yopu is to write a program that loads the temperature first, then the chance of rain, and then prints a recommendation.
+    The task for you is to write a program that loads the temperature first, then the chance of rain, and then prints a recommendation.
     
 .. activecode:: console__more_branching_weather
 
