@@ -117,10 +117,10 @@ html_theme = 'custom_theme'
 #html_theme_options = {'nosidebar': 'true'}
 html_theme_options = {
     # Navigation bar title. (Default: ``project`` value)
-    'navbar_title': "Block-based programming in MakeCode",
+    'navbar_title': "Textual Programming in Python",
 
     # Tab name for entire site. (Default: "Site")
-    'navbar_site_name': "Block-based programming in MakeCode - Chapters",
+    'navbar_site_name': "Textual Programming in Python - Chapters",
 
     # Global TOC depth for "site" navbar tab. (Default: 1)
     # Switching to -1 shows all levels.
