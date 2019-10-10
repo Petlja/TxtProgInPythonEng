@@ -51,6 +51,8 @@ When working interactively, Python interpreter can also be used as a calculator 
 
     >>> 3 + 2
     5
+    >>> 3.25 + 2.25
+    5.5
     >>> 3 - 2
     1
     >>> 4 * 2
@@ -67,7 +69,7 @@ The following symbols are used for basic calculating operations in Python (as in
 
 In addition to these basic and most commonly used ones, we sometimes need a few other operations, which are used less frequently. Those are:
 
-- integer division (taking the whole part of the quotient): ``//``, for example the value of the expression :math:`7 // 2` si :math:`3`.
+- integer division (taking the whole part of the quotient): ``//``, for example the value of the expression :math:`7 // 2` is :math:`3`.
 - remainder of a division: ``%``, for example the value of the expression :math:`7 \% 2` is :math:`1`.
 - the power operator: ``**``, for example the value of the expression :math:`2 ** 4` is :math:`2^4 = 16`.
 

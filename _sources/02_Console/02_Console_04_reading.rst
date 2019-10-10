@@ -6,7 +6,7 @@ Reading text
 
 The programs we have learned to write so far contain all the information needed and always work the same way. When we need a program to do the same thing with different data, we would have to modify the program itself. This method may be quite appropriate when changes to the data are small and not frequent.
 
-Another way to get our program to handle more diverse tasks is to enable data entry. Iserting data into a program during its operation is done using the *input()* function. This function works by waiting for the program user to type something (and press the *Enter* key) and then returning the typed text as a result.
+Another way to get our program to handle more diverse tasks is to enable data entry. Iserting data into a program during its execution is done using the *input()* function. This function works by waiting for the program user to type something (and press the *Enter* key) and then returning the typed text as a result.
 
 When you run this program, to see how it works, type something and press *Enter*. Try the same program in the *IDLE* environment or on the *repl.it* site.
 

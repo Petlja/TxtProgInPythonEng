@@ -22,7 +22,7 @@ We can solve this problem by placing the names in one tuple and the ages in the 
     if not name_has_been_found:
         print('Name', asked_name, 'has not been found.')
 
-As we can see, the collections we already know can serve us in this case as well. However, for this type of task, there is a collection in which data is recorded in a more transparent way, and the necessary data is found easier and more efficiently. Let's look at another solution:
+As we can see, the collections we already know can serve us in this case as well. However, for this type of task, there is a collection in which data is recorded in a more coherent way, and the necessary data is found easier and more efficiently. Let's look at another solution:
 
 .. activecode:: dict__1st_example
 
@@ -127,6 +127,7 @@ Tasks for exercise
     
     The names of the students who were absent from the class were given in a tuple. Each appearance of one name represents absence from one class. Complete the program so that it calculates and prints out how many classes each student has missed.
     
+    To help you check your program, here is the expected result: for the data given in the tuple *absent*, you should get that James has 4 absences, Maya 3, Alexander 2, and Violet, Mark, Frankie, Peter, Ronnie and Oliver one absence each (not necessarily in that order).
     
 .. activecode:: console__dict__absence
     
@@ -135,13 +136,29 @@ Tasks for exercise
         'Mark', 'Maya', 'Frankie', 'James', 'Peter',
         'Ronnie', 'Oliver', 'Maya', 'Alexander', 'James')
         
+.. commented out
+
+    absences = {}
+    for name in absent:
+        absences[name] = absences.get(name, 0) + 1
+    for name in absences:
+        print(name, absences[name])        
+
 .. questionnote::
 
     **Task - stock status**
     
-     Purchases and sales of goods in the form of tuple of pairs are given. In each pair, the first element is the name of the goods, and the second is the change in stock status. For example, a pair *('cheese', -1.5)* means that the available quantity of cheese has decreased by 1.5 (so much cheese has been sold).
+    Purchases and sales of goods in the form of tuple of pairs are given. In each pair, the first element is the name of the goods, and the second is the change in stock status. For example, a pair *('cheese', -1.5)* means that the available quantity of cheese has decreased by 1.5 (so much cheese has been sold).
      
-     Complete the program that calculates and prints the state after these changes, based on the given state changes. Assume that there are no stocks at the beginning.
+    Complete the program that calculates and prints the state after these changes, based on the given state changes. Assume that there are no stocks at the beginning.
+    
+    Check the result: for the data given, you should get (in any order)
+    
+    - cheese 18.5
+    - milk 297
+    - flour 985
+    - eggs 1988
+    - fish 47
      
 In this task, the most important part of the program is traversing through all the pairs. For clarity, we immediately unpack each pair from the tuple *changes* to variables *good*, *change*.
 

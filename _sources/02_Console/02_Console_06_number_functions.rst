@@ -59,7 +59,7 @@ Check your understanding of the above functions:
 
 .. dragndrop:: console__numberfunc_max_0x
     :feedback: Try again!
-    :match_1: abs(x)||| x if x is greater than zero, and -x otherwise
+    :match_1: abs(x)||| x if x is positive, and the opposite number otherwise
     :match_2: max(0, x)||| x if x is positive and zero otherwise
     :match_3: min(0, x)||| x if x is negative and zero otherwise
     :match_4: min(0, abs(x))||| always zero

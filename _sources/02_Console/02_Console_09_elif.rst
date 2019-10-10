@@ -20,6 +20,8 @@ There are tasks in which, when one condition is not fulfilled, another one shoul
             else:
                 if fourth_condition:
                     statement4
+                else:
+                    statement5
 
 in Python we use the special word ``elif``, which stands for *else:* and the indented *if* in the following line. So we get a more readable code:
 
@@ -34,6 +36,21 @@ in Python we use the special word ``elif``, which stands for *else:* and the ind
         statement3
     elif fourth_condition:
         statement4
+    else:
+        statement5
+
+Note 1: Any number of consecutive *elif* statements can be used this way. 
+
+Note 2: The part
+
+.. activecode:: console__more_branching_elif3
+    :passivecode: true
+
+    else:
+        statement5
+
+is optional and can be omitted if not needed.
+
 
 Examples and tasks
 ''''''''''''''''''
@@ -205,7 +222,7 @@ Note that programs with nested branches can be modified to use only consecutive 
     
     **Task - studying:** 
     
-    John's parents told John that if he received fours or fives in maths and English, he could go to an afternoon football tournament, otherwise he had to learn the subject or subjects from which he received grade(s) less than 4 (grades are from 1 to 5).
+    John's parents told John that if he received fours or fives in maths and English, he could go to an afternoon football tournament, otherwise he had to learn the subject or subjects from which he received grade(s) less than 4 (grades are from 1 to 5, 1 being the worst, 5 being the best).
     
     Write a program that first loads John's math grade and then English grade and prints a message for John. For example:
     
@@ -213,6 +230,7 @@ Note that programs with nested branches can be modified to use only consecutive 
     - for grades 3, 4 print "learn math"
     - for grades 4, 2 print "learn English"
     - for grades 5, 4 print "go to the tournament"
+    
 
 .. activecode:: console__more_branching_grades
 
@@ -236,6 +254,6 @@ Note that programs with nested branches can be modified to use only consecutive 
 .. activecode:: console__more_branching_weather
 
     t = int(input("What is the temperature: "))
-    sanse_kisa = int(input("What are the chances of rain: "))
+    chance_of_rain = int(input("What are the chances of rain: "))
     # finish the program
 

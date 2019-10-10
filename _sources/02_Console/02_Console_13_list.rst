@@ -3,7 +3,7 @@ Lists
 
 So far, we have mentioned tuple and range as types of collections, and we have seen that the string can also be used as a collection. Another very important and often used type of collections are lists.
 
-Lists and tuples
+Lists vs. tuples
 ----------------
 
 Lists, as well as tuples, can be specified by enumerating the elements, except that the list elements are written between square brackets:
@@ -67,7 +67,7 @@ Tuple *t* can be converted to a list *a* during the program execution, and vice 
 Building a list
 ---------------
 
-as we have already seen, we can gradually build lists in a program. For example, if we are given a tuple of numbers from which we want to copy those that are greater than zero (and perform some extra task with these numbers latter), we can do this:
+As we have already seen, we can gradually build lists in a program. For example, if we are given a tuple of numbers from which we want to copy those that are greater than zero (and perform some extra task with these numbers latter), we can do this:
 
 .. activecode:: console__collections_list_create
 
@@ -123,7 +123,7 @@ If the user enters all the elements of the list in one line separated by spaces,
     a_str = input("Enter all the elements: ")
     a = []
     for s in a_str.split():
-        a.append(s)
+        a.append(float(s))
 
     print("The elements of the list are:")
     for x in a:

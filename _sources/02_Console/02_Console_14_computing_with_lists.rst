@@ -22,7 +22,7 @@ This task is a combination of the tasks we have done so far. In the first part o
 
     print(min(positive))
 
-We mentioned that the functions *min*, *max*, *sum*, *len* can be applied to different collections, and we have shown this with examples of tuple, range and string (except the sum of the elements of a string). We now see that the *min* function also accepts a list as its argument. The same holds to the functions *max*, *sum*, *len*.
+We mentioned that the functions *min*, *max*, *sum*, *len* can be applied to different collections, and we have shown this with examples of tuple, range and string (except the sum of the elements of a string). We now see that the *min* function also accepts a list as its argument. The same holds for the functions *max*, *sum*, *len*.
 
 
 

@@ -7,7 +7,8 @@ Tuples are also a type of data in Python, such as numbers, strings, or logical v
 
 Each value that consists of multiple values of a simpler type will be called a **collection**. The data the collection consists of are called **collection elements**.
 
-We can say that tuple is a kind of collection, and it is the first kind of collection we encounter.
+The only collections we have seen so far are tuples, which we will now get to know in more detail. We will see some more types of collections very soon.
+
 
 Tuple and its elements
 ----------------------
@@ -185,7 +186,7 @@ We have used strings as the basic type so far, but strings can also be used as c
     for c in s:
         print(c)
 
-Functions of collections
+Functions on collections
 ------------------------
 
 There are many functions in Python that accept a collection as an argument. One of them is the *len* function, which we have already met. Some other commonly used functions that apply to collections are:
@@ -218,7 +219,7 @@ There are many functions in Python that accept a collection as an argument. One 
     # elements of s are not numbers, so uncommenting the next statement would cause an error
     # print('sum(s) =', sum(s)) 
 
-The values of the functions *len*, *sum*, *min*, *max* for the range can also be determined from the parameters of the range, but here we wanted to point out that all these functions accept different collections as their argument (including range).
+The values of the functions *len*, *sum*, *min*, *max* for the range can also be determined from the parameters of the range. Also, *min* and *max* are not commonly applied to a string (they return character with smallest and biggest code respectively). Here, we are just pointing out that all these functions accept various kinds of collections as their argument (including range and string).
 
 Questions
 '''''''''

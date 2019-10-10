@@ -107,7 +107,7 @@ At the beginning of this program, we load the number of votes *n*, then use the 
 
     **Task - written test:** 
     
-    Several people passed the traffic proficiency test, which is a prerequisite for taking the practical part of the exam. A test is considered passed if the number of incorrect answers is less than or equal to 3.
+    Several people took the traffic proficiency test, which is a prerequisite for taking the practical part of the exam. A test is considered passed if the number of incorrect answers is less than or equal to 3.
     
     At the beginning of the script are given the test results of one group of candidates (number of incorrect answers for each person who took the test). Complete the script by listing how many candidates have passed the test.
     

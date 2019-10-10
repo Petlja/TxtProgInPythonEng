@@ -146,10 +146,13 @@ The occurrence of errors (also known as bugs) should not worry you as it is a co
 
 To help you understand the error messages you will be getting (and to become less anxious about errors), we recommend that you now try to deliberately make some small mistakes that might anyway happen to you when writing a program.
 
-When you know exactly what you did wrong and look at the message, it will be easier to understand the same message latter when you see it after an unintentional error.
+When you make a few intentional errors, you will gain some experience how error messages look like and it will be easier for you to understand the same messages latter, when they occur unintentionally. 
+
+You can try some errors here:
 
 .. activecode:: console__program_make_err
 
+    # add statement(s)
     
 
 We have also prepared a few programs with intentionally made mistakes, which we then explain. Programs are short to make errors more noticeable, but in longer programs, debugging is almost the same. Since the error message contains the program line number in which the error occured, in longer programs you just need to first find the program line mentioned and look at that (and possibly the previous) line.

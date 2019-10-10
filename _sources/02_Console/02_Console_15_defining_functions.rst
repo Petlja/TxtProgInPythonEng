@@ -194,7 +194,7 @@ The *process_family_member* function performs all the necessary actions for one 
 .. activecode:: console__functions_transport
 
     def process_family_member(which_one, travel_duration):
-        prompt = 'Enter the hour and minute of departure of the' + which_one + 'member'
+        prompt = 'Enter the hour and minute of departure of the ' + which_one + ' member'
         s_hour, s_min = input(prompt).split()
         departure_hour, departure_minute = int(s_hour), int(s_min)
         if departure_hour >= 16:

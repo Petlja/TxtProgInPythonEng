@@ -248,7 +248,7 @@ Logical expressions - questions
     :match_1: At least one of a, b, c is positive ||| a > 0 or b > 0 or c > 0
     :match_2: None of a, b, c is positive ||| a <= 0 and b <= 0 and c <= 0
     :match_3: a, b and c are not all positive ||| a <= 0 or b <= 0 or c <= 0
-    :match_4: a, b and c are not all positive ||| a > 0 and b > 0 and c > 0
+    :match_4: a, b and c are all positive ||| a > 0 and b > 0 and c > 0
 
     Match conditions and descriptions
 

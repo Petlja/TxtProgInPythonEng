@@ -62,7 +62,7 @@ When displaying multiple real numbers one below the other, we can make them more
 
 .. activecode:: console__text_format2a
 
-    print(1.23)
+    print(-1.23)
     print(7251.7)
     print(84.15)
 
@@ -70,11 +70,13 @@ To get a more readable look, we can use the *format* function like this:
 
 .. activecode:: console__text_format2b
 
-    print(format(1.23, '8.2f'))
+    print(format(-1.23, '8.2f'))
     print(format(7251.7, '8.2f'))
     print(format(84.15, '8.2f'))
 
-In the description '8.2f' the number 8 means that the textual version of the given number should be left-padded with spaces (if needed) to take up total of 8 places. Other parts of the description have the same meaning as before.
+In the description '8.2f' the number 8 means that the textual version of the given number should be left-padded with spaces (if needed) to take up total of 8 places. These 8 places include the digits, the decimal point, possible sign of the number and spaces in front of the number. 
+
+Other parts of the description ('.2f') have the same meaning as before.
 
 
 The *format* function has many other features, but we will not use them here.
@@ -125,12 +127,12 @@ In the following example we underline the numbers with a line, and that line is 
     a = 1.23958
     b = 5467251.707256
     c = 384.150576
-    zbir = a + b + c
+    total = a + b + c
     print(format(a, '12.2f'))
     print(format(b, '12.2f'))
     print(format(c, '12.2f'))
     print(12 * '-')
-    print(format(zbir, '12.2f'))
+    print(format(total, '12.2f'))
 
     
 Questions and Tasks

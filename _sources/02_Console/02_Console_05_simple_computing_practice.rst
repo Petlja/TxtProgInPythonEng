@@ -1,9 +1,7 @@
 Programs with Computation - Exercise
 ====================================
 
-So far, we have learned how to load numbers in programs, how to perform computational operations on them, and how to print results.
-
-We can now practice the lessons learned in a few simple math tasks.
+So far, we have learned how to load numbers in programs, how to perform computational operations on them, and how to print results. We can now practice these things with a few simple math tasks. 
 
 Tasks without loading data
 --------------------------
@@ -17,7 +15,7 @@ Example
 
     Jessica and Oscar are organizing a celebration. The rented space accommodates 100 people, Jessica has so far invited 43, and Oscar 28.
     
-    Write a program that calculates and prints how much more space is available.
+    Write a program that calculates and prints how much more space is available.
 
 The problem can be solved as follows:
 

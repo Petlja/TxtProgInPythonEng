@@ -1,5 +1,5 @@
-Programs with known input data
-==============================
+Scripts and *for* loop
+======================
 
 Scripts
 -------
@@ -21,10 +21,12 @@ With scripts, there is no strict division between users and developers as with a
 
 We have already emphasized that this manual is not intended only for future professionals in programming. If you do not program applications, you can still benefit from programming. You may write a script or customize an existing one, as expected in the presumed instruction of the previous example.
 
-Changing data by input
-----------------------
+Repeating computation for multiple data
+---------------------------------------
 
 Let's make the previous example more general. Suppose that in one store we are entitled to a 20 percent discount over the regular prices. We are interested in discounted prices of various products, whose regular prices we know.
+
+**Restarting program that loads data**
 
 The solution we already know how to write is to load the regular price of the product and then calculate and print the reduced price. This program can look like this:
 
@@ -38,12 +40,16 @@ The solution we already know how to write is to load the regular price of the pr
 We can run the program multiple times, setting each time a regular price for one of the products we are interested in.
 
 
-Data variation
---------------
+**Multiple inputs in the program itself**
 
-In the previous example, it was necessary to run the program multiple times and enter the data (regular price of a product) each time. In case we know in advance all the data that we would enter one by one at different executionss of the program, then it is more comfortable to enter all that data directly into the program and to repeat the calculation and printing of the results for each of the data in one execution.
+In the case where we know in advance all the regular prices of products that interest us, multiple program launches and entering one price at a time is not the most comfortable way to get all the discounted prices. Instead, it would be more convenient to enter all regular prices directly into the program and to repeat calculation and printing the results for each of these data.
 
-Let's say that the regular prices of the products we are interested in are 250, 120, and 310 and we want to calculate the discounted prices for those products with a single execution. Here is how we can do it:
+*for* statement
+---------------
+
+In order to be able to repeat some part of the program for each piece of multiple data, we need the **for** statement, which allows other statements to be repeated. Now we are going to see one way to use *for* statement, and we will see some other forms of *for* statement in the following lessons.
+
+Let's return to the discounted price example. Let's say that the regular prices of the products we are interested in are 250, 120, and 310 and we want to calculate the discounted prices for those products with a single execution. Here is how we can do it:
 
 .. activecode:: console__scripting_for
 
@@ -62,7 +68,7 @@ Running the program we see that it prints:
     120 96.0
     310 248.0
 
-We notice that the last two lines of the program were executed three times, with the variable *regular_price* receiving the values 250, 120, 310 in that order. We achieved this with the statement ``for``. The parts of the program that are repeated are called loops, so we can say that in the previous example we used a **for loop**.
+We notice that the last two lines of the program were executed three times, with the variable *regular_price* receiving the values 250, 120, 310 in that order. We achieved this with the ``for`` statement. The parts of the program that are repeated are called loops, so we can say that in the previous example we used a **for loop**.
 
 The following figure shows the main elements of the *for* loop:
 
@@ -83,7 +89,7 @@ Examples and tasks
 
 .. questionnote::
     
-    **Example - when to go**
+    **Example - when to depart**
     
     Ronnie should arrive at destination no later than 5:00 pm. Depending on the way of travel he chooses, Ronnie may need 55, 70, 85, or 95 minutes. Write a program that prints for each way of travel when Ronnie needs to leave at the latest to arrive on time.
     
