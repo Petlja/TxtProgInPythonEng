@@ -30,7 +30,7 @@ import petljadoc
 # Add any Sphinx extension module names here, as strings. They can be extensions
 # coming with Sphinx (named 'sphinx.ext.*') or your custom ones.
 
-extensions = ['sphinx.ext.mathjax'] + [m for m in runestone_extensions() if not m.endswith("webgldemo")] + petljadoc.runestone_ext.extensions()
+extensions = ['sphinx.ext.mathjax'] + runestone_extensions() + petljadoc.runestone_ext.extensions()
 
 #,'runestone.video','runestone.reveal','runestone.poll','runestone.tabbedStuff','runestone.disqus','runestone.codelens','runestone.activecode', 'runestone.assess', 'runestone.animation','runestone.meta', 'runestone.parsons', 'runestone.blockly', 'runestone.livecode','runestone.accessibility']
 
@@ -109,12 +109,29 @@ rst_prolog = (
 
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
-html_theme = 'custom_theme'
+html_theme = 'petljadoc_runestone_theme'
 
 # Theme options are theme-specific and customize the look and feel of a theme
 # further.  For a list of options available for each theme, see the
 # documentation.
 #html_theme_options = {'nosidebar': 'true'}
+html_context = {'course_id': 'Textual Programming in Python',
+                'login_required':'false',
+                'appname': "runestone",
+                'loglevel': int("0"),
+                'course_url': "http://127.0.0.1:8000",
+                'use_services': 'false',
+                'python3': 'true',
+                'dburl': os.environ['DBURL'] if 'DBURL' in os.environ else '',
+                'default_ac_lang': 'python',
+                'basecourse': 'Настава програмирања за Први разред гимназије',
+                'jobe_server': 'http://jobe2.cosc.canterbury.ac.nz',
+                'proxy_uri_runs': '/jobe/index.php/restapi/runs/',
+                'proxy_uri_files': '/jobe/index.php/restapi/files/',
+                'downloads_enabled': 'false',
+                'enable_chatcodes': 'false',
+               }
+
 html_theme_options = {
     # Navigation bar title. (Default: ``project`` value)
     'navbar_title': "Textual Programming in Python",
