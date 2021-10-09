@@ -42,9 +42,9 @@ In Python, it is a common style that capital letters are not used (though allowe
 
 .. dragndrop:: console__basics_quiz_variable_names
     :feedback: Try again!
-    :match_1: 2_date ||| incorrect, starts with an illegal character
-    :match_2: pet_no_2 ||| correct name
-    :match_3: state_at_23:59 ||| incorrect, contains an illegal character
+    :match_1: 2_date ||| invalid, starts with an illegal character
+    :match_2: pet_no_2 ||| valid name
+    :match_3: state_at_23:59 ||| invalid, contains an illegal character
 
     Match the proposed variable names with the answers.
 

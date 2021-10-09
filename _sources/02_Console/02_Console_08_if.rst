@@ -7,16 +7,20 @@ Similarly, in programs with numbers we often need to compare two values, that is
 
 Some of the symbols used for comparison are the same as in mathematics (for example ``<`` and ``>``) and some are not. The following table gives the notation of all standard comparisons used in mathematics and in Python (and also in many other programming languages).
 
-====================   ==================== ========================================
-Math                   Python               Meaning
-====================   ==================== ========================================
-:math:`а < b`          a < b                a is less than b
-:math:`a \leq b`       a <= b               a is less than or equal to b
-:math:`a > b`          a > b                a is greater than b
-:math:`a \geq b`       a >= b               a is greater than or equal to b
-:math:`a = b`          a == b               a is equal to b
-:math:`a \neq b`       a != b               a is not equal to b
-====================   ==================== ========================================
+.. table::
+    :align: left
+    :widths: 15, 15, 70
+    
+    ====================   ==================== ========================================
+    Math                   Python               Meaning
+    ====================   ==================== ========================================
+    :math:`а < b`          a < b                a is less than b
+    :math:`a \leq b`       a <= b               a is less than or equal to b
+    :math:`a > b`          a > b                a is greater than b
+    :math:`a \geq b`       a >= b               a is greater than or equal to b
+    :math:`a = b`          a == b               a is equal to b
+    :math:`a \neq b`       a != b               a is not equal to b
+    ====================   ==================== ========================================
 
 Notation :math:`a<b` can be understood as an expression whose value is true or false in each case. These values are written in Python as *True* and *False* and they are **logical constants**, that is, constants of the type ``bool`` which we call the logical type. Expressions whose value is true or false (logical type) are called **logical expressions**. All the expressions in the table above are logical expressions (we will see more logical expressions later).
 
@@ -145,9 +149,9 @@ Logical expressions
 
 In some tasks we need to express conditions that are more complex than simply comparing two values. The words **and**, **or** and **not** are used to connect the simpler terms, and Python uses exactly the same words for that. Here is how to evaluate such complex contidions. If *a* and *b* are any conditions, then:
 
-- condition ``a and b`` will be fulfilled if both conditions *a* and *b* are fulfilled;
-- condition ``a or b`` will be fulfilled if at least one of conditions *a* and *b* is fulfilled;
-- condition ``not a`` will be fulfilled if condition *a* is not fulfilled (which we have already mentioned in the lessons on Karel);
+- condition ``a and b`` is fulfilled if both conditions *a* and *b* are fulfilled;
+- condition ``a or b`` is fulfilled if at least one of conditions *a* and *b* is fulfilled;
+- condition ``not a`` is fulfilled if condition *a* is not fulfilled (which we have already mentioned in the lessons on Karel);
 
 These conditions can be further combined into even more complex ones according to the needs of the task. In complex conditions, we can use parentheses to influence the order in which the conditions are calculated (also when we are not sure which is the default order), and to make the program clearer to other people reading it. If there are no parentheses in the complex condition, *not* is applied first, then *and*, and finally *or*.
 
@@ -309,7 +313,7 @@ Logical expression - tasks
     
     Write a program that takes integers *a1*, *a2*, *m1* and *m2*, and answers the question of whether Anna's and Mark's travels overlap.
     
-**Hint:** trips overlap if Marko leaves before Ana returns (the day of Mark's departure is less than or equal to the day of Ana's return) or vice versa - if Ana leaves before Marko returns.
+**Hint:** trips overlap if Mark leaves before Ana returns (the day of Mark's departure is less than or equal to the day of Ana's return) or vice versa - if Ana leaves before Mark returns.
 
 .. activecode:: console__branching_intervals
 

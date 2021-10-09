@@ -147,3 +147,4 @@ Check your understanding of the functions explained in this lesson:
     
 .. activecode:: console__givenfunc_round
 
+    # insert your code here

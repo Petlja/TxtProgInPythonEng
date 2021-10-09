@@ -239,7 +239,7 @@ We can write the program like this:
 
     **Task - on duty:**  
     
-    In Company X, all employees occasionally remain on-call. The norm for the previous period is 20 hours on-call. Every extra hour (over 20 hours) on-call is additionally paid. The number of on-call hours for each employee is given, and the director wants to know the total number of on-call hours **over the norm**.
+    In Company X, all employees occasionally remain on-call. The norm for the previous period is 20 hours on-call. Every extra hour (over 20 hours) on-call is additionally paid. The number of on-call hours for each employee is given, and the manager wants to know the total number of on-call hours **over the norm**.
     
     Complete the program by computing and printing the total number of overtime hours on-call.
     

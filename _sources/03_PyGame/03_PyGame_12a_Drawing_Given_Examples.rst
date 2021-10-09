@@ -62,8 +62,8 @@ If you want to solve these tasks outside of the web browser, in your programming
 .. image:: ../../_images/PyGame/drawing_grid_trees.png
    :width: 120px                
 
-Антена
-''''''
+Antenna
+'''''''
 
 Before cable television, television signals were received by antennas that were usually placed on the roofs of people's homes and buildings. In this task one such antenna is to be drawn.
 
@@ -185,8 +185,8 @@ It is enough to read the coordinates of the center of the circle representing th
 If you want to see how you can determine the coordinates of the center with more accurate reading and calculating, click on the "Determining the center" button.
 
 .. reveal:: PyGame__drawing_house_circle_center_reveal
-   :showtitle: Determining the center
-   :hidetitle: Hide determining the center
+    :showtitle: Determining the center
+    :hidetitle: Hide determining the center
 
     As in the previous task, let :math:`X_L` and :math:`X_R` denote the :math:`x` coordinates of the leftmost and rightmost point of the circle that represents the Sun, and :math:`Y_T`, :math:`Y_B` the :math:`y` coordinates of the highest and lowest point of that circle. 
     

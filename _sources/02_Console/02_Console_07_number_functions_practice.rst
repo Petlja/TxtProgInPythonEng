@@ -7,13 +7,13 @@ Let's practice using the mathematical functions we have learned.
     
     **Task - advertising:** 
     
-    Thomas distributes advertising packages containing one calendar, a keychain and a pen. Write a program that loads how many calendars, keychains, and pens Thomas has and then prints how many advertising packages he can make.
+    Thomas distributes advertising packages containing a flyer, a keychain and a pen. Write a program that loads how many flyers, keychains, and pens Thomas has and then prints how many advertising packages he can make.
 
 To finish the program insert one of the mathematical functions you have learned.
 
 .. activecode:: console__mathfunc_promo_material
 
-    num_calendars = int(input("How many calendars are there?"))
+    num_flyers = int(input("How many flyers are there?"))
     num_keychains = int(input("How many keychains are there?"))
     num_pens = int(input("How many pens are there?"))
     num_packages = 0 # complete the statement
@@ -28,6 +28,8 @@ To finish the program insert one of the mathematical functions you have learned.
     
   
 .. activecode:: console__mathfunc_lemonade
+
+    # insert your code here
 
 .. reveal:: console__mathfunc_lemonade_reveal
    :showtitle: Help
@@ -51,6 +53,8 @@ To finish the program insert one of the mathematical functions you have learned.
     The six friends agreed to get on the playground at a certain time and play a game. Write a program that loads the delay time of each player in minutes (as whole numbers) and prints with how many minutes of delay the match could have started.
     
 .. activecode:: console__mathfunc_late_game
+
+    # insert your code here
 
 .. reveal:: console__mathfunc_late_game_reveal
    :showtitle: Help
@@ -84,9 +88,11 @@ To finish the program insert one of the mathematical functions you have learned.
 
     **Task - two buses:** 
     
-    Maya and Lola travel on the same highway in two different buses and talk on the phone. One of them has just noticed the milestone *x* and the other *y*. Write a program that loads integers: *x* and *y* and prints how many miles Maya and Lola are away from each other.
+    Maya and Lola travel on the same highway in two different buses and talk on the phone. One of them has just noticed the milestone *x* and the other has noticed the milestone *y*. Write a program that loads integers: *x* and *y* and prints how many miles Maya and Lola are away from each other.
     
 .. activecode:: console__mathfunc_buses
+
+    # insert your code here
 
 .. commented out
     
@@ -112,3 +118,5 @@ To finish the program insert one of the mathematical functions you have learned.
     The course consists of several video lessons that all last equally. You have decided to devote 90 minutes to this course every day and you want to know how many days it will take for the whole course. Write a program that loads the number of lessons and the duration of one lesson in minutes, and prints the required number of days, rounded to the nearest integer.
     
 .. activecode:: console__mathfunc_videolessons
+
+    # insert your code here

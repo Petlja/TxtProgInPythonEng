@@ -4,7 +4,7 @@ Complex branching
 Successive conditions
 ---------------------
 
-There are tasks in which, when one condition is not fulfilled, another one should be checked, and if that condition is not valid either then a third one is checked and so on. To avoid writting
+There are tasks in which, when one condition is not fulfilled, another one should be checked, and if that condition is not valid either, then a third one is checked and so on. To avoid writting
 
 .. activecode:: console__more_branching_elif1
     :passivecode: true
@@ -88,18 +88,19 @@ One possible solution is given below. Consider why it is not necessary to use co
 
 .. questionnote::
     
-    **Task - age categories of players:** 
+    **Task - age groups of players:** 
     
-    Young basketball players register at the beginning of the basketball season in one of the age categories, according to how many years they turn in the calendar year in which the season begins. The registration rules are as follows:
+    Young basketball players register at the beginning of the basketball season in one of the age categories (U10, U12, U14, U16, U18), according to how many years they turn in the calendar year in which the season begins. The registration rules are as follows:
     
-    - 10 and under - no category
-    - 11 or 12 years - younger pioneers
-    - 13 or 14 years old - pioneers
-    - 15 or 16 - Cadets
-    - 17 or 18 - juniors
-    - 19 years and older - seniors
-    
+    - 9 and under - U10 
+    - 10 or 11 years - U12
+    - 12 or 13 years - U14
+    - 14 or 15 years - U16
+    - 16 or 17 years - U18
+
     Write a program that takes the age of a basketball player in the year they register and pritnts their age category.
+    
+    For example, if age is 15, the program should print *U16*
 
 .. activecode:: console__more_branching_categories
 
@@ -208,7 +209,7 @@ Note that programs with nested branches can be modified to use only consecutive 
     - for number 177, enter "on the left side, before the intersection"
     - for number 219 write "on the left side, after the intersection"
 
-**Hint:** After loading, you should first check if *n* is even, that is, if :math:`n \% 2 == 0`.
+**Hint:** After loading, you should first check if ``n`` is even, that is, if ``n % 2 == 0``.
 
 .. activecode:: console__more_branching_quart
 
@@ -245,9 +246,9 @@ Note that programs with nested branches can be modified to use only consecutive 
     
     Ian is writing a program that reads the current temperature (in degrees Celsius) and the chance of rain (from 0 to 100) from the weather website, and based on that information, it writes a recommendation whether to bring a jacket (which has a hood) or an umbrella, or none of these two. Ian chose this rule:
 
-    - when the temperature is below 21, the advice should be: "wear the jacket"
-    - when the temperature is 21 or higher and the chance of rain is over 50, the recommendation is: "bring an umbrella"
-    - when the temperature is 21 or higher and the chance of rain is up to 50, the advice should be "you can go in a T-shirt"
+    - when the temperature is below 21 Celsius, the advice should be: "wear the jacket"
+    - when the temperature is 21 Celsius or higher and the chance of rain is over 50, the recommendation is: "bring an umbrella"
+    - when the temperature is 21 Celsius or higher and the chance of rain is up to 50, the advice should be "you can go in a T-shirt"
     
     The task for you is to write a program that loads the temperature first, then the chance of rain, and then prints a recommendation.
     

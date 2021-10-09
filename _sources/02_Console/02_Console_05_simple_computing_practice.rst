@@ -61,8 +61,7 @@ Write a clearer solution using variables.
 
 .. activecode:: console__computing_divmod
 
-
-
+    # insert your code here
 
 
 .. questionnote::
@@ -83,7 +82,8 @@ Your job is to write a solution in which the starting and calculated values are 
         print(11+31-15)
 
 .. activecode:: console__computing_date
-
+    
+    # insert your code here
 
 
 .. questionnote::
@@ -96,6 +96,7 @@ Write a program that uses variables for the starting and calculated values.
 
 .. activecode:: console__computing_buying3_simple
 
+    # insert your code here
 
             
 Tasks with loading data
@@ -108,7 +109,7 @@ Example
 
     **Example - paintwork** 
     
-    Philip prepares to paint the ceiling in one room. In order to know how much paint to buy, he needs to know the dimensions of the room and how many square meters covers one kilogram of paint. Write a program that loads the length of the room, the width of the room, an area that covers one kilogram of paint, and prints the required number of kilograms of paint.
+    Philip prepares to paint the ceiling in one room. In order to know how much paint to buy, he needs to know the dimensions of the room and how many square meters one kilogram of paint covers. Write a program that loads the length of the room, the width of the room, an area that can be covered by one kilogram of paint, and prints the required number of kilograms of paint.
     
 Solution:
 
@@ -132,6 +133,7 @@ Tasks for exercise
 
 .. activecode:: console__computing_rabbits
 
+    # insert your code here
 
 
 .. questionnote::
@@ -141,3 +143,5 @@ Tasks for exercise
     John buys the car in installments. Write a program that sequentially loads the contract price, the amount of one installment and the number of installments, and prints how much more John will pay in total over the price stated in contract.
         
 .. activecode:: console__computing_buying_car
+
+    # insert your code here

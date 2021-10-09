@@ -143,7 +143,7 @@ A program that solves this task could look like this:
 
     **Task - final grade**
 
-    The sum of 5 Katie's grades so far is 23. Katie expects another grade from the final control task. Finish the program below so that for each possible final grade (1, 2, 3, 4, or 5) it prints what the average grade would be in that case.
+    The sum of 5 Katie's grades so far is 23. Katie expects another grade from the final task. Finish the program below so that for each possible final grade (1, 2, 3, 4, or 5) it prints what the average grade would be in that case.
     
 .. activecode:: console__scripting_final_mark
 
@@ -159,7 +159,7 @@ A program that solves this task could look like this:
 
     **Task - allowance**
 
-    Theo makes a plan for spending his pocket money over a 14-day vacation. Write a program that, for an average daily spend of 5, 10, or 20 euro, lists how much money in total Theo would need in each case.
+    Little Theo makes a plan for spending his pocket money over a 14-day vacation. Write a program that, for an average daily spend of 5, 10, or 20 euro, lists how much money in total Theo would need in each case.
    
 
 .. activecode:: console__scripting_allowance

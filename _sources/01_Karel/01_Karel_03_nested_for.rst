@@ -97,7 +97,7 @@ Skip
 
   In front of Karel, there is one ball on every third square, and Karel should pick them up both.
   
-Karl should repeat a group of actions "Move three times, and then take the ball" 2 times.
+Karel should repeat a group of actions "Move three times, and then take the ball" 2 times.
 
 .. karel:: Karel_for_every_nth_square
     :blockly:

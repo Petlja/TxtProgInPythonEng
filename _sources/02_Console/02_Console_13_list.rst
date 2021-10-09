@@ -219,7 +219,7 @@ One possible solution is:
     
     A tuple of numbers is given. Extract the numbers that are even and then print them out.
     
-    Recall that the number *x* is even if :math:`x \% 2 == 0`
+    Recall that the number ``x`` is even if ``x % 2 == 0``
 
 .. activecode:: console__collections_list_even
 
