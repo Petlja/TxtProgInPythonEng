@@ -12,3 +12,4 @@ A very interesting domain of application programming is the creation of programs
       ./03_PyGame_10_Drawing.rst
       ./03_PyGame_20_Animation.rst
       ./03_PyGame_30_Interaction.rst
+      ./03_PyGame_37_Project_SpaceGame.rst
