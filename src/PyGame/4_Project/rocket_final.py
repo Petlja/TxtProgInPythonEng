@@ -76,11 +76,9 @@ def draw():
 
     # check if martian is hit by a greeting
     hit = False
-    topleft = (martian_x, martian_y)
-    martian_rect = martian.get_rect(topleft)
+    martian_rect = pg.Rect(martian_x, martian_y, martian.get_width(), martian.get_height())
     for (greeting_x, greeting_y) in greetings:
-        topleft = (greeting_x, greeting_y)
-        greeting_rect = greeting.get_rect(topleft)
+        greeting_rect = pg.Rect(greeting_x, greeting_y, greeting.get_width(), greeting.get_height())
         if martian_rect.colliderect(greeting_rect):
             hit = True
 
