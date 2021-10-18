@@ -2,7 +2,7 @@
 import pygame as pg
 import pygamebg as pgbg
 
-(width, height) = (800, 800)
+(width, height) = (800, 500)
 window = pgbg.open_window(width, height, "Rocket")
 
 pg.key.set_repeat(10,10)

@@ -1,7 +1,7 @@
 import pygame as pg
 import pygamebg as pgbg
 
-(width, height) = (800, 800)
+(width, height) = (800, 500)
 window = pgbg.open_window(width, height, "Rocket")
 
 pg.key.set_repeat(10,10)
@@ -20,6 +20,8 @@ martian_speed = 3
 # rocket position
 rocket_x = 0
 rocket_y = height - rocket.get_height()
+
+
 
 # greeting positions
 greetings = []
@@ -74,9 +76,11 @@ def draw():
 
     # check if martian is hit by a greeting
     hit = False
-    martian_rect = martian.get_rect(topleft = (martian_x, martian_y))
+    topleft = (martian_x, martian_y)
+    martian_rect = martian.get_rect(topleft)
     for (greeting_x, greeting_y) in greetings:
-        greeting_rect = greeting.get_rect(topleft = (greeting_x, greeting_y))
+        topleft = (greeting_x, greeting_y)
+        greeting_rect = greeting.get_rect(topleft)
         if martian_rect.colliderect(greeting_rect):
             hit = True
 
